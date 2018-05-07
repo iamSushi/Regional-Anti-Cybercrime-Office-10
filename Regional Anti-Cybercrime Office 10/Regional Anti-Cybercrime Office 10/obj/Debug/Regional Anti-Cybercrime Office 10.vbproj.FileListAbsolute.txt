@@ -1,0 +1,18 @@
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\bin\Debug\Regional Anti-Cybercrime Office 10.exe.config
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\bin\Debug\Regional Anti-Cybercrime Office 10.exe
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\bin\Debug\Regional Anti-Cybercrime Office 10.pdb
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\bin\Debug\Regional Anti-Cybercrime Office 10.xml
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\obj\Debug\Regional Anti-Cybercrime Office 10.vbprojResolveAssemblyReference.cache
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\obj\Debug\Regional_Anti_Cybercrime_Office_10.Form1.resources
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\obj\Debug\Regional_Anti_Cybercrime_Office_10.Resources.resources
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\obj\Debug\Regional Anti-Cybercrime Office 10.vbproj.GenerateResource.cache
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\obj\Debug\Regional Anti-Cybercrime Office 10.vbproj.CoreCompileInputs.cache
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\obj\Debug\Regional Anti-Cybercrime Office 10.exe
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\obj\Debug\Regional Anti-Cybercrime Office 10.xml
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\obj\Debug\Regional Anti-Cybercrime Office 10.pdb
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\obj\Debug\Regional_Anti_Cybercrime_Office_10.Form2.resources
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\obj\Debug\Regional_Anti_Cybercrime_Office_10.Form3.resources
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\obj\Debug\Regional_Anti_Cybercrime_Office_10.Form4.resources
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\obj\Debug\Regional_Anti_Cybercrime_Office_10.Form5.resources
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\obj\Debug\Regional_Anti_Cybercrime_Office_10.Form6.resources
+C:\xampp\htdocs\Github\Regional Anti-Cybercrime Office 10\Regional Anti-Cybercrime Office 10\obj\Debug\Regional_Anti_Cybercrime_Office_10.police_form.resources
