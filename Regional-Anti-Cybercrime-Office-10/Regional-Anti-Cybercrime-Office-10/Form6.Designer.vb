@@ -80,7 +80,7 @@ Partial Class Form6
         Me.Button21.Location = New System.Drawing.Point(540, 57)
         Me.Button21.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(233, 91)
+        Me.Button21.Size = New System.Drawing.Size(276, 91)
         Me.Button21.TabIndex = 4
         Me.Button21.Text = "Connection"
         Me.Button21.UseVisualStyleBackColor = True
