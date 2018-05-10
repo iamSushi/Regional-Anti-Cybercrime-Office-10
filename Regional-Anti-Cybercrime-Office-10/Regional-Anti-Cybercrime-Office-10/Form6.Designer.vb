@@ -51,6 +51,7 @@ Partial Class Form6
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.DoubleBitmapControl1 = New BunifuAnimatorNS.DoubleBitmapControl()
         Me.Panel4.SuspendLayout()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -63,6 +64,7 @@ Partial Class Form6
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Panel4.AutoScroll = True
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.DoubleBitmapControl1)
         Me.Panel4.Controls.Add(Me.Button21)
         Me.Panel4.Controls.Add(Me.Button20)
         Me.Panel4.Controls.Add(Me.Button19)
@@ -78,11 +80,7 @@ Partial Class Form6
         Me.Button21.Font = New System.Drawing.Font("Calibri", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button21.Location = New System.Drawing.Point(405, 46)
         Me.Button21.Name = "Button21"
-<<<<<<< HEAD
         Me.Button21.Size = New System.Drawing.Size(207, 74)
-=======
-        Me.Button21.Size = New System.Drawing.Size(276, 91)
->>>>>>> c7c4461f92237924edca1f6bb2ad639953b46422
         Me.Button21.TabIndex = 4
         Me.Button21.Text = "Connection"
         Me.Button21.UseVisualStyleBackColor = True
@@ -432,6 +430,15 @@ Partial Class Form6
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'DoubleBitmapControl1
+        '
+        Me.DoubleBitmapControl1.Location = New System.Drawing.Point(182, 526)
+        Me.DoubleBitmapControl1.Name = "DoubleBitmapControl1"
+        Me.DoubleBitmapControl1.Size = New System.Drawing.Size(75, 23)
+        Me.DoubleBitmapControl1.TabIndex = 5
+        Me.DoubleBitmapControl1.Text = "DoubleBitmapControl1"
+        Me.DoubleBitmapControl1.Visible = False
+        '
         'Form6
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -483,4 +490,5 @@ Partial Class Form6
     Friend WithEvents Button19 As Button
     Friend WithEvents Button20 As Button
     Friend WithEvents Button21 As Button
+    Friend WithEvents DoubleBitmapControl1 As BunifuAnimatorNS.DoubleBitmapControl
 End Class

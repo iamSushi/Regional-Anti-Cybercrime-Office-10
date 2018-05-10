@@ -67,16 +67,17 @@ Public Class Form6
     End Sub
 
     Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server = localhost; userid = 3306; password = root; database = cybercrime; sslmode= true"
+        'mysqlconn = New MySqlConnection
+        'mysqlconn.ConnectionString = "host = 127.0.0.1; user = 3306; database = cybercrime;"
+        Dim mysqlConn As New MySqlConnection("server = localhost; host = 127.0.0.1; user = root; database = cybercrime")
         Try
-            mysqlconn.Open()
+            mysqlConn.Open()
             MessageBox.Show("Connected")
-            mysqlconn.Close()
+            'mysqlconn.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         Finally
-            mysqlconn.Dispose()
+            mysqlConn.Dispose()
         End Try
     End Sub
 End Class
