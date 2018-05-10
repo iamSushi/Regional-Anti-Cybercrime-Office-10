@@ -78,7 +78,11 @@ Partial Class Form6
         Me.Button21.Font = New System.Drawing.Font("Calibri", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button21.Location = New System.Drawing.Point(405, 46)
         Me.Button21.Name = "Button21"
+<<<<<<< HEAD
         Me.Button21.Size = New System.Drawing.Size(207, 74)
+=======
+        Me.Button21.Size = New System.Drawing.Size(276, 91)
+>>>>>>> c7c4461f92237924edca1f6bb2ad639953b46422
         Me.Button21.TabIndex = 4
         Me.Button21.Text = "Connection"
         Me.Button21.UseVisualStyleBackColor = True
