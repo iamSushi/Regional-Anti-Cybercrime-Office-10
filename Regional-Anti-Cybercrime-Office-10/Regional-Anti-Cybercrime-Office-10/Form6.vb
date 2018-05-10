@@ -68,7 +68,7 @@ Public Class Form6
 
     Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server = localhost; userid = 3306; password = root; database = cybercrime; Sslmode = none"
+        mysqlconn.ConnectionString = "server = localhost; userid = 3306; password = root; database = cybercrime; sslmode= true"
         Try
             mysqlconn.Open()
             MessageBox.Show("Connected")
