@@ -4,6 +4,20 @@
 Public Class Form6
     Dim mysqlconn As MySqlConnection
 
+    Public Sub Button21_Click(sender As Object, e As EventArgs)
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "host = 127.0.0.1; userid = 3306; database = cybercrime;"
+        ''Dim mysqlConn As New MySqlConnection("server = 127.0.0.1; user = root; database = cybercrime")
+        Try
+            mysqlconn.Open()
+            MessageBox.Show("Connected")
+            'mysqlconn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Do While panel_slide.Width < 109
             panel_slide.Width = panel_slide.Width + 1
@@ -64,20 +78,5 @@ Public Class Form6
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
         Form7.Show()
         Me.Close()
-    End Sub
-
-    Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
-        'mysqlconn = New MySqlConnection
-        'mysqlconn.ConnectionString = "host = 127.0.0.1; user = 3306; database = cybercrime;"
-        Dim mysqlConn As New MySqlConnection("server = localhost; host = 127.0.0.1; user = root; database = cybercrime")
-        Try
-            mysqlConn.Open()
-            MessageBox.Show("Connected")
-            'mysqlconn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlConn.Dispose()
-        End Try
     End Sub
 End Class

@@ -78,18 +78,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\register_officer.Designer.vb">
-      <DependentUpon>register_officer.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\register_officer.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\register_person.Designer.vb">
-      <DependentUpon>register_person.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\register_person.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Controls\view_officer.Designer.vb">
       <DependentUpon>view_officer.vb</DependentUpon>
     </Compile>
@@ -156,12 +144,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Controls\register_officer.resx">
-      <DependentUpon>register_officer.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\register_person.resx">
-      <DependentUpon>register_person.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Controls\view_officer.resx">
       <DependentUpon>view_officer.vb</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +186,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
