@@ -75,7 +75,15 @@ Public Class Form5
             mysqlconn.Open()
 
             Dim query As String
-            query = "insert into persons values(null,'" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','null','" & DateTimePicker1.Text & "','male','" & ComboBox3.Text & "','" & TextBox5.Text & "','" & TextBox6.Text & "','" & ComboBox1.Text & "',null)"
+            Dim gender As String
+
+            If RadioButton1.Checked = True Then
+                gender = "male"
+            Else
+                gender = "female"
+            End If
+
+            query = "insert into persons values(null,'" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','null','" & DateTimePicker1.Text & "','" + gender + "','" & ComboBox3.Text & "','" & TextBox5.Text & "','" & TextBox6.Text & "','" & ComboBox1.Text & "',null)"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
