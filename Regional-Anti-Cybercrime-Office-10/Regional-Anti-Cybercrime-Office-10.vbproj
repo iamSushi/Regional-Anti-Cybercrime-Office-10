@@ -84,18 +84,6 @@
     <Compile Include="Controls\UserControl1.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\UserControl2.Designer.vb">
-      <DependentUpon>UserControl2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\UserControl2.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\UserControl3.Designer.vb">
-      <DependentUpon>UserControl3.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\UserControl3.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -158,12 +146,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Controls\UserControl1.resx">
       <DependentUpon>UserControl1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UserControl2.resx">
-      <DependentUpon>UserControl2.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\UserControl3.resx">
-      <DependentUpon>UserControl3.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
