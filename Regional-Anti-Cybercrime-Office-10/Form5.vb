@@ -71,7 +71,22 @@ Public Class Form5
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
+        Try
+            mysqlconn.Open()
 
+            Dim query As String
+            query = "insert into persons values(null,'" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','null','" & DateTimePicker1.Text & "','male','" & ComboBox3.Text & "','" & TextBox5.Text & "','" & TextBox6.Text & "','" & ComboBox1.Text & "',null)"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+            MessageBox.Show("Successful")
+
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
 
     End Sub
 
