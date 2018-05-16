@@ -166,7 +166,7 @@ Partial Class Form1
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLight
         Me.Label3.Location = New System.Drawing.Point(54, 10)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(317, 52)

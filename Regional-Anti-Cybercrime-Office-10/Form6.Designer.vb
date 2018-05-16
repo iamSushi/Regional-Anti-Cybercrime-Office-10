@@ -574,7 +574,6 @@ Partial Class Form6
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.GroupBox1.Controls.Add(Me.DoubleBitmapControl1)
         Me.GroupBox1.Controls.Add(Me.Button34)
         Me.GroupBox1.Controls.Add(Me.Button33)
         Me.GroupBox1.Controls.Add(Me.Button32)
