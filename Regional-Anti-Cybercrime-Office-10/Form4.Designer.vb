@@ -44,19 +44,29 @@ Partial Class Form4
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button17 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button17 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel4.SuspendLayout()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel4
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Panel4.AutoScroll = True
+        Me.Panel4.Controls.Add(Me.DataGridView1)
         Me.Panel4.Location = New System.Drawing.Point(83, 58)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1001, 672)
@@ -322,6 +332,17 @@ Partial Class Form4
         Me.Panel1.Size = New System.Drawing.Size(1084, 58)
         Me.Panel1.TabIndex = 4
         '
+        'Button17
+        '
+        Me.Button17.FlatAppearance.BorderSize = 0
+        Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button17.Image = CType(resources.GetObject("Button17.Image"), System.Drawing.Image)
+        Me.Button17.Location = New System.Drawing.Point(1011, 0)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Size = New System.Drawing.Size(73, 58)
+        Me.Button17.TabIndex = 8
+        Me.Button17.UseVisualStyleBackColor = True
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -343,16 +364,45 @@ Partial Class Form4
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'Button17
+        'DataGridView1
         '
-        Me.Button17.FlatAppearance.BorderSize = 0
-        Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button17.Image = CType(resources.GetObject("Button17.Image"), System.Drawing.Image)
-        Me.Button17.Location = New System.Drawing.Point(1011, 0)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(73, 58)
-        Me.Button17.TabIndex = 8
-        Me.Button17.UseVisualStyleBackColor = True
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
+        Me.DataGridView1.Location = New System.Drawing.Point(20, 22)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(958, 415)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Date Received"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "DFE Type"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Lab Case No."
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Requesting Agency"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Nature of Case"
+        Me.Column5.Name = "Column5"
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Investigator"
+        Me.Column6.Name = "Column6"
         '
         'Form4
         '
@@ -367,11 +417,13 @@ Partial Class Form4
         Me.Name = "Form4"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form4"
+        Me.Panel4.ResumeLayout(False)
         Me.panel_slide.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -400,4 +452,11 @@ Partial Class Form4
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button17 As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
 End Class
