@@ -23,7 +23,7 @@ Partial Class Form5
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form5))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panel_slide = New System.Windows.Forms.Panel()
         Me.Button16 = New System.Windows.Forms.Button()
         Me.Button15 = New System.Windows.Forms.Button()
@@ -50,6 +50,9 @@ Partial Class Form5
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button18 = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Button32 = New System.Windows.Forms.Button()
         Me.Button31 = New System.Windows.Forms.Button()
         Me.Button30 = New System.Windows.Forms.Button()
@@ -81,6 +84,12 @@ Partial Class Form5
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button19 = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Button24 = New System.Windows.Forms.Button()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Button23 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Button35 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -93,15 +102,6 @@ Partial Class Form5
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button18 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button23 = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button24 = New System.Windows.Forms.Button()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -477,6 +477,40 @@ Partial Class Form5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Basic Information"
         '
+        'Button18
+        '
+        Me.Button18.BackColor = System.Drawing.Color.Transparent
+        Me.Button18.FlatAppearance.BorderSize = 0
+        Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button18.Image = CType(resources.GetObject("Button18.Image"), System.Drawing.Image)
+        Me.Button18.Location = New System.Drawing.Point(470, 405)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(34, 31)
+        Me.Button18.TabIndex = 54
+        Me.Button18.UseVisualStyleBackColor = False
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Complainant", "Victim", "Suspect", "Witness"})
+        Me.ComboBox1.Location = New System.Drawing.Point(235, 405)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(229, 31)
+        Me.ComboBox1.TabIndex = 53
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Image = CType(resources.GetObject("Label3.Image"), System.Drawing.Image)
+        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label3.Location = New System.Drawing.Point(74, 407)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(103, 23)
+        Me.Label3.TabIndex = 52
+        Me.Label3.Text = "      Category"
+        '
         'Button32
         '
         Me.Button32.BackColor = System.Drawing.Color.Transparent
@@ -836,6 +870,76 @@ Partial Class Form5
         Me.TabPage1.Text = "Persons"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker2.Location = New System.Drawing.Point(28, 199)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(175, 31)
+        Me.DateTimePicker2.TabIndex = 55
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Complainant", "Victim", "Suspect", "Witness"})
+        Me.ComboBox2.Location = New System.Drawing.Point(28, 124)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(175, 31)
+        Me.ComboBox2.TabIndex = 54
+        '
+        'Button24
+        '
+        Me.Button24.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Button24.FlatAppearance.BorderSize = 0
+        Me.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button24.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button24.Image = CType(resources.GetObject("Button24.Image"), System.Drawing.Image)
+        Me.Button24.Location = New System.Drawing.Point(203, 199)
+        Me.Button24.Name = "Button24"
+        Me.Button24.Size = New System.Drawing.Size(35, 31)
+        Me.Button24.TabIndex = 19
+        Me.Button24.UseVisualStyleBackColor = False
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label13.Image = CType(resources.GetObject("Label13.Image"), System.Drawing.Image)
+        Me.Label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label13.Location = New System.Drawing.Point(24, 173)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(70, 23)
+        Me.Label13.TabIndex = 17
+        Me.Label13.Text = "      Date"
+        '
+        'Button23
+        '
+        Me.Button23.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Button23.FlatAppearance.BorderSize = 0
+        Me.Button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button23.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button23.Image = CType(resources.GetObject("Button23.Image"), System.Drawing.Image)
+        Me.Button23.Location = New System.Drawing.Point(203, 124)
+        Me.Button23.Name = "Button23"
+        Me.Button23.Size = New System.Drawing.Size(35, 31)
+        Me.Button23.TabIndex = 16
+        Me.Button23.UseVisualStyleBackColor = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label4.Image = CType(resources.GetObject("Label4.Image"), System.Drawing.Image)
+        Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label4.Location = New System.Drawing.Point(24, 98)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(103, 23)
+        Me.Label4.TabIndex = 14
+        Me.Label4.Text = "      Category"
+        '
         'Button35
         '
         Me.Button35.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
@@ -872,8 +976,8 @@ Partial Class Form5
         '
         'DataGridView1
         '
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column8, Me.Column6, Me.Column7})
@@ -927,110 +1031,6 @@ Partial Class Form5
         Me.Column7.HeaderText = "Email"
         Me.Column7.Name = "Column7"
         Me.Column7.Width = 150
-        '
-        'Button18
-        '
-        Me.Button18.BackColor = System.Drawing.Color.Transparent
-        Me.Button18.FlatAppearance.BorderSize = 0
-        Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button18.Image = CType(resources.GetObject("Button18.Image"), System.Drawing.Image)
-        Me.Button18.Location = New System.Drawing.Point(470, 405)
-        Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(34, 31)
-        Me.Button18.TabIndex = 54
-        Me.Button18.UseVisualStyleBackColor = False
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Complainant", "Victim", "Suspect", "Witness"})
-        Me.ComboBox1.Location = New System.Drawing.Point(235, 405)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(229, 31)
-        Me.ComboBox1.TabIndex = 53
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Image = CType(resources.GetObject("Label3.Image"), System.Drawing.Image)
-        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label3.Location = New System.Drawing.Point(74, 407)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(103, 23)
-        Me.Label3.TabIndex = 52
-        Me.Label3.Text = "      Category"
-        '
-        'Button23
-        '
-        Me.Button23.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Button23.FlatAppearance.BorderSize = 0
-        Me.Button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button23.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button23.Image = CType(resources.GetObject("Button23.Image"), System.Drawing.Image)
-        Me.Button23.Location = New System.Drawing.Point(203, 124)
-        Me.Button23.Name = "Button23"
-        Me.Button23.Size = New System.Drawing.Size(35, 31)
-        Me.Button23.TabIndex = 16
-        Me.Button23.UseVisualStyleBackColor = False
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label4.Image = CType(resources.GetObject("Label4.Image"), System.Drawing.Image)
-        Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(24, 98)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(103, 23)
-        Me.Label4.TabIndex = 14
-        Me.Label4.Text = "      Category"
-        '
-        'Button24
-        '
-        Me.Button24.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Button24.FlatAppearance.BorderSize = 0
-        Me.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button24.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button24.Image = CType(resources.GetObject("Button24.Image"), System.Drawing.Image)
-        Me.Button24.Location = New System.Drawing.Point(203, 199)
-        Me.Button24.Name = "Button24"
-        Me.Button24.Size = New System.Drawing.Size(35, 31)
-        Me.Button24.TabIndex = 19
-        Me.Button24.UseVisualStyleBackColor = False
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label13.Image = CType(resources.GetObject("Label13.Image"), System.Drawing.Image)
-        Me.Label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label13.Location = New System.Drawing.Point(24, 173)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(70, 23)
-        Me.Label13.TabIndex = 17
-        Me.Label13.Text = "      Date"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Complainant", "Victim", "Suspect", "Witness"})
-        Me.ComboBox2.Location = New System.Drawing.Point(28, 124)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(175, 31)
-        Me.ComboBox2.TabIndex = 54
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Location = New System.Drawing.Point(28, 199)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(175, 31)
-        Me.DateTimePicker2.TabIndex = 55
         '
         'Form5
         '

@@ -1,4 +1,10 @@
-﻿Public Class Form5
+﻿Imports MySql.Data.MySqlClient
+
+Public Class Form5
+    Dim mysqlconn As MySqlConnection
+    Dim command As MySqlCommand
+    Dim reader As MySqlDataReader
+
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Do While panel_slide.Width < 109
             panel_slide.Width = panel_slide.Width + 1
@@ -59,5 +65,9 @@
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
         Form7.Show()
         Me.Close()
+    End Sub
+
+    Private Sub Button22_Click(sender As Object, e As EventArgs) Handles Button22.Click
+
     End Sub
 End Class
