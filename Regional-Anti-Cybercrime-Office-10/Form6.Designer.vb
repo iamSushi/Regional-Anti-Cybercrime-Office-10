@@ -45,6 +45,7 @@ Partial Class Form6
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button36 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -56,6 +57,15 @@ Partial Class Form6
         Me.Button22 = New System.Windows.Forms.Button()
         Me.Button21 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button34 = New System.Windows.Forms.Button()
+        Me.Button33 = New System.Windows.Forms.Button()
+        Me.Button32 = New System.Windows.Forms.Button()
+        Me.Button31 = New System.Windows.Forms.Button()
+        Me.Button30 = New System.Windows.Forms.Button()
+        Me.Button29 = New System.Windows.Forms.Button()
+        Me.Button28 = New System.Windows.Forms.Button()
+        Me.Button27 = New System.Windows.Forms.Button()
+        Me.Button26 = New System.Windows.Forms.Button()
         Me.Button20 = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -82,6 +92,15 @@ Partial Class Form6
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button18 = New System.Windows.Forms.Button()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Button17 = New System.Windows.Forms.Button()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Button35 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -92,36 +111,18 @@ Partial Class Form6
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button26 = New System.Windows.Forms.Button()
-        Me.Button27 = New System.Windows.Forms.Button()
-        Me.Button28 = New System.Windows.Forms.Button()
-        Me.Button29 = New System.Windows.Forms.Button()
-        Me.Button30 = New System.Windows.Forms.Button()
-        Me.Button31 = New System.Windows.Forms.Button()
-        Me.Button32 = New System.Windows.Forms.Button()
-        Me.Button33 = New System.Windows.Forms.Button()
-        Me.Button34 = New System.Windows.Forms.Button()
-        Me.Button36 = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.Button38 = New System.Windows.Forms.Button()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.Button39 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.Button18 = New System.Windows.Forms.Button()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.Button17 = New System.Windows.Forms.Button()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Button35 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DoubleBitmapControl1 = New BunifuAnimatorNS.DoubleBitmapControl()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -398,6 +399,17 @@ Partial Class Form6
         Me.Panel1.Size = New System.Drawing.Size(1084, 58)
         Me.Panel1.TabIndex = 4
         '
+        'Button36
+        '
+        Me.Button36.FlatAppearance.BorderSize = 0
+        Me.Button36.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button36.Image = CType(resources.GetObject("Button36.Image"), System.Drawing.Image)
+        Me.Button36.Location = New System.Drawing.Point(1011, 0)
+        Me.Button36.Name = "Button36"
+        Me.Button36.Size = New System.Drawing.Size(73, 58)
+        Me.Button36.TabIndex = 8
+        Me.Button36.UseVisualStyleBackColor = True
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -536,6 +548,7 @@ Partial Class Form6
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.GroupBox1.Controls.Add(Me.DoubleBitmapControl1)
         Me.GroupBox1.Controls.Add(Me.Button34)
         Me.GroupBox1.Controls.Add(Me.Button33)
         Me.GroupBox1.Controls.Add(Me.Button32)
@@ -578,6 +591,114 @@ Partial Class Form6
         Me.GroupBox1.TabIndex = 21
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Basic Information"
+        '
+        'Button34
+        '
+        Me.Button34.BackColor = System.Drawing.Color.Transparent
+        Me.Button34.FlatAppearance.BorderSize = 0
+        Me.Button34.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button34.Image = CType(resources.GetObject("Button34.Image"), System.Drawing.Image)
+        Me.Button34.Location = New System.Drawing.Point(594, 324)
+        Me.Button34.Name = "Button34"
+        Me.Button34.Size = New System.Drawing.Size(34, 31)
+        Me.Button34.TabIndex = 23
+        Me.Button34.UseVisualStyleBackColor = False
+        '
+        'Button33
+        '
+        Me.Button33.BackColor = System.Drawing.Color.Transparent
+        Me.Button33.FlatAppearance.BorderSize = 0
+        Me.Button33.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button33.Image = CType(resources.GetObject("Button33.Image"), System.Drawing.Image)
+        Me.Button33.Location = New System.Drawing.Point(443, 444)
+        Me.Button33.Name = "Button33"
+        Me.Button33.Size = New System.Drawing.Size(34, 31)
+        Me.Button33.TabIndex = 33
+        Me.Button33.UseVisualStyleBackColor = False
+        '
+        'Button32
+        '
+        Me.Button32.BackColor = System.Drawing.Color.Transparent
+        Me.Button32.FlatAppearance.BorderSize = 0
+        Me.Button32.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button32.Image = CType(resources.GetObject("Button32.Image"), System.Drawing.Image)
+        Me.Button32.Location = New System.Drawing.Point(443, 394)
+        Me.Button32.Name = "Button32"
+        Me.Button32.Size = New System.Drawing.Size(34, 31)
+        Me.Button32.TabIndex = 32
+        Me.Button32.UseVisualStyleBackColor = False
+        '
+        'Button31
+        '
+        Me.Button31.BackColor = System.Drawing.Color.Transparent
+        Me.Button31.FlatAppearance.BorderSize = 0
+        Me.Button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button31.Image = CType(resources.GetObject("Button31.Image"), System.Drawing.Image)
+        Me.Button31.Location = New System.Drawing.Point(443, 346)
+        Me.Button31.Name = "Button31"
+        Me.Button31.Size = New System.Drawing.Size(34, 31)
+        Me.Button31.TabIndex = 31
+        Me.Button31.UseVisualStyleBackColor = False
+        '
+        'Button30
+        '
+        Me.Button30.BackColor = System.Drawing.Color.Transparent
+        Me.Button30.FlatAppearance.BorderSize = 0
+        Me.Button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button30.Image = CType(resources.GetObject("Button30.Image"), System.Drawing.Image)
+        Me.Button30.Location = New System.Drawing.Point(443, 298)
+        Me.Button30.Name = "Button30"
+        Me.Button30.Size = New System.Drawing.Size(34, 31)
+        Me.Button30.TabIndex = 30
+        Me.Button30.UseVisualStyleBackColor = False
+        '
+        'Button29
+        '
+        Me.Button29.BackColor = System.Drawing.Color.Transparent
+        Me.Button29.FlatAppearance.BorderSize = 0
+        Me.Button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button29.Image = CType(resources.GetObject("Button29.Image"), System.Drawing.Image)
+        Me.Button29.Location = New System.Drawing.Point(443, 197)
+        Me.Button29.Name = "Button29"
+        Me.Button29.Size = New System.Drawing.Size(34, 31)
+        Me.Button29.TabIndex = 29
+        Me.Button29.UseVisualStyleBackColor = False
+        '
+        'Button28
+        '
+        Me.Button28.BackColor = System.Drawing.Color.Transparent
+        Me.Button28.FlatAppearance.BorderSize = 0
+        Me.Button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button28.Image = CType(resources.GetObject("Button28.Image"), System.Drawing.Image)
+        Me.Button28.Location = New System.Drawing.Point(443, 149)
+        Me.Button28.Name = "Button28"
+        Me.Button28.Size = New System.Drawing.Size(34, 31)
+        Me.Button28.TabIndex = 28
+        Me.Button28.UseVisualStyleBackColor = False
+        '
+        'Button27
+        '
+        Me.Button27.BackColor = System.Drawing.Color.Transparent
+        Me.Button27.FlatAppearance.BorderSize = 0
+        Me.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button27.Image = CType(resources.GetObject("Button27.Image"), System.Drawing.Image)
+        Me.Button27.Location = New System.Drawing.Point(443, 97)
+        Me.Button27.Name = "Button27"
+        Me.Button27.Size = New System.Drawing.Size(34, 31)
+        Me.Button27.TabIndex = 27
+        Me.Button27.UseVisualStyleBackColor = False
+        '
+        'Button26
+        '
+        Me.Button26.BackColor = System.Drawing.Color.Transparent
+        Me.Button26.FlatAppearance.BorderSize = 0
+        Me.Button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button26.Image = CType(resources.GetObject("Button26.Image"), System.Drawing.Image)
+        Me.Button26.Location = New System.Drawing.Point(443, 46)
+        Me.Button26.Name = "Button26"
+        Me.Button26.Size = New System.Drawing.Size(34, 31)
+        Me.Button26.TabIndex = 26
+        Me.Button26.UseVisualStyleBackColor = False
         '
         'Button20
         '
@@ -869,261 +990,6 @@ Partial Class Form6
         Me.TabPage1.Text = "Officers"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'DataGridView1
-        '
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
-        Me.DataGridView1.GridColor = System.Drawing.SystemColors.Control
-        Me.DataGridView1.Location = New System.Drawing.Point(26, 124)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.Size = New System.Drawing.Size(945, 462)
-        Me.DataGridView1.TabIndex = 1
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Firstname"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Width = 200
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Middlename"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Surname"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Birthdate"
-        Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Gender"
-        Me.Column5.Name = "Column5"
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Contact"
-        Me.Column6.Name = "Column6"
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Email"
-        Me.Column7.Name = "Column7"
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Rank"
-        Me.Column8.Name = "Column8"
-        '
-        'Column9
-        '
-        Me.Column9.HeaderText = "Office"
-        Me.Column9.Name = "Column9"
-        '
-        'Button26
-        '
-        Me.Button26.BackColor = System.Drawing.Color.Transparent
-        Me.Button26.FlatAppearance.BorderSize = 0
-        Me.Button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button26.Image = CType(resources.GetObject("Button26.Image"), System.Drawing.Image)
-        Me.Button26.Location = New System.Drawing.Point(443, 46)
-        Me.Button26.Name = "Button26"
-        Me.Button26.Size = New System.Drawing.Size(34, 31)
-        Me.Button26.TabIndex = 26
-        Me.Button26.UseVisualStyleBackColor = False
-        '
-        'Button27
-        '
-        Me.Button27.BackColor = System.Drawing.Color.Transparent
-        Me.Button27.FlatAppearance.BorderSize = 0
-        Me.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button27.Image = CType(resources.GetObject("Button27.Image"), System.Drawing.Image)
-        Me.Button27.Location = New System.Drawing.Point(443, 97)
-        Me.Button27.Name = "Button27"
-        Me.Button27.Size = New System.Drawing.Size(34, 31)
-        Me.Button27.TabIndex = 27
-        Me.Button27.UseVisualStyleBackColor = False
-        '
-        'Button28
-        '
-        Me.Button28.BackColor = System.Drawing.Color.Transparent
-        Me.Button28.FlatAppearance.BorderSize = 0
-        Me.Button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button28.Image = CType(resources.GetObject("Button28.Image"), System.Drawing.Image)
-        Me.Button28.Location = New System.Drawing.Point(443, 149)
-        Me.Button28.Name = "Button28"
-        Me.Button28.Size = New System.Drawing.Size(34, 31)
-        Me.Button28.TabIndex = 28
-        Me.Button28.UseVisualStyleBackColor = False
-        '
-        'Button29
-        '
-        Me.Button29.BackColor = System.Drawing.Color.Transparent
-        Me.Button29.FlatAppearance.BorderSize = 0
-        Me.Button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button29.Image = CType(resources.GetObject("Button29.Image"), System.Drawing.Image)
-        Me.Button29.Location = New System.Drawing.Point(443, 197)
-        Me.Button29.Name = "Button29"
-        Me.Button29.Size = New System.Drawing.Size(34, 31)
-        Me.Button29.TabIndex = 29
-        Me.Button29.UseVisualStyleBackColor = False
-        '
-        'Button30
-        '
-        Me.Button30.BackColor = System.Drawing.Color.Transparent
-        Me.Button30.FlatAppearance.BorderSize = 0
-        Me.Button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button30.Image = CType(resources.GetObject("Button30.Image"), System.Drawing.Image)
-        Me.Button30.Location = New System.Drawing.Point(443, 298)
-        Me.Button30.Name = "Button30"
-        Me.Button30.Size = New System.Drawing.Size(34, 31)
-        Me.Button30.TabIndex = 30
-        Me.Button30.UseVisualStyleBackColor = False
-        '
-        'Button31
-        '
-        Me.Button31.BackColor = System.Drawing.Color.Transparent
-        Me.Button31.FlatAppearance.BorderSize = 0
-        Me.Button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button31.Image = CType(resources.GetObject("Button31.Image"), System.Drawing.Image)
-        Me.Button31.Location = New System.Drawing.Point(443, 346)
-        Me.Button31.Name = "Button31"
-        Me.Button31.Size = New System.Drawing.Size(34, 31)
-        Me.Button31.TabIndex = 31
-        Me.Button31.UseVisualStyleBackColor = False
-        '
-        'Button32
-        '
-        Me.Button32.BackColor = System.Drawing.Color.Transparent
-        Me.Button32.FlatAppearance.BorderSize = 0
-        Me.Button32.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button32.Image = CType(resources.GetObject("Button32.Image"), System.Drawing.Image)
-        Me.Button32.Location = New System.Drawing.Point(443, 394)
-        Me.Button32.Name = "Button32"
-        Me.Button32.Size = New System.Drawing.Size(34, 31)
-        Me.Button32.TabIndex = 32
-        Me.Button32.UseVisualStyleBackColor = False
-        '
-        'Button33
-        '
-        Me.Button33.BackColor = System.Drawing.Color.Transparent
-        Me.Button33.FlatAppearance.BorderSize = 0
-        Me.Button33.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button33.Image = CType(resources.GetObject("Button33.Image"), System.Drawing.Image)
-        Me.Button33.Location = New System.Drawing.Point(443, 444)
-        Me.Button33.Name = "Button33"
-        Me.Button33.Size = New System.Drawing.Size(34, 31)
-        Me.Button33.TabIndex = 33
-        Me.Button33.UseVisualStyleBackColor = False
-        '
-        'Button34
-        '
-        Me.Button34.BackColor = System.Drawing.Color.Transparent
-        Me.Button34.FlatAppearance.BorderSize = 0
-        Me.Button34.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button34.Image = CType(resources.GetObject("Button34.Image"), System.Drawing.Image)
-        Me.Button34.Location = New System.Drawing.Point(594, 324)
-        Me.Button34.Name = "Button34"
-        Me.Button34.Size = New System.Drawing.Size(34, 31)
-        Me.Button34.TabIndex = 23
-        Me.Button34.UseVisualStyleBackColor = False
-        '
-        'Button36
-        '
-        Me.Button36.FlatAppearance.BorderSize = 0
-        Me.Button36.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button36.Image = CType(resources.GetObject("Button36.Image"), System.Drawing.Image)
-        Me.Button36.Location = New System.Drawing.Point(1011, 0)
-        Me.Button36.Name = "Button36"
-        Me.Button36.Size = New System.Drawing.Size(73, 58)
-        Me.Button36.TabIndex = 8
-        Me.Button36.UseVisualStyleBackColor = True
-        '
-        'TabPage3
-        '
-        Me.TabPage3.Controls.Add(Me.Button38)
-        Me.TabPage3.Controls.Add(Me.TextBox11)
-        Me.TabPage3.Controls.Add(Me.Button39)
-        Me.TabPage3.Controls.Add(Me.Label16)
-        Me.TabPage3.Controls.Add(Me.DataGridView2)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 54)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(1004, 614)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Examiner"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'DataGridView2
-        '
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonFace
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
-        Me.DataGridView2.GridColor = System.Drawing.SystemColors.Control
-        Me.DataGridView2.Location = New System.Drawing.Point(27, 109)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView2.Size = New System.Drawing.Size(949, 482)
-        Me.DataGridView2.TabIndex = 14
-        '
-        'Button38
-        '
-        Me.Button38.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Button38.FlatAppearance.BorderSize = 0
-        Me.Button38.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button38.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button38.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button38.Image = CType(resources.GetObject("Button38.Image"), System.Drawing.Image)
-        Me.Button38.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button38.Location = New System.Drawing.Point(214, 58)
-        Me.Button38.Name = "Button38"
-        Me.Button38.Padding = New System.Windows.Forms.Padding(4, 0, 0, 0)
-        Me.Button38.Size = New System.Drawing.Size(35, 31)
-        Me.Button38.TabIndex = 50
-        Me.Button38.UseVisualStyleBackColor = False
-        '
-        'TextBox11
-        '
-        Me.TextBox11.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox11.Location = New System.Drawing.Point(27, 58)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(189, 31)
-        Me.TextBox11.TabIndex = 49
-        '
-        'Button39
-        '
-        Me.Button39.BackColor = System.Drawing.Color.Transparent
-        Me.Button39.FlatAppearance.BorderSize = 0
-        Me.Button39.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button39.Image = CType(resources.GetObject("Button39.Image"), System.Drawing.Image)
-        Me.Button39.Location = New System.Drawing.Point(254, 59)
-        Me.Button39.Name = "Button39"
-        Me.Button39.Size = New System.Drawing.Size(34, 31)
-        Me.Button39.TabIndex = 48
-        Me.Button39.UseVisualStyleBackColor = False
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Image = CType(resources.GetObject("Label16.Image"), System.Drawing.Image)
-        Me.Label16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label16.Location = New System.Drawing.Point(23, 28)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(105, 23)
-        Me.Label16.TabIndex = 47
-        Me.Label16.Text = "      Examiner"
-        '
         'Button18
         '
         Me.Button18.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
@@ -1226,6 +1092,142 @@ Partial Class Form6
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "      Name"
         '
+        'DataGridView1
+        '
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.Control
+        Me.DataGridView1.Location = New System.Drawing.Point(26, 124)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.Size = New System.Drawing.Size(945, 462)
+        Me.DataGridView1.TabIndex = 1
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Firstname"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Width = 200
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Middlename"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Surname"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Birthdate"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Gender"
+        Me.Column5.Name = "Column5"
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Contact"
+        Me.Column6.Name = "Column6"
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Email"
+        Me.Column7.Name = "Column7"
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Rank"
+        Me.Column8.Name = "Column8"
+        '
+        'Column9
+        '
+        Me.Column9.HeaderText = "Office"
+        Me.Column9.Name = "Column9"
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.Button38)
+        Me.TabPage3.Controls.Add(Me.TextBox11)
+        Me.TabPage3.Controls.Add(Me.Button39)
+        Me.TabPage3.Controls.Add(Me.Label16)
+        Me.TabPage3.Controls.Add(Me.DataGridView2)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 54)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Size = New System.Drawing.Size(1004, 614)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Examiner"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Button38
+        '
+        Me.Button38.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button38.FlatAppearance.BorderSize = 0
+        Me.Button38.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button38.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button38.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button38.Image = CType(resources.GetObject("Button38.Image"), System.Drawing.Image)
+        Me.Button38.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button38.Location = New System.Drawing.Point(214, 58)
+        Me.Button38.Name = "Button38"
+        Me.Button38.Padding = New System.Windows.Forms.Padding(4, 0, 0, 0)
+        Me.Button38.Size = New System.Drawing.Size(35, 31)
+        Me.Button38.TabIndex = 50
+        Me.Button38.UseVisualStyleBackColor = False
+        '
+        'TextBox11
+        '
+        Me.TextBox11.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox11.Location = New System.Drawing.Point(27, 58)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(189, 31)
+        Me.TextBox11.TabIndex = 49
+        '
+        'Button39
+        '
+        Me.Button39.BackColor = System.Drawing.Color.Transparent
+        Me.Button39.FlatAppearance.BorderSize = 0
+        Me.Button39.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button39.Image = CType(resources.GetObject("Button39.Image"), System.Drawing.Image)
+        Me.Button39.Location = New System.Drawing.Point(254, 59)
+        Me.Button39.Name = "Button39"
+        Me.Button39.Size = New System.Drawing.Size(34, 31)
+        Me.Button39.TabIndex = 48
+        Me.Button39.UseVisualStyleBackColor = False
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Image = CType(resources.GetObject("Label16.Image"), System.Drawing.Image)
+        Me.Label16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label16.Location = New System.Drawing.Point(23, 28)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(105, 23)
+        Me.Label16.TabIndex = 47
+        Me.Label16.Text = "      Examiner"
+        '
+        'DataGridView2
+        '
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonFace
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
+        Me.DataGridView2.GridColor = System.Drawing.SystemColors.Control
+        Me.DataGridView2.Location = New System.Drawing.Point(27, 109)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView2.Size = New System.Drawing.Size(949, 482)
+        Me.DataGridView2.TabIndex = 14
+        '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
@@ -1255,6 +1257,15 @@ Partial Class Form6
         Me.DataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.DataGridViewTextBoxColumn9.HeaderText = "Office"
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        '
+        'DoubleBitmapControl1
+        '
+        Me.DoubleBitmapControl1.Location = New System.Drawing.Point(1230, 826)
+        Me.DoubleBitmapControl1.Name = "DoubleBitmapControl1"
+        Me.DoubleBitmapControl1.Size = New System.Drawing.Size(75, 23)
+        Me.DoubleBitmapControl1.TabIndex = 34
+        Me.DoubleBitmapControl1.Text = "DoubleBitmapControl1"
+        Me.DoubleBitmapControl1.Visible = False
         '
         'Form6
         '
@@ -1387,4 +1398,5 @@ Partial Class Form6
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DoubleBitmapControl1 As BunifuAnimatorNS.DoubleBitmapControl
 End Class

@@ -49,7 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>F:\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Users\iamSushi\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -78,12 +78,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\register_officer.Designer.vb">
+      <DependentUpon>register_officer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\register_officer.vb" />
+    <Compile Include="Controls\register_person.Designer.vb">
+      <DependentUpon>register_person.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\register_person.vb" />
     <Compile Include="Controls\view_officer.Designer.vb">
       <DependentUpon>view_officer.vb</DependentUpon>
     </Compile>
-    <Compile Include="Controls\view_officer.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="Controls\view_officer.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Controls\register_officer.resx">
+      <DependentUpon>register_officer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\register_person.resx">
+      <DependentUpon>register_person.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\view_officer.resx">
       <DependentUpon>view_officer.vb</DependentUpon>
     </EmbeddedResource>
@@ -186,9 +198,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
