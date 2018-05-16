@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2018 at 02:22 AM
+-- Generation Time: May 16, 2018 at 05:17 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -34,7 +34,8 @@ CREATE TABLE `agency` (
   `address` varchar(50) NOT NULL,
   `mother_unit` varchar(50) NOT NULL,
   `contact_no` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL
+  `email` varchar(50) NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -70,7 +71,8 @@ CREATE TABLE `destinction` (
 CREATE TABLE `dfe` (
   `dfe_id` bigint(20) NOT NULL,
   `lab_case_no` bigint(20) NOT NULL,
-  `type` varchar(20) NOT NULL
+  `type` varchar(20) NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -82,7 +84,8 @@ CREATE TABLE `dfe` (
 CREATE TABLE `evidence` (
   `dfe_id` bigint(20) NOT NULL,
   `type` varchar(20) NOT NULL,
-  `qty` varchar(20) NOT NULL
+  `qty` varchar(20) NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -95,13 +98,14 @@ CREATE TABLE `laboratory_case` (
   `lab_case_no` bigint(20) NOT NULL,
   `lab_case_no_id` varchar(50) NOT NULL,
   `date_received` date NOT NULL,
-  `complainant` bigint(20) NOT NULL,
-  `victim` bigint(20) NOT NULL,
-  `suspect` bigint(20) NOT NULL,
-  `requesting_agency` bigint(20) NOT NULL,
-  `examiner` bigint(20) NOT NULL,
-  `investigator` bigint(20) NOT NULL,
-  `remarks` varchar(50) NOT NULL
+  `complainant` int(20) NOT NULL,
+  `victim` int(20) NOT NULL,
+  `suspect` int(20) NOT NULL,
+  `requesting_agency` int(20) NOT NULL,
+  `examiner` int(20) NOT NULL,
+  `investigator` int(20) NOT NULL,
+  `remarks` varchar(50) NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -120,8 +124,19 @@ CREATE TABLE `officer` (
   `contact` varchar(20) NOT NULL,
   `email` varchar(20) NOT NULL,
   `rank` varchar(20) NOT NULL,
-  `office` varchar(50) NOT NULL
+  `office` varchar(50) NOT NULL,
+  `user` varchar(50) NOT NULL,
+  `pass` varchar(50) NOT NULL,
+  `remark` varchar(50) NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `officer`
+--
+
+INSERT INTO `officer` (`officer_id`, `fname`, `mname`, `sname`, `dob`, `gender`, `contact`, `email`, `rank`, `office`, `user`, `pass`, `remark`, `date_created`) VALUES
+(1, 'joshua', NULL, 'perater', '2018-05-10', 'male', '09169947508', 'jbperater15', 'spo1', 'alagar', 'admin', 'admin', 'secret', '2018-05-16 13:33:24');
 
 -- --------------------------------------------------------
 
@@ -142,6 +157,13 @@ CREATE TABLE `persons` (
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `persons`
+--
+
+INSERT INTO `persons` (`person_id`, `fname`, `mname`, `sname`, `nname`, `dob`, `gender`, `status`, `contact`, `date_created`) VALUES
+(1, 'joshua', 'omagap', 'perater', 'gwapo', '2018-05-22', 'male', 'single', '09169947508', '2018-05-16 12:40:18');
+
 -- --------------------------------------------------------
 
 --
@@ -154,7 +176,8 @@ CREATE TABLE `reports` (
   `date_informed` date NOT NULL,
   `date_released` date NOT NULL,
   `released_by` bigint(20) NOT NULL,
-  `claimed_by` bigint(20) NOT NULL
+  `claimed_by` bigint(20) NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -254,12 +277,12 @@ ALTER TABLE `laboratory_case`
 -- AUTO_INCREMENT for table `officer`
 --
 ALTER TABLE `officer`
-  MODIFY `officer_id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `officer_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `persons`
 --
 ALTER TABLE `persons`
-  MODIFY `person_id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `person_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `reports`
 --
