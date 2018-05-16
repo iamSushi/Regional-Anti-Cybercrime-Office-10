@@ -71,21 +71,9 @@ Public Class Form5
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
-        Try
-            mysqlconn.Open()
-            Dim query As String
-            query = "insert into persons values(null,'" & fname.Text & "','" & mname.Text & "','" & surname.Text & "')"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
 
-            mysqlconn.Close()
-        Catch ex As mysqlException
-
-        End Try
 
     End Sub
 
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles fname.TextChanged
 
-    End Sub
 End Class
