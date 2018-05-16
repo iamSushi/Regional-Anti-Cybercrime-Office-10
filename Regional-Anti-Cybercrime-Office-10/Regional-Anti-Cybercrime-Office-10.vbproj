@@ -78,10 +78,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\view_officer.Designer.vb">
-      <DependentUpon>view_officer.vb</DependentUpon>
+    <Compile Include="Controls\UserControl1.Designer.vb">
+      <DependentUpon>UserControl1.vb</DependentUpon>
     </Compile>
-    <Compile Include="Controls\view_officer.vb">
+    <Compile Include="Controls\UserControl1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UserControl2.Designer.vb">
+      <DependentUpon>UserControl2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserControl2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UserControl3.Designer.vb">
+      <DependentUpon>UserControl3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserControl3.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -144,8 +156,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Controls\view_officer.resx">
-      <DependentUpon>view_officer.vb</DependentUpon>
+    <EmbeddedResource Include="Controls\UserControl1.resx">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UserControl2.resx">
+      <DependentUpon>UserControl2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UserControl3.resx">
+      <DependentUpon>UserControl3.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
