@@ -99,16 +99,13 @@ Partial Class Form5
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-<<<<<<< HEAD
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-=======
 
 
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
 
->>>>>>> 005e8ec5e840af01fc9df72037c3451e8fff1245
+
 
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
