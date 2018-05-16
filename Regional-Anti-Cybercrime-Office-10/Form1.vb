@@ -17,8 +17,6 @@ Public Class Form1
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
 
-
-
             Dim result As Integer
             result = 0
             While reader.Read
