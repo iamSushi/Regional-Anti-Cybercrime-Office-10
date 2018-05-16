@@ -61,7 +61,6 @@ Partial Class Form7
         Me.Button22 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button23 = New System.Windows.Forms.Button()
         Me.Panel4.SuspendLayout()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -377,7 +376,6 @@ Partial Class Form7
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Button23)
         Me.Panel2.Controls.Add(Me.Panel5)
         Me.Panel2.Controls.Add(Me.Button8)
         Me.Panel2.Controls.Add(Me.Button7)
@@ -533,17 +531,6 @@ Partial Class Form7
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'Button23
-        '
-        Me.Button23.FlatAppearance.BorderSize = 0
-        Me.Button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button23.Image = CType(resources.GetObject("Button23.Image"), System.Drawing.Image)
-        Me.Button23.Location = New System.Drawing.Point(0, 346)
-        Me.Button23.Name = "Button23"
-        Me.Button23.Size = New System.Drawing.Size(73, 50)
-        Me.Button23.TabIndex = 8
-        Me.Button23.UseVisualStyleBackColor = True
-        '
         'Form7
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -606,5 +593,4 @@ Partial Class Form7
     Friend WithEvents Button19 As Button
     Friend WithEvents Button26 As Button
     Friend WithEvents Button22 As Button
-    Friend WithEvents Button23 As Button
 End Class
