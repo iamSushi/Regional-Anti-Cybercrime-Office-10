@@ -195,7 +195,11 @@ Partial Class Form3
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+<<<<<<< HEAD
         Me.DataGridView1.Location = New System.Drawing.Point(25, 323)
+=======
+        Me.DataGridView1.Location = New System.Drawing.Point(25, 358)
+>>>>>>> f0d616c663e54d5451e5aff1ea5a1ce30ca52939
         Me.DataGridView1.Name = "DataGridView1"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
@@ -205,7 +209,11 @@ Partial Class Form3
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+<<<<<<< HEAD
         Me.DataGridView1.Size = New System.Drawing.Size(957, 272)
+=======
+        Me.DataGridView1.Size = New System.Drawing.Size(957, 237)
+>>>>>>> f0d616c663e54d5451e5aff1ea5a1ce30ca52939
         Me.DataGridView1.TabIndex = 7
         '
         'DataGridViewTextBoxColumn9
