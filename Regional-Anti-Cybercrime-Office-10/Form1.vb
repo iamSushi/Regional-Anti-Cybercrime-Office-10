@@ -13,7 +13,7 @@ Public Class Form1
         Try
             mysqlconn.Open()
             Dim query As String
-            query = "select * from officer where user ='" & TextBox1.Text & "' and pass ='" & TextBox2.Text & "'"
+            query = "select * from accounts where username ='" & TextBox1.Text & "' and password ='" & TextBox2.Text & "'"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
 

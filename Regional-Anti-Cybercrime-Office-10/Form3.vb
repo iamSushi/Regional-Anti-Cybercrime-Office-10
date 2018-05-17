@@ -1,4 +1,9 @@
-﻿Public Class Form3
+﻿Imports MySql.Data.MySqlClient
+
+Public Class Form3
+    Dim mysqlconn As MySqlConnection
+    Dim command As MySqlCommand
+    Dim reader As MySqlDataReader
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Do While panel_slide.Width < 109
             panel_slide.Width = panel_slide.Width + 1
@@ -105,10 +110,68 @@
 
     Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
         Form8.Show()
- 
+
     End Sub
 
     Private Sub Button31_Click(sender As Object, e As EventArgs) Handles Button31.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            Dim gender As String
+
+
+
+            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "',null,null,null,'" & TextBox6.Text & "','" & TextBox7.Text & "','" & TextBox8.Text & "','" & TextBox10.Text & "','" & TextBox12.Text & "','" & TextBox13.Text & "','',null)"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = Command.ExecuteReader
+            MessageBox.Show("Successful")
+            TextBox2.Text = ""
+            TextBox3.Text = ""
+            TextBox4.Text = ""
+            TextBox5.Text = ""
+            TextBox6.Text = ""
+            DateTimePicker1.Text = ""
+            ComboBox3.Text = ""
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+    Private Sub load_table()
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select lab_case_no_id,date_received,requesting_agency,examiner,investigator,date_occur,time_occur,place_occur from laboratory_case"
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        load_table()
     End Sub
 End Class

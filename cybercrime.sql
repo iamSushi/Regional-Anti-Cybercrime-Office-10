@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2018 at 03:40 PM
+-- Generation Time: May 17, 2018 at 06:12 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -21,6 +21,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `cybercrime`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `accounts`
+--
+
+CREATE TABLE `accounts` (
+  `acc_id` int(11) NOT NULL,
+  `officer_id` int(20) NOT NULL,
+  `position` varchar(20) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `accounts`
+--
+
+INSERT INTO `accounts` (`acc_id`, `officer_id`, `position`, `username`, `password`) VALUES
+(1, 1, 'admin', 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -127,6 +148,13 @@ CREATE TABLE `laboratory_case` (
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `laboratory_case`
+--
+
+INSERT INTO `laboratory_case` (`lab_case_no`, `lab_case_no_id`, `date_received`, `complainant`, `victim`, `suspect`, `requesting_agency`, `examiner`, `investigator`, `date_occur`, `time_occur`, `place_occur`, `remarks`, `date_created`) VALUES
+(1, 'daw', '0000-00-00', NULL, NULL, NULL, 0, 0, 0, '0000-00-00', '00:00:00', 'dadw', '', '2018-05-17 14:27:56');
+
 -- --------------------------------------------------------
 
 --
@@ -223,6 +251,12 @@ CREATE TABLE `reports` (
 --
 
 --
+-- Indexes for table `accounts`
+--
+ALTER TABLE `accounts`
+  ADD PRIMARY KEY (`acc_id`);
+
+--
 -- Indexes for table `agency`
 --
 ALTER TABLE `agency`
@@ -304,6 +338,11 @@ ALTER TABLE `reports`
 --
 
 --
+-- AUTO_INCREMENT for table `accounts`
+--
+ALTER TABLE `accounts`
+  MODIFY `acc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `agency`
 --
 ALTER TABLE `agency`
@@ -327,7 +366,7 @@ ALTER TABLE `facts`
 -- AUTO_INCREMENT for table `laboratory_case`
 --
 ALTER TABLE `laboratory_case`
-  MODIFY `lab_case_no` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `lab_case_no` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `nature`
 --
