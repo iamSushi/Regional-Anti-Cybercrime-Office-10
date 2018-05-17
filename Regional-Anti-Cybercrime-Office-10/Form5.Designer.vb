@@ -92,16 +92,12 @@ Partial Class Form5
         Me.Button35 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-<<<<<<< HEAD
-=======
+
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
 
 
 
-<<<<<<< HEAD
->>>>>>> dcbe7b2c2de02e300dbcc0cd1414153b6ff010e1
-=======
->>>>>>> dcbe7b2c2de02e300dbcc0cd1414153b6ff010e1
+ 
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -967,8 +963,7 @@ Partial Class Form5
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "      Name"
         '
-<<<<<<< HEAD
-=======
+
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize

@@ -149,7 +149,7 @@ Public Class Form5
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
 
-<<<<<<< HEAD
+
     End Sub
 
     Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
@@ -241,7 +241,6 @@ Public Class Form5
         Finally
             mysqlconn.Dispose()
         End Try
-=======
->>>>>>> dcbe7b2c2de02e300dbcc0cd1414153b6ff010e1
+
     End Sub
 End Class
