@@ -97,7 +97,11 @@ Partial Class Form5
 
 
 
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 594b388ea727b0396b3acaa778cdf1e92afdf247
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -972,7 +976,7 @@ Partial Class Form5
         Me.DataGridView1.Size = New System.Drawing.Size(704, 565)
 
         '
->>>>>>> dcbe7b2c2de02e300dbcc0cd1414153b6ff010e1
+
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
