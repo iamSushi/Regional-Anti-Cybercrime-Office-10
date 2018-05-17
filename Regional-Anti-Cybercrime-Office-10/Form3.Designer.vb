@@ -22,9 +22,9 @@ Partial Class Form3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form3))
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -63,6 +63,8 @@ Partial Class Form3
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
         Me.Button38 = New System.Windows.Forms.Button()
         Me.Button39 = New System.Windows.Forms.Button()
         Me.Button37 = New System.Windows.Forms.Button()
@@ -120,8 +122,6 @@ Partial Class Form3
         Me.Button17 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
-        Me.Label18 = New System.Windows.Forms.Label()
         Me.Panel4.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -177,37 +177,16 @@ Partial Class Form3
         'DataGridView1
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.Column1, Me.Column2, Me.Column3, Me.Column4})
-<<<<<<< HEAD
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle5
-        Me.DataGridView1.Location = New System.Drawing.Point(25, 358)
-        Me.DataGridView1.Name = "DataGridView1"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
-        Me.DataGridView1.Size = New System.Drawing.Size(957, 237)
-=======
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -216,7 +195,7 @@ Partial Class Form3
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView1.Location = New System.Drawing.Point(25, 315)
+        Me.DataGridView1.Location = New System.Drawing.Point(25, 358)
         Me.DataGridView1.Name = "DataGridView1"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
@@ -226,8 +205,7 @@ Partial Class Form3
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridView1.Size = New System.Drawing.Size(957, 280)
->>>>>>> 13330eec12620e6810dbf961befed7949f1a6f12
+        Me.DataGridView1.Size = New System.Drawing.Size(957, 237)
         Me.DataGridView1.TabIndex = 7
         '
         'DataGridViewTextBoxColumn9
@@ -587,6 +565,28 @@ Partial Class Form3
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Case"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Image = CType(resources.GetObject("Label18.Image"), System.Drawing.Image)
+        Me.Label18.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label18.Location = New System.Drawing.Point(28, 241)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(64, 23)
+        Me.Label18.TabIndex = 83
+        Me.Label18.Text = "      DFE"
+        '
+        'CheckedListBox1
+        '
+        Me.CheckedListBox1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckedListBox1.FormattingEnabled = True
+        Me.CheckedListBox1.Items.AddRange(New Object() {"Cellphone", "Tablet", "SIM Card", "Secure Digital", "Hard Disk Drive", "Optical Drive", "Desktop", "Loptop", "External Drive", "Universal Serieal Bus", "Digital Video Recorder"})
+        Me.CheckedListBox1.Location = New System.Drawing.Point(196, 241)
+        Me.CheckedListBox1.Name = "CheckedListBox1"
+        Me.CheckedListBox1.Size = New System.Drawing.Size(220, 76)
+        Me.CheckedListBox1.TabIndex = 82
         '
         'Button38
         '
@@ -1234,28 +1234,6 @@ Partial Class Form3
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'CheckedListBox1
-        '
-        Me.CheckedListBox1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckedListBox1.FormattingEnabled = True
-        Me.CheckedListBox1.Items.AddRange(New Object() {"Cellphone", "Tablet", "SIM Card", "Secure Digital", "Hard Disk Drive", "Optical Drive", "Desktop", "Loptop", "External Drive", "Universal Serieal Bus", "Digital Video Recorder"})
-        Me.CheckedListBox1.Location = New System.Drawing.Point(196, 241)
-        Me.CheckedListBox1.Name = "CheckedListBox1"
-        Me.CheckedListBox1.Size = New System.Drawing.Size(220, 76)
-        Me.CheckedListBox1.TabIndex = 82
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Image = CType(resources.GetObject("Label18.Image"), System.Drawing.Image)
-        Me.Label18.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label18.Location = New System.Drawing.Point(28, 241)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(64, 23)
-        Me.Label18.TabIndex = 83
-        Me.Label18.Text = "      DFE"
         '
         'Form3
         '
