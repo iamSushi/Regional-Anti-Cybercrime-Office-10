@@ -82,4 +82,20 @@
             Me.DialogResult = DialogResult.None
         End If
     End Sub
+
+    Private Sub Button32_Click(sender As Object, e As EventArgs) Handles Button32.Click
+        Form8.Show()
+    End Sub
+
+    Private Sub Button36_Click(sender As Object, e As EventArgs) Handles Button36.Click
+        Form9.Show()
+    End Sub
+
+    Private Sub Button28_Click(sender As Object, e As EventArgs) Handles Button28.Click
+        Form8.Show()
+    End Sub
+
+    Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
+        Form8.Show()
+    End Sub
 End Class

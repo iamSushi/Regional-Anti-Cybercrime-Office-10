@@ -105,14 +105,6 @@ Partial Class Form6
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button25 = New System.Windows.Forms.Button()
-        Me.Button37 = New System.Windows.Forms.Button()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -124,8 +116,6 @@ Partial Class Form6
         Me.Panel4.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'panel_slide
@@ -1089,7 +1079,6 @@ Partial Class Form6
         '
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.ItemSize = New System.Drawing.Size(150, 50)
         Me.TabControl1.Location = New System.Drawing.Point(73, 58)
@@ -1098,99 +1087,6 @@ Partial Class Form6
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1012, 672)
         Me.TabControl1.TabIndex = 7
-        '
-        'TabPage3
-        '
-        Me.TabPage3.Controls.Add(Me.GroupBox2)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 54)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1004, 614)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Agency"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.GroupBox2.Controls.Add(Me.Button25)
-        Me.GroupBox2.Controls.Add(Me.Button37)
-        Me.GroupBox2.Controls.Add(Me.TextBox13)
-        Me.GroupBox2.Controls.Add(Me.Label18)
-        Me.GroupBox2.Controls.Add(Me.Label19)
-        Me.GroupBox2.Controls.Add(Me.TextBox14)
-        Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(36, 33)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(925, 253)
-        Me.GroupBox2.TabIndex = 30
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Agency"
-        '
-        'Button25
-        '
-        Me.Button25.BackColor = System.Drawing.Color.Transparent
-        Me.Button25.FlatAppearance.BorderSize = 0
-        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button25.Image = CType(resources.GetObject("Button25.Image"), System.Drawing.Image)
-        Me.Button25.Location = New System.Drawing.Point(427, 102)
-        Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(34, 31)
-        Me.Button25.TabIndex = 33
-        Me.Button25.UseVisualStyleBackColor = False
-        '
-        'Button37
-        '
-        Me.Button37.BackColor = System.Drawing.Color.Transparent
-        Me.Button37.FlatAppearance.BorderSize = 0
-        Me.Button37.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button37.Image = CType(resources.GetObject("Button37.Image"), System.Drawing.Image)
-        Me.Button37.Location = New System.Drawing.Point(427, 51)
-        Me.Button37.Name = "Button37"
-        Me.Button37.Size = New System.Drawing.Size(34, 31)
-        Me.Button37.TabIndex = 32
-        Me.Button37.UseVisualStyleBackColor = False
-        '
-        'TextBox13
-        '
-        Me.TextBox13.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox13.Location = New System.Drawing.Point(192, 52)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(229, 31)
-        Me.TextBox13.TabIndex = 30
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Image = CType(resources.GetObject("Label18.Image"), System.Drawing.Image)
-        Me.Label18.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label18.Location = New System.Drawing.Point(31, 58)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(97, 23)
-        Me.Label18.TabIndex = 28
-        Me.Label18.Text = "      Address"
-        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Image = CType(resources.GetObject("Label19.Image"), System.Drawing.Image)
-        Me.Label19.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label19.Location = New System.Drawing.Point(31, 105)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(34, 23)
-        Me.Label19.TabIndex = 29
-        Me.Label19.Text = "      "
-        '
-        'TextBox14
-        '
-        Me.TextBox14.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox14.Location = New System.Drawing.Point(192, 103)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(229, 31)
-        Me.TextBox14.TabIndex = 31
         '
         'Form6
         '
@@ -1219,9 +1115,6 @@ Partial Class Form6
         Me.Panel4.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
-        Me.TabPage3.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1306,12 +1199,4 @@ Partial Class Form6
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Button25 As Button
-    Friend WithEvents Button37 As Button
-    Friend WithEvents TextBox13 As TextBox
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label19 As Label
-    Friend WithEvents TextBox14 As TextBox
 End Class
