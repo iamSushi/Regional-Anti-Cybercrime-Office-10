@@ -98,7 +98,7 @@ Public Class Form5
 
     End Sub
 
-<<<<<<< HEAD
+
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         Dim dialog As DialogResult
         dialog = MessageBox.Show("Do you really want to exit?", "Exit", MessageBoxButtons.YesNo)
@@ -107,8 +107,6 @@ Public Class Form5
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None
         End If
-=======
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
     End Sub
 
@@ -150,6 +148,6 @@ Public Class Form5
 
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
->>>>>>> 4e1cbbd56b77d06fd6de6bb2fb61372dd6e49da4
+
     End Sub
 End Class
