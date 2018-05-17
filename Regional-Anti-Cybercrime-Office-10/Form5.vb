@@ -87,8 +87,15 @@ Public Class Form5
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
-
-
+            TextBox2.Text = ""
+            TextBox3.Text = ""
+            TextBox4.Text = ""
+            TextBox5.Text = ""
+            TextBox6.Text = ""
+            DateTimePicker1.Text = ""
+            ComboBox3.Text = ""
+            ComboBox1.Text = ""
+            load_table()
             mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show(ex.Message)
@@ -136,6 +143,7 @@ Public Class Form5
 
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
+
 
     End Sub
 
