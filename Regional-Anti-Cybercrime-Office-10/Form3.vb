@@ -83,14 +83,7 @@
         End If
     End Sub
 
-<<<<<<< HEAD
-    Private Sub CheckedListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CheckedListBox1.SelectedIndexChanged
 
-    End Sub
-
-    Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.SelectedIndexChanged
-
-=======
     Private Sub Button32_Click(sender As Object, e As EventArgs) Handles Button32.Click
         Form8.Show()
     End Sub
@@ -105,6 +98,5 @@
 
     Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
         Form8.Show()
->>>>>>> 13330eec12620e6810dbf961befed7949f1a6f12
     End Sub
 End Class
