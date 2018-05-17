@@ -3,6 +3,8 @@
 
 Public Class Form6
     Dim mysqlconn As MySqlConnection
+    Dim command As MySqlCommand
+    Dim reader As MySqlDataReader
 
     Public Sub Button21_Click(sender As Object, e As EventArgs)
         mysqlconn = New MySqlConnection
@@ -88,5 +90,169 @@ Public Class Form6
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None
         End If
+    End Sub
+
+    Private Sub Button22_Click(sender As Object, e As EventArgs) Handles Button22.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            Dim gender As String
+
+            If RadioButton1.Checked = True Then
+                gender = "male"
+            Else
+                gender = "female"
+            End If
+
+            query = "insert into officer values(null,'" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','" & DateTimePicker1.Text & "','" + gender + "','" & TextBox5.Text & "','" & TextBox6.Text & "','" & ComboBox3.Text & "','" & ComboBox4.Text & "','null','null','" & TextBox7.Text & "',null)"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+            MessageBox.Show("Successful")
+            TextBox2.Text = ""
+            TextBox3.Text = ""
+            TextBox4.Text = ""
+            TextBox5.Text = ""
+            TextBox6.Text = ""
+            TextBox7.Text = ""
+            DateTimePicker1.Text = ""
+            ComboBox3.Text = ""
+            ComboBox4.Text = ""
+            load_table()
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub load_table()
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select * from officer"
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select * from officer where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select * from officer where rank = '" & TextBox8.Text & "'"
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select * from officer where office = '" & TextBox9.Text & "'"
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub TextBox9_TextChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        load_table()
+
+
     End Sub
 End Class

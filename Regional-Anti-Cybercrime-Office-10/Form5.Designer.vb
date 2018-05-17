@@ -97,11 +97,7 @@ Partial Class Form5
 
 
 
-<<<<<<< HEAD
- 
-=======
 
->>>>>>> 594b388ea727b0396b3acaa778cdf1e92afdf247
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
