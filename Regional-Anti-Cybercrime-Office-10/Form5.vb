@@ -245,7 +245,7 @@ Public Class Form5
 
     End Sub
 
-    Private Sub Label14_Click(sender As Object, e As EventArgs) Handles Label14.Click
+    Private Sub Label14_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

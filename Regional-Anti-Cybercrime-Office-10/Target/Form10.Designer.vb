@@ -243,7 +243,7 @@ Partial Class Form10
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(665, 760)
+        Me.ClientSize = New System.Drawing.Size(665, 713)
         Me.Controls.Add(Me.TextBox8)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.TextBox7)
@@ -263,6 +263,7 @@ Partial Class Form10
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label5)
         Me.Name = "Form10"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form10"
         Me.ResumeLayout(False)
         Me.PerformLayout()

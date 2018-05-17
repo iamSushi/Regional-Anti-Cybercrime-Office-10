@@ -78,6 +78,9 @@ Partial Class Form7
         Me.Button22 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.Panel4.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -93,7 +96,7 @@ Partial Class Form7
         '
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Panel4.AutoScroll = True
-        Me.Panel4.BackColor = System.Drawing.Color.Transparent
+        Me.Panel4.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Panel4.Controls.Add(Me.Label13)
         Me.Panel4.Controls.Add(Me.Label12)
         Me.Panel4.Controls.Add(Me.Label11)
@@ -107,58 +110,66 @@ Partial Class Form7
         Me.Panel4.Controls.Add(Me.Button23)
         Me.Panel4.Controls.Add(Me.Panel3)
         Me.Panel4.Controls.Add(Me.Button24)
-        Me.Panel4.Location = New System.Drawing.Point(83, 58)
+        Me.Panel4.Location = New System.Drawing.Point(73, 58)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1001, 672)
+        Me.Panel4.Size = New System.Drawing.Size(1011, 672)
         Me.Panel4.TabIndex = 7
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(110, 571)
+        Me.Label13.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(157, 488)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(73, 23)
+        Me.Label13.Size = New System.Drawing.Size(93, 29)
         Me.Label13.TabIndex = 57
         Me.Label13.Text = "Director"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(111, 513)
+        Me.Label12.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label12.Location = New System.Drawing.Point(155, 444)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(89, 23)
+        Me.Label12.Size = New System.Drawing.Size(116, 29)
         Me.Label12.TabIndex = 56
         Me.Label12.Text = "Omamalin"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(110, 451)
+        Me.Label11.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(155, 397)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(170, 23)
+        Me.Label11.Size = New System.Drawing.Size(218, 29)
         Me.Label11.TabIndex = 55
         Me.Label11.Text = "James Kenneth Mark"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(111, 387)
+        Me.Label10.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(155, 351)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(76, 23)
+        Me.Label10.Size = New System.Drawing.Size(99, 29)
         Me.Label10.TabIndex = 54
         Me.Label10.Text = "Sinadjan"
         '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.GroupBox2.Controls.Add(Me.Label16)
+        Me.GroupBox2.Controls.Add(Me.Label15)
+        Me.GroupBox2.Controls.Add(Me.Label14)
         Me.GroupBox2.Controls.Add(Me.Button28)
         Me.GroupBox2.Controls.Add(Me.Button27)
         Me.GroupBox2.Controls.Add(Me.Button25)
         Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.GroupBox2.Location = New System.Drawing.Point(446, 368)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(528, 272)
@@ -168,30 +179,39 @@ Partial Class Form7
         '
         'Button28
         '
-        Me.Button28.Location = New System.Drawing.Point(261, 72)
+        Me.Button28.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Button28.FlatAppearance.BorderSize = 0
+        Me.Button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button28.Image = CType(resources.GetObject("Button28.Image"), System.Drawing.Image)
+        Me.Button28.Location = New System.Drawing.Point(220, 76)
         Me.Button28.Name = "Button28"
-        Me.Button28.Size = New System.Drawing.Size(165, 54)
+        Me.Button28.Size = New System.Drawing.Size(104, 100)
         Me.Button28.TabIndex = 2
-        Me.Button28.Text = "Nature of Case"
-        Me.Button28.UseVisualStyleBackColor = True
+        Me.Button28.UseVisualStyleBackColor = False
         '
         'Button27
         '
-        Me.Button27.Location = New System.Drawing.Point(118, 141)
+        Me.Button27.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Button27.FlatAppearance.BorderSize = 0
+        Me.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button27.Image = CType(resources.GetObject("Button27.Image"), System.Drawing.Image)
+        Me.Button27.Location = New System.Drawing.Point(367, 75)
         Me.Button27.Name = "Button27"
-        Me.Button27.Size = New System.Drawing.Size(120, 54)
+        Me.Button27.Size = New System.Drawing.Size(104, 100)
         Me.Button27.TabIndex = 1
-        Me.Button27.Text = "Facts"
-        Me.Button27.UseVisualStyleBackColor = True
+        Me.Button27.UseVisualStyleBackColor = False
         '
         'Button25
         '
-        Me.Button25.Location = New System.Drawing.Point(118, 73)
+        Me.Button25.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Button25.FlatAppearance.BorderSize = 0
+        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button25.Image = CType(resources.GetObject("Button25.Image"), System.Drawing.Image)
+        Me.Button25.Location = New System.Drawing.Point(73, 75)
         Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(120, 54)
+        Me.Button25.Size = New System.Drawing.Size(104, 100)
         Me.Button25.TabIndex = 0
-        Me.Button25.Text = "Agency"
-        Me.Button25.UseVisualStyleBackColor = True
+        Me.Button25.UseVisualStyleBackColor = False
         '
         'GroupBox1
         '
@@ -211,6 +231,7 @@ Partial Class Form7
         Me.GroupBox1.Controls.Add(Me.TextBox4)
         Me.GroupBox1.Controls.Add(Me.Button19)
         Me.GroupBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.GroupBox1.Location = New System.Drawing.Point(446, 26)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(528, 314)
@@ -259,9 +280,9 @@ Partial Class Form7
         Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button17.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button17.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button17.Location = New System.Drawing.Point(342, 239)
+        Me.Button17.Location = New System.Drawing.Point(350, 239)
         Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(82, 31)
+        Me.Button17.Size = New System.Drawing.Size(74, 31)
         Me.Button17.TabIndex = 39
         Me.Button17.Text = "Save"
         Me.Button17.UseVisualStyleBackColor = False
@@ -283,9 +304,9 @@ Partial Class Form7
         Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button18.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button18.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button18.Location = New System.Drawing.Point(254, 239)
+        Me.Button18.Location = New System.Drawing.Point(270, 239)
         Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(82, 31)
+        Me.Button18.Size = New System.Drawing.Size(74, 31)
         Me.Button18.TabIndex = 40
         Me.Button18.Text = "Clear"
         Me.Button18.UseVisualStyleBackColor = False
@@ -370,7 +391,8 @@ Partial Class Form7
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(85, 543)
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(40, 493)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(49, 23)
         Me.Label9.TabIndex = 51
@@ -380,17 +402,19 @@ Partial Class Form7
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(85, 484)
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(38, 449)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(111, 23)
+        Me.Label8.Size = New System.Drawing.Size(80, 23)
         Me.Label8.TabIndex = 50
-        Me.Label8.Text = "Middlename"
+        Me.Label8.Text = "Surname"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(85, 423)
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(40, 402)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(90, 23)
         Me.Label7.TabIndex = 49
@@ -400,7 +424,8 @@ Partial Class Form7
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(85, 359)
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(40, 356)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(86, 23)
         Me.Label6.TabIndex = 48
@@ -413,7 +438,7 @@ Partial Class Form7
         Me.Button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button23.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button23.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button23.Location = New System.Drawing.Point(160, 293)
+        Me.Button23.Location = New System.Drawing.Point(143, 263)
         Me.Button23.Name = "Button23"
         Me.Button23.Size = New System.Drawing.Size(80, 30)
         Me.Button23.TabIndex = 47
@@ -425,7 +450,7 @@ Partial Class Form7
         Me.Panel3.BackColor = System.Drawing.Color.Transparent
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel3.Controls.Add(Me.PictureBox2)
-        Me.Panel3.Location = New System.Drawing.Point(59, 59)
+        Me.Panel3.Location = New System.Drawing.Point(42, 29)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(225, 225)
         Me.Panel3.TabIndex = 45
@@ -447,7 +472,7 @@ Partial Class Form7
         Me.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button24.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button24.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button24.Location = New System.Drawing.Point(64, 294)
+        Me.Button24.Location = New System.Drawing.Point(47, 264)
         Me.Button24.Name = "Button24"
         Me.Button24.Size = New System.Drawing.Size(85, 30)
         Me.Button24.TabIndex = 46
@@ -468,7 +493,7 @@ Partial Class Form7
         Me.panel_slide.Dock = System.Windows.Forms.DockStyle.Left
         Me.panel_slide.Location = New System.Drawing.Point(73, 58)
         Me.panel_slide.Name = "panel_slide"
-        Me.panel_slide.Size = New System.Drawing.Size(10, 672)
+        Me.panel_slide.Size = New System.Drawing.Size(0, 672)
         Me.panel_slide.TabIndex = 6
         '
         'Button16
@@ -478,7 +503,7 @@ Partial Class Form7
         Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button16.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button16.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button16.Location = New System.Drawing.Point(-99, 575)
+        Me.Button16.Location = New System.Drawing.Point(-109, 575)
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(109, 50)
         Me.Button16.TabIndex = 14
@@ -493,7 +518,7 @@ Partial Class Form7
         Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button15.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button15.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button15.Location = New System.Drawing.Point(-99, 622)
+        Me.Button15.Location = New System.Drawing.Point(-109, 622)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(109, 50)
         Me.Button15.TabIndex = 13
@@ -508,7 +533,7 @@ Partial Class Form7
         Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button14.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button14.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button14.Location = New System.Drawing.Point(-99, 234)
+        Me.Button14.Location = New System.Drawing.Point(-109, 234)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(109, 50)
         Me.Button14.TabIndex = 12
@@ -523,7 +548,7 @@ Partial Class Form7
         Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button13.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button13.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button13.Location = New System.Drawing.Point(-99, 178)
+        Me.Button13.Location = New System.Drawing.Point(-109, 178)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(109, 50)
         Me.Button13.TabIndex = 11
@@ -538,7 +563,7 @@ Partial Class Form7
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button12.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button12.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button12.Location = New System.Drawing.Point(-99, 122)
+        Me.Button12.Location = New System.Drawing.Point(-109, 122)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(109, 50)
         Me.Button12.TabIndex = 10
@@ -553,7 +578,7 @@ Partial Class Form7
         Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button11.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button11.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button11.Location = New System.Drawing.Point(-99, 290)
+        Me.Button11.Location = New System.Drawing.Point(-109, 290)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(109, 50)
         Me.Button11.TabIndex = 9
@@ -568,7 +593,7 @@ Partial Class Form7
         Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button10.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button10.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button10.Location = New System.Drawing.Point(-99, 66)
+        Me.Button10.Location = New System.Drawing.Point(-109, 66)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(109, 50)
         Me.Button10.TabIndex = 8
@@ -582,7 +607,7 @@ Partial Class Form7
         Me.Button9.FlatAppearance.BorderSize = 0
         Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
-        Me.Button9.Location = New System.Drawing.Point(-28, 10)
+        Me.Button9.Location = New System.Drawing.Point(-38, 10)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(32, 31)
         Me.Button9.TabIndex = 8
@@ -746,6 +771,39 @@ Partial Class Form7
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label14.Location = New System.Drawing.Point(89, 180)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(76, 23)
+        Me.Label14.TabIndex = 45
+        Me.Label14.Text = "AGENCY"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label15.Location = New System.Drawing.Point(249, 180)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(50, 23)
+        Me.Label15.TabIndex = 46
+        Me.Label15.Text = "CASE"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label16.Location = New System.Drawing.Point(393, 180)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(58, 23)
+        Me.Label16.TabIndex = 47
+        Me.Label16.Text = "FACTS"
+        '
         'Form7
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -762,6 +820,7 @@ Partial Class Form7
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
@@ -830,4 +889,7 @@ Partial Class Form7
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label14 As Label
 End Class
