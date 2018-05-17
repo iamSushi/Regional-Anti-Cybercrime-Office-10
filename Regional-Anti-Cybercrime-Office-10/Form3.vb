@@ -88,14 +88,6 @@ Public Class Form3
         End If
     End Sub
 
-
-    Private Sub CheckedListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CheckedListBox1.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.SelectedIndexChanged
-
-    End Sub
     Private Sub Button32_Click(sender As Object, e As EventArgs) Handles Button32.Click
         Form8.Show()
     End Sub
@@ -110,6 +102,7 @@ Public Class Form3
 
     Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
         Form8.Show()
+<<<<<<< HEAD
 
     End Sub
 
@@ -174,4 +167,8 @@ Public Class Form3
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
     End Sub
+=======
+    End Sub
+
+>>>>>>> 579ed4e01b1e181e4c257d45ca09b209019d2abc
 End Class

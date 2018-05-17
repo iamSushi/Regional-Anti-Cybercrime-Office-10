@@ -46,7 +46,7 @@ Partial Class Form10
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(40, 63)
+        Me.TextBox2.Location = New System.Drawing.Point(40, 65)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(577, 31)
         Me.TextBox2.TabIndex = 12
@@ -67,7 +67,7 @@ Partial Class Form10
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(40, 222)
+        Me.TextBox1.Location = New System.Drawing.Point(40, 224)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(577, 31)
         Me.TextBox1.TabIndex = 14
@@ -88,7 +88,7 @@ Partial Class Form10
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(40, 301)
+        Me.TextBox3.Location = New System.Drawing.Point(40, 303)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(577, 31)
         Me.TextBox3.TabIndex = 16
@@ -109,7 +109,7 @@ Partial Class Form10
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(40, 385)
+        Me.TextBox4.Location = New System.Drawing.Point(40, 383)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(577, 31)
         Me.TextBox4.TabIndex = 18
@@ -120,7 +120,7 @@ Partial Class Form10
         Me.Label3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Image = CType(resources.GetObject("Label3.Image"), System.Drawing.Image)
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label3.Location = New System.Drawing.Point(32, 359)
+        Me.Label3.Location = New System.Drawing.Point(32, 355)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(101, 23)
         Me.Label3.TabIndex = 17
@@ -130,7 +130,7 @@ Partial Class Form10
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(40, 612)
+        Me.TextBox5.Location = New System.Drawing.Point(40, 614)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(202, 31)
         Me.TextBox5.TabIndex = 20
@@ -179,7 +179,7 @@ Partial Class Form10
         'TextBox6
         '
         Me.TextBox6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(40, 140)
+        Me.TextBox6.Location = New System.Drawing.Point(40, 142)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(577, 31)
         Me.TextBox6.TabIndex = 31
@@ -200,7 +200,7 @@ Partial Class Form10
         'TextBox7
         '
         Me.TextBox7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(40, 463)
+        Me.TextBox7.Location = New System.Drawing.Point(40, 462)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(292, 31)
         Me.TextBox7.TabIndex = 33
@@ -211,7 +211,7 @@ Partial Class Form10
         Me.Label7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Image = CType(resources.GetObject("Label7.Image"), System.Drawing.Image)
         Me.Label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label7.Location = New System.Drawing.Point(36, 437)
+        Me.Label7.Location = New System.Drawing.Point(36, 434)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(124, 23)
         Me.Label7.TabIndex = 32
@@ -232,7 +232,7 @@ Partial Class Form10
         Me.Label8.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Image = CType(resources.GetObject("Label8.Image"), System.Drawing.Image)
         Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label8.Location = New System.Drawing.Point(36, 511)
+        Me.Label8.Location = New System.Drawing.Point(36, 509)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(75, 23)
         Me.Label8.TabIndex = 34
@@ -243,7 +243,7 @@ Partial Class Form10
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(665, 760)
+        Me.ClientSize = New System.Drawing.Size(665, 713)
         Me.Controls.Add(Me.TextBox8)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.TextBox7)
@@ -262,8 +262,10 @@ Partial Class Form10
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label5)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form10"
-        Me.Text = "Form10"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "RACO10"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

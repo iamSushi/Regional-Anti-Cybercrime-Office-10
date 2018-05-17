@@ -220,7 +220,7 @@ Partial Class Form2
         '
         'panel_slide
         '
-        Me.panel_slide.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.panel_slide.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
         Me.panel_slide.Controls.Add(Me.Button16)
         Me.panel_slide.Controls.Add(Me.Button15)
         Me.panel_slide.Controls.Add(Me.Button14)
@@ -232,7 +232,7 @@ Partial Class Form2
         Me.panel_slide.Dock = System.Windows.Forms.DockStyle.Left
         Me.panel_slide.Location = New System.Drawing.Point(73, 58)
         Me.panel_slide.Name = "panel_slide"
-        Me.panel_slide.Size = New System.Drawing.Size(10, 672)
+        Me.panel_slide.Size = New System.Drawing.Size(0, 672)
         Me.panel_slide.TabIndex = 2
         '
         'Button16
@@ -242,7 +242,7 @@ Partial Class Form2
         Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button16.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button16.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button16.Location = New System.Drawing.Point(-99, 575)
+        Me.Button16.Location = New System.Drawing.Point(-109, 575)
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(109, 50)
         Me.Button16.TabIndex = 14
@@ -257,7 +257,7 @@ Partial Class Form2
         Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button15.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button15.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button15.Location = New System.Drawing.Point(-99, 622)
+        Me.Button15.Location = New System.Drawing.Point(-109, 622)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(109, 50)
         Me.Button15.TabIndex = 13
@@ -272,7 +272,7 @@ Partial Class Form2
         Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button14.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button14.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button14.Location = New System.Drawing.Point(-99, 234)
+        Me.Button14.Location = New System.Drawing.Point(-109, 234)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(109, 50)
         Me.Button14.TabIndex = 12
@@ -287,7 +287,7 @@ Partial Class Form2
         Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button13.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button13.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button13.Location = New System.Drawing.Point(-99, 178)
+        Me.Button13.Location = New System.Drawing.Point(-109, 178)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(109, 50)
         Me.Button13.TabIndex = 11
@@ -302,7 +302,7 @@ Partial Class Form2
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button12.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button12.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button12.Location = New System.Drawing.Point(-99, 122)
+        Me.Button12.Location = New System.Drawing.Point(-109, 122)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(109, 50)
         Me.Button12.TabIndex = 10
@@ -317,7 +317,7 @@ Partial Class Form2
         Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button11.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button11.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button11.Location = New System.Drawing.Point(-99, 290)
+        Me.Button11.Location = New System.Drawing.Point(-109, 290)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(109, 50)
         Me.Button11.TabIndex = 9
@@ -332,7 +332,7 @@ Partial Class Form2
         Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button10.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button10.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button10.Location = New System.Drawing.Point(-99, 66)
+        Me.Button10.Location = New System.Drawing.Point(-109, 66)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(109, 50)
         Me.Button10.TabIndex = 8
@@ -346,7 +346,7 @@ Partial Class Form2
         Me.Button9.FlatAppearance.BorderSize = 0
         Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
-        Me.Button9.Location = New System.Drawing.Point(-28, 10)
+        Me.Button9.Location = New System.Drawing.Point(-38, 10)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(32, 31)
         Me.Button9.TabIndex = 8
@@ -404,9 +404,10 @@ Partial Class Form2
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel4)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form2"
+        Me.Text = "RACO10"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
