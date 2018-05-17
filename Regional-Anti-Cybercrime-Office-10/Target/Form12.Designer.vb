@@ -114,9 +114,10 @@ Partial Class Form12
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label5)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form12"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form12"
+        Me.Text = "RACO10"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
