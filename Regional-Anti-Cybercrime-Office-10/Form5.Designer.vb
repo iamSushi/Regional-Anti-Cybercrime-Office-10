@@ -99,14 +99,6 @@ Partial Class Form5
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-
-
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-
-
-
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -1002,7 +994,6 @@ Partial Class Form5
         Me.Column6.HeaderText = "Contact"
         Me.Column6.Name = "Column6"
         '
-
         'Column4
         '
         Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
@@ -1014,11 +1005,6 @@ Partial Class Form5
         Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column5.HeaderText = "d.c"
         Me.Column5.Name = "Column5"
-
-        'Column7
-        '
-
-
         '
         'Form5
         '

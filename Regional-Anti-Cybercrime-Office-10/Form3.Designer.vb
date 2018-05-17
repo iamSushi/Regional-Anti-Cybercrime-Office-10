@@ -30,8 +30,19 @@ Partial Class Form3
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button34 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.UserControl11 = New Regional_Anti_Cybercrime_Office_10.UserControl1()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Button33 = New System.Windows.Forms.Button()
@@ -112,29 +123,18 @@ Partial Class Form3
         Me.Button17 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.UserControl11 = New Regional_Anti_Cybercrime_Office_10.UserControl1()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel4.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel4
@@ -210,6 +210,60 @@ Partial Class Form3
         Me.DataGridView1.Size = New System.Drawing.Size(957, 237)
         Me.DataGridView1.TabIndex = 7
         '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Laboratory Case ID"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.Width = 150
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Date Received"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.Width = 96
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.HeaderText = "Agency"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.Width = 95
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.HeaderText = "Examiner"
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.DataGridViewTextBoxColumn15.Width = 96
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        Me.DataGridViewTextBoxColumn16.HeaderText = "Investigator"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.Width = 95
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "DFE"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Width = 96
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "DO"
+        Me.Column2.Name = "Column2"
+        Me.Column2.Width = 95
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "TO"
+        Me.Column3.Name = "Column3"
+        Me.Column3.Width = 96
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "PO"
+        Me.Column4.Name = "Column4"
+        Me.Column4.Width = 95
+        '
         'Button34
         '
         Me.Button34.BackColor = System.Drawing.Color.Transparent
@@ -255,6 +309,23 @@ Partial Class Form3
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Case"
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.UserControl11)
+        Me.Panel3.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel3.Location = New System.Drawing.Point(219, 222)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(221, 77)
+        Me.Panel3.TabIndex = 65
+        '
+        'UserControl11
+        '
+        Me.UserControl11.Location = New System.Drawing.Point(0, 0)
+        Me.UserControl11.Name = "UserControl11"
+        Me.UserControl11.Size = New System.Drawing.Size(257, 88)
+        Me.UserControl11.TabIndex = 66
         '
         'Label17
         '
@@ -1177,77 +1248,6 @@ Partial Class Form3
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.UserControl11)
-        Me.Panel3.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel3.Location = New System.Drawing.Point(219, 222)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(221, 77)
-        Me.Panel3.TabIndex = 65
-        '
-        'UserControl11
-        '
-        Me.UserControl11.Location = New System.Drawing.Point(0, 0)
-        Me.UserControl11.Name = "UserControl11"
-        Me.UserControl11.Size = New System.Drawing.Size(220, 76)
-        Me.UserControl11.TabIndex = 66
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.HeaderText = "Laboratory Case ID"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.Width = 150
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.HeaderText = "Date Received"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.Width = 96
-        '
-        'DataGridViewTextBoxColumn14
-        '
-        Me.DataGridViewTextBoxColumn14.HeaderText = "Agency"
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        Me.DataGridViewTextBoxColumn14.Width = 95
-        '
-        'DataGridViewTextBoxColumn15
-        '
-        Me.DataGridViewTextBoxColumn15.HeaderText = "Examiner"
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-        Me.DataGridViewTextBoxColumn15.Width = 96
-        '
-        'DataGridViewTextBoxColumn16
-        '
-        Me.DataGridViewTextBoxColumn16.HeaderText = "Investigator"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        Me.DataGridViewTextBoxColumn16.Width = 95
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "DFE"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Width = 96
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "DO"
-        Me.Column2.Name = "Column2"
-        Me.Column2.Width = 95
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "TO"
-        Me.Column3.Name = "Column3"
-        Me.Column3.Width = 96
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "PO"
-        Me.Column4.Name = "Column4"
-        Me.Column4.Width = 95
-        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1268,6 +1268,7 @@ Partial Class Form3
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1276,7 +1277,6 @@ Partial Class Form3
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1367,8 +1367,6 @@ Partial Class Form3
     Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents Button33 As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents UserControl11 As UserControl1
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
@@ -1378,4 +1376,6 @@ Partial Class Form3
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents UserControl11 As UserControl1
 End Class

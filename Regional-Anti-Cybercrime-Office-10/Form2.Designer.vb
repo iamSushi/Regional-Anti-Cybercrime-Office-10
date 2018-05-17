@@ -24,6 +24,7 @@ Partial Class Form2
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button17 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -49,7 +50,6 @@ Partial Class Form2
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button17 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -71,6 +71,17 @@ Partial Class Form2
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1084, 58)
         Me.Panel1.TabIndex = 0
+        '
+        'Button17
+        '
+        Me.Button17.FlatAppearance.BorderSize = 0
+        Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button17.Image = CType(resources.GetObject("Button17.Image"), System.Drawing.Image)
+        Me.Button17.Location = New System.Drawing.Point(1011, 0)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Size = New System.Drawing.Size(73, 58)
+        Me.Button17.TabIndex = 8
+        Me.Button17.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -382,17 +393,6 @@ Partial Class Form2
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 0
         Me.PictureBox2.TabStop = False
-        '
-        'Button17
-        '
-        Me.Button17.FlatAppearance.BorderSize = 0
-        Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button17.Image = CType(resources.GetObject("Button17.Image"), System.Drawing.Image)
-        Me.Button17.Location = New System.Drawing.Point(1011, 0)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(73, 58)
-        Me.Button17.TabIndex = 8
-        Me.Button17.UseVisualStyleBackColor = True
         '
         'Form2
         '

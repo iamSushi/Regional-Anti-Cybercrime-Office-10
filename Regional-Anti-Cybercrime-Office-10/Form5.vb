@@ -90,5 +90,13 @@ Public Class Form5
 
     End Sub
 
-
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Dim dialog As DialogResult
+        dialog = MessageBox.Show("Do you really want to exit?", "Exit", MessageBoxButtons.YesNo)
+        If dialog = DialogResult.Yes Then
+            Application.ExitThread()
+        ElseIf dialog = DialogResult.No Then
+            Me.DialogResult = DialogResult.None
+        End If
+    End Sub
 End Class
