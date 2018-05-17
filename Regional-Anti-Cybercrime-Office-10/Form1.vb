@@ -25,7 +25,7 @@ Public Class Form1
 
             If result = 1 Then
                 Form2.Show()
-
+                Me.Hide()
             Else
                 MessageBox.Show("You Wrong")
             End If
@@ -38,6 +38,7 @@ Public Class Form1
         Finally
             mysqlconn.Dispose()
         End Try
+
 
     End Sub
 
