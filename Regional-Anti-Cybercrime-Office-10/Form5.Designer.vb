@@ -23,7 +23,6 @@ Partial Class Form5
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form5))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panel_slide = New System.Windows.Forms.Panel()
         Me.Button16 = New System.Windows.Forms.Button()
         Me.Button15 = New System.Windows.Forms.Button()
@@ -93,12 +92,15 @@ Partial Class Form5
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+<<<<<<< HEAD
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+=======
+>>>>>>> 4e1cbbd56b77d06fd6de6bb2fb61372dd6e49da4
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -834,6 +836,7 @@ Partial Class Form5
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.DataGridView1)
         Me.TabPage1.Controls.Add(Me.DateTimePicker2)
         Me.TabPage1.Controls.Add(Me.ComboBox2)
         Me.TabPage1.Controls.Add(Me.Button24)
@@ -843,7 +846,6 @@ Partial Class Form5
         Me.TabPage1.Controls.Add(Me.Button35)
         Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Controls.Add(Me.Label2)
-        Me.TabPage1.Controls.Add(Me.DataGridView1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 54)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -958,16 +960,11 @@ Partial Class Form5
         '
         'DataGridView1
         '
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column4, Me.Column5})
-        Me.DataGridView1.GridColor = System.Drawing.SystemColors.Control
-        Me.DataGridView1.Location = New System.Drawing.Point(268, 24)
+        Me.DataGridView1.Location = New System.Drawing.Point(278, 24)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.Size = New System.Drawing.Size(704, 565)
+<<<<<<< HEAD
         Me.DataGridView1.TabIndex = 1
         '
         'Column1
@@ -1005,6 +1002,9 @@ Partial Class Form5
         Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column5.HeaderText = "d.c"
         Me.Column5.Name = "Column5"
+=======
+        Me.DataGridView1.TabIndex = 56
+>>>>>>> 4e1cbbd56b77d06fd6de6bb2fb61372dd6e49da4
         '
         'Form5
         '
@@ -1060,7 +1060,6 @@ Partial Class Form5
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Button22 As Button
     Friend WithEvents GroupBox1 As GroupBox
@@ -1105,10 +1104,5 @@ Partial Class Form5
     Friend WithEvents Label4 As Label
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

@@ -75,7 +75,15 @@ Public Class Form5
             mysqlconn.Open()
 
             Dim query As String
-            query = "insert into persons values(null,'" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','null','" & DateTimePicker1.Text & "','male','" & ComboBox3.Text & "','" & TextBox5.Text & "','" & TextBox6.Text & "','" & ComboBox1.Text & "',null)"
+            Dim gender As String
+
+            If RadioButton1.Checked = True Then
+                gender = "male"
+            Else
+                gender = "female"
+            End If
+
+            query = "insert into persons values(null,'" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','null','" & DateTimePicker1.Text & "','" + gender + "','" & ComboBox3.Text & "','" & TextBox5.Text & "','" & TextBox6.Text & "','" & ComboBox1.Text & "',null)"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
@@ -90,6 +98,7 @@ Public Class Form5
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         Dim dialog As DialogResult
         dialog = MessageBox.Show("Do you really want to exit?", "Exit", MessageBoxButtons.YesNo)
@@ -98,5 +107,49 @@ Public Class Form5
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None
         End If
+=======
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
+
+    Private Sub load_table()
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select * from persons"
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        load_table()
+>>>>>>> 4e1cbbd56b77d06fd6de6bb2fb61372dd6e49da4
     End Sub
 End Class
