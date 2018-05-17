@@ -92,12 +92,7 @@ Partial Class Form5
         Me.Button35 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-
-
-
-
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -418,6 +413,7 @@ Partial Class Form5
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Label14)
         Me.TabPage2.Controls.Add(Me.GroupBox1)
         Me.TabPage2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPage2.Location = New System.Drawing.Point(4, 54)
@@ -925,9 +921,9 @@ Partial Class Form5
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label4.Location = New System.Drawing.Point(24, 98)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(103, 23)
+        Me.Label4.Size = New System.Drawing.Size(118, 23)
         Me.Label4.TabIndex = 14
-        Me.Label4.Text = "      Category"
+        Me.Label4.Text = "      Distinction"
         '
         'Button35
         '
@@ -963,16 +959,15 @@ Partial Class Form5
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "      Name"
         '
-
-        'DataGridView1
+        'Label14
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(278, 24)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(704, 565)
-
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(81, 66)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(45, 13)
+        Me.Label14.TabIndex = 22
+        Me.Label14.Text = "Label14"
         '
-
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -993,6 +988,7 @@ Partial Class Form5
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.Panel4.ResumeLayout(False)
@@ -1072,4 +1068,5 @@ Partial Class Form5
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Label14 As Label
 End Class
