@@ -90,7 +90,7 @@
 
     Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.SelectedIndexChanged
 
-
+    End Sub
     Private Sub Button32_Click(sender As Object, e As EventArgs) Handles Button32.Click
         Form8.Show()
     End Sub

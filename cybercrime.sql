@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2018 at 05:17 PM
+-- Generation Time: May 17, 2018 at 03:40 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -31,7 +31,11 @@ SET time_zone = "+00:00";
 CREATE TABLE `agency` (
   `agency_id` bigint(20) NOT NULL,
   `name` varchar(50) NOT NULL,
-  `address` varchar(50) NOT NULL,
+  `street1` varchar(20) DEFAULT NULL,
+  `street2` varchar(20) DEFAULT NULL,
+  `city` varchar(20) NOT NULL,
+  `province` varchar(20) NOT NULL,
+  `postal` varchar(20) NOT NULL,
   `mother_unit` varchar(50) NOT NULL,
   `contact_no` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -91,6 +95,18 @@ CREATE TABLE `evidence` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `facts`
+--
+
+CREATE TABLE `facts` (
+  `fact_no` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `remarks` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `laboratory_case`
 --
 
@@ -98,14 +114,29 @@ CREATE TABLE `laboratory_case` (
   `lab_case_no` bigint(20) NOT NULL,
   `lab_case_no_id` varchar(50) NOT NULL,
   `date_received` date NOT NULL,
-  `complainant` int(20) NOT NULL,
-  `victim` int(20) NOT NULL,
-  `suspect` int(20) NOT NULL,
-  `requesting_agency` int(20) NOT NULL,
-  `examiner` int(20) NOT NULL,
-  `investigator` int(20) NOT NULL,
-  `remarks` varchar(50) NOT NULL,
+  `complainant` int(20) DEFAULT NULL,
+  `victim` int(20) DEFAULT NULL,
+  `suspect` int(20) DEFAULT NULL,
+  `requesting_agency` int(20) DEFAULT NULL,
+  `examiner` int(20) DEFAULT NULL,
+  `investigator` int(20) DEFAULT NULL,
+  `date_occur` date NOT NULL,
+  `time_occur` time NOT NULL,
+  `place_occur` varchar(50) NOT NULL,
+  `remarks` varchar(50) DEFAULT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nature`
+--
+
+CREATE TABLE `nature` (
+  `nature_no` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `remarks` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -136,7 +167,9 @@ CREATE TABLE `officer` (
 --
 
 INSERT INTO `officer` (`officer_id`, `fname`, `mname`, `sname`, `dob`, `gender`, `contact`, `email`, `rank`, `office`, `user`, `pass`, `remark`, `date_created`) VALUES
-(1, 'joshua', NULL, 'perater', '2018-05-10', 'male', '09169947508', 'jbperater15', 'spo1', 'alagar', 'admin', 'admin', 'secret', '2018-05-16 13:33:24');
+(1, 'joshua', NULL, 'perater', '2018-05-10', 'male', '09169947508', 'jbperater15', 'spo1', 'alagar', 'admin', 'admin', 'secret', '2018-05-16 13:33:24'),
+(2, 'aw', 'saw', 'daw', '0000-00-00', 'female', 'daw', 'sa', 'dawd', 'awd', 'null', 'null', 'dawdad', '2018-05-17 07:15:17'),
+(3, 'dawdaw', 'dwwa', 'aws', '0000-00-00', 'female', 'wda', 'awd', 'dawd', 'ada', 'null', 'null', 'dawdaw', '2018-05-17 07:17:01');
 
 -- --------------------------------------------------------
 
@@ -149,11 +182,13 @@ CREATE TABLE `persons` (
   `fname` varchar(50) NOT NULL,
   `mname` varchar(20) DEFAULT NULL,
   `sname` varchar(20) NOT NULL,
-  `nname` varchar(20) NOT NULL,
+  `nname` varchar(20) DEFAULT NULL,
   `dob` date NOT NULL,
   `gender` varchar(20) NOT NULL,
   `status` varchar(20) NOT NULL,
   `contact` varchar(20) DEFAULT NULL,
+  `email` varchar(20) DEFAULT NULL,
+  `category` varchar(20) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -161,8 +196,11 @@ CREATE TABLE `persons` (
 -- Dumping data for table `persons`
 --
 
-INSERT INTO `persons` (`person_id`, `fname`, `mname`, `sname`, `nname`, `dob`, `gender`, `status`, `contact`, `date_created`) VALUES
-(1, 'joshua', 'omagap', 'perater', 'gwapo', '2018-05-22', 'male', 'single', '09169947508', '2018-05-16 12:40:18');
+INSERT INTO `persons` (`person_id`, `fname`, `mname`, `sname`, `nname`, `dob`, `gender`, `status`, `contact`, `email`, `category`, `date_created`) VALUES
+(1, 'joshua', 'omagap', 'perater', 'gwapo', '2018-05-22', 'male', 'single', '09169947508', NULL, '', '2018-05-16 12:40:18'),
+(2, 'sample', 'lang', 'ni', 'null', '0000-00-00', 'male', 'Single', '09169947508', 'try@gmail.com', 'Complainant', '2018-05-16 16:03:41'),
+(3, 'sakura', '', 'Uchiha', 'null', '0000-00-00', 'female', 'Married', '0316495', 'sakura@gmail.com', 'Victim', '2018-05-16 17:17:23'),
+(4, 'dawd', 'dawd', 'adwda', 'null', '0000-00-00', 'female', 'Widowed', 'daw', 'awd', 'Victim', '2018-05-17 07:22:25');
 
 -- --------------------------------------------------------
 
@@ -217,6 +255,12 @@ ALTER TABLE `evidence`
   ADD KEY `dfe_id` (`dfe_id`);
 
 --
+-- Indexes for table `facts`
+--
+ALTER TABLE `facts`
+  ADD PRIMARY KEY (`fact_no`);
+
+--
 -- Indexes for table `laboratory_case`
 --
 ALTER TABLE `laboratory_case`
@@ -227,6 +271,12 @@ ALTER TABLE `laboratory_case`
   ADD KEY `requesting_agency` (`requesting_agency`),
   ADD KEY `examiner` (`examiner`),
   ADD KEY `investigator` (`investigator`);
+
+--
+-- Indexes for table `nature`
+--
+ALTER TABLE `nature`
+  ADD PRIMARY KEY (`nature_no`);
 
 --
 -- Indexes for table `officer`
@@ -269,20 +319,30 @@ ALTER TABLE `destinction`
 ALTER TABLE `dfe`
   MODIFY `dfe_id` bigint(20) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `facts`
+--
+ALTER TABLE `facts`
+  MODIFY `fact_no` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `laboratory_case`
 --
 ALTER TABLE `laboratory_case`
   MODIFY `lab_case_no` bigint(20) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `nature`
+--
+ALTER TABLE `nature`
+  MODIFY `nature_no` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `officer`
 --
 ALTER TABLE `officer`
-  MODIFY `officer_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `officer_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `persons`
 --
 ALTER TABLE `persons`
-  MODIFY `person_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `person_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `reports`
 --
