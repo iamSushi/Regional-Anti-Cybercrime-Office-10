@@ -70,11 +70,11 @@ Public Class Form3
 
     End Sub
 
-    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+    Private Sub Label9_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
     End Sub
 
@@ -88,25 +88,23 @@ Public Class Form3
         End If
     End Sub
 
-    Private Sub Button32_Click(sender As Object, e As EventArgs) Handles Button32.Click
+    Private Sub Button32_Click(sender As Object, e As EventArgs)
         Form8.Show()
     End Sub
 
-    Private Sub Button36_Click(sender As Object, e As EventArgs) Handles Button36.Click
+    Private Sub Button36_Click(sender As Object, e As EventArgs)
         Form9.Show()
     End Sub
 
-    Private Sub Button28_Click(sender As Object, e As EventArgs) Handles Button28.Click
+    Private Sub Button28_Click(sender As Object, e As EventArgs)
         Form8.Show()
     End Sub
 
-    Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
+    Private Sub Button21_Click(sender As Object, e As EventArgs)
         Form8.Show()
-<<<<<<< HEAD
-
     End Sub
 
-    Private Sub Button31_Click(sender As Object, e As EventArgs) Handles Button31.Click
+    Private Sub Button31_Click(sender As Object, e As EventArgs)
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
@@ -114,13 +112,10 @@ Public Class Form3
             mysqlconn.Open()
 
             Dim query As String
-            Dim gender As String
-
-
 
             query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "',null,null,null,'" & TextBox6.Text & "','" & TextBox7.Text & "','" & TextBox8.Text & "','" & TextBox10.Text & "','" & TextBox12.Text & "','" & TextBox13.Text & "','',null)"
             command = New MySqlCommand(query, mysqlconn)
-            reader = Command.ExecuteReader
+            reader = command.ExecuteReader
             MessageBox.Show("Successful")
             TextBox2.Text = ""
             TextBox3.Text = ""
@@ -167,8 +162,5 @@ Public Class Form3
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
     End Sub
-=======
-    End Sub
 
->>>>>>> 579ed4e01b1e181e4c257d45ca09b209019d2abc
 End Class
