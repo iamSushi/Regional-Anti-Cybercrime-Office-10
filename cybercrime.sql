@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2018 at 06:12 PM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- Generation Time: May 23, 2018 at 08:13 AM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -52,11 +52,10 @@ INSERT INTO `accounts` (`acc_id`, `officer_id`, `position`, `username`, `passwor
 CREATE TABLE `agency` (
   `agency_id` bigint(20) NOT NULL,
   `name` varchar(50) NOT NULL,
-  `street1` varchar(20) DEFAULT NULL,
-  `street2` varchar(20) DEFAULT NULL,
+  `street` varchar(20) DEFAULT NULL,
+  `barangay` varchar(20) DEFAULT NULL,
   `city` varchar(20) NOT NULL,
   `province` varchar(20) NOT NULL,
-  `postal` varchar(20) NOT NULL,
   `mother_unit` varchar(50) NOT NULL,
   `contact_no` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -158,6 +157,19 @@ INSERT INTO `laboratory_case` (`lab_case_no`, `lab_case_no_id`, `date_received`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `law`
+--
+
+CREATE TABLE `law` (
+  `law_id` bigint(20) NOT NULL,
+  `designation` varchar(50) NOT NULL,
+  `date_passed` date NOT NULL,
+  `description` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `nature`
 --
 
@@ -197,7 +209,11 @@ CREATE TABLE `officer` (
 INSERT INTO `officer` (`officer_id`, `fname`, `mname`, `sname`, `dob`, `gender`, `contact`, `email`, `rank`, `office`, `user`, `pass`, `remark`, `date_created`) VALUES
 (1, 'joshua', NULL, 'perater', '2018-05-10', 'male', '09169947508', 'jbperater15', 'spo1', 'alagar', 'admin', 'admin', 'secret', '2018-05-16 13:33:24'),
 (2, 'aw', 'saw', 'daw', '0000-00-00', 'female', 'daw', 'sa', 'dawd', 'awd', 'null', 'null', 'dawdad', '2018-05-17 07:15:17'),
-(3, 'dawdaw', 'dwwa', 'aws', '0000-00-00', 'female', 'wda', 'awd', 'dawd', 'ada', 'null', 'null', 'dawdaw', '2018-05-17 07:17:01');
+(3, 'dawdaw', 'dwwa', 'aws', '0000-00-00', 'female', 'wda', 'awd', 'dawd', 'ada', 'null', 'null', 'dawdaw', '2018-05-17 07:17:01'),
+(4, '', '', '', '0000-00-00', 'female', '', '', '', '', 'null', 'null', '', '2018-05-22 02:15:56'),
+(5, 'James', 'Sinadjan', '', '0000-00-00', 'female', '', '', '', '', 'null', 'null', '', '2018-05-22 02:16:05'),
+(6, 'Jhon', 'Doe', 'Dee', '0000-00-00', 'male', '', '', '', '', 'null', 'null', '', '2018-05-22 02:16:36'),
+(7, 'Uzumaki', 'Secreto', 'Naruto', '0000-00-00', 'female', '', '', 'Police Officer 3', '', 'null', 'null', '', '2018-05-22 08:09:45');
 
 -- --------------------------------------------------------
 
@@ -228,7 +244,21 @@ INSERT INTO `persons` (`person_id`, `fname`, `mname`, `sname`, `nname`, `dob`, `
 (1, 'joshua', 'omagap', 'perater', 'gwapo', '2018-05-22', 'male', 'single', '09169947508', NULL, '', '2018-05-16 12:40:18'),
 (2, 'sample', 'lang', 'ni', 'null', '0000-00-00', 'male', 'Single', '09169947508', 'try@gmail.com', 'Complainant', '2018-05-16 16:03:41'),
 (3, 'sakura', '', 'Uchiha', 'null', '0000-00-00', 'female', 'Married', '0316495', 'sakura@gmail.com', 'Victim', '2018-05-16 17:17:23'),
-(4, 'dawd', 'dawd', 'adwda', 'null', '0000-00-00', 'female', 'Widowed', 'daw', 'awd', 'Victim', '2018-05-17 07:22:25');
+(4, 'dawd', 'dawd', 'adwda', 'null', '0000-00-00', 'female', 'Widowed', 'daw', 'awd', 'Victim', '2018-05-17 07:22:25'),
+(5, 'Yunnah', 'Chuyy', 'Masaya', 'null', '0000-00-00', 'male', '', '', '', '', '2018-05-22 02:17:17'),
+(6, 'fbhdfbj', 'vxdbxd', 'bxdc', 'null', '0000-00-00', 'female', 'Divorced', 'xbxd', 'vxdvxd', 'Complainant', '2018-05-22 08:03:06');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rank`
+--
+
+CREATE TABLE `rank` (
+  `rank_id` bigint(20) NOT NULL,
+  `rank` varchar(50) NOT NULL,
+  `date_created` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -307,6 +337,12 @@ ALTER TABLE `laboratory_case`
   ADD KEY `investigator` (`investigator`);
 
 --
+-- Indexes for table `law`
+--
+ALTER TABLE `law`
+  ADD PRIMARY KEY (`law_id`);
+
+--
 -- Indexes for table `nature`
 --
 ALTER TABLE `nature`
@@ -323,6 +359,12 @@ ALTER TABLE `officer`
 --
 ALTER TABLE `persons`
   ADD PRIMARY KEY (`person_id`);
+
+--
+-- Indexes for table `rank`
+--
+ALTER TABLE `rank`
+  ADD PRIMARY KEY (`rank_id`);
 
 --
 -- Indexes for table `reports`
@@ -342,51 +384,73 @@ ALTER TABLE `reports`
 --
 ALTER TABLE `accounts`
   MODIFY `acc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `agency`
 --
 ALTER TABLE `agency`
   MODIFY `agency_id` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `destinction`
 --
 ALTER TABLE `destinction`
   MODIFY `destinct_id` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `dfe`
 --
 ALTER TABLE `dfe`
   MODIFY `dfe_id` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `facts`
 --
 ALTER TABLE `facts`
   MODIFY `fact_no` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `laboratory_case`
 --
 ALTER TABLE `laboratory_case`
   MODIFY `lab_case_no` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `law`
+--
+ALTER TABLE `law`
+  MODIFY `law_id` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `nature`
 --
 ALTER TABLE `nature`
   MODIFY `nature_no` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `officer`
 --
 ALTER TABLE `officer`
-  MODIFY `officer_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `officer_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT for table `persons`
 --
 ALTER TABLE `persons`
-  MODIFY `person_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `person_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `rank`
+--
+ALTER TABLE `rank`
+  MODIFY `rank_id` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `reports`
 --
 ALTER TABLE `reports`
-  MODIFY `report_id` bigint(20) NOT NULL AUTO_INCREMENT;COMMIT;
+  MODIFY `report_id` bigint(20) NOT NULL AUTO_INCREMENT;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

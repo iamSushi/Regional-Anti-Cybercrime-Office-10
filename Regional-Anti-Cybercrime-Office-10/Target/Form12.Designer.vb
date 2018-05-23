@@ -23,27 +23,13 @@ Partial Class Form12
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form12))
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button22 = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(138, 389)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(96, 30)
-        Me.Button1.TabIndex = 43
-        Me.Button1.Text = "Clear"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'Button22
         '
@@ -54,7 +40,7 @@ Partial Class Form12
         Me.Button22.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button22.Location = New System.Drawing.Point(32, 389)
         Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(96, 30)
+        Me.Button22.Size = New System.Drawing.Size(88, 30)
         Me.Button22.TabIndex = 42
         Me.Button22.Text = "Save"
         Me.Button22.UseVisualStyleBackColor = False
@@ -103,6 +89,20 @@ Partial Class Form12
         Me.Label5.Text = "      Name"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(130, 389)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(84, 30)
+        Me.Button1.TabIndex = 43
+        Me.Button1.Text = "View"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Form12
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -122,11 +122,10 @@ Partial Class Form12
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Button1 As Button
     Friend WithEvents Button22 As Button
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents Button1 As Button
 End Class

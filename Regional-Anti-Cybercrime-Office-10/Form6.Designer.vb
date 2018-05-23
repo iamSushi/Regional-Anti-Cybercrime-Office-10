@@ -703,7 +703,7 @@ Partial Class Form6
         Me.Button34.FlatAppearance.BorderSize = 0
         Me.Button34.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button34.Image = CType(resources.GetObject("Button34.Image"), System.Drawing.Image)
-        Me.Button34.Location = New System.Drawing.Point(594, 297)
+        Me.Button34.Location = New System.Drawing.Point(596, 296)
         Me.Button34.Name = "Button34"
         Me.Button34.Size = New System.Drawing.Size(34, 31)
         Me.Button34.TabIndex = 23
@@ -870,11 +870,11 @@ Partial Class Form6
         'TextBox7
         '
         Me.TextBox7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(499, 328)
+        Me.TextBox7.Location = New System.Drawing.Point(501, 333)
         Me.TextBox7.Multiline = True
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox7.Size = New System.Drawing.Size(423, 157)
+        Me.TextBox7.Size = New System.Drawing.Size(423, 179)
         Me.TextBox7.TabIndex = 22
         '
         'TextBox2
@@ -904,7 +904,7 @@ Partial Class Form6
         Me.Label14.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Image = CType(resources.GetObject("Label14.Image"), System.Drawing.Image)
         Me.Label14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label14.Location = New System.Drawing.Point(495, 302)
+        Me.Label14.Location = New System.Drawing.Point(497, 301)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(101, 23)
         Me.Label14.TabIndex = 20

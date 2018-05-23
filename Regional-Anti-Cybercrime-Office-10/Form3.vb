@@ -113,7 +113,7 @@ Public Class Form3
 
             Dim query As String
 
-            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "',null,null,null,'" & TextBox6.Text & "','" & TextBox7.Text & "','" & TextBox8.Text & "','" & DateTimePicker2.Text & "','" & TextBox12.Text & "','" & TextBox13.Text & "','',null)"
+            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "',null,null,null,'" & TextBox6.Text & "','" & TextBox7.Text & "','" & TextBox8.Text & "','" & DateTimePicker2.Text & "','" & ComboBox13.Text & "','" & TextBox13.Text & "','',null)"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
@@ -178,4 +178,6 @@ Public Class Form3
     Private Sub Button21_Click_1(sender As Object, e As EventArgs) Handles Button21.Click
         Form8.Show()
     End Sub
+
+
 End Class

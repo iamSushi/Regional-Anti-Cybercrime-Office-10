@@ -86,9 +86,9 @@ Partial Class Form11
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button1.Location = New System.Drawing.Point(139, 448)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(96, 30)
+        Me.Button1.Size = New System.Drawing.Size(84, 30)
         Me.Button1.TabIndex = 37
-        Me.Button1.Text = "Clear"
+        Me.Button1.Text = "View"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Button22

@@ -72,14 +72,18 @@
     End Sub
 
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
-        Form13.Show()
+        Form10.Show()
     End Sub
 
     Private Sub Button28_Click(sender As Object, e As EventArgs) Handles Button28.Click
-        Form14.Show()
+        Form11.Show()
     End Sub
 
     Private Sub Button27_Click(sender As Object, e As EventArgs) Handles Button27.Click
-        Form15.Show()
+        Form12.Show()
+    End Sub
+
+    Private Sub Button23_Click(sender As Object, e As EventArgs) Handles Button23.Click
+        Form16.Show()
     End Sub
 End Class

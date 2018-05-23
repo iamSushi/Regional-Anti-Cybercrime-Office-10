@@ -189,7 +189,7 @@ Partial Class Form8
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(684, 491)
+        Me.ClientSize = New System.Drawing.Size(689, 491)
         Me.Controls.Add(Me.DateTimePicker2)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.Button24)
