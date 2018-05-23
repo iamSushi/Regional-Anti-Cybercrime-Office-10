@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2018 at 08:13 AM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.2
+-- Generation Time: May 23, 2018 at 07:41 PM
+-- Server version: 10.1.25-MariaDB
+-- PHP Version: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -61,6 +61,13 @@ CREATE TABLE `agency` (
   `email` varchar(50) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `agency`
+--
+
+INSERT INTO `agency` (`agency_id`, `name`, `street`, `barangay`, `city`, `province`, `mother_unit`, `contact_no`, `email`, `date_created`) VALUES
+(1, 'dawddawd', 'dawd', 'dawd', 'dawd', 'dawd', 'awd', 'dawd', 'da', '2018-05-23 17:00:51');
 
 -- --------------------------------------------------------
 
@@ -121,8 +128,16 @@ CREATE TABLE `evidence` (
 CREATE TABLE `facts` (
   `fact_no` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
-  `remarks` longtext NOT NULL
+  `remarks` longtext NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `facts`
+--
+
+INSERT INTO `facts` (`fact_no`, `name`, `remarks`, `date_created`) VALUES
+(1, 'fwfwaf', 'fwafawf', '2018-05-23 16:46:48');
 
 -- --------------------------------------------------------
 
@@ -176,8 +191,17 @@ CREATE TABLE `law` (
 CREATE TABLE `nature` (
   `nature_no` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
-  `remarks` longtext NOT NULL
+  `date_passed` date NOT NULL,
+  `remark` varchar(50) NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `nature`
+--
+
+INSERT INTO `nature` (`nature_no`, `name`, `date_passed`, `remark`, `date_created`) VALUES
+(1, 'dawd', '0000-00-00', 'dawd', '2018-05-23 17:39:48');
 
 -- --------------------------------------------------------
 
@@ -257,8 +281,16 @@ INSERT INTO `persons` (`person_id`, `fname`, `mname`, `sname`, `nname`, `dob`, `
 CREATE TABLE `rank` (
   `rank_id` bigint(20) NOT NULL,
   `rank` varchar(50) NOT NULL,
-  `date_created` date NOT NULL
+  `abbreviation` varchar(50) NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rank`
+--
+
+INSERT INTO `rank` (`rank_id`, `rank`, `abbreviation`, `date_created`) VALUES
+(1, 'dawd', 'dawd', '2018-05-23 17:29:27');
 
 -- --------------------------------------------------------
 
@@ -384,73 +416,61 @@ ALTER TABLE `reports`
 --
 ALTER TABLE `accounts`
   MODIFY `acc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `agency`
 --
 ALTER TABLE `agency`
-  MODIFY `agency_id` bigint(20) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `agency_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `destinction`
 --
 ALTER TABLE `destinction`
   MODIFY `destinct_id` bigint(20) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `dfe`
 --
 ALTER TABLE `dfe`
   MODIFY `dfe_id` bigint(20) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `facts`
 --
 ALTER TABLE `facts`
-  MODIFY `fact_no` int(11) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `fact_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `laboratory_case`
 --
 ALTER TABLE `laboratory_case`
   MODIFY `lab_case_no` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `law`
 --
 ALTER TABLE `law`
   MODIFY `law_id` bigint(20) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `nature`
 --
 ALTER TABLE `nature`
-  MODIFY `nature_no` int(11) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `nature_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `officer`
 --
 ALTER TABLE `officer`
   MODIFY `officer_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
 --
 -- AUTO_INCREMENT for table `persons`
 --
 ALTER TABLE `persons`
   MODIFY `person_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `rank`
 --
 ALTER TABLE `rank`
-  MODIFY `rank_id` bigint(20) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `rank_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `reports`
 --
 ALTER TABLE `reports`
-  MODIFY `report_id` bigint(20) NOT NULL AUTO_INCREMENT;
-COMMIT;
+  MODIFY `report_id` bigint(20) NOT NULL AUTO_INCREMENT;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

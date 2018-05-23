@@ -17,7 +17,7 @@ Public Class Form10
 
             Dim query As String
 
-            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & TextBox6.Text & "','" & TextBox1.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','" & TextBox7.Text & "','" & TextBox8.Text & "','" & TextBox5.Text & "',null)"
+            query = "insert into agency values(null,'" & TextBox2.Text & "','" & TextBox6.Text & "','" & TextBox1.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','" & TextBox7.Text & "','" & TextBox8.Text & "','" & TextBox5.Text & "',null)"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successfully Add an Agency")
