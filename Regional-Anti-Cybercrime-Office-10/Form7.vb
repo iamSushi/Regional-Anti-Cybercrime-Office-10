@@ -86,4 +86,8 @@
     Private Sub Button23_Click(sender As Object, e As EventArgs) Handles Button23.Click
         Form16.Show()
     End Sub
+
+    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
+
+    End Sub
 End Class
