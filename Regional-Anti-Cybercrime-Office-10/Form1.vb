@@ -38,7 +38,7 @@ Public Class Form1
         Finally
             mysqlconn.Dispose()
         End Try
-
+        Form2.Show()
 
     End Sub
 
