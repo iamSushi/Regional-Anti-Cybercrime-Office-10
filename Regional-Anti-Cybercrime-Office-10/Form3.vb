@@ -164,6 +164,12 @@ Public Class Form3
         load_table()
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
 
         Try
             mysqlconn.Open()
@@ -251,6 +257,85 @@ Public Class Form3
         Finally
             mysqlconn.Dispose()
         End Try
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select nature_no as Id , name as Name from nature"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            Dim comboSource As New Dictionary(Of String, String)()
+
+            While reader.Read
+                Dim name = reader.GetString("name")
+                Dim id = reader.GetString("id")
+                comboSource.Add(id, name)
+            End While
+            ComboBox16.DataSource = New BindingSource(comboSource, Nothing)
+            ComboBox16.DisplayMember = "Value"
+            ComboBox16.ValueMember = "Key"
+
+            Dim agency As String = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select fact_no as Id , name as Name from facts"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            Dim comboSource As New Dictionary(Of String, String)()
+
+            While reader.Read
+                Dim name = reader.GetString("name")
+                Dim id = reader.GetString("id")
+                comboSource.Add(id, name)
+            End While
+            ComboBox13.DataSource = New BindingSource(comboSource, Nothing)
+            ComboBox13.DisplayMember = "Value"
+            ComboBox13.ValueMember = "Key"
+
+            Dim agency As String = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select * from laboratory_case"
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
     End Sub
 
     Private Sub Button32_Click_1(sender As Object, e As EventArgs) Handles Button32.Click
@@ -266,7 +351,7 @@ Public Class Form3
     End Sub
 
     Private Sub Button21_Click_1(sender As Object, e As EventArgs) Handles Button21.Click
-        Form8.Show()
+        Form18.Show()
     End Sub
 
     Private Sub Button31_Click_1(sender As Object, e As EventArgs) Handles Button31.Click
@@ -274,7 +359,7 @@ Public Class Form3
     End Sub
 
     Private Sub Button36_Click_1(sender As Object, e As EventArgs) Handles Button36.Click
-
+        Form19.show()
     End Sub
 
     Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
@@ -294,5 +379,9 @@ Public Class Form3
 
     Private Sub ComboBox15_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox15.SelectedIndexChanged
         Form8.lab_case = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
+    End Sub
+
+    Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
+
     End Sub
 End Class
