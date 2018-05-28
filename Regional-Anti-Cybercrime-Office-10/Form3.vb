@@ -223,33 +223,7 @@ Public Class Form3
             mysqlconn.Dispose()
         End Try
 
-        Try
-            mysqlconn.Open()
 
-            Dim query As String
-
-            query = "select lab_case_no as Id , lab_case_no_id as Name from laboratory_case"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-
-            Dim comboSource As New Dictionary(Of String, String)()
-
-            While reader.Read
-                Dim name = reader.GetString("name")
-                Dim id = reader.GetString("id")
-                comboSource.Add(id, name)
-            End While
-            ComboBox18.DataSource = New BindingSource(comboSource, Nothing)
-            ComboBox18.DisplayMember = "Value"
-            ComboBox18.ValueMember = "Key"
-
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
 
         Try
             mysqlconn.Open()
@@ -393,34 +367,8 @@ Public Class Form3
         End Try
     End Sub
 
-    Private Sub load_combobox()
-        Try
-            mysqlconn.Open()
 
-            Dim query As String
 
-            query = "select lab_case_no as Id , lab_case_no_id as Name from laboratory_case"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-
-            Dim comboSource As New Dictionary(Of String, String)()
-
-            While reader.Read
-                Dim name = reader.GetString("name")
-                Dim id = reader.GetString("id")
-                comboSource.Add(id, name)
-            End While
-            ComboBox18.DataSource = New BindingSource(comboSource, Nothing)
-            ComboBox18.DisplayMember = "Value"
-            ComboBox18.ValueMember = "Key"
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
-    End Sub
 
 
     Private Sub Button32_Click_1(sender As Object, e As EventArgs) Handles Button32.Click
@@ -462,7 +410,7 @@ Public Class Form3
             ComboBox4.Text = ""
 
             load_table()
-            load_combobox()
+
 
 
             mysqlconn.Close()
@@ -509,6 +457,7 @@ Public Class Form3
     End Sub
 
     Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
+        Form20.Show()
 
     End Sub
 End Class
