@@ -102,6 +102,8 @@ Partial Class Form6
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Button25 = New System.Windows.Forms.Button()
+        Me.Button23 = New System.Windows.Forms.Button()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -418,6 +420,8 @@ Partial Class Form6
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Button25)
+        Me.TabPage1.Controls.Add(Me.Button23)
         Me.TabPage1.Controls.Add(Me.Button21)
         Me.TabPage1.Controls.Add(Me.TextBox10)
         Me.TabPage1.Controls.Add(Me.TextBox9)
@@ -1071,6 +1075,34 @@ Partial Class Form6
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'Button25
+        '
+        Me.Button25.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button25.FlatAppearance.BorderSize = 0
+        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button25.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button25.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button25.Location = New System.Drawing.Point(114, 315)
+        Me.Button25.Name = "Button25"
+        Me.Button25.Size = New System.Drawing.Size(79, 30)
+        Me.Button25.TabIndex = 65
+        Me.Button25.Text = "Delete"
+        Me.Button25.UseVisualStyleBackColor = False
+        '
+        'Button23
+        '
+        Me.Button23.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button23.FlatAppearance.BorderSize = 0
+        Me.Button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button23.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button23.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button23.Location = New System.Drawing.Point(26, 315)
+        Me.Button23.Name = "Button23"
+        Me.Button23.Size = New System.Drawing.Size(79, 30)
+        Me.Button23.TabIndex = 64
+        Me.Button23.Text = "Update"
+        Me.Button23.UseVisualStyleBackColor = False
+        '
         'Form6
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1179,4 +1211,6 @@ Partial Class Form6
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Button25 As Button
+    Friend WithEvents Button23 As Button
 End Class

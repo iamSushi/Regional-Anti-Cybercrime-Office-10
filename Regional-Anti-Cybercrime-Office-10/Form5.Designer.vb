@@ -23,7 +23,7 @@ Partial Class Form5
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form5))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panel_slide = New System.Windows.Forms.Panel()
         Me.Button16 = New System.Windows.Forms.Button()
         Me.Button15 = New System.Windows.Forms.Button()
@@ -94,6 +94,8 @@ Partial Class Form5
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Button21 = New System.Windows.Forms.Button()
+        Me.Button25 = New System.Windows.Forms.Button()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -838,6 +840,8 @@ Partial Class Form5
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Button25)
+        Me.TabPage1.Controls.Add(Me.Button21)
         Me.TabPage1.Controls.Add(Me.DataGridView1)
         Me.TabPage1.Controls.Add(Me.DateTimePicker2)
         Me.TabPage1.Controls.Add(Me.ComboBox2)
@@ -860,14 +864,14 @@ Partial Class Form5
         'DataGridView1
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(278, 24)
         Me.DataGridView1.Name = "DataGridView1"
@@ -984,6 +988,34 @@ Partial Class Form5
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'Button21
+        '
+        Me.Button21.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button21.FlatAppearance.BorderSize = 0
+        Me.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button21.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button21.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button21.Location = New System.Drawing.Point(24, 256)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(79, 30)
+        Me.Button21.TabIndex = 57
+        Me.Button21.Text = "Update"
+        Me.Button21.UseVisualStyleBackColor = False
+        '
+        'Button25
+        '
+        Me.Button25.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button25.FlatAppearance.BorderSize = 0
+        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button25.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button25.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button25.Location = New System.Drawing.Point(112, 256)
+        Me.Button25.Name = "Button25"
+        Me.Button25.Size = New System.Drawing.Size(79, 30)
+        Me.Button25.TabIndex = 58
+        Me.Button25.Text = "Delete"
+        Me.Button25.UseVisualStyleBackColor = False
+        '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1085,4 +1117,6 @@ Partial Class Form5
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Button25 As Button
+    Friend WithEvents Button21 As Button
 End Class

@@ -61,16 +61,6 @@ Partial Class Form4
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button20 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -102,6 +92,16 @@ Partial Class Form4
         Me.Column35 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column36 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column33 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button20 = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -448,7 +448,7 @@ Partial Class Form4
         Me.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button21.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button21.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button21.Location = New System.Drawing.Point(837, 52)
+        Me.Button21.Location = New System.Drawing.Point(819, 53)
         Me.Button21.Name = "Button21"
         Me.Button21.Size = New System.Drawing.Size(79, 30)
         Me.Button21.TabIndex = 82
@@ -462,7 +462,7 @@ Partial Class Form4
         Me.Button39.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button39.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button39.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button39.Location = New System.Drawing.Point(748, 51)
+        Me.Button39.Location = New System.Drawing.Point(730, 52)
         Me.Button39.Name = "Button39"
         Me.Button39.Size = New System.Drawing.Size(79, 30)
         Me.Button39.TabIndex = 81
@@ -473,7 +473,7 @@ Partial Class Form4
         '
         Me.ComboBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(520, 51)
+        Me.ComboBox2.Location = New System.Drawing.Point(498, 50)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(175, 31)
         Me.ComboBox2.TabIndex = 24
@@ -482,7 +482,7 @@ Partial Class Form4
         '
         Me.ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(268, 51)
+        Me.ComboBox1.Location = New System.Drawing.Point(260, 51)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(175, 31)
         Me.ComboBox1.TabIndex = 23
@@ -495,7 +495,7 @@ Partial Class Form4
         Me.Button19.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button19.Image = CType(resources.GetObject("Button19.Image"), System.Drawing.Image)
-        Me.Button19.Location = New System.Drawing.Point(695, 51)
+        Me.Button19.Location = New System.Drawing.Point(673, 50)
         Me.Button19.Name = "Button19"
         Me.Button19.Size = New System.Drawing.Size(35, 31)
         Me.Button19.TabIndex = 22
@@ -508,7 +508,7 @@ Partial Class Form4
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label4.Image = CType(resources.GetObject("Label4.Image"), System.Drawing.Image)
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(516, 25)
+        Me.Label4.Location = New System.Drawing.Point(494, 24)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(90, 23)
         Me.Label4.TabIndex = 20
@@ -522,7 +522,7 @@ Partial Class Form4
         Me.Button18.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button18.Image = CType(resources.GetObject("Button18.Image"), System.Drawing.Image)
-        Me.Button18.Location = New System.Drawing.Point(443, 51)
+        Me.Button18.Location = New System.Drawing.Point(435, 51)
         Me.Button18.Name = "Button18"
         Me.Button18.Size = New System.Drawing.Size(35, 31)
         Me.Button18.TabIndex = 19
@@ -535,7 +535,7 @@ Partial Class Form4
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label3.Image = CType(resources.GetObject("Label3.Image"), System.Drawing.Image)
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label3.Location = New System.Drawing.Point(264, 25)
+        Me.Label3.Location = New System.Drawing.Point(256, 25)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(72, 23)
         Me.Label3.TabIndex = 17
@@ -595,109 +595,19 @@ Partial Class Form4
         Me.DataGridView1.Size = New System.Drawing.Size(954, 489)
         Me.DataGridView1.TabIndex = 0
         '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.DataGridView2)
-        Me.TabPage2.Controls.Add(Me.Button20)
-        Me.TabPage2.Controls.Add(Me.TextBox2)
-        Me.TabPage2.Controls.Add(Me.Label5)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 54)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1003, 614)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Nature of Case"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column14, Me.Column15, Me.Column16, Me.Column17, Me.Column18})
-        Me.DataGridView2.Location = New System.Drawing.Point(24, 99)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(955, 492)
-        Me.DataGridView2.TabIndex = 20
-        '
-        'Column14
-        '
-        Me.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column14.HeaderText = "Laboratory Case ID"
-        Me.Column14.Name = "Column14"
-        '
-        'Column15
-        '
-        Me.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column15.HeaderText = "Nature of Case"
-        Me.Column15.Name = "Column15"
-        '
-        'Column16
-        '
-        Me.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column16.HeaderText = "Complainant"
-        Me.Column16.Name = "Column16"
-        '
-        'Column17
-        '
-        Me.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column17.HeaderText = "Victim"
-        Me.Column17.Name = "Column17"
-        '
-        'Column18
-        '
-        Me.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column18.HeaderText = "Suspect"
-        Me.Column18.Name = "Column18"
-        '
-        'Button20
-        '
-        Me.Button20.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Button20.FlatAppearance.BorderSize = 0
-        Me.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button20.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Button20.Image = CType(resources.GetObject("Button20.Image"), System.Drawing.Image)
-        Me.Button20.Location = New System.Drawing.Point(199, 51)
-        Me.Button20.Name = "Button20"
-        Me.Button20.Size = New System.Drawing.Size(35, 31)
-        Me.Button20.TabIndex = 19
-        Me.Button20.UseVisualStyleBackColor = False
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox2.Location = New System.Drawing.Point(24, 51)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(175, 31)
-        Me.TextBox2.TabIndex = 18
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label5.Image = CType(resources.GetObject("Label5.Image"), System.Drawing.Image)
-        Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(20, 25)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(92, 23)
-        Me.Label5.TabIndex = 17
-        Me.Label5.Text = "      Case ID"
-        '
         'Column1
         '
         Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
         Me.Column1.HeaderText = "Date Received"
         Me.Column1.Name = "Column1"
-        Me.Column1.Width = 143
+        Me.Column1.Width = 131
         '
         'Column2
         '
         Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
         Me.Column2.HeaderText = "DFE Type"
         Me.Column2.Name = "Column2"
-        Me.Column2.Width = 105
+        Me.Column2.Width = 96
         '
         'Column3
         '
@@ -899,6 +809,96 @@ Partial Class Form4
         '
         Me.Column33.HeaderText = "Fact"
         Me.Column33.Name = "Column33"
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.DataGridView2)
+        Me.TabPage2.Controls.Add(Me.Button20)
+        Me.TabPage2.Controls.Add(Me.TextBox2)
+        Me.TabPage2.Controls.Add(Me.Label5)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 54)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(1003, 614)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Nature of Case"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column14, Me.Column15, Me.Column16, Me.Column17, Me.Column18})
+        Me.DataGridView2.Location = New System.Drawing.Point(24, 99)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(955, 492)
+        Me.DataGridView2.TabIndex = 20
+        '
+        'Column14
+        '
+        Me.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column14.HeaderText = "Laboratory Case ID"
+        Me.Column14.Name = "Column14"
+        '
+        'Column15
+        '
+        Me.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column15.HeaderText = "Nature of Case"
+        Me.Column15.Name = "Column15"
+        '
+        'Column16
+        '
+        Me.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column16.HeaderText = "Complainant"
+        Me.Column16.Name = "Column16"
+        '
+        'Column17
+        '
+        Me.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column17.HeaderText = "Victim"
+        Me.Column17.Name = "Column17"
+        '
+        'Column18
+        '
+        Me.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column18.HeaderText = "Suspect"
+        Me.Column18.Name = "Column18"
+        '
+        'Button20
+        '
+        Me.Button20.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Button20.FlatAppearance.BorderSize = 0
+        Me.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button20.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button20.Image = CType(resources.GetObject("Button20.Image"), System.Drawing.Image)
+        Me.Button20.Location = New System.Drawing.Point(199, 51)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(35, 31)
+        Me.Button20.TabIndex = 19
+        Me.Button20.UseVisualStyleBackColor = False
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.TextBox2.Location = New System.Drawing.Point(24, 51)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(175, 31)
+        Me.TextBox2.TabIndex = 18
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label5.Image = CType(resources.GetObject("Label5.Image"), System.Drawing.Image)
+        Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label5.Location = New System.Drawing.Point(20, 25)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(92, 23)
+        Me.Label5.TabIndex = 17
+        Me.Label5.Text = "      Case ID"
         '
         'Form4
         '
