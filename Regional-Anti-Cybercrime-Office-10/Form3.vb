@@ -245,11 +245,6 @@ Public Class Form3
                 Dim id = reader.GetString("id")
                 comboSource.Add(id, name)
             End While
-            ComboBox15.DataSource = New BindingSource(comboSource, Nothing)
-            ComboBox15.DisplayMember = "Value"
-            ComboBox15.ValueMember = "Key"
-
-            Dim agency As String = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
 
             mysqlconn.Close()
         Catch ex As MySqlException
@@ -278,8 +273,6 @@ Public Class Form3
             ComboBox16.DisplayMember = "Value"
             ComboBox16.ValueMember = "Key"
 
-            Dim agency As String = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
-
             mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show(ex.Message)
@@ -306,8 +299,6 @@ Public Class Form3
             ComboBox13.DataSource = New BindingSource(comboSource, Nothing)
             ComboBox13.DisplayMember = "Value"
             ComboBox13.ValueMember = "Key"
-
-            Dim agency As String = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
 
             mysqlconn.Close()
         Catch ex As MySqlException
@@ -343,7 +334,7 @@ Public Class Form3
     End Sub
 
     Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
-
+        Form20.Show()
     End Sub
 
     Private Sub Button28_Click_1(sender As Object, e As EventArgs) Handles Button28.Click
@@ -375,10 +366,6 @@ Public Class Form3
 
     Private Sub Button38_Click(sender As Object, e As EventArgs) Handles Button38.Click
 
-    End Sub
-
-    Private Sub ComboBox15_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox15.SelectedIndexChanged
-        Form8.lab_case = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
     End Sub
 
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
