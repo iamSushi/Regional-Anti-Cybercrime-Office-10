@@ -363,7 +363,7 @@ Public Class Form3
 
 
 
-            query = "insert into officer values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "','" & TextBox7.Text & "',null,null,null,'" & ComboBox14.Text & "','" & TextBox4.Text & "','" & DateTimePicker1.Text & "','" + gender + "','" & TextBox5.Text & "','" & TextBox6.Text & "','" & ComboBox3.Text & "','" & ComboBox4.Text & "','null','null','" & TextBox7.Text & "',null)"
+            query = "insert into officer values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "','" & TextBox7.Text & "',null,null,null,'" & agency & "','" & TextBox4.Text & "','" & DateTimePicker1.Text & "','" + gender + "','" & TextBox5.Text & "','" & TextBox6.Text & "','" & ComboBox3.Text & "','" & ComboBox4.Text & "','null','null','" & TextBox7.Text & "',null)"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
