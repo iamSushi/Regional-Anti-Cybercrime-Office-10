@@ -484,7 +484,31 @@ Public Class Form3
         MessageBox.Show(ComboBox13.SelectedText)
     End Sub
 
+
+    Private Sub Button38_Click(sender As Object, e As EventArgs) Handles Button38.Click
+
+    End Sub
+
+
+
+    Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
+
+    Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
+
+    End Sub
+
+
     Private Sub ComboBox14_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox14.SelectedIndexChanged
         Form8.lab_case = DirectCast(ComboBox14.SelectedItem, KeyValuePair(Of String, String)).Key
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
+
     End Sub
 End Class
