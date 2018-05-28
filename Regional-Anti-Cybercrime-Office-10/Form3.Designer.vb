@@ -86,12 +86,9 @@ Partial Class Form3
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-
-        Me.ComboBox16 = New System.Windows.Forms.ComboBox()
-
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboBox16 = New System.Windows.Forms.ComboBox()
-
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.ComboBox13 = New System.Windows.Forms.ComboBox()
         Me.Button20 = New System.Windows.Forms.Button()
@@ -139,9 +136,6 @@ Partial Class Form3
         Me.Button32 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -873,13 +867,17 @@ Partial Class Form3
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Case"
         Me.TabPage1.UseVisualStyleBackColor = True
-
-        Me.ComboBox16.FormattingEnabled = True
-        Me.ComboBox16.Location = New System.Drawing.Point(192, 71)
-        Me.ComboBox16.Name = "ComboBox16"
-        Me.ComboBox16.Size = New System.Drawing.Size(189, 31)
-        Me.ComboBox16.TabIndex = 92
-
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.TextBox1.Location = New System.Drawing.Point(230, 28)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(189, 31)
+        Me.TextBox1.TabIndex = 94
+        '
+        'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1469,17 +1467,6 @@ Partial Class Form3
         Me.Label11.TabIndex = 52
         Me.Label11.Text = "      Complainant"
         '
-
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox1.Location = New System.Drawing.Point(230, 28)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(189, 31)
-        Me.TextBox1.TabIndex = 94
-        '
-
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
