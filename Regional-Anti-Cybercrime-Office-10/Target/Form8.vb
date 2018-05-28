@@ -96,9 +96,6 @@ Public Class Form8
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
-
-
-        ComboBox2.Text = lab_case
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
@@ -132,7 +129,7 @@ Public Class Form8
 
     End Sub
 
-    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
+    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) 
 
     End Sub
 
@@ -144,11 +141,11 @@ Public Class Form8
 
     End Sub
 
-    Private Sub Button23_Click(sender As Object, e As EventArgs) Handles Button23.Click
+    Private Sub Button23_Click(sender As Object, e As EventArgs) 
 
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+    Private Sub Label4_Click(sender As Object, e As EventArgs) 
 
     End Sub
 
@@ -166,7 +163,6 @@ Public Class Form8
 
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
 
-        ComboBox2.Text = lab_case
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
