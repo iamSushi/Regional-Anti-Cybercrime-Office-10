@@ -96,6 +96,13 @@ Public Class Form6
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
+        Dim filesize As UInt32
+        Dim mstream As New System.IO.MemoryStream
+        PictureBox2.Image.Save(mstream, System.Drawing.Imaging.ImageFormat.Jpeg)
+        Dim arrImage() As Byte = mstream.GetBuffer
+        filesize = mstream.Length
+        mstream.Close()
+
         Try
             mysqlconn.Open()
 
@@ -108,8 +115,9 @@ Public Class Form6
                 gender = "female"
             End If
 
-            query = "insert into officer values(null,'" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','" & DateTimePicker1.Text & "','" + gender + "','" & TextBox5.Text & "','" & TextBox6.Text & "','" & ComboBox3.Text & "','" & ComboBox4.Text & "','null','null','" & TextBox7.Text & "',null)"
+            query = "insert into officer values(null,'" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','" & DateTimePicker1.Text & "','" + gender + "','" & TextBox5.Text & "','" & TextBox6.Text & "','" & ComboBox3.Text & "','" & ComboBox4.Text & "','null','null','" & TextBox7.Text & "',@profile_image,null)"
             command = New MySqlCommand(query, mysqlconn)
+            command.Parameters.AddWithValue("@profile_image", arrImage)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
             TextBox2.Text = ""
@@ -121,6 +129,7 @@ Public Class Form6
             DateTimePicker1.Text = ""
             ComboBox3.Text = ""
             ComboBox4.Text = ""
+            PictureBox2.Image = Nothing
             load_table()
 
             mysqlconn.Close()
@@ -347,7 +356,11 @@ Public Class Form6
         End Try
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub Button19_Click(sender As Object, e As EventArgs) Handles Button19.Click
+        OpenFileDialog1.ShowDialog()
+    End Sub
 
+    Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
+        PictureBox2.ImageLocation = OpenFileDialog1.FileName
     End Sub
 End Class

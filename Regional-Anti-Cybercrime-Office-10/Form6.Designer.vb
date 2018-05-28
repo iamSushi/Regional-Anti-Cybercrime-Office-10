@@ -101,6 +101,7 @@ Partial Class Form6
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -1066,6 +1067,10 @@ Partial Class Form6
         Me.TabControl1.Size = New System.Drawing.Size(1012, 672)
         Me.TabControl1.TabIndex = 7
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'Form6
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1173,4 +1178,5 @@ Partial Class Form6
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

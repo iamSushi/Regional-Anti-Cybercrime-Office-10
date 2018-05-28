@@ -107,6 +107,7 @@ Public Class Form5
             DateTimePicker1.Text = ""
             ComboBox3.Text = ""
             ComboBox1.Text = ""
+            PictureBox2.Image = Nothing
             load_table()
             mysqlconn.Close()
         Catch ex As MySqlException
