@@ -5,6 +5,8 @@ Public Class Form3
     Dim command As MySqlCommand
     Dim reader As MySqlDataReader
     Dim agency As String
+    Dim examiner As String
+    Dim investigator As String
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Do While panel_slide.Width < 109
             panel_slide.Width = panel_slide.Width + 1
@@ -114,7 +116,7 @@ Public Class Form3
 
             Dim query As String
 
-            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "',null,null,null,'" & ComboBox14.Text & "','','','" & DateTimePicker2.Text & "','" & ComboBox13.Text & "','" & TextBox13.Text & "','',null)"
+            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "',null,null,null,'" & ComboBox14.Text & "','" & DateTimePicker2.Text & "','" & ComboBox13.Text & "','" & TextBox13.Text & "','null',null)"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
@@ -246,6 +248,9 @@ Public Class Form3
                 Dim id = reader.GetString("id")
                 comboSource.Add(id, name)
             End While
+            ComboBox18.DataSource = New BindingSource(comboSource, Nothing)
+            ComboBox18.DisplayMember = "Value"
+            ComboBox18.ValueMember = "Key"
 
 
             mysqlconn.Close()
@@ -318,6 +323,68 @@ Public Class Form3
 
             Dim query As String
 
+            query = "select officer_id as id , fname as f ,mname as m ,sname as s from officer"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            Dim comboSource As New Dictionary(Of String, String)()
+
+            While reader.Read
+                Dim fname = reader.GetString("f")
+                Dim sname = reader.GetString("s")
+                Dim name = fname + " " + sname
+                Dim id = reader.GetString("id")
+                comboSource.Add(id, name)
+            End While
+            ComboBox15.DataSource = New BindingSource(comboSource, Nothing)
+            ComboBox15.DisplayMember = "Value"
+            ComboBox15.ValueMember = "Key"
+
+            Dim examiner As String = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select officer_id as id , fname as f ,mname as m ,sname as s from officer"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            Dim comboSource As New Dictionary(Of String, String)()
+
+            While reader.Read
+                Dim fname = reader.GetString("f")
+                Dim sname = reader.GetString("s")
+                Dim name = fname + " " + sname
+                Dim id = reader.GetString("id")
+                comboSource.Add(id, name)
+            End While
+            ComboBox17.DataSource = New BindingSource(comboSource, Nothing)
+            ComboBox17.DisplayMember = "Value"
+            ComboBox17.ValueMember = "Key"
+
+            Dim investigator As String = DirectCast(ComboBox17.SelectedItem, KeyValuePair(Of String, String)).Key
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
             query = "select * from laboratory_case"
 
             command = New MySqlCommand(query, mysqlconn)
@@ -334,6 +401,36 @@ Public Class Form3
             mysqlconn.Dispose()
         End Try
     End Sub
+
+    Private Sub load_combobox()
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select lab_case_no as Id , lab_case_no_id as Name from laboratory_case"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            Dim comboSource As New Dictionary(Of String, String)()
+
+            While reader.Read
+                Dim name = reader.GetString("name")
+                Dim id = reader.GetString("id")
+                comboSource.Add(id, name)
+            End While
+            ComboBox18.DataSource = New BindingSource(comboSource, Nothing)
+            ComboBox18.DisplayMember = "Value"
+            ComboBox18.ValueMember = "Key"
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
 
     Private Sub Button32_Click_1(sender As Object, e As EventArgs) Handles Button32.Click
         Form8.Show()
@@ -354,15 +451,18 @@ Public Class Form3
     Private Sub Button31_Click_1(sender As Object, e As EventArgs) Handles Button31.Click
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
-
+        Dim investigator As String = DirectCast(ComboBox17.SelectedItem, KeyValuePair(Of String, String)).Key
+        Dim examiner As String = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
+        Dim agency As String = DirectCast(ComboBox13.SelectedItem, KeyValuePair(Of String, String)).Key
         Try
             mysqlconn.Open()
 
             Dim query As String
-            Dim gender As String
+            Dim query1 As String
 
-            query = "insert into officer values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "','',null,null,null,'" & agency & "','" & TextBox4.Text & "','" & DateTimePicker1.Text & "','" + gender + "','','','" & ComboBox3.Text & "','" & ComboBox4.Text & "','null','null','',null)"
 
+            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "',null,null,null,'" & agency & "','" & examiner & "','" & investigator & "','" & DateTimePicker2.Text & "',' " & DateTimePicker3.Text & "',' " & TextBox13.Text & "','null',null)"
+            query1 = "insert into laboratory_case values(null,         '1'            ,'          1                 ','3','4','5',          '6',      '     7       ',   '       8'           ,'        9                  ','              10             ','             11          ', 12 ,null)"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
@@ -373,7 +473,10 @@ Public Class Form3
             DateTimePicker1.Text = ""
             ComboBox3.Text = ""
             ComboBox4.Text = ""
+
             load_table()
+            load_combobox()
+
 
             mysqlconn.Close()
         Catch ex As MySqlException

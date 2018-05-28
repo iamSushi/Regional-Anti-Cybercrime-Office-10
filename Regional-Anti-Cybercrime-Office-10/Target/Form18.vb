@@ -45,6 +45,7 @@ Public Class Form18
         End Try
 
         load_table()
+        load_table2()
     End Sub
 
     Private Sub load_table()
@@ -53,29 +54,6 @@ Public Class Form18
         Dim adapter As New MySqlDataAdapter
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
-        Dim adapter2 As New MySqlDataAdapter
-        Dim dbDataSet2 As New DataTable
-        Dim soure2 As New BindingSource
-
-        Try
-            mysqlconn.Open()
-
-            Dim query As String
-
-            query = "select persons.person_id,persons.fname,persons.mname,persons.sname from suspect left join persons on suspect.person_id = persons.person_id"
-            command = New MySqlCommand(query, mysqlconn)
-            adapter2.SelectCommand = command
-            adapter2.Fill(dbDataSet2)
-            soure2.DataSource = dbDataSet2
-            DataGridView2.DataSource = soure2
-            adapter.Update(dbDataSet2)
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
 
         Try
             mysqlconn.Open()
@@ -96,6 +74,36 @@ Public Class Form18
         Finally
             mysqlconn.Dispose()
         End Try
+    End Sub
+
+    Private Sub load_table2()
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+
+        Dim adapter2 As New MySqlDataAdapter
+        Dim dbDataSet2 As New DataTable
+        Dim soure2 As New BindingSource
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select persons.person_id,persons.fname,persons.mname,persons.sname from suspect left join persons on suspect.person_id = persons.person_id where lab_case_no = '" & lab_case & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            adapter2.SelectCommand = command
+            adapter2.Fill(dbDataSet2)
+            soure2.DataSource = dbDataSet2
+            DataGridView2.DataSource = soure2
+            adapter2.Update(dbDataSet2)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
     End Sub
 
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
@@ -129,6 +137,8 @@ Public Class Form18
         End Try
 
         load_table()
+        load_table2()
+
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged

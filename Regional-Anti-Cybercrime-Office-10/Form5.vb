@@ -117,7 +117,7 @@ Public Class Form5
 
             Dim query As String
 
-            query = "select * from persons"
+            query = "select fname as First, mname as Middle, sname as Surname, dob as Birthday, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as Created from persons"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -261,7 +261,7 @@ Public Class Form5
 
             Dim query As String
 
-            query = "select * from persons where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
+            query = "select fname as First, mname as Middle, sname as Surname, dob as Birthday, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as Created from persons where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command

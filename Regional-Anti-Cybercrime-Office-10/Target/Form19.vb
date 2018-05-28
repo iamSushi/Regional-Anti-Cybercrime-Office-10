@@ -87,4 +87,9 @@ Public Class Form19
             mysqlconn.Dispose()
         End Try
     End Sub
+
+    Private Sub Form19_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        load_table()
+
+    End Sub
 End Class

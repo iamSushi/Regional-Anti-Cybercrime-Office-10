@@ -20,29 +20,7 @@ Public Class Form8
         Dim adapter As New MySqlDataAdapter
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
-        Dim adapter2 As New MySqlDataAdapter
-        Dim dbDataSet2 As New DataTable
-        Dim soure2 As New BindingSource
 
-        Try
-            mysqlconn.Open()
-
-            Dim query As String
-
-            query = "select persons.person_id,persons.fname,persons.mname,persons.sname from victim left join persons on victim.person_id = persons.person_id"
-            command = New MySqlCommand(query, mysqlconn)
-            adapter2.SelectCommand = command
-            adapter2.Fill(dbDataSet2)
-            soure2.DataSource = dbDataSet2
-            DataGridView2.DataSource = soure2
-            adapter.Update(dbDataSet2)
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
 
         Try
             mysqlconn.Open()
@@ -56,6 +34,34 @@ Public Class Form8
             soure.DataSource = dbDataSet
             DataGridView1.DataSource = soure
             adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub load_table2()
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        Dim adapter2 As New MySqlDataAdapter
+        Dim dbDataSet2 As New DataTable
+        Dim soure2 As New BindingSource
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select persons.person_id,persons.fname,persons.mname,persons.sname from victim left join persons on victim.person_id = persons.person_id where lab_case_no = '" & lab_case & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            adapter2.SelectCommand = command
+            adapter2.Fill(dbDataSet2)
+            soure2.DataSource = dbDataSet2
+            DataGridView2.DataSource = soure2
+            adapter2.Update(dbDataSet2)
 
             mysqlconn.Close()
         Catch ex As MySqlException
@@ -126,6 +132,7 @@ Public Class Form8
         End Try
 
         load_table()
+        load_table2()
 
     End Sub
 
@@ -191,7 +198,7 @@ Public Class Form8
             mysqlconn.Dispose()
         End Try
 
-        load_table()
+        load_table2()
 
     End Sub
 End Class
