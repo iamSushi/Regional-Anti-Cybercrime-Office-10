@@ -3,6 +3,7 @@ Imports System.IO
 Imports System.Drawing
 
 Public Class Form5
+    Dim trylang As String
     Dim mysqlconn As MySqlConnection
     Dim command As MySqlCommand
     Dim reader As MySqlDataReader
