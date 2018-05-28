@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2018 at 07:41 PM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- Generation Time: May 28, 2018 at 05:03 PM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -67,7 +67,9 @@ CREATE TABLE `agency` (
 --
 
 INSERT INTO `agency` (`agency_id`, `name`, `street`, `barangay`, `city`, `province`, `mother_unit`, `contact_no`, `email`, `date_created`) VALUES
-(1, 'dawddawd', 'dawd', 'dawd', 'dawd', 'dawd', 'awd', 'dawd', 'da', '2018-05-23 17:00:51');
+(1, 'dawddawd', 'dawd', 'dawd', 'dawd', 'dawd', 'awd', 'dawd', 'da', '2018-05-23 17:00:51'),
+(2, 'asas', 'sa', 'asa', 'sa', 'asa', 'saas', 'sa', 'asa', '2018-05-28 02:07:28'),
+(3, 'Malacanang', 'Malacanang', 'Malacanang', 'Malacanang', 'Malacanang', '', '', '', '2018-05-28 14:52:47');
 
 -- --------------------------------------------------------
 
@@ -79,6 +81,14 @@ CREATE TABLE `case_nature` (
   `lab_case_no` bigint(20) NOT NULL,
   `nature_of_case` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `case_nature`
+--
+
+INSERT INTO `case_nature` (`lab_case_no`, `nature_of_case`) VALUES
+(1, 'dawd'),
+(1, 'sample');
 
 -- --------------------------------------------------------
 
@@ -237,7 +247,8 @@ INSERT INTO `officer` (`officer_id`, `fname`, `mname`, `sname`, `dob`, `gender`,
 (4, '', '', '', '0000-00-00', 'female', '', '', '', '', 'null', 'null', '', '2018-05-22 02:15:56'),
 (5, 'James', 'Sinadjan', '', '0000-00-00', 'female', '', '', '', '', 'null', 'null', '', '2018-05-22 02:16:05'),
 (6, 'Jhon', 'Doe', 'Dee', '0000-00-00', 'male', '', '', '', '', 'null', 'null', '', '2018-05-22 02:16:36'),
-(7, 'Uzumaki', 'Secreto', 'Naruto', '0000-00-00', 'female', '', '', 'Police Officer 3', '', 'null', 'null', '', '2018-05-22 08:09:45');
+(7, 'Uzumaki', 'Secreto', 'Naruto', '0000-00-00', 'female', '', '', 'Police Officer 3', '', 'null', 'null', '', '2018-05-22 08:09:45'),
+(8, '', '', '', '0000-00-00', 'female', '', '', '', '', 'null', 'null', '', '2018-05-23 17:46:32');
 
 -- --------------------------------------------------------
 
@@ -306,6 +317,35 @@ CREATE TABLE `reports` (
   `released_by` bigint(20) NOT NULL,
   `claimed_by` bigint(20) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `suspect`
+--
+
+CREATE TABLE `suspect` (
+  `lab_case_no` int(50) NOT NULL,
+  `person_id` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `suspect`
+--
+
+INSERT INTO `suspect` (`lab_case_no`, `person_id`) VALUES
+(0, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `victim`
+--
+
+CREATE TABLE `victim` (
+  `lab_case_no` int(50) NOT NULL,
+  `person_id` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -416,61 +456,73 @@ ALTER TABLE `reports`
 --
 ALTER TABLE `accounts`
   MODIFY `acc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `agency`
 --
 ALTER TABLE `agency`
-  MODIFY `agency_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `agency_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `destinction`
 --
 ALTER TABLE `destinction`
   MODIFY `destinct_id` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `dfe`
 --
 ALTER TABLE `dfe`
   MODIFY `dfe_id` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `facts`
 --
 ALTER TABLE `facts`
   MODIFY `fact_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `laboratory_case`
 --
 ALTER TABLE `laboratory_case`
   MODIFY `lab_case_no` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `law`
 --
 ALTER TABLE `law`
   MODIFY `law_id` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `nature`
 --
 ALTER TABLE `nature`
   MODIFY `nature_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `officer`
 --
 ALTER TABLE `officer`
-  MODIFY `officer_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `officer_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT for table `persons`
 --
 ALTER TABLE `persons`
   MODIFY `person_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `rank`
 --
 ALTER TABLE `rank`
   MODIFY `rank_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `reports`
 --
 ALTER TABLE `reports`
-  MODIFY `report_id` bigint(20) NOT NULL AUTO_INCREMENT;COMMIT;
+  MODIFY `report_id` bigint(20) NOT NULL AUTO_INCREMENT;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
