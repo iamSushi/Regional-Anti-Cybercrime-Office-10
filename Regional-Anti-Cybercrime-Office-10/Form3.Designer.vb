@@ -86,13 +86,12 @@ Partial Class Form3
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-<<<<<<< HEAD
+
         Me.ComboBox16 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox15 = New System.Windows.Forms.ComboBox()
-=======
+
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboBox16 = New System.Windows.Forms.ComboBox()
->>>>>>> 8eda2eb1a3ae56a0673fb3ec722ad2e6b0c9d2fc
+
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.ComboBox13 = New System.Windows.Forms.ComboBox()
         Me.Button20 = New System.Windows.Forms.Button()
@@ -140,10 +139,9 @@ Partial Class Form3
         Me.Button32 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-<<<<<<< HEAD
-=======
+
         Me.TextBox1 = New System.Windows.Forms.TextBox()
->>>>>>> 8eda2eb1a3ae56a0673fb3ec722ad2e6b0c9d2fc
+
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -875,20 +873,13 @@ Partial Class Form3
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Case"
         Me.TabPage1.UseVisualStyleBackColor = True
-        '
-<<<<<<< HEAD
-        'ComboBox16
-        '
+
         Me.ComboBox16.FormattingEnabled = True
         Me.ComboBox16.Location = New System.Drawing.Point(192, 71)
         Me.ComboBox16.Name = "ComboBox16"
         Me.ComboBox16.Size = New System.Drawing.Size(189, 31)
         Me.ComboBox16.TabIndex = 92
-        '
-        'ComboBox15
-=======
-        'Label2
->>>>>>> 8eda2eb1a3ae56a0673fb3ec722ad2e6b0c9d2fc
+
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1478,8 +1469,7 @@ Partial Class Form3
         Me.Label11.TabIndex = 52
         Me.Label11.Text = "      Complainant"
         '
-<<<<<<< HEAD
-=======
+
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1489,7 +1479,7 @@ Partial Class Form3
         Me.TextBox1.Size = New System.Drawing.Size(189, 31)
         Me.TextBox1.TabIndex = 94
         '
->>>>>>> 8eda2eb1a3ae56a0673fb3ec722ad2e6b0c9d2fc
+
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
