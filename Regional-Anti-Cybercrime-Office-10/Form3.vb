@@ -484,7 +484,7 @@ Public Class Form3
         MessageBox.Show(ComboBox13.SelectedText)
     End Sub
 
-<<<<<<< HEAD
+
     Private Sub Button38_Click(sender As Object, e As EventArgs) Handles Button38.Click
 
     End Sub
@@ -499,8 +499,7 @@ Public Class Form3
 
     End Sub
 
-=======
->>>>>>> 5a91e66d1b3564a941091e3a1528d1b0735c4c4d
+
     Private Sub ComboBox14_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox14.SelectedIndexChanged
         Form8.lab_case = DirectCast(ComboBox14.SelectedItem, KeyValuePair(Of String, String)).Key
     End Sub
