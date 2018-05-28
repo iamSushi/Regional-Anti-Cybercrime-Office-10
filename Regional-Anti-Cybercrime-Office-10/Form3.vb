@@ -361,13 +361,8 @@ Public Class Form3
             Dim query As String
             Dim gender As String
 
+            query = "insert into officer values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "','',null,null,null,'" & agency & "','" & TextBox4.Text & "','" & DateTimePicker1.Text & "','" + gender + "','','','" & ComboBox3.Text & "','" & ComboBox4.Text & "','null','null','',null)"
 
-<<<<<<< HEAD
-            query = "insert into officer values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "',',null,null,null,'','" & TextBox4.Text & "','" & DateTimePicker1.Text & "','" + gender + "','','','" & ComboBox3.Text & "','" & ComboBox4.Text & "','null','null','',null)"
-=======
-
-            query = "insert into officer values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "','" & TextBox7.Text & "',null,null,null,'" & agency & "','" & TextBox4.Text & "','" & DateTimePicker1.Text & "','" + gender + "','" & TextBox5.Text & "','" & TextBox6.Text & "','" & ComboBox3.Text & "','" & ComboBox4.Text & "','null','null','" & TextBox7.Text & "',null)"
->>>>>>> 6b96dfb839fb65815837457cb22484873169264b
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
