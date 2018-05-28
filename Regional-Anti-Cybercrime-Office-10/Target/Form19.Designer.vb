@@ -23,13 +23,11 @@ Partial Class Form19
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form19))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Button24 = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Button23 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button35 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -46,7 +44,7 @@ Partial Class Form19
         'DataGridView2
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(722, 89)
+        Me.DataGridView2.Location = New System.Drawing.Point(691, 89)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(341, 390)
         Me.DataGridView2.TabIndex = 76
@@ -54,20 +52,10 @@ Partial Class Form19
         'DateTimePicker2
         '
         Me.DateTimePicker2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Location = New System.Drawing.Point(459, 42)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(248, 42)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(175, 31)
         Me.DateTimePicker2.TabIndex = 75
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Complainant", "Victim", "Suspect", "Witness"})
-        Me.ComboBox2.Location = New System.Drawing.Point(237, 42)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(175, 31)
-        Me.ComboBox2.TabIndex = 74
         '
         'Button24
         '
@@ -76,7 +64,7 @@ Partial Class Form19
         Me.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button24.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button24.Image = CType(resources.GetObject("Button24.Image"), System.Drawing.Image)
-        Me.Button24.Location = New System.Drawing.Point(637, 42)
+        Me.Button24.Location = New System.Drawing.Point(426, 42)
         Me.Button24.Name = "Button24"
         Me.Button24.Size = New System.Drawing.Size(35, 31)
         Me.Button24.TabIndex = 73
@@ -89,24 +77,11 @@ Partial Class Form19
         Me.Label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label13.Image = CType(resources.GetObject("Label13.Image"), System.Drawing.Image)
         Me.Label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label13.Location = New System.Drawing.Point(455, 9)
+        Me.Label13.Location = New System.Drawing.Point(244, 9)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(70, 23)
         Me.Label13.TabIndex = 72
         Me.Label13.Text = "      Date"
-        '
-        'Button23
-        '
-        Me.Button23.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Button23.FlatAppearance.BorderSize = 0
-        Me.Button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button23.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button23.Image = CType(resources.GetObject("Button23.Image"), System.Drawing.Image)
-        Me.Button23.Location = New System.Drawing.Point(409, 42)
-        Me.Button23.Name = "Button23"
-        Me.Button23.Size = New System.Drawing.Size(35, 31)
-        Me.Button23.TabIndex = 71
-        Me.Button23.UseVisualStyleBackColor = False
         '
         'Label4
         '
@@ -115,7 +90,7 @@ Partial Class Form19
         Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label4.Image = CType(resources.GetObject("Label4.Image"), System.Drawing.Image)
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(233, 9)
+        Me.Label4.Location = New System.Drawing.Point(12, 9)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(118, 23)
         Me.Label4.TabIndex = 70
@@ -157,14 +132,14 @@ Partial Class Form19
         '
         'DataGridView1
         '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4})
         Me.DataGridView1.Location = New System.Drawing.Point(12, 89)
@@ -199,13 +174,11 @@ Partial Class Form19
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1084, 491)
+        Me.ClientSize = New System.Drawing.Size(1053, 491)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.DateTimePicker2)
-        Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.Button24)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.Button23)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button35)
         Me.Controls.Add(Me.TextBox1)
@@ -222,10 +195,8 @@ Partial Class Form19
 
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Button24 As Button
     Friend WithEvents Label13 As Label
-    Friend WithEvents Button23 As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents Button35 As Button
     Friend WithEvents TextBox1 As TextBox

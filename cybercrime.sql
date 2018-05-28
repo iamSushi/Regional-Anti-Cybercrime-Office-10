@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2018 at 05:03 PM
+-- Generation Time: May 28, 2018 at 05:27 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -268,6 +268,7 @@ CREATE TABLE `persons` (
   `contact` varchar(20) DEFAULT NULL,
   `email` varchar(20) DEFAULT NULL,
   `category` varchar(20) NOT NULL,
+  `profile_image` longblob NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -275,13 +276,13 @@ CREATE TABLE `persons` (
 -- Dumping data for table `persons`
 --
 
-INSERT INTO `persons` (`person_id`, `fname`, `mname`, `sname`, `nname`, `dob`, `gender`, `status`, `contact`, `email`, `category`, `date_created`) VALUES
-(1, 'joshua', 'omagap', 'perater', 'gwapo', '2018-05-22', 'male', 'single', '09169947508', NULL, '', '2018-05-16 12:40:18'),
-(2, 'sample', 'lang', 'ni', 'null', '0000-00-00', 'male', 'Single', '09169947508', 'try@gmail.com', 'Complainant', '2018-05-16 16:03:41'),
-(3, 'sakura', '', 'Uchiha', 'null', '0000-00-00', 'female', 'Married', '0316495', 'sakura@gmail.com', 'Victim', '2018-05-16 17:17:23'),
-(4, 'dawd', 'dawd', 'adwda', 'null', '0000-00-00', 'female', 'Widowed', 'daw', 'awd', 'Victim', '2018-05-17 07:22:25'),
-(5, 'Yunnah', 'Chuyy', 'Masaya', 'null', '0000-00-00', 'male', '', '', '', '', '2018-05-22 02:17:17'),
-(6, 'fbhdfbj', 'vxdbxd', 'bxdc', 'null', '0000-00-00', 'female', 'Divorced', 'xbxd', 'vxdvxd', 'Complainant', '2018-05-22 08:03:06');
+INSERT INTO `persons` (`person_id`, `fname`, `mname`, `sname`, `nname`, `dob`, `gender`, `status`, `contact`, `email`, `category`, `profile_image`, `date_created`) VALUES
+(1, 'joshua', 'omagap', 'perater', 'gwapo', '2018-05-22', 'male', 'single', '09169947508', NULL, '', '', '2018-05-16 12:40:18'),
+(2, 'sample', 'lang', 'ni', 'null', '0000-00-00', 'male', 'Single', '09169947508', 'try@gmail.com', 'Complainant', '', '2018-05-16 16:03:41'),
+(3, 'sakura', '', 'Uchiha', 'null', '0000-00-00', 'female', 'Married', '0316495', 'sakura@gmail.com', 'Victim', '', '2018-05-16 17:17:23'),
+(4, 'dawd', 'dawd', 'adwda', 'null', '0000-00-00', 'female', 'Widowed', 'daw', 'awd', 'Victim', '', '2018-05-17 07:22:25'),
+(5, 'Yunnah', 'Chuyy', 'Masaya', 'null', '0000-00-00', 'male', '', '', '', '', '', '2018-05-22 02:17:17'),
+(6, 'fbhdfbj', 'vxdbxd', 'bxdc', 'null', '0000-00-00', 'female', 'Divorced', 'xbxd', 'vxdvxd', 'Complainant', '', '2018-05-22 08:03:06');
 
 -- --------------------------------------------------------
 
