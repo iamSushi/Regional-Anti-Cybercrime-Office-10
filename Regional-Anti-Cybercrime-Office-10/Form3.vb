@@ -114,7 +114,7 @@ Public Class Form3
 
             Dim query As String
 
-            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "',null,null,null,'" & ComboBox14.Text & "','" & TextBox7.Text & "','" & TextBox8.Text & "','" & DateTimePicker2.Text & "','" & ComboBox13.Text & "','" & TextBox13.Text & "','',null)"
+            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "',null,null,null,'" & ComboBox14.Text & "','','','" & DateTimePicker2.Text & "','" & ComboBox13.Text & "','" & TextBox13.Text & "','',null)"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
@@ -362,8 +362,7 @@ Public Class Form3
             Dim gender As String
 
 
-
-            query = "insert into officer values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "','" & TextBox7.Text & "',null,null,null,'" & ComboBox14.Text & "','" & TextBox4.Text & "','" & DateTimePicker1.Text & "','" + gender + "','" & TextBox5.Text & "','" & TextBox6.Text & "','" & ComboBox3.Text & "','" & ComboBox4.Text & "','null','null','" & TextBox7.Text & "',null)"
+            query = "insert into officer values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "',',null,null,null,'','" & TextBox4.Text & "','" & DateTimePicker1.Text & "','" + gender + "','','','" & ComboBox3.Text & "','" & ComboBox4.Text & "','null','null','',null)"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
@@ -371,7 +370,6 @@ Public Class Form3
             TextBox3.Text = ""
             TextBox4.Text = ""
 
-            TextBox7.Text = ""
             DateTimePicker1.Text = ""
             ComboBox3.Text = ""
             ComboBox4.Text = ""
