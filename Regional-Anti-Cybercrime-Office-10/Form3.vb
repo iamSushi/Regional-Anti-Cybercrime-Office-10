@@ -7,6 +7,9 @@ Public Class Form3
     Dim agency As String
     Dim examiner As String
     Dim investigator As String
+
+
+
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Do While panel_slide.Width < 109
             panel_slide.Width = panel_slide.Width + 1
@@ -67,18 +70,6 @@ Public Class Form3
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
         Form7.Show()
         Me.Close()
-    End Sub
-
-    Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Label9_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
@@ -436,10 +427,6 @@ Public Class Form3
         Form8.Show()
     End Sub
 
-    Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
-
-    End Sub
-
     Private Sub Button28_Click_1(sender As Object, e As EventArgs) Handles Button28.Click
         Form8.Show()
     End Sub
@@ -490,29 +477,11 @@ Public Class Form3
         Form19.show()
     End Sub
 
-    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
-
-    End Sub
-
     Private Sub Button39_Click(sender As Object, e As EventArgs) Handles Button39.Click
         Dim key As String = DirectCast(ComboBox13.SelectedItem, KeyValuePair(Of String, String)).Key
         Dim value As String = DirectCast(ComboBox13.SelectedItem, KeyValuePair(Of String, String)).Value
         MessageBox.Show(key & "   " & value)
         MessageBox.Show(ComboBox13.SelectedText)
-    End Sub
-
-    Private Sub Button38_Click(sender As Object, e As EventArgs) Handles Button38.Click
-
-    End Sub
-
-
-
-    Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
-
-    End Sub
-
-    Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
-
     End Sub
 
     Private Sub ComboBox14_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox14.SelectedIndexChanged
