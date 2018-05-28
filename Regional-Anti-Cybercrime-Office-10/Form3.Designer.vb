@@ -53,15 +53,6 @@ Partial Class Form3
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button34 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.ComboBox17 = New System.Windows.Forms.ComboBox()
@@ -135,7 +126,19 @@ Partial Class Form3
         Me.Button32 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
+<<<<<<< HEAD
         Me.ComboBox18 = New System.Windows.Forms.ComboBox()
+=======
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+>>>>>>> c33e98d2a3611c1fd6fe42c75f763a866a26b48f
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -483,7 +486,11 @@ Partial Class Form3
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+<<<<<<< HEAD
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.Column1, Me.Column2, Me.Column3, Me.Column4})
+=======
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.Column1, Me.DataGridViewTextBoxColumn14, Me.Column2, Me.Column3, Me.Column4, Me.DataGridViewTextBoxColumn10})
+>>>>>>> c33e98d2a3611c1fd6fe42c75f763a866a26b48f
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -504,60 +511,6 @@ Partial Class Form3
         Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.Size = New System.Drawing.Size(957, 276)
         Me.DataGridView1.TabIndex = 7
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.HeaderText = "Laboratory Case ID"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.Width = 150
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.HeaderText = "Date Received"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.Width = 96
-        '
-        'DataGridViewTextBoxColumn14
-        '
-        Me.DataGridViewTextBoxColumn14.HeaderText = "Agency"
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        Me.DataGridViewTextBoxColumn14.Width = 95
-        '
-        'DataGridViewTextBoxColumn15
-        '
-        Me.DataGridViewTextBoxColumn15.HeaderText = "Examiner"
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-        Me.DataGridViewTextBoxColumn15.Width = 96
-        '
-        'DataGridViewTextBoxColumn16
-        '
-        Me.DataGridViewTextBoxColumn16.HeaderText = "Investigator"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        Me.DataGridViewTextBoxColumn16.Width = 95
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "DFE"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Width = 96
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "DO"
-        Me.Column2.Name = "Column2"
-        Me.Column2.Width = 95
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "TO"
-        Me.Column3.Name = "Column3"
-        Me.Column3.Width = 96
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "PO"
-        Me.Column4.Name = "Column4"
-        Me.Column4.Width = 95
         '
         'Button34
         '
@@ -617,7 +570,11 @@ Partial Class Form3
         '
         Me.ComboBox15.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox15.FormattingEnabled = True
+<<<<<<< HEAD
         Me.ComboBox15.Items.AddRange(New Object() {" "})
+=======
+        Me.ComboBox15.Items.AddRange(New Object() {"Cellphone", "Computer", "Audio Visual", "Intel"})
+>>>>>>> c33e98d2a3611c1fd6fe42c75f763a866a26b48f
         Me.ComboBox15.Location = New System.Drawing.Point(220, 91)
         Me.ComboBox15.Name = "ComboBox15"
         Me.ComboBox15.Size = New System.Drawing.Size(219, 31)
@@ -1462,6 +1419,7 @@ Partial Class Form3
         Me.Label11.TabIndex = 52
         Me.Label11.Text = "      Complainant"
         '
+<<<<<<< HEAD
         'ComboBox18
         '
         Me.ComboBox18.FormattingEnabled = True
@@ -1470,6 +1428,62 @@ Partial Class Form3
         Me.ComboBox18.Size = New System.Drawing.Size(189, 31)
         Me.ComboBox18.TabIndex = 94
         '
+=======
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Laboratory Case ID"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.Width = 150
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.HeaderText = "Examiner"
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.DataGridViewTextBoxColumn15.Width = 96
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        Me.DataGridViewTextBoxColumn16.HeaderText = "Investigator"
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.Width = 95
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "DFE"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Width = 96
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.HeaderText = "Agency"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.Width = 95
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "DO"
+        Me.Column2.Name = "Column2"
+        Me.Column2.Width = 95
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "TO"
+        Me.Column3.Name = "Column3"
+        Me.Column3.Width = 96
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "PO"
+        Me.Column4.Name = "Column4"
+        Me.Column4.Width = 95
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Date Received"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.Width = 96
+        '
+>>>>>>> c33e98d2a3611c1fd6fe42c75f763a866a26b48f
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1529,15 +1543,6 @@ Partial Class Form3
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Button34 As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label17 As Label
@@ -1611,5 +1616,17 @@ Partial Class Form3
     Friend WithEvents Label2 As Label
     Friend WithEvents ComboBox17 As ComboBox
     Friend WithEvents ComboBox15 As ComboBox
+<<<<<<< HEAD
     Friend WithEvents ComboBox18 As ComboBox
+=======
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+>>>>>>> c33e98d2a3611c1fd6fe42c75f763a866a26b48f
 End Class
