@@ -134,8 +134,11 @@ Partial Class Form3
         Me.Button32 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
+<<<<<<< HEAD
         Me.ComboBox15 = New System.Windows.Forms.ComboBox()
         Me.ComboBox17 = New System.Windows.Forms.ComboBox()
+=======
+>>>>>>> b5f8a20874b1822254206edc36765b454b2caf34
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -1451,6 +1454,7 @@ Partial Class Form3
         Me.Label11.TabIndex = 52
         Me.Label11.Text = "      Complainant"
         '
+<<<<<<< HEAD
         'ComboBox15
         '
         Me.ComboBox15.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1471,6 +1475,8 @@ Partial Class Form3
         Me.ComboBox17.Size = New System.Drawing.Size(220, 31)
         Me.ComboBox17.TabIndex = 75
         '
+=======
+>>>>>>> b5f8a20874b1822254206edc36765b454b2caf34
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)

@@ -4,6 +4,7 @@ Public Class Form3
     Dim mysqlconn As MySqlConnection
     Dim command As MySqlCommand
     Dim reader As MySqlDataReader
+    Dim agency As String
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Do While panel_slide.Width < 109
             panel_slide.Width = panel_slide.Width + 1
@@ -246,6 +247,7 @@ Public Class Form3
                 comboSource.Add(id, name)
             End While
 
+
             mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show(ex.Message)
@@ -273,6 +275,8 @@ Public Class Form3
             ComboBox16.DisplayMember = "Value"
             ComboBox16.ValueMember = "Key"
 
+            Dim agency As String = DirectCast(ComboBox14.SelectedItem, KeyValuePair(Of String, String)).Key
+
             mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show(ex.Message)
@@ -299,6 +303,8 @@ Public Class Form3
             ComboBox13.DataSource = New BindingSource(comboSource, Nothing)
             ComboBox13.DisplayMember = "Value"
             ComboBox13.ValueMember = "Key"
+
+            Dim agency As String = DirectCast(ComboBox13.SelectedItem, KeyValuePair(Of String, String)).Key
 
             mysqlconn.Close()
         Catch ex As MySqlException
@@ -334,7 +340,7 @@ Public Class Form3
     End Sub
 
     Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
-        Form20.Show()
+
     End Sub
 
     Private Sub Button28_Click_1(sender As Object, e As EventArgs) Handles Button28.Click
@@ -346,7 +352,37 @@ Public Class Form3
     End Sub
 
     Private Sub Button31_Click_1(sender As Object, e As EventArgs) Handles Button31.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            Dim gender As String
+
+
+
+            query = "insert into officer values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "','" & TextBox7.Text & "',null,null,null,'" & ComboBox14.Text & "','" & TextBox4.Text & "','" & DateTimePicker1.Text & "','" + gender + "','" & TextBox5.Text & "','" & TextBox6.Text & "','" & ComboBox3.Text & "','" & ComboBox4.Text & "','null','null','" & TextBox7.Text & "',null)"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+            MessageBox.Show("Successful")
+            TextBox2.Text = ""
+            TextBox3.Text = ""
+            TextBox4.Text = ""
+
+            TextBox7.Text = ""
+            DateTimePicker1.Text = ""
+            ComboBox3.Text = ""
+            ComboBox4.Text = ""
+            load_table()
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
     End Sub
 
     Private Sub Button36_Click_1(sender As Object, e As EventArgs) Handles Button36.Click
@@ -368,11 +404,17 @@ Public Class Form3
 
     End Sub
 
+
+
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
 
     End Sub
 
     Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
 
+    End Sub
+
+    Private Sub ComboBox14_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox14.SelectedIndexChanged
+        Form8.lab_case = DirectCast(ComboBox14.SelectedItem, KeyValuePair(Of String, String)).Key
     End Sub
 End Class
