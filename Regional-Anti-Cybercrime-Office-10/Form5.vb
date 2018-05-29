@@ -82,10 +82,10 @@ Public Class Form5
         filesize = mstream.Length
         mstream.Close()
 
-        'If String.IsNullOrEmpty(fname.Text) Then
-        '    MsgBox("Input Firstname")
-        'ElseIf String.IsNullOrEmpty(mname.Text) Then
-        '    MsgBox("Input Secondname")
+        if string.isnullorempty(fname.text) Then
+            MsgBox("input firstname")
+            'ElseIf String.IsNullOrEmpty(mname.Text) Then
+            '    MsgBox("Input Secondname")
         Else
             Try
                 mysqlconn.Open()
