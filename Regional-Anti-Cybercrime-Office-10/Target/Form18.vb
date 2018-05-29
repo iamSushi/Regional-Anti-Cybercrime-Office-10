@@ -31,7 +31,7 @@ Public Class Form18
 
                 Dim query As String
 
-                query = "insert into suspect values('" & lab_case & "','" & pili & "')"
+                query = "insert into suspect values('" & lab_case & "','" & pili & "',null)"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
                 MessageBox.Show("Successful")

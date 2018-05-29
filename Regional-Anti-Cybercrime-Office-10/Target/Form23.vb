@@ -1,11 +1,12 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class Form20
+Public Class Form23
     Dim mysqlconn As MySqlConnection
     Dim command As MySqlCommand
     Dim reader As MySqlDataReader
-    Private Sub Form20_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        load_table()
+
+    Private Sub Form23_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 
     Private Sub load_table()
@@ -21,34 +22,7 @@ Public Class Form20
 
             Dim query As String
 
-            query = "select lab_case_no,lab_case_no_id As CaseID from laboratory_case  "
-            command = New MySqlCommand(query, mysqlconn)
-            adapter.SelectCommand = command
-            adapter.Fill(dbDataSet)
-            soure.DataSource = dbDataSet
-            DataGridView1.DataSource = soure
-            adapter.Update(dbDataSet)
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-        Dim adapter As New MySqlDataAdapter
-        Dim dbDataSet As New DataTable
-        Dim soure As New BindingSource
-
-
-        Try
-            mysqlconn.Open()
-
-            Dim query As String
-
-            query = "select lab_case_no_id As CaseID from laboratory_case where lab_case_no_id like '" & TextBox1.Text & "%' "
+            query = "select agency_id as ID , name as Agency_Name from agency "
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -74,14 +48,14 @@ Public Class Form20
             If e.RowIndex >= 0 Then
                 Dim row As DataGridViewRow
                 row = Me.DataGridView1.Rows(e.RowIndex)
-                Dim pili = row.Cells("lab_case_no").Value.ToString
+                Dim pili = row.Cells("ID").Value.ToString
+                Dim name = row.Cells("Agency_Name").Value.ToString
 
                 MessageBox.Show(pili)
-                Form3.TextBox1.Text = row.Cells("CaseID").Value.ToString
-                Form3.lab_case = pili
-                Form8.lab_case = pili
-                Form18.lab_case = pili
-                Form24.lab_case = pili
+
+                Form3.TextBox6.Text = name
+                Form3.agency = pili
+
 
 
             End If
@@ -91,7 +65,5 @@ Public Class Form20
         Finally
             mysqlconn.Dispose()
         End Try
-
-        load_table()
     End Sub
 End Class

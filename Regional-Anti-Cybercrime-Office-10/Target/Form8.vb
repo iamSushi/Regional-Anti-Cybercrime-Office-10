@@ -118,7 +118,7 @@ Public Class Form8
 
                 Dim query As String
 
-                query = "insert into victim values('" & lab_case & "','" & pili & "')"
+                query = "insert into victim values('" & lab_case & "','" & pili & "',null)"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
                 MessageBox.Show("Successful")
