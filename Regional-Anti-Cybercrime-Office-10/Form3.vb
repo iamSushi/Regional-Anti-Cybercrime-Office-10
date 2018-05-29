@@ -452,12 +452,7 @@ Public Class Form3
         Form8.lab_case = DirectCast(ComboBox14.SelectedItem, KeyValuePair(Of String, String)).Key
     End Sub
 
-    Private Sub DataGridView1_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-    End Sub
-
     Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
         Form20.Show()
-
     End Sub
 End Class
