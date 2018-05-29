@@ -82,10 +82,60 @@ Public Class Form5
         filesize = mstream.Length
         mstream.Close()
 
-        if string.isnullorempty(fname.text) Then
-            MsgBox("input firstname")
-            'ElseIf String.IsNullOrEmpty(mname.Text) Then
-            '    MsgBox("Input Secondname")
+        Dim count As Int16
+        count = 0
+
+        If String.IsNullOrEmpty(fname.Text) Then
+            Me.ErrorProvider1.SetError(Me.fname, "Input firstname")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.fname, "")
+        End If
+
+        If String.IsNullOrEmpty(mname.Text) Then
+            Me.ErrorProvider1.SetError(Me.mname, "Input middlename")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.mname, "")
+        End If
+
+        If String.IsNullOrEmpty(sname.Text) Then
+            Me.ErrorProvider1.SetError(Me.sname, "Input surname")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.sname, "")
+        End If
+
+        If String.IsNullOrEmpty(contact.Text) Then
+            Me.ErrorProvider1.SetError(Me.contact, "Input contact")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.contact, "")
+        End If
+
+        If String.IsNullOrEmpty(email.Text) Then
+            Me.ErrorProvider1.SetError(Me.email, "Input email")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.email, "")
+        End If
+
+        If String.IsNullOrEmpty(category.Text) Then
+            Me.ErrorProvider1.SetError(Me.category, "Input category")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.category, "")
+        End If
+
+        If String.IsNullOrEmpty(status.Text) Then
+            Me.ErrorProvider1.SetError(Me.status, "Input status")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.status, "")
+        End If
+
+        If count <> 0 Then
+            Return
         Else
             Try
                 mysqlconn.Open()
@@ -113,6 +163,15 @@ Public Class Form5
                 status.Text = ""
                 category.Text = ""
                 PictureBox2.Image = Nothing
+
+                Me.ErrorProvider1.SetError(Me.fname, "")
+                Me.ErrorProvider1.SetError(Me.mname, "")
+                Me.ErrorProvider1.SetError(Me.sname, "")
+                Me.ErrorProvider1.SetError(Me.contact, "")
+                Me.ErrorProvider1.SetError(Me.email, "")
+                Me.ErrorProvider1.SetError(Me.category, "")
+                Me.ErrorProvider1.SetError(Me.status, "")
+                count = 0
                 load_table()
                 mysqlconn.Close()
 
@@ -140,7 +199,7 @@ Public Class Form5
 
             Dim query As String
 
-            query = "select fname as First, mname as Middle, sname as Surname, dob as Birthday, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as Created from persons"
+            query = "select fname as Firstname, mname as Middlename, sname as Surname, dob as Birthdate, gender as Gender, status as Status, contact as ContactNo, email as EmailAddress, category as Category, date_created as DateCreated from persons"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -323,5 +382,6 @@ Public Class Form5
     Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
         PictureBox2.ImageLocation = OpenFileDialog1.FileName
     End Sub
+
 
 End Class
