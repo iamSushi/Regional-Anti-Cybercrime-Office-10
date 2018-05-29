@@ -82,39 +82,48 @@ Public Class Form5
         filesize = mstream.Length
         mstream.Close()
 
-        Try
-            mysqlconn.Open()
+        'If String.IsNullOrEmpty(fname.Text) Then
+        '    MsgBox("Input Firstname")
+        'ElseIf String.IsNullOrEmpty(mname.Text) Then
+        '    MsgBox("Input Secondname")
+        Else
+            Try
+                mysqlconn.Open()
 
-            Dim query As String
-            Dim gender As String
+                Dim query As String
+                Dim gender As String
 
-            If RadioButton1.Checked = True Then
-                gender = "male"
-            Else
-                gender = "female"
-            End If
+                If RadioButton1.Checked = True Then
+                    gender = "male"
+                Else
+                    gender = "female"
+                End If
 
-            query = "insert into persons values(null,'" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','null','" & DateTimePicker1.Text & "','" + gender + "','" & ComboBox3.Text & "','" & TextBox5.Text & "','" & TextBox6.Text & "','" & ComboBox1.Text & "',@profile_image,null)"
-            command = New MySqlCommand(query, mysqlconn)
-            command.Parameters.AddWithValue("@profile_image", arrImage)
-            reader = command.ExecuteReader
-            MessageBox.Show("Successful")
-            TextBox2.Text = ""
-            TextBox3.Text = ""
-            TextBox4.Text = ""
-            TextBox5.Text = ""
-            TextBox6.Text = ""
-            DateTimePicker1.Text = ""
-            ComboBox3.Text = ""
-            ComboBox1.Text = ""
-            PictureBox2.Image = Nothing
-            load_table()
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
+                query = "insert into persons values(null,'" & fname.Text & "','" & mname.Text & "','" & sname.Text & "','null','" & DateTimePicker1.Text & "','" + gender + "','" & status.Text & "','" & contact.Text & "','" & email.Text & "','" & category.Text & "',@profile_image,null)"
+                command = New MySqlCommand(query, mysqlconn)
+                command.Parameters.AddWithValue("@profile_image", arrImage)
+                reader = command.ExecuteReader
+                MessageBox.Show("Successful")
+                fname.Text = ""
+                mname.Text = ""
+                sname.Text = ""
+                contact.Text = ""
+                email.Text = ""
+                DateTimePicker1.Text = ""
+                status.Text = ""
+                category.Text = ""
+                PictureBox2.Image = Nothing
+                load_table()
+                mysqlconn.Close()
+
+            Catch ex As MySqlException
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
+        End If
+
+
 
 
     End Sub
@@ -147,18 +156,8 @@ Public Class Form5
         End Try
     End Sub
 
-    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
-
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
-
-
     End Sub
 
     Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
@@ -259,10 +258,6 @@ Public Class Form5
 
     End Sub
 
-    Private Sub Label14_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
@@ -328,4 +323,5 @@ Public Class Form5
     Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
         PictureBox2.ImageLocation = OpenFileDialog1.FileName
     End Sub
+
 End Class
