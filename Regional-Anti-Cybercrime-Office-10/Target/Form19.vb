@@ -51,7 +51,7 @@ Public Class Form19
 
             Dim query As String
 
-            query = "select law_id as ID , designation as Name from law"
+            query = "select law_id as ID , designation as Name, date_passed as Date_Passed, description as Description from law"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -77,7 +77,7 @@ Public Class Form19
 
             Dim query As String
 
-            query = "select law_id,designation,description from case_nature left join law on case_nature.nature_of_case = law.law_id"
+            query = "select law_id as ID, designation as Designation, description as Description from case_nature left join law on case_nature.nature_of_case = law.law_id"
             command = New MySqlCommand(query, mysqlconn)
             adapter2.SelectCommand = command
             adapter2.Fill(dbDataSet2)
@@ -125,5 +125,43 @@ Public Class Form19
     Private Sub Form19_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
 
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+
+        Try
+            mysqlconn.Open()
+
+            If e.RowIndex >= 0 Then
+                Dim row As DataGridViewRow
+                row = Me.DataGridView2.Rows(e.RowIndex)
+                Dim pili = row.Cells("ID").Value.ToString
+
+                MessageBox.Show(pili)
+
+                Dim query As String
+
+                query = "delete from case_nature where nature_of_case = '" & pili & "' and lab_case_no = '" & lab_case & "'"
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+                MessageBox.Show("Successful")
+
+            End If
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        load_table()
+        load_table2()
     End Sub
 End Class
