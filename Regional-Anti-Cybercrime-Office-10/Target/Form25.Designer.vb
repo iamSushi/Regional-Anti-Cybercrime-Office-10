@@ -437,7 +437,7 @@ Partial Class Form25
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(1030, 21)
+        Me.Label1.Location = New System.Drawing.Point(963, 27)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(62, 23)
         Me.Label1.TabIndex = 103
@@ -449,7 +449,7 @@ Partial Class Form25
         Me.Label13.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Image = CType(resources.GetObject("Label13.Image"), System.Drawing.Image)
         Me.Label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label13.Location = New System.Drawing.Point(843, 21)
+        Me.Label13.Location = New System.Drawing.Point(776, 27)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(181, 23)
         Me.Label13.TabIndex = 0
