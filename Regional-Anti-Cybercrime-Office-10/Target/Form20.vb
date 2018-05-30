@@ -83,12 +83,11 @@ Public Class Form20
                 Form19.Label3.Text = row.Cells("CaseID").Value.ToString
                 Form3.lab_case = pili
                 Form8.lab_case = pili
-<<<<<<< HEAD
-=======
+
                 Form18.lab_case = pili
                 Form19.lab_case = pili
                 Form24.lab_case = pili
->>>>>>> 91b04d57495381b1a74ff394ee704b8a445d11de
+
 
 
             End If

@@ -600,14 +600,14 @@ Partial Class Form4
         Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
         Me.Column1.HeaderText = "Date Received"
         Me.Column1.Name = "Column1"
-        Me.Column1.Width = 131
+        Me.Column1.Width = 143
         '
         'Column2
         '
         Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
         Me.Column2.HeaderText = "DFE Type"
         Me.Column2.Name = "Column2"
-        Me.Column2.Width = 96
+        Me.Column2.Width = 105
         '
         'Column3
         '
