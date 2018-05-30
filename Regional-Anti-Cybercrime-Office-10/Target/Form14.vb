@@ -22,7 +22,7 @@ Public Class Form14
 
             Dim query As String
 
-            query = "select * from nature"
+            query = "select * from law"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
