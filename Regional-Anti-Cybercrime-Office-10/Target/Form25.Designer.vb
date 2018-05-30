@@ -24,6 +24,8 @@ Partial Class Form25
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form25))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
@@ -38,7 +40,6 @@ Partial Class Form25
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
@@ -53,16 +54,15 @@ Partial Class Form25
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.ListBox3 = New System.Windows.Forms.ListBox()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
         Me.Button31 = New System.Windows.Forms.Button()
         Me.Button29 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
@@ -114,10 +114,32 @@ Partial Class Form25
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Case"
         '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(224, 48)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(72, 23)
+        Me.Label26.TabIndex = 119
+        Me.Label26.Text = "Label26"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label27.Image = CType(resources.GetObject("Label27.Image"), System.Drawing.Image)
+        Me.Label27.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label27.Location = New System.Drawing.Point(27, 48)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(131, 23)
+        Me.Label27.TabIndex = 118
+        Me.Label27.Text = "      Complainant"
+        '
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(213, 693)
+        Me.Label25.Location = New System.Drawing.Point(224, 693)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(72, 23)
         Me.Label25.TabIndex = 117
@@ -126,7 +148,7 @@ Partial Class Form25
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(213, 652)
+        Me.Label24.Location = New System.Drawing.Point(224, 652)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(72, 23)
         Me.Label24.TabIndex = 116
@@ -135,7 +157,7 @@ Partial Class Form25
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(213, 606)
+        Me.Label23.Location = New System.Drawing.Point(224, 606)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(72, 23)
         Me.Label23.TabIndex = 115
@@ -144,7 +166,7 @@ Partial Class Form25
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(213, 559)
+        Me.Label22.Location = New System.Drawing.Point(224, 559)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(72, 23)
         Me.Label22.TabIndex = 114
@@ -153,7 +175,7 @@ Partial Class Form25
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(212, 513)
+        Me.Label21.Location = New System.Drawing.Point(223, 513)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(72, 23)
         Me.Label21.TabIndex = 113
@@ -162,7 +184,7 @@ Partial Class Form25
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(212, 465)
+        Me.Label20.Location = New System.Drawing.Point(223, 465)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(72, 23)
         Me.Label20.TabIndex = 112
@@ -171,7 +193,7 @@ Partial Class Form25
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(213, 420)
+        Me.Label19.Location = New System.Drawing.Point(224, 420)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(72, 23)
         Me.Label19.TabIndex = 111
@@ -180,7 +202,7 @@ Partial Class Form25
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(213, 379)
+        Me.Label18.Location = New System.Drawing.Point(224, 379)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(72, 23)
         Me.Label18.TabIndex = 110
@@ -189,7 +211,7 @@ Partial Class Form25
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(213, 330)
+        Me.Label15.Location = New System.Drawing.Point(224, 330)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(72, 23)
         Me.Label15.TabIndex = 109
@@ -198,7 +220,7 @@ Partial Class Form25
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(213, 277)
+        Me.Label11.Location = New System.Drawing.Point(224, 277)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(72, 23)
         Me.Label11.TabIndex = 108
@@ -207,7 +229,7 @@ Partial Class Form25
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(212, 230)
+        Me.Label10.Location = New System.Drawing.Point(223, 230)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(72, 23)
         Me.Label10.TabIndex = 107
@@ -216,7 +238,7 @@ Partial Class Form25
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(213, 181)
+        Me.Label5.Location = New System.Drawing.Point(224, 181)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(62, 23)
         Me.Label5.TabIndex = 106
@@ -225,7 +247,7 @@ Partial Class Form25
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(213, 137)
+        Me.Label3.Location = New System.Drawing.Point(224, 137)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(62, 23)
         Me.Label3.TabIndex = 105
@@ -234,21 +256,11 @@ Partial Class Form25
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(213, 93)
+        Me.Label2.Location = New System.Drawing.Point(224, 93)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(62, 23)
         Me.Label2.TabIndex = 104
         Me.Label2.Text = "Label2"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(959, 49)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(62, 23)
-        Me.Label1.TabIndex = 103
-        Me.Label1.Text = "Label1"
         '
         'Label33
         '
@@ -421,13 +433,23 @@ Partial Class Form25
         Me.Label12.TabIndex = 2
         Me.Label12.Text = "      Date Received"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(1030, 21)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(62, 23)
+        Me.Label1.TabIndex = 103
+        Me.Label1.Text = "Label1"
+        '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Image = CType(resources.GetObject("Label13.Image"), System.Drawing.Image)
         Me.Label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label13.Location = New System.Drawing.Point(772, 49)
+        Me.Label13.Location = New System.Drawing.Point(843, 21)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(181, 23)
         Me.Label13.TabIndex = 0
@@ -436,92 +458,73 @@ Partial Class Form25
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(562, 618)
+        Me.DataGridView1.Location = New System.Drawing.Point(547, 571)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(857, 94)
+        Me.DataGridView1.Size = New System.Drawing.Size(860, 116)
         Me.DataGridView1.TabIndex = 9
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.ListBox1)
-        Me.GroupBox2.Location = New System.Drawing.Point(550, 105)
+        Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(541, 77)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(269, 481)
         Me.GroupBox2.TabIndex = 10
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Suspect(s)"
         '
+        'ListBox1
+        '
+        Me.ListBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 23
+        Me.ListBox1.Location = New System.Drawing.Point(6, 34)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(257, 441)
+        Me.ListBox1.TabIndex = 0
+        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.ListBox2)
-        Me.GroupBox3.Location = New System.Drawing.Point(850, 105)
+        Me.GroupBox3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox3.Location = New System.Drawing.Point(841, 77)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(269, 481)
         Me.GroupBox3.TabIndex = 11
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Victim(s)"
         '
+        'ListBox2
+        '
+        Me.ListBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox2.FormattingEnabled = True
+        Me.ListBox2.ItemHeight = 23
+        Me.ListBox2.Location = New System.Drawing.Point(6, 34)
+        Me.ListBox2.Name = "ListBox2"
+        Me.ListBox2.Size = New System.Drawing.Size(257, 441)
+        Me.ListBox2.TabIndex = 1
+        '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.ListBox3)
-        Me.GroupBox4.Location = New System.Drawing.Point(1153, 105)
+        Me.GroupBox4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox4.Location = New System.Drawing.Point(1144, 77)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(269, 481)
         Me.GroupBox4.TabIndex = 11
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Nature of Case(s)"
         '
-        'ListBox1
-        '
-        Me.ListBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 23
-        Me.ListBox1.Location = New System.Drawing.Point(12, 16)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(239, 441)
-        Me.ListBox1.TabIndex = 0
-        '
-        'ListBox2
-        '
-        Me.ListBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.ItemHeight = 23
-        Me.ListBox2.Location = New System.Drawing.Point(12, 16)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(251, 441)
-        Me.ListBox2.TabIndex = 1
-        '
         'ListBox3
         '
-        Me.ListBox3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListBox3.FormattingEnabled = True
         Me.ListBox3.ItemHeight = 23
-        Me.ListBox3.Location = New System.Drawing.Point(12, 16)
+        Me.ListBox3.Location = New System.Drawing.Point(6, 34)
         Me.ListBox3.Name = "ListBox3"
-        Me.ListBox3.Size = New System.Drawing.Size(242, 441)
+        Me.ListBox3.Size = New System.Drawing.Size(257, 441)
         Me.ListBox3.TabIndex = 1
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(213, 48)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(72, 23)
-        Me.Label26.TabIndex = 119
-        Me.Label26.Text = "Label26"
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label27.Image = CType(resources.GetObject("Label27.Image"), System.Drawing.Image)
-        Me.Label27.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label27.Location = New System.Drawing.Point(27, 48)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(131, 23)
-        Me.Label27.TabIndex = 118
-        Me.Label27.Text = "      Complainant"
         '
         'Button31
         '
@@ -530,7 +533,7 @@ Partial Class Form25
         Me.Button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button31.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button31.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button31.Location = New System.Drawing.Point(1328, 737)
+        Me.Button31.Location = New System.Drawing.Point(651, 746)
         Me.Button31.Name = "Button31"
         Me.Button31.Size = New System.Drawing.Size(79, 30)
         Me.Button31.TabIndex = 105
@@ -544,7 +547,7 @@ Partial Class Form25
         Me.Button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button29.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button29.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button29.Location = New System.Drawing.Point(1224, 737)
+        Me.Button29.Location = New System.Drawing.Point(547, 746)
         Me.Button29.Name = "Button29"
         Me.Button29.Size = New System.Drawing.Size(79, 30)
         Me.Button29.TabIndex = 104
