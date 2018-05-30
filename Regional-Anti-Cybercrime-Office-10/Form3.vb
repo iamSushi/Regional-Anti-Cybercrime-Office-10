@@ -200,39 +200,6 @@ Public Class Form3
             mysqlconn.Dispose()
         End Try
 
-
-
-
-
-        Try
-            mysqlconn.Open()
-
-            Dim query As String
-
-            query = "select law_id as Id , designation as name from law"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-
-            Dim comboSource As New Dictionary(Of String, String)()
-
-            While reader.Read
-                Dim name = reader.GetString("name")
-                Dim id = reader.GetString("id")
-                comboSource.Add(id, name)
-            End While
-            ComboBox16.DataSource = New BindingSource(comboSource, Nothing)
-            ComboBox16.DisplayMember = "Value"
-            ComboBox16.ValueMember = "Key"
-
-            Dim law As String = DirectCast(ComboBox16.SelectedItem, KeyValuePair(Of String, String)).Key
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
-
         Try
             mysqlconn.Open()
 
@@ -356,7 +323,7 @@ Public Class Form3
             Dim query1 As String
 
 
-            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "','" & DateTimePicker4.Text & "','" & DateTimePicker5.Text & "','" + releasedby + "','" + claimedby + "',null,'" & agency & "','" & examiner & "','" & investigator & "','" & DateTimePicker2.Text & "',' " & DateTimePicker3.Text & "',' " & TextBox13.Text & "',' " & ComboBox3.Text & " ','null',null)"
+            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "','" & DateTimePicker4.Text & "','" & DateTimePicker5.Text & "','" & DateTimePicker6.Text & "','" & TextBox9.Text & "','" + releasedby + "','" + claimedby + "',null,'" & agency & "','" & examiner & "','" & investigator & "','" & DateTimePicker2.Text & "',' " & DateTimePicker3.Text & "',' " & TextBox13.Text & "',' " & ComboBox3.Text & " ','null',null)"
             query1 = "insert into laboratory_case values(null,         '1'            ,'          1                 ','3','4','5',          '6',      '     7       ',   '       8'           ,'        9                  ','              10             ','             11          ', 12 ,null)"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
@@ -466,5 +433,13 @@ Public Class Form3
 
     Private Sub Button27_Click(sender As Object, e As EventArgs) Handles Button27.Click
         Form22.Show()
+    End Sub
+
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
     End Sub
 End Class

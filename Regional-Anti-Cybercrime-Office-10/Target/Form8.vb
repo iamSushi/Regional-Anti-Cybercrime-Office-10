@@ -185,7 +185,7 @@ Public Class Form8
 
                 Dim query As String
 
-                query = "delete from victim where person_id = '" & pili & "'"
+                query = "delete from victim where person_id = '" & pili & "' and lab_case_no = ' " & lab_case & "'"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
                 MessageBox.Show("Successful")

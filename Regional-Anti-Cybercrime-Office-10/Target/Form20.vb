@@ -78,9 +78,13 @@ Public Class Form20
 
                 MessageBox.Show(pili)
                 Form3.TextBox1.Text = row.Cells("CaseID").Value.ToString
+                Form8.Label3.Text = row.Cells("CaseID").Value.ToString
+                Form18.Label3.Text = row.Cells("CaseID").Value.ToString
+                Form19.Label3.Text = row.Cells("CaseID").Value.ToString
                 Form3.lab_case = pili
                 Form8.lab_case = pili
                 Form18.lab_case = pili
+                Form19.lab_case = pili
                 Form24.lab_case = pili
 
 
