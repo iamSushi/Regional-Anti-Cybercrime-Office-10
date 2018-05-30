@@ -7,6 +7,7 @@ Public Class Form5
     Dim mysqlconn As MySqlConnection
     Dim command As MySqlCommand
     Dim reader As MySqlDataReader
+    Dim index As Integer
 
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -149,7 +150,7 @@ Public Class Form5
                     gender = "female"
                 End If
 
-                query = "insert into persons values(null,'" & fname.Text & "','" & mname.Text & "','" & sname.Text & "','null','" & DateTimePicker1.Text & "','" + gender + "','" & status.Text & "','" & contact.Text & "','" & email.Text & "','" & category.Text & "',@profile_image,null)"
+                query = "insert into persons values(null,'" & fname.Text & "','" & mname.Text & "','" & sname.Text & "','null','" & DateTimePicker1.Text & "','" & gender & "','" & status.Text & "','" & contact.Text & "','" & email.Text & "','" & category.Text & "',@profile_image,null)"
                 command = New MySqlCommand(query, mysqlconn)
                 command.Parameters.AddWithValue("@profile_image", arrImage)
                 reader = command.ExecuteReader
@@ -199,7 +200,7 @@ Public Class Form5
 
             Dim query As String
 
-            query = "select fname as Firstname, mname as Middlename, sname as Surname, dob as Birthdate, gender as Gender, status as Status, contact as ContactNo, email as EmailAddress, category as Category, date_created as DateCreated from persons"
+            query = "select person_id as ID,fname as Firstname, mname as Middlename, sname as Surname, dob as Birthdate, gender as Gender, status as Status, contact as ContactNo, email as EmailAddress, category as Category, date_created as DateCreated from persons"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -217,6 +218,7 @@ Public Class Form5
 
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
+
     End Sub
 
     Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
@@ -383,5 +385,173 @@ Public Class Form5
         PictureBox2.ImageLocation = OpenFileDialog1.FileName
     End Sub
 
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+
+        index = e.RowIndex
+        Dim selectedRow As DataGridViewRow
+        selectedRow = DataGridView1.Rows(index)
+
+        id.Text = selectedRow.Cells(0).Value.ToString()
+        fname.Text = selectedRow.Cells(1).Value.ToString()
+        mname.Text = selectedRow.Cells(2).Value.ToString()
+        sname.Text = selectedRow.Cells(3).Value.ToString()
+        contact.Text = selectedRow.Cells(7).Value.ToString()
+        email.Text = selectedRow.Cells(8).Value.ToString()
+        category.Text = selectedRow.Cells(9).Value.ToString()
+        status.Text = selectedRow.Cells(6).Value.ToString()
+    End Sub
+
+    Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+
+        'dim newdatarow as datagridviewrow
+        'newdatarow = datagridview1.rows(index)
+
+        'newdatarow.cells(1).value = fname.text
+        'newdatarow.cells(2).value = mname.text
+        'newdatarow.cells(3).value = sname.text
+        'newdatarow.cells(7).value = contact.text
+        'newdatarow.cells(8).value = email.text
+        'newdatarow.cells(9).value = category.text
+        'newdatarow.cells(6).value = status.text
+
+        'msgbox("successfully updated!")
+        'fname.text = ""
+        'mname.text = ""
+        'sname.text = ""
+        'contact.text = ""
+        'email.text = ""
+        'category.text = ""
+        'status.text = ""
+
+        Dim filesize As UInt32
+        Dim mstream As New System.IO.MemoryStream
+        PictureBox2.Image.Save(mstream, System.Drawing.Imaging.ImageFormat.Jpeg)
+        Dim arrImage() As Byte = mstream.GetBuffer
+        filesize = mstream.Length
+        mstream.Close()
+
+        Dim count As Int16
+        count = 0
+
+        If String.IsNullOrEmpty(fname.Text) Then
+            Me.ErrorProvider1.SetError(Me.fname, "Input firstname")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.fname, "")
+        End If
+
+        If String.IsNullOrEmpty(mname.Text) Then
+            Me.ErrorProvider1.SetError(Me.mname, "Input middlename")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.mname, "")
+        End If
+
+        If String.IsNullOrEmpty(sname.Text) Then
+            Me.ErrorProvider1.SetError(Me.sname, "Input surname")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.sname, "")
+        End If
+
+        If String.IsNullOrEmpty(contact.Text) Then
+            Me.ErrorProvider1.SetError(Me.contact, "Input contact")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.contact, "")
+        End If
+
+        If String.IsNullOrEmpty(email.Text) Then
+            Me.ErrorProvider1.SetError(Me.email, "Input email")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.email, "")
+        End If
+
+        If String.IsNullOrEmpty(category.Text) Then
+            Me.ErrorProvider1.SetError(Me.category, "Input category")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.category, "")
+        End If
+
+        If String.IsNullOrEmpty(status.Text) Then
+            Me.ErrorProvider1.SetError(Me.status, "Input status")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.status, "")
+        End If
+
+        If count <> 0 Then
+            Return
+        Else
+            Try
+                mysqlconn.Open()
+
+                Dim query As String
+                Dim gender As String
+
+                If RadioButton1.Checked = True Then
+                    gender = "male"
+                Else
+                    gender = "female"
+                End If
+
+                query = "UPDATE persons set fname = '" & fname.Text & "', mname = '" & mname.Text & "', sname = '" & sname.Text & "', contact = '" & contact.Text & "',email = '" & email.Text & "',category = '" & category.Text & "',status = '" & status.Text & "' where person_id = '" & id.Text & "'"
+                command = New MySqlCommand(query, mysqlconn)
+                command.Parameters.AddWithValue("@profile_image", arrImage)
+                reader = command.ExecuteReader
+                MessageBox.Show("Successful")
+                fname.Text = ""
+                mname.Text = ""
+                sname.Text = ""
+                contact.Text = ""
+                email.Text = ""
+                DateTimePicker1.Text = ""
+                status.Text = ""
+                category.Text = ""
+                PictureBox2.Image = Nothing
+
+                Me.ErrorProvider1.SetError(Me.fname, "")
+                Me.ErrorProvider1.SetError(Me.mname, "")
+                Me.ErrorProvider1.SetError(Me.sname, "")
+                Me.ErrorProvider1.SetError(Me.contact, "")
+                Me.ErrorProvider1.SetError(Me.email, "")
+                Me.ErrorProvider1.SetError(Me.category, "")
+                Me.ErrorProvider1.SetError(Me.status, "")
+                count = 0
+                load_table()
+                mysqlconn.Close()
+
+            Catch ex As MySqlException
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
+        End If
+
+    End Sub
+
+    Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+
+        Try
+            Dim query As String
+            mysqlconn.Open()
+            query = "DELETE FROM persons WHERE person_id = '" & id.Text & "'"
+            command = New MySqlCommand(query, mysqlconn)
+
+            reader = command.ExecuteReader
+            MessageBox.Show("Successful")
+            load_table()
+            mysqlconn.Close()
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
 
 End Class

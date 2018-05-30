@@ -80,8 +80,6 @@ Public Class Form20
                 Form3.TextBox1.Text = row.Cells("CaseID").Value.ToString
                 Form8.lab_case = pili
 
-                Dim query As String
-
 
             End If
             mysqlconn.Close()
