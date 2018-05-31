@@ -331,7 +331,8 @@ Public Class Form3
             TextBox2.Text = ""
             TextBox3.Text = ""
             TextBox4.Text = ""
-
+            ComboBox15.Text = ""
+            ComboBox17.Text = ""
             DateTimePicker1.Text = ""
             ComboBox3.Text = ""
             ComboBox4.Text = ""

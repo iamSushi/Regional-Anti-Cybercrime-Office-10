@@ -27,7 +27,7 @@ Public Class Form1
                 Form2.Show()
                 Me.Hide()
             Else
-                MessageBox.Show("You Wrong")
+                MessageBox.Show("Username or Password is incorrect!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
 
 
