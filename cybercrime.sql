@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2018 at 04:16 PM
+-- Generation Time: Jun 04, 2018 at 07:10 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -29,7 +29,6 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `accounts` (
-  `acc_id` bigint(20) NOT NULL,
   `officer_id` bigint(20) NOT NULL,
   `type` varchar(20) NOT NULL,
   `username` varchar(20) NOT NULL,
@@ -124,8 +123,8 @@ CREATE TABLE `laboratory_case` (
   `date_released` date NOT NULL,
   `date_examined` date NOT NULL,
   `case_status` varchar(20) NOT NULL,
-  `released_by` varchar(50) NOT NULL,
-  `claimed_by` varchar(50) NOT NULL,
+  `released_by` bigint(20) NOT NULL,
+  `claimed_by` bigint(20) NOT NULL,
   `complainant` bigint(20) DEFAULT NULL,
   `requesting_agency` bigint(20) DEFAULT NULL,
   `examiner` bigint(20) DEFAULT NULL,
@@ -238,7 +237,6 @@ CREATE TABLE `victim` (
 -- Indexes for table `accounts`
 --
 ALTER TABLE `accounts`
-  ADD PRIMARY KEY (`acc_id`),
   ADD KEY `officer_id` (`officer_id`);
 
 --
@@ -274,7 +272,9 @@ ALTER TABLE `laboratory_case`
   ADD KEY `complainant` (`complainant`),
   ADD KEY `requesting_agency` (`requesting_agency`),
   ADD KEY `examiner` (`examiner`),
-  ADD KEY `investigator` (`investigator`);
+  ADD KEY `investigator` (`investigator`),
+  ADD KEY `released_by` (`released_by`),
+  ADD KEY `claimed_by` (`claimed_by`);
 
 --
 -- Indexes for table `law`
@@ -319,12 +319,6 @@ ALTER TABLE `victim`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `accounts`
---
-ALTER TABLE `accounts`
-  MODIFY `acc_id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `agency`
@@ -395,6 +389,13 @@ ALTER TABLE `evidence`
 --
 ALTER TABLE `facts`
   ADD CONSTRAINT `facts_ibfk_1` FOREIGN KEY (`lab_case_no`) REFERENCES `laboratory_case` (`lab_case_no`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `laboratory_case`
+--
+ALTER TABLE `laboratory_case`
+  ADD CONSTRAINT `laboratory_case_ibfk_1` FOREIGN KEY (`released_by`) REFERENCES `officer` (`officer_id`),
+  ADD CONSTRAINT `laboratory_case_ibfk_2` FOREIGN KEY (`claimed_by`) REFERENCES `officer` (`officer_id`);
 
 --
 -- Constraints for table `suspect`
