@@ -26,15 +26,12 @@ Public Class Form18
                 row = Me.DataGridView1.Rows(e.RowIndex)
                 Dim pili = row.Cells("person_id").Value.ToString
 
-                MessageBox.Show(pili)
-
 
                 Dim query As String
 
                 query = "insert into suspect values('" & lab_case & "','" & pili & "',null)"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
-                MessageBox.Show("Successful")
 
             End If
             mysqlconn.Close()
@@ -119,14 +116,12 @@ Public Class Form18
                 row = Me.DataGridView2.Rows(e.RowIndex)
                 Dim pili = row.Cells("person_id").Value.ToString
 
-                MessageBox.Show(pili)
 
                 Dim query As String
 
                 query = "delete from suspect where person_id = '" & pili & "'"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
-                MessageBox.Show("Successful")
 
             End If
             mysqlconn.Close()

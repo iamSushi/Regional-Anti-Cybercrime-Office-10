@@ -61,12 +61,12 @@ Public Class Form25
                 Label11.Text = reader.GetString("claimed_by")
                 Label15.Text = reader.GetString("released_by")
                 Label18.Text = reader.GetString("case_status")
-                Label19.Text = reader.GetString("date_received")
-                Label20.Text = reader.GetString("date_informed")
-                Label21.Text = reader.GetString("date_released")
-                Label22.Text = reader.GetString("date_occur")
-                Label23.Text = reader.GetString("time_occur")
-                Label24.Text = reader.GetString("date_examined")
+                Label19.Text = reader.GetDateTime("date_received")
+                Label20.Text = reader.GetDateTime("date_informed")
+                Label21.Text = reader.GetDateTime("date_released")
+                Label22.Text = reader.GetDateTime("date_occur")
+                Label23.Text = reader.GetDateTime("time_occur")
+                Label24.Text = reader.GetDateTime("date_examined")
                 Label25.Text = reader.GetString("place_occur")
             End While
 
@@ -229,11 +229,35 @@ Public Class Form25
 
     Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
         Dim dialog As DialogResult
-        dialog = MessageBox.Show("Do you really want to exit?", "Exit", MessageBoxButtons.YesNo)
+        dialog = MessageBox.Show("Do you really want to delete the Case?", "Exit", MessageBoxButtons.YesNo)
         If dialog = DialogResult.Yes Then
+            Try
+                mysqlconn.Open()
 
+                Dim query As String
+
+                query = "delete from laboratory_case where lab_case_no = '" & lab_case & "'"
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+
+
+
+                mysqlconn.Close()
+            Catch ex As MySqlException
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None
         End If
+    End Sub
+
+    Private Sub Button31_Click(sender As Object, e As EventArgs) Handles Button31.Click
+        Form13.lab_case = lab_case
+        Form13.Show()
+        Me.Hide()
+
+
     End Sub
 End Class

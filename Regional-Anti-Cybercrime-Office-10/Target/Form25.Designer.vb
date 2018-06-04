@@ -569,6 +569,7 @@ Partial Class Form25
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form25"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form25"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
