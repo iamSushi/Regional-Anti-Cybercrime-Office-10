@@ -52,7 +52,7 @@ Public Class Form21
                 Dim m = row.Cells("Middlename").Value.ToString
                 Dim s = row.Cells("Surname").Value.ToString
                 Dim name = f + " " + m + " " + s
-                MessageBox.Show(pili)
+
 
                 Form3.TextBox5.Text = name
                 Form3.releasedby = pili

@@ -53,7 +53,7 @@ Public Class Form22
                 Dim m = row.Cells("Middlename").Value.ToString
                 Dim s = row.Cells("Surname").Value.ToString
                 Dim name = f + " " + m + " " + s
-                MessageBox.Show(pili)
+
 
                 Form3.TextBox6.Text = name
                 Form3.claimedby = pili
