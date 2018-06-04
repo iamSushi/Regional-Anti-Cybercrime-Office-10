@@ -28,6 +28,7 @@ Partial Class Form21
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -38,7 +39,7 @@ Partial Class Form21
         Me.Button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button35.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button35.Image = CType(resources.GetObject("Button35.Image"), System.Drawing.Image)
-        Me.Button35.Location = New System.Drawing.Point(297, 31)
+        Me.Button35.Location = New System.Drawing.Point(654, 27)
         Me.Button35.Name = "Button35"
         Me.Button35.Size = New System.Drawing.Size(35, 31)
         Me.Button35.TabIndex = 61
@@ -47,7 +48,7 @@ Partial Class Form21
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(122, 31)
+        Me.TextBox1.Location = New System.Drawing.Point(479, 27)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(175, 31)
         Me.TextBox1.TabIndex = 60
@@ -59,7 +60,7 @@ Partial Class Form21
         Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label2.Location = New System.Drawing.Point(25, 34)
+        Me.Label2.Location = New System.Drawing.Point(382, 30)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 23)
         Me.Label2.TabIndex = 59
@@ -81,11 +82,21 @@ Partial Class Form21
         Me.DataGridView1.Size = New System.Drawing.Size(660, 358)
         Me.DataGridView1.TabIndex = 62
         '
+        'Label
+        '
+        Me.Label.AutoSize = True
+        Me.Label.Location = New System.Drawing.Point(26, 37)
+        Me.Label.Name = "Label"
+        Me.Label.Size = New System.Drawing.Size(102, 13)
+        Me.Label.TabIndex = 63
+        Me.Label.Text = "Released Personnel"
+        '
         'Form21
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(715, 450)
+        Me.Controls.Add(Me.Label)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button35)
         Me.Controls.Add(Me.TextBox1)
@@ -102,4 +113,5 @@ Partial Class Form21
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Label As Label
 End Class
