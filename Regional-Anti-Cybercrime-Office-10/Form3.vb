@@ -326,31 +326,8 @@ Public Class Form3
         End Try
     End Sub
 
-
-
-    Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
-
-    Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
-
-    End Sub
-
-
-    Private Sub ComboBox14_SelectedIndexChanged(sender As Object, e As EventArgs) 
-
-    End Sub
-
     Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
         Form20.Show()
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Label30_Click(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub Button25_Click(sender As Object, e As EventArgs)
@@ -361,11 +338,13 @@ Public Class Form3
         Form22.Show()
     End Sub
 
-    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Form2.Show()
+        Me.Close()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
+    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
+        Form2.Show()
+        Me.Close()
     End Sub
 End Class

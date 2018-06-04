@@ -39,6 +39,9 @@ Partial Class Form2
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
@@ -57,19 +60,34 @@ Partial Class Form2
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Button10 = New System.Windows.Forms.Button()
         Me.Button35 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.panel_slide = New System.Windows.Forms.Panel()
+        Me.Button18 = New System.Windows.Forms.Button()
+        Me.Button16 = New System.Windows.Forms.Button()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button19 = New System.Windows.Forms.Button()
+        Me.Button20 = New System.Windows.Forms.Button()
+        Me.Button21 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.panel_slide.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -246,6 +264,9 @@ Partial Class Form2
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Button12)
+        Me.TabPage1.Controls.Add(Me.Button9)
+        Me.TabPage1.Controls.Add(Me.DataGridView2)
         Me.TabPage1.Controls.Add(Me.DateTimePicker3)
         Me.TabPage1.Controls.Add(Me.DateTimePicker2)
         Me.TabPage1.Controls.Add(Me.TextBox13)
@@ -270,11 +291,48 @@ Partial Class Form2
         Me.TabPage1.Text = "Fact"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Button12
+        '
+        Me.Button12.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button12.FlatAppearance.BorderSize = 0
+        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button12.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button12.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button12.Location = New System.Drawing.Point(807, 568)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(85, 30)
+        Me.Button12.TabIndex = 105
+        Me.Button12.Text = "Update"
+        Me.Button12.UseVisualStyleBackColor = False
+        '
+        'Button9
+        '
+        Me.Button9.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button9.FlatAppearance.BorderSize = 0
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button9.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button9.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button9.Location = New System.Drawing.Point(898, 568)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(85, 30)
+        Me.Button9.TabIndex = 105
+        Me.Button9.Text = "Delete"
+        Me.Button9.UseVisualStyleBackColor = False
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(398, 255)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(585, 298)
+        Me.DataGridView2.TabIndex = 104
+        '
         'DateTimePicker3
         '
         Me.DateTimePicker3.CalendarFont = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker3.Location = New System.Drawing.Point(37, 206)
+        Me.DateTimePicker3.Location = New System.Drawing.Point(40, 220)
         Me.DateTimePicker3.Name = "DateTimePicker3"
         Me.DateTimePicker3.Size = New System.Drawing.Size(318, 31)
         Me.DateTimePicker3.TabIndex = 103
@@ -284,7 +342,7 @@ Partial Class Form2
         Me.DateTimePicker2.CalendarFont = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker2.Checked = False
         Me.DateTimePicker2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Location = New System.Drawing.Point(37, 132)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(40, 140)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(318, 31)
         Me.DateTimePicker2.TabIndex = 102
@@ -293,7 +351,7 @@ Partial Class Form2
         'TextBox13
         '
         Me.TextBox13.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox13.Location = New System.Drawing.Point(37, 274)
+        Me.TextBox13.Location = New System.Drawing.Point(40, 300)
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.Size = New System.Drawing.Size(318, 31)
         Me.TextBox13.TabIndex = 101
@@ -304,7 +362,7 @@ Partial Class Form2
         Me.Label16.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.Image = CType(resources.GetObject("Label16.Image"), System.Drawing.Image)
         Me.Label16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label16.Location = New System.Drawing.Point(38, 248)
+        Me.Label16.Location = New System.Drawing.Point(38, 274)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(180, 23)
         Me.Label16.TabIndex = 100
@@ -316,7 +374,7 @@ Partial Class Form2
         Me.Label14.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Image = CType(resources.GetObject("Label14.Image"), System.Drawing.Image)
         Me.Label14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label14.Location = New System.Drawing.Point(38, 180)
+        Me.Label14.Location = New System.Drawing.Point(36, 194)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(177, 23)
         Me.Label14.TabIndex = 99
@@ -328,7 +386,7 @@ Partial Class Form2
         Me.Label10.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Image = CType(resources.GetObject("Label10.Image"), System.Drawing.Image)
         Me.Label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label10.Location = New System.Drawing.Point(38, 106)
+        Me.Label10.Location = New System.Drawing.Point(36, 114)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(176, 23)
         Me.Label10.TabIndex = 98
@@ -340,7 +398,7 @@ Partial Class Form2
         Me.Label9.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Image = CType(resources.GetObject("Label9.Image"), System.Drawing.Image)
         Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label9.Location = New System.Drawing.Point(38, 34)
+        Me.Label9.Location = New System.Drawing.Point(36, 34)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(181, 23)
         Me.Label9.TabIndex = 96
@@ -363,7 +421,7 @@ Partial Class Form2
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(426, 60)
+        Me.TextBox4.Location = New System.Drawing.Point(40, 382)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(318, 31)
         Me.TextBox4.TabIndex = 75
@@ -374,7 +432,7 @@ Partial Class Form2
         Me.Label4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Image = CType(resources.GetObject("Label4.Image"), System.Drawing.Image)
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(427, 34)
+        Me.Label4.Location = New System.Drawing.Point(36, 356)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(70, 23)
         Me.Label4.TabIndex = 74
@@ -388,7 +446,7 @@ Partial Class Form2
         Me.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button22.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button22.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button22.Location = New System.Drawing.Point(549, 530)
+        Me.Button22.Location = New System.Drawing.Point(283, 506)
         Me.Button22.Name = "Button22"
         Me.Button22.Size = New System.Drawing.Size(75, 30)
         Me.Button22.TabIndex = 68
@@ -398,11 +456,11 @@ Partial Class Form2
         'facts
         '
         Me.facts.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.facts.Location = New System.Drawing.Point(42, 345)
+        Me.facts.Location = New System.Drawing.Point(398, 60)
         Me.facts.Multiline = True
         Me.facts.Name = "facts"
         Me.facts.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.facts.Size = New System.Drawing.Size(582, 170)
+        Me.facts.Size = New System.Drawing.Size(585, 170)
         Me.facts.TabIndex = 67
         '
         'Label6
@@ -411,7 +469,7 @@ Partial Class Form2
         Me.Label6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Image = CType(resources.GetObject("Label6.Image"), System.Drawing.Image)
         Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label6.Location = New System.Drawing.Point(38, 319)
+        Me.Label6.Location = New System.Drawing.Point(394, 34)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(70, 23)
         Me.Label6.TabIndex = 66
@@ -421,7 +479,7 @@ Partial Class Form2
         'factname
         '
         Me.factname.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.factname.Location = New System.Drawing.Point(427, 132)
+        Me.factname.Location = New System.Drawing.Point(40, 460)
         Me.factname.Name = "factname"
         Me.factname.Size = New System.Drawing.Size(318, 31)
         Me.factname.TabIndex = 65
@@ -432,7 +490,7 @@ Partial Class Form2
         Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Image = CType(resources.GetObject("Label5.Image"), System.Drawing.Image)
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(427, 106)
+        Me.Label5.Location = New System.Drawing.Point(36, 434)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(76, 23)
         Me.Label5.TabIndex = 64
@@ -443,7 +501,7 @@ Partial Class Form2
         '
         Me.TextBox6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox6.Location = New System.Drawing.Point(38, 60)
+        Me.TextBox6.Location = New System.Drawing.Point(40, 60)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(290, 31)
         Me.TextBox6.TabIndex = 97
@@ -455,15 +513,19 @@ Partial Class Form2
         Me.TabPage2.Location = New System.Drawing.Point(4, 54)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1003, 614)
+        Me.TabPage2.Size = New System.Drawing.Size(925, 614)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Table"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.DateTimePicker1)
+        Me.Panel3.Controls.Add(Me.Label3)
+        Me.Panel3.Controls.Add(Me.Button14)
+        Me.Panel3.Controls.Add(Me.TextBox3)
+        Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.Label8)
-        Me.Panel3.Controls.Add(Me.Button10)
         Me.Panel3.Controls.Add(Me.Button35)
         Me.Panel3.Controls.Add(Me.TextBox1)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
@@ -471,6 +533,61 @@ Partial Class Form2
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(261, 608)
         Me.Panel3.TabIndex = 60
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(21, 132)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(207, 31)
+        Me.DateTimePicker1.TabIndex = 66
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label3.Image = CType(resources.GetObject("Label3.Image"), System.Drawing.Image)
+        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label3.Location = New System.Drawing.Point(17, 189)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(71, 23)
+        Me.Label3.TabIndex = 63
+        Me.Label3.Text = "      Time"
+        '
+        'Button14
+        '
+        Me.Button14.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Button14.FlatAppearance.BorderSize = 0
+        Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button14.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button14.Image = CType(resources.GetObject("Button14.Image"), System.Drawing.Image)
+        Me.Button14.Location = New System.Drawing.Point(193, 215)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(35, 31)
+        Me.Button14.TabIndex = 65
+        Me.Button14.UseVisualStyleBackColor = False
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.TextBox3.Location = New System.Drawing.Point(21, 215)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(175, 31)
+        Me.TextBox3.TabIndex = 64
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
+        Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label2.Location = New System.Drawing.Point(17, 106)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(70, 23)
+        Me.Label2.TabIndex = 60
+        Me.Label2.Text = "      Date"
         '
         'Label8
         '
@@ -481,23 +598,9 @@ Partial Class Form2
         Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label8.Location = New System.Drawing.Point(17, 21)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(79, 23)
+        Me.Label8.Size = New System.Drawing.Size(92, 23)
         Me.Label8.TabIndex = 56
-        Me.Label8.Text = "      Name"
-        '
-        'Button10
-        '
-        Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Button10.FlatAppearance.BorderSize = 0
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button10.Location = New System.Drawing.Point(150, 565)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(89, 30)
-        Me.Button10.TabIndex = 59
-        Me.Button10.Text = "Delete"
-        Me.Button10.UseVisualStyleBackColor = False
+        Me.Label8.Text = "      Case ID"
         '
         'Button35
         '
@@ -506,7 +609,7 @@ Partial Class Form2
         Me.Button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button35.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button35.Image = CType(resources.GetObject("Button35.Image"), System.Drawing.Image)
-        Me.Button35.Location = New System.Drawing.Point(193, 52)
+        Me.Button35.Location = New System.Drawing.Point(193, 47)
         Me.Button35.Name = "Button35"
         Me.Button35.Size = New System.Drawing.Size(35, 31)
         Me.Button35.TabIndex = 58
@@ -516,7 +619,7 @@ Partial Class Form2
         '
         Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox1.Location = New System.Drawing.Point(21, 52)
+        Me.TextBox1.Location = New System.Drawing.Point(21, 47)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(175, 31)
         Me.TextBox1.TabIndex = 57
@@ -530,8 +633,142 @@ Partial Class Form2
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(997, 608)
+        Me.DataGridView1.Size = New System.Drawing.Size(919, 608)
         Me.DataGridView1.TabIndex = 55
+        '
+        'panel_slide
+        '
+        Me.panel_slide.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.panel_slide.Controls.Add(Me.Button18)
+        Me.panel_slide.Controls.Add(Me.Button16)
+        Me.panel_slide.Controls.Add(Me.Button15)
+        Me.panel_slide.Controls.Add(Me.Button10)
+        Me.panel_slide.Controls.Add(Me.Button13)
+        Me.panel_slide.Controls.Add(Me.Button19)
+        Me.panel_slide.Controls.Add(Me.Button20)
+        Me.panel_slide.Controls.Add(Me.Button21)
+        Me.panel_slide.Dock = System.Windows.Forms.DockStyle.Left
+        Me.panel_slide.Location = New System.Drawing.Point(73, 58)
+        Me.panel_slide.Name = "panel_slide"
+        Me.panel_slide.Size = New System.Drawing.Size(155, 672)
+        Me.panel_slide.TabIndex = 9
+        '
+        'Button18
+        '
+        Me.Button18.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button18.FlatAppearance.BorderSize = 0
+        Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button18.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button18.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button18.Location = New System.Drawing.Point(46, 66)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(109, 50)
+        Me.Button18.TabIndex = 15
+        Me.Button18.Text = "   Facts"
+        Me.Button18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button18.UseVisualStyleBackColor = True
+        '
+        'Button16
+        '
+        Me.Button16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button16.FlatAppearance.BorderSize = 0
+        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button16.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button16.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button16.Location = New System.Drawing.Point(46, 575)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(109, 50)
+        Me.Button16.TabIndex = 14
+        Me.Button16.Text = "   Settings"
+        Me.Button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button16.UseVisualStyleBackColor = True
+        '
+        'Button15
+        '
+        Me.Button15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button15.FlatAppearance.BorderSize = 0
+        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button15.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button15.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button15.Location = New System.Drawing.Point(46, 622)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(109, 50)
+        Me.Button15.TabIndex = 13
+        Me.Button15.Text = "   Logout"
+        Me.Button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button15.UseVisualStyleBackColor = True
+        '
+        'Button10
+        '
+        Me.Button10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button10.FlatAppearance.BorderSize = 0
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button10.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button10.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button10.Location = New System.Drawing.Point(46, 233)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(109, 50)
+        Me.Button10.TabIndex = 12
+        Me.Button10.Text = "   Person"
+        Me.Button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button10.UseVisualStyleBackColor = True
+        '
+        'Button13
+        '
+        Me.Button13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button13.FlatAppearance.BorderSize = 0
+        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button13.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button13.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button13.Location = New System.Drawing.Point(46, 177)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(109, 50)
+        Me.Button13.TabIndex = 11
+        Me.Button13.Text = "   Report"
+        Me.Button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button13.UseVisualStyleBackColor = True
+        '
+        'Button19
+        '
+        Me.Button19.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button19.FlatAppearance.BorderSize = 0
+        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button19.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button19.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button19.Location = New System.Drawing.Point(46, 121)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(109, 50)
+        Me.Button19.TabIndex = 10
+        Me.Button19.Text = "   Case"
+        Me.Button19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button19.UseVisualStyleBackColor = True
+        '
+        'Button20
+        '
+        Me.Button20.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button20.FlatAppearance.BorderSize = 0
+        Me.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button20.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button20.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button20.Location = New System.Drawing.Point(46, 289)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(109, 50)
+        Me.Button20.TabIndex = 9
+        Me.Button20.Text = "   Officer"
+        Me.Button20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button20.UseVisualStyleBackColor = True
+        '
+        'Button21
+        '
+        Me.Button21.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button21.FlatAppearance.BorderSize = 0
+        Me.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button21.Image = CType(resources.GetObject("Button21.Image"), System.Drawing.Image)
+        Me.Button21.Location = New System.Drawing.Point(117, 10)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(32, 31)
+        Me.Button21.TabIndex = 8
+        Me.Button21.UseVisualStyleBackColor = True
         '
         'Form2
         '
@@ -539,6 +776,7 @@ Partial Class Form2
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(1084, 730)
+        Me.Controls.Add(Me.panel_slide)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -552,10 +790,12 @@ Partial Class Form2
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.panel_slide.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -584,10 +824,6 @@ Partial Class Form2
     Friend WithEvents Label6 As Label
     Friend WithEvents factname As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents Button10 As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button35 As Button
-    Friend WithEvents Label8 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Label9 As Label
@@ -598,5 +834,25 @@ Partial Class Form2
     Friend WithEvents Label16 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label10 As Label
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents Button12 As Button
+    Friend WithEvents Button9 As Button
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Button14 As Button
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Button35 As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents panel_slide As Panel
+    Friend WithEvents Button18 As Button
+    Friend WithEvents Button16 As Button
+    Friend WithEvents Button15 As Button
+    Friend WithEvents Button10 As Button
+    Friend WithEvents Button13 As Button
+    Friend WithEvents Button19 As Button
+    Friend WithEvents Button20 As Button
+    Friend WithEvents Button21 As Button
 End Class
