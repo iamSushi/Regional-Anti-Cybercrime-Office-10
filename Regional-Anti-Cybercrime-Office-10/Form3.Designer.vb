@@ -73,16 +73,7 @@ Partial Class Form3
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-<<<<<<< HEAD
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox13 = New System.Windows.Forms.ComboBox()
-        Me.Button23 = New System.Windows.Forms.Button()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-=======
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
->>>>>>> 0df4c2ee83cc5a28ae53941135c2cfea967fd94c
         Me.ComboBox12 = New System.Windows.Forms.ComboBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.ComboBox11 = New System.Windows.Forms.ComboBox()
@@ -100,23 +91,6 @@ Partial Class Form3
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button38 = New System.Windows.Forms.Button()
         Me.Label28 = New System.Windows.Forms.Label()
-<<<<<<< HEAD
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Button35 = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Button39 = New System.Windows.Forms.Button()
-        Me.Button38 = New System.Windows.Forms.Button()
-=======
->>>>>>> 0df4c2ee83cc5a28ae53941135c2cfea967fd94c
         Me.Button36 = New System.Windows.Forms.Button()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -138,29 +112,6 @@ Partial Class Form3
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-<<<<<<< HEAD
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.Label45 = New System.Windows.Forms.Label()
-        Me.Label46 = New System.Windows.Forms.Label()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.Label49 = New System.Windows.Forms.Label()
-        Me.Label50 = New System.Windows.Forms.Label()
-        Me.Label51 = New System.Windows.Forms.Label()
-        Me.Label52 = New System.Windows.Forms.Label()
-        Me.Label53 = New System.Windows.Forms.Label()
-=======
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
@@ -182,7 +133,6 @@ Partial Class Form3
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBox16 = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
->>>>>>> 0df4c2ee83cc5a28ae53941135c2cfea967fd94c
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -191,14 +141,9 @@ Partial Class Form3
         Me.TabPage2.SuspendLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
-<<<<<<< HEAD
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
-=======
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
->>>>>>> 0df4c2ee83cc5a28ae53941135c2cfea967fd94c
         Me.SuspendLayout()
         '
         'panel_slide
@@ -796,10 +741,6 @@ Partial Class Form3
         '
         'TabPage1
         '
-<<<<<<< HEAD
-        Me.TabPage1.Controls.Add(Me.GroupBox3)
-        Me.TabPage1.Controls.Add(Me.TextBox8)
-=======
         Me.TabPage1.Controls.Add(Me.ComboBox16)
         Me.TabPage1.Controls.Add(Me.Label14)
         Me.TabPage1.Controls.Add(Me.ComboBox14)
@@ -808,7 +749,6 @@ Partial Class Form3
         Me.TabPage1.Controls.Add(Me.ComboBox12)
         Me.TabPage1.Controls.Add(Me.TextBox8)
         Me.TabPage1.Controls.Add(Me.ComboBox11)
->>>>>>> 0df4c2ee83cc5a28ae53941135c2cfea967fd94c
         Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Controls.Add(Me.ComboBox10)
         Me.TabPage1.Controls.Add(Me.Label2)
@@ -881,8 +821,6 @@ Partial Class Form3
         Me.TextBox8.Size = New System.Drawing.Size(189, 31)
         Me.TextBox8.TabIndex = 96
         '
-<<<<<<< HEAD
-=======
         'ComboBox11
         '
         Me.ComboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -894,7 +832,6 @@ Partial Class Form3
         Me.ComboBox11.Size = New System.Drawing.Size(44, 31)
         Me.ComboBox11.TabIndex = 20
         '
->>>>>>> 0df4c2ee83cc5a28ae53941135c2cfea967fd94c
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1052,34 +989,6 @@ Partial Class Form3
         Me.Label28.Size = New System.Drawing.Size(31, 23)
         Me.Label28.TabIndex = 10
         Me.Label28.Text = "VR"
-        '
-        'Button39
-        '
-        Me.Button39.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Button39.FlatAppearance.BorderSize = 0
-        Me.Button39.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button39.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button39.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button39.Location = New System.Drawing.Point(242, 308)
-        Me.Button39.Name = "Button39"
-        Me.Button39.Size = New System.Drawing.Size(79, 30)
-        Me.Button39.TabIndex = 80
-        Me.Button39.Text = "Clear"
-        Me.Button39.UseVisualStyleBackColor = False
-        '
-        'Button38
-        '
-        Me.Button38.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Button38.FlatAppearance.BorderSize = 0
-        Me.Button38.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button38.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button38.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button38.Location = New System.Drawing.Point(337, 308)
-        Me.Button38.Name = "Button38"
-        Me.Button38.Size = New System.Drawing.Size(79, 30)
-        Me.Button38.TabIndex = 81
-        Me.Button38.Text = "Save"
-        Me.Button38.UseVisualStyleBackColor = False
         '
         'Button36
         '
@@ -1324,45 +1233,6 @@ Partial Class Form3
         Me.Label11.TabIndex = 52
         Me.Label11.Text = "      Complainant"
         '
-<<<<<<< HEAD
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.Label52)
-        Me.GroupBox3.Controls.Add(Me.Label53)
-        Me.GroupBox3.Controls.Add(Me.Label44)
-        Me.GroupBox3.Controls.Add(Me.Label45)
-        Me.GroupBox3.Controls.Add(Me.Label46)
-        Me.GroupBox3.Controls.Add(Me.Label47)
-        Me.GroupBox3.Controls.Add(Me.Label48)
-        Me.GroupBox3.Controls.Add(Me.Label49)
-        Me.GroupBox3.Controls.Add(Me.Label50)
-        Me.GroupBox3.Controls.Add(Me.Label51)
-        Me.GroupBox3.Controls.Add(Me.Label34)
-        Me.GroupBox3.Controls.Add(Me.Label35)
-        Me.GroupBox3.Controls.Add(Me.Label36)
-        Me.GroupBox3.Controls.Add(Me.Label37)
-        Me.GroupBox3.Controls.Add(Me.Label38)
-        Me.GroupBox3.Controls.Add(Me.Label39)
-        Me.GroupBox3.Controls.Add(Me.Label40)
-        Me.GroupBox3.Controls.Add(Me.Label41)
-        Me.GroupBox3.Controls.Add(Me.Label42)
-        Me.GroupBox3.Controls.Add(Me.Label43)
-        Me.GroupBox3.Location = New System.Drawing.Point(40, 344)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(925, 247)
-        Me.GroupBox3.TabIndex = 97
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Case"
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(211, 25)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(70, 23)
-        Me.Label34.TabIndex = 129
-        Me.Label34.Text = "Label34"
-=======
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.Button10)
@@ -1418,22 +1288,11 @@ Partial Class Form3
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(220, 31)
         Me.TextBox12.TabIndex = 99
->>>>>>> 0df4c2ee83cc5a28ae53941135c2cfea967fd94c
         '
         'Label35
         '
         Me.Label35.AutoSize = True
         Me.Label35.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.Label35.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label35.Image = CType(resources.GetObject("Label35.Image"), System.Drawing.Image)
-        Me.Label35.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label35.Location = New System.Drawing.Point(14, 25)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(131, 23)
-        Me.Label35.TabIndex = 128
-        Me.Label35.Text = "      Complainant"
-=======
         Me.Label35.Image = CType(resources.GetObject("Label35.Image"), System.Drawing.Image)
         Me.Label35.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label35.Location = New System.Drawing.Point(37, 93)
@@ -1441,201 +1300,10 @@ Partial Class Form3
         Me.Label35.Size = New System.Drawing.Size(105, 23)
         Me.Label35.TabIndex = 97
         Me.Label35.Text = "      Examiner"
->>>>>>> 0df4c2ee83cc5a28ae53941135c2cfea967fd94c
         '
         'Label36
         '
         Me.Label36.AutoSize = True
-<<<<<<< HEAD
-        Me.Label36.Location = New System.Drawing.Point(210, 207)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(70, 23)
-        Me.Label36.TabIndex = 127
-        Me.Label36.Text = "Label36"
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(212, 158)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(70, 23)
-        Me.Label37.TabIndex = 126
-        Me.Label37.Text = "Label37"
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(211, 114)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(70, 23)
-        Me.Label38.TabIndex = 125
-        Me.Label38.Text = "Label38"
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(211, 70)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(70, 23)
-        Me.Label39.TabIndex = 124
-        Me.Label39.Text = "Label39"
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label40.Image = CType(resources.GetObject("Label40.Image"), System.Drawing.Image)
-        Me.Label40.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label40.Location = New System.Drawing.Point(15, 158)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(64, 23)
-        Me.Label40.TabIndex = 123
-        Me.Label40.Text = "      DFE"
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Image = CType(resources.GetObject("Label41.Image"), System.Drawing.Image)
-        Me.Label41.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label41.Location = New System.Drawing.Point(14, 114)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(128, 23)
-        Me.Label41.TabIndex = 122
-        Me.Label41.Text = "      Investigator"
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42.Image = CType(resources.GetObject("Label42.Image"), System.Drawing.Image)
-        Me.Label42.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label42.Location = New System.Drawing.Point(14, 70)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(105, 23)
-        Me.Label42.TabIndex = 121
-        Me.Label42.Text = "      Examiner"
-        '
-        'Label43
-        '
-        Me.Label43.AutoSize = True
-        Me.Label43.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label43.Image = CType(resources.GetObject("Label43.Image"), System.Drawing.Image)
-        Me.Label43.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label43.Location = New System.Drawing.Point(13, 207)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(180, 23)
-        Me.Label43.TabIndex = 120
-        Me.Label43.Text = "      Requesting Agency"
-        '
-        'Label44
-        '
-        Me.Label44.AutoSize = True
-        Me.Label44.Location = New System.Drawing.Point(658, 204)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(70, 23)
-        Me.Label44.TabIndex = 137
-        Me.Label44.Text = "Label44"
-        '
-        'Label45
-        '
-        Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(658, 114)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(70, 23)
-        Me.Label45.TabIndex = 136
-        Me.Label45.Text = "Label45"
-        '
-        'Label46
-        '
-        Me.Label46.AutoSize = True
-        Me.Label46.Location = New System.Drawing.Point(658, 70)
-        Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(70, 23)
-        Me.Label46.TabIndex = 135
-        Me.Label46.Text = "Label46"
-        '
-        'Label47
-        '
-        Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(659, 25)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(70, 23)
-        Me.Label47.TabIndex = 134
-        Me.Label47.Text = "Label47"
-        '
-        'Label48
-        '
-        Me.Label48.AutoSize = True
-        Me.Label48.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label48.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label48.Image = CType(resources.GetObject("Label48.Image"), System.Drawing.Image)
-        Me.Label48.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label48.Location = New System.Drawing.Point(461, 114)
-        Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(122, 23)
-        Me.Label48.TabIndex = 133
-        Me.Label48.Text = "      Case Status"
-        '
-        'Label49
-        '
-        Me.Label49.AutoSize = True
-        Me.Label49.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label49.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label49.Image = CType(resources.GetObject("Label49.Image"), System.Drawing.Image)
-        Me.Label49.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label49.Location = New System.Drawing.Point(461, 70)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(118, 23)
-        Me.Label49.TabIndex = 132
-        Me.Label49.Text = "      Claimed By"
-        '
-        'Label50
-        '
-        Me.Label50.AutoSize = True
-        Me.Label50.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label50.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label50.Image = CType(resources.GetObject("Label50.Image"), System.Drawing.Image)
-        Me.Label50.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label50.Location = New System.Drawing.Point(461, 25)
-        Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(125, 23)
-        Me.Label50.TabIndex = 131
-        Me.Label50.Text = "      Released By"
-        '
-        'Label51
-        '
-        Me.Label51.AutoSize = True
-        Me.Label51.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label51.Image = CType(resources.GetObject("Label51.Image"), System.Drawing.Image)
-        Me.Label51.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label51.Location = New System.Drawing.Point(461, 204)
-        Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(142, 23)
-        Me.Label51.TabIndex = 130
-        Me.Label51.Text = "      Date Received"
-        '
-        'Label52
-        '
-        Me.Label52.AutoSize = True
-        Me.Label52.Location = New System.Drawing.Point(658, 158)
-        Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(70, 23)
-        Me.Label52.TabIndex = 139
-        Me.Label52.Text = "Label52"
-        '
-        'Label53
-        '
-        Me.Label53.AutoSize = True
-        Me.Label53.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label53.Image = CType(resources.GetObject("Label53.Image"), System.Drawing.Image)
-        Me.Label53.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label53.Location = New System.Drawing.Point(461, 158)
-        Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(148, 23)
-        Me.Label53.TabIndex = 138
-        Me.Label53.Text = "      Date Examined"
-=======
         Me.Label36.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.Image = CType(resources.GetObject("Label36.Image"), System.Drawing.Image)
         Me.Label36.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1812,7 +1480,6 @@ Partial Class Form3
         Me.Label14.Size = New System.Drawing.Size(32, 23)
         Me.Label14.TabIndex = 100
         Me.Label14.Text = "CD"
->>>>>>> 0df4c2ee83cc5a28ae53941135c2cfea967fd94c
         '
         'Form3
         '
@@ -1839,17 +1506,10 @@ Partial Class Form3
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-<<<<<<< HEAD
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
-=======
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
->>>>>>> 0df4c2ee83cc5a28ae53941135c2cfea967fd94c
         Me.ResumeLayout(False)
 
     End Sub
@@ -1913,14 +1573,10 @@ Partial Class Form3
     Friend WithEvents Label18 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox1 As TextBox
-<<<<<<< HEAD
-    Friend WithEvents Label6 As Label
-=======
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents TabPage3 As TabPage
->>>>>>> 0df4c2ee83cc5a28ae53941135c2cfea967fd94c
     Friend WithEvents Label30 As Label
     Friend WithEvents DateTimePicker4 As DateTimePicker
     Friend WithEvents Label31 As Label
@@ -1943,29 +1599,6 @@ Partial Class Form3
     Friend WithEvents Label33 As Label
     Friend WithEvents DateTimePicker5 As DateTimePicker
     Friend WithEvents TextBox9 As TextBox
-<<<<<<< HEAD
-    Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Label34 As Label
-    Friend WithEvents Label35 As Label
-    Friend WithEvents Label36 As Label
-    Friend WithEvents Label37 As Label
-    Friend WithEvents Label38 As Label
-    Friend WithEvents Label39 As Label
-    Friend WithEvents Label40 As Label
-    Friend WithEvents Label41 As Label
-    Friend WithEvents Label42 As Label
-    Friend WithEvents Label43 As Label
-    Friend WithEvents Label44 As Label
-    Friend WithEvents Label45 As Label
-    Friend WithEvents Label46 As Label
-    Friend WithEvents Label47 As Label
-    Friend WithEvents Label48 As Label
-    Friend WithEvents Label49 As Label
-    Friend WithEvents Label50 As Label
-    Friend WithEvents Label51 As Label
-    Friend WithEvents Label52 As Label
-    Friend WithEvents Label53 As Label
-=======
     Friend WithEvents Label29 As Label
     Friend WithEvents Label32 As Label
     Friend WithEvents TextBox7 As TextBox
@@ -1987,5 +1620,4 @@ Partial Class Form3
     Friend WithEvents Label14 As Label
     Friend WithEvents ComboBox14 As ComboBox
     Friend WithEvents Label4 As Label
->>>>>>> 0df4c2ee83cc5a28ae53941135c2cfea967fd94c
 End Class

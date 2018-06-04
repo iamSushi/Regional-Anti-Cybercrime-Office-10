@@ -103,7 +103,7 @@ Public Class Form3
 
             Dim query As String
 
-            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "',null,null,null,'" & agency & "','" & DateTimePicker2.Text & "','" & ComboBox13.Text & "','" & TextBox13.Text & "','null',null)"
+            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "',null,null,null,'" & agency & "','null','null','null','null',null)"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
@@ -177,11 +177,7 @@ Public Class Form3
                 Dim id = reader.GetString("id")
                 comboSource.Add(id, name)
             End While
-            ComboBox13.DataSource = New BindingSource(comboSource, Nothing)
-            ComboBox13.DisplayMember = "Value"
-            ComboBox13.ValueMember = "Key"
 
-            Dim facts As String = DirectCast(ComboBox13.SelectedItem, KeyValuePair(Of String, String)).Key
 
             mysqlconn.Close()
         Catch ex As MySqlException
@@ -206,11 +202,7 @@ Public Class Form3
                 Dim id = reader.GetString("id")
                 comboSource.Add(id, name)
             End While
-            ComboBox13.DataSource = New BindingSource(comboSource, Nothing)
-            ComboBox13.DisplayMember = "Value"
-            ComboBox13.ValueMember = "Key"
 
-            Dim agency As String = DirectCast(ComboBox13.SelectedItem, KeyValuePair(Of String, String)).Key
 
             mysqlconn.Close()
         Catch ex As MySqlException
@@ -305,7 +297,6 @@ Public Class Form3
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
         Dim investigator As String = DirectCast(ComboBox17.SelectedItem, KeyValuePair(Of String, String)).Key
         Dim examiner As String = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
-        Dim agency As String = DirectCast(ComboBox13.SelectedItem, KeyValuePair(Of String, String)).Key
         Try
             mysqlconn.Open()
 
@@ -313,7 +304,7 @@ Public Class Form3
             Dim query1 As String
 
 
-            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "','" & DateTimePicker4.Text & "','" & DateTimePicker5.Text & "','" & DateTimePicker6.Text & "','" & TextBox9.Text & "','" + releasedby + "','" + claimedby + "',null,'" & agency & "','" & examiner & "','" & investigator & "','" & DateTimePicker2.Text & "',' " & DateTimePicker3.Text & "',' " & TextBox13.Text & "',' " & ComboBox3.Text & " ','null',null)"
+            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "','" & DateTimePicker4.Text & "','" & DateTimePicker5.Text & "','" & DateTimePicker6.Text & "','" & TextBox9.Text & "','" + releasedby + "','" + claimedby + "',null,'" & agency & "','" & examiner & "','" & investigator & "','null','null','null',' " & ComboBox3.Text & " ','null',null)"
             query1 = "insert into laboratory_case values(null,         '1'            ,'          1                 ','3','4','5',          '6',      '     7       ',   '       8'           ,'        9                  ','              10             ','             11          ', 12 ,null)"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
@@ -341,13 +332,6 @@ Public Class Form3
 
     Private Sub Button36_Click_1(sender As Object, e As EventArgs) Handles Button36.Click
         Form19.show()
-    End Sub
-
-    Private Sub Button39_Click(sender As Object, e As EventArgs) 
-        Dim key As String = DirectCast(ComboBox13.SelectedItem, KeyValuePair(Of String, String)).Key
-        Dim value As String = DirectCast(ComboBox13.SelectedItem, KeyValuePair(Of String, String)).Value
-        MessageBox.Show(key & "   " & value)
-        MessageBox.Show(ComboBox13.SelectedText)
     End Sub
 
 

@@ -48,7 +48,7 @@ Partial Class Form6
         Me.Button36 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.DoubleBitmapControl1 = New BunifuAnimatorNS.DoubleBitmapControl()
+
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
@@ -392,12 +392,7 @@ Partial Class Form6
         '
         'DoubleBitmapControl1
         '
-        Me.DoubleBitmapControl1.Location = New System.Drawing.Point(1230, 826)
-        Me.DoubleBitmapControl1.Name = "DoubleBitmapControl1"
-        Me.DoubleBitmapControl1.Size = New System.Drawing.Size(75, 23)
-        Me.DoubleBitmapControl1.TabIndex = 34
-        Me.DoubleBitmapControl1.Text = "DoubleBitmapControl1"
-        Me.DoubleBitmapControl1.Visible = False
+
         '
         'TabPage1
         '
@@ -1047,7 +1042,7 @@ Partial Class Form6
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button36 As Button
-    Friend WithEvents DoubleBitmapControl1 As BunifuAnimatorNS.DoubleBitmapControl
+
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents TextBox8 As TextBox

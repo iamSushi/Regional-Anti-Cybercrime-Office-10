@@ -17,13 +17,15 @@ Public Class Form19
                 row = Me.DataGridView1.Rows(e.RowIndex)
                 Dim pili = row.Cells("ID").Value.ToString
 
+                MessageBox.Show(pili)
+
 
                 Dim query As String
 
                 query = "insert into case_nature values('" & lab_case & "','" & pili & "',null)"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
-
+                MessageBox.Show("Successful")
 
             End If
             mysqlconn.Close()
@@ -141,12 +143,15 @@ Public Class Form19
                 Dim row As DataGridViewRow
                 row = Me.DataGridView2.Rows(e.RowIndex)
                 Dim pili = row.Cells("ID").Value.ToString
+
+                MessageBox.Show(pili)
+
                 Dim query As String
 
                 query = "delete from case_nature where nature_of_case = '" & pili & "' and lab_case_no = '" & lab_case & "'"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
-
+                MessageBox.Show("Successful")
 
             End If
             mysqlconn.Close()

@@ -155,12 +155,6 @@
     <Compile Include="Target\Form12.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Target\Form13.Designer.vb">
-      <DependentUpon>Form13.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Target\Form13.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Target\Form16.Designer.vb">
       <DependentUpon>Form16.vb</DependentUpon>
     </Compile>
@@ -264,9 +258,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Target\Form12.resx">
       <DependentUpon>Form12.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Target\Form13.resx">
-      <DependentUpon>Form13.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Target\Form16.resx">
       <DependentUpon>Form16.vb</DependentUpon>
