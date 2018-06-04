@@ -134,7 +134,7 @@ Public Class Form3
 
             Dim query As String
 
-            query = "select lab_case_no_id,date_received,requesting_agency,examiner,investigator,date_occur,time_occur,place_occur from laboratory_case"
+            query = "select lab_case_no_id,date_received,requesting_agency,examiner,investigator from laboratory_case"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -160,57 +160,6 @@ Public Class Form3
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
 
-
-        Try
-            mysqlconn.Open()
-
-            Dim query As String
-
-            query = "select fact_no as Id , name as Name from facts"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-
-            Dim comboSource As New Dictionary(Of String, String)()
-
-            While reader.Read
-                Dim name = reader.GetString("name")
-                Dim id = reader.GetString("id")
-                comboSource.Add(id, name)
-            End While
-
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
-
-        Try
-            mysqlconn.Open()
-
-            Dim query As String
-
-            query = "select fact_no as Id , name as Name from facts"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-
-            Dim comboSource As New Dictionary(Of String, String)()
-
-            While reader.Read
-                Dim name = reader.GetString("name")
-                Dim id = reader.GetString("id")
-                comboSource.Add(id, name)
-            End While
-
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
-
         Try
             mysqlconn.Open()
 
@@ -234,6 +183,8 @@ Public Class Form3
             ComboBox15.ValueMember = "Key"
 
             Dim examiner As String = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
+
+
 
             mysqlconn.Close()
         Catch ex As MySqlException
@@ -304,7 +255,7 @@ Public Class Form3
             Dim query1 As String
 
 
-            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "','" & DateTimePicker4.Text & "','" & DateTimePicker5.Text & "','" & DateTimePicker6.Text & "','" & TextBox9.Text & "','" + releasedby + "','" + claimedby + "',null,'" & agency & "','" & examiner & "','" & investigator & "','null','null','null',' " & ComboBox3.Text & " ','null',null)"
+            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "',null,'" & DateTimePicker5.Text & "','" & DateTimePicker6.Text & "','" & TextBox9.Text & "',null,null,null,'" & agency & "','" & examiner & "','" & investigator & "',' " & ComboBox3.Text & " ',null)"
             query1 = "insert into laboratory_case values(null,         '1'            ,'          1                 ','3','4','5',          '6',      '     7       ',   '       8'           ,'        9                  ','              10             ','             11          ', 12 ,null)"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
