@@ -6,6 +6,7 @@ Public Class Form23
     Dim reader As MySqlDataReader
 
     Private Sub Form23_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        load_table()
 
     End Sub
 
@@ -22,7 +23,7 @@ Public Class Form23
 
             Dim query As String
 
-            query = "select agency_id as ID , name as Agency_Name from agency "
+            query = "select agency_id as ID , agency_name as Agency_Name from agency "
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -51,14 +52,40 @@ Public Class Form23
                 Dim pili = row.Cells("ID").Value.ToString
                 Dim name = row.Cells("Agency_Name").Value.ToString
 
-                MessageBox.Show(pili)
-
-                Form3.TextBox6.Text = name
+                Form3.TextBox7.Text = name
                 Form3.agency = pili
 
 
 
+
             End If
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select agency_id as ID, agency_name as Name where Agency_Name like '" & TextBox1.Text & "%' "
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
             mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show(ex.Message)

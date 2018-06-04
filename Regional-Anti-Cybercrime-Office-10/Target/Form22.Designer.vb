@@ -28,6 +28,7 @@ Partial Class Form22
         Me.Button35 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -54,7 +55,7 @@ Partial Class Form22
         Me.Button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button35.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button35.Image = CType(resources.GetObject("Button35.Image"), System.Drawing.Image)
-        Me.Button35.Location = New System.Drawing.Point(300, 20)
+        Me.Button35.Location = New System.Drawing.Point(658, 21)
         Me.Button35.Name = "Button35"
         Me.Button35.Size = New System.Drawing.Size(35, 31)
         Me.Button35.TabIndex = 65
@@ -63,7 +64,7 @@ Partial Class Form22
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(125, 20)
+        Me.TextBox1.Location = New System.Drawing.Point(483, 21)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(175, 31)
         Me.TextBox1.TabIndex = 64
@@ -75,17 +76,27 @@ Partial Class Form22
         Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label2.Location = New System.Drawing.Point(28, 23)
+        Me.Label2.Location = New System.Drawing.Point(386, 24)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 23)
         Me.Label2.TabIndex = 63
         Me.Label2.Text = "      Name"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(29, 31)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(94, 13)
+        Me.Label1.TabIndex = 67
+        Me.Label1.Text = "Claimed Personnel"
         '
         'Form22
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(725, 450)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button35)
         Me.Controls.Add(Me.TextBox1)
@@ -102,4 +113,5 @@ Partial Class Form22
     Friend WithEvents Button35 As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
 End Class

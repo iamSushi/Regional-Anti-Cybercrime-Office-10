@@ -170,7 +170,7 @@ Public Class Form3
             reader = command.ExecuteReader
 
             Dim comboSource As New Dictionary(Of String, String)()
-
+            comboSource.Add("0", "")
             While reader.Read
                 Dim fname = reader.GetString("f")
                 Dim sname = reader.GetString("s")
@@ -203,7 +203,7 @@ Public Class Form3
             reader = command.ExecuteReader
 
             Dim comboSource As New Dictionary(Of String, String)()
-
+            comboSource.Add("0", "")
             While reader.Read
                 Dim fname = reader.GetString("f")
                 Dim sname = reader.GetString("s")
@@ -255,19 +255,19 @@ Public Class Form3
             Dim query1 As String
 
 
-            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Text & "',null,'" & DateTimePicker5.Text & "','" & DateTimePicker6.Text & "','" & TextBox9.Text & "',null,null,null,'" & agency & "','" & examiner & "','" & investigator & "',' " & ComboBox3.Text & " ',null)"
+            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Value & "',null,'" & DateTimePicker5.Value & "','" & DateTimePicker6.Value & "','" & TextBox9.Text & "',null,null,null,'" & agency & "','" & examiner & "','" & investigator & "',' " & ComboBox3.Text & " ',null)"
             query1 = "insert into laboratory_case values(null,         '1'            ,'          1                 ','3','4','5',          '6',      '     7       ',   '       8'           ,'        9                  ','              10             ','             11          ', 12 ,null)"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
             TextBox2.Text = ""
-            TextBox3.Text = ""
-            TextBox4.Text = ""
+            TextBox7.Text = ""
+            TextBox9.Text = ""
             ComboBox15.Text = ""
             ComboBox17.Text = ""
-            DateTimePicker1.Text = ""
             ComboBox3.Text = ""
-            ComboBox4.Text = ""
+            DateTimePicker1.Text = ""
+
 
             load_table()
 
@@ -346,5 +346,13 @@ Public Class Form3
     Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
         Form2.Show()
         Me.Close()
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub Button34_Click(sender As Object, e As EventArgs) Handles Button34.Click
+        Form23.Show()
     End Sub
 End Class
