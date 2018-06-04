@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-
+Imports System.IO
 
 Public Class Form6
     Dim mysqlconn As MySqlConnection
@@ -251,68 +251,6 @@ Public Class Form6
         End Try
     End Sub
 
-    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
-        Dim adapter As New MySqlDataAdapter
-        Dim dbDataSet As New DataTable
-        Dim soure As New BindingSource
-
-        Try
-            mysqlconn.Open()
-
-            Dim query As String
-
-            query = "select * from officer where rank = '" & TextBox8.Text & "'"
-
-            command = New MySqlCommand(query, mysqlconn)
-            adapter.SelectCommand = command
-            adapter.Fill(dbDataSet)
-            soure.DataSource = dbDataSet
-            DataGridView1.DataSource = soure
-            adapter.Update(dbDataSet)
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
-    End Sub
-
-    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
-        Dim adapter As New MySqlDataAdapter
-        Dim dbDataSet As New DataTable
-        Dim soure As New BindingSource
-
-        Try
-            mysqlconn.Open()
-
-            Dim query As String
-
-            query = "select * from officer where office = '" & TextBox9.Text & "'"
-
-            command = New MySqlCommand(query, mysqlconn)
-            adapter.SelectCommand = command
-            adapter.Fill(dbDataSet)
-            soure.DataSource = dbDataSet
-            DataGridView1.DataSource = soure
-            adapter.Update(dbDataSet)
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
-    End Sub
-
-    Private Sub TextBox9_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
         mysqlconn = New MySqlConnection
@@ -344,6 +282,19 @@ Public Class Form6
             End While
 
             mysqlconn.Close()
+            mysqlconn.Open()
+
+            Dim query3 As String
+            query3 = "select * from cybercrime.rank"
+            command = New MySqlCommand(query3, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                Dim xxrank = reader.GetString("rank")
+                ComboBox1.Items.Add(xxrank)
+            End While
+
+            mysqlconn.Close()
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -366,64 +317,6 @@ Public Class Form6
             Dim query As String
 
             query = "select fname as First, mname as Middle, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , office as Office, remark as Remark , date_created as Created from officer where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
-
-            command = New MySqlCommand(query, mysqlconn)
-            adapter.SelectCommand = command
-            adapter.Fill(dbDataSet)
-            soure.DataSource = dbDataSet
-            DataGridView1.DataSource = soure
-            adapter.Update(dbDataSet)
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
-    End Sub
-
-    Private Sub TextBox8_TextChanged(sender As Object, e As EventArgs) Handles TextBox8.TextChanged
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
-        Dim adapter As New MySqlDataAdapter
-        Dim dbDataSet As New DataTable
-        Dim soure As New BindingSource
-
-        Try
-            mysqlconn.Open()
-
-            Dim query As String
-
-            query = "select * from officer where rank = '" & TextBox8.Text & "'"
-
-            command = New MySqlCommand(query, mysqlconn)
-            adapter.SelectCommand = command
-            adapter.Fill(dbDataSet)
-            soure.DataSource = dbDataSet
-            DataGridView1.DataSource = soure
-            adapter.Update(dbDataSet)
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
-    End Sub
-
-    Private Sub TextBox9_TextChanged_1(sender As Object, e As EventArgs) Handles TextBox9.TextChanged
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
-        Dim adapter As New MySqlDataAdapter
-        Dim dbDataSet As New DataTable
-        Dim soure As New BindingSource
-
-        Try
-            mysqlconn.Open()
-
-            Dim query As String
-
-            query = "select * from officer where office = '" & TextBox9.Text & "'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -574,6 +467,17 @@ Public Class Form6
         email.Text = selectedRow.Cells(7).Value.ToString()
         rank.Text = selectedRow.Cells(8).Value.ToString()
         office.Text = selectedRow.Cells(9).Value.ToString()
+
+        TextBox2.Text = selectedRow.Cells(1).Value.ToString()
+        TextBox3.Text = selectedRow.Cells(2).Value.ToString()
+        TextBox4.Text = selectedRow.Cells(3).Value.ToString()
+        TextBox5.Text = selectedRow.Cells(4).Value.ToString()
+
+        Dim img() As Byte
+
+        Dim ms As New MemoryStream(img)
+        PictureBox3.Image = Image.FromStream(ms)
+
     End Sub
 
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
@@ -604,4 +508,5 @@ Public Class Form6
         Form2.Show()
         Me.Close()
     End Sub
+
 End Class
