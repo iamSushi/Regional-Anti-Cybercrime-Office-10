@@ -84,6 +84,7 @@ Partial Class Form4
         Me.Button20 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button25 = New System.Windows.Forms.Button()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -99,6 +100,7 @@ Partial Class Form4
         'panel_slide
         '
         Me.panel_slide.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.panel_slide.Controls.Add(Me.Button25)
         Me.panel_slide.Controls.Add(Me.Button16)
         Me.panel_slide.Controls.Add(Me.Button15)
         Me.panel_slide.Controls.Add(Me.Button14)
@@ -149,7 +151,7 @@ Partial Class Form4
         Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button14.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button14.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button14.Location = New System.Drawing.Point(-109, 177)
+        Me.Button14.Location = New System.Drawing.Point(-109, 233)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(109, 50)
         Me.Button14.TabIndex = 12
@@ -164,7 +166,7 @@ Partial Class Form4
         Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button13.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button13.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button13.Location = New System.Drawing.Point(-109, 121)
+        Me.Button13.Location = New System.Drawing.Point(-109, 177)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(109, 50)
         Me.Button13.TabIndex = 11
@@ -179,7 +181,7 @@ Partial Class Form4
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button12.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button12.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button12.Location = New System.Drawing.Point(-109, 65)
+        Me.Button12.Location = New System.Drawing.Point(-109, 121)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(109, 50)
         Me.Button12.TabIndex = 10
@@ -194,7 +196,7 @@ Partial Class Form4
         Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button11.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button11.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button11.Location = New System.Drawing.Point(-109, 233)
+        Me.Button11.Location = New System.Drawing.Point(-109, 289)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(109, 50)
         Me.Button11.TabIndex = 9
@@ -827,6 +829,21 @@ Partial Class Form4
         Me.Label5.TabIndex = 17
         Me.Label5.Text = "      Case ID"
         '
+        'Button25
+        '
+        Me.Button25.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button25.FlatAppearance.BorderSize = 0
+        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button25.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button25.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button25.Location = New System.Drawing.Point(-109, 68)
+        Me.Button25.Name = "Button25"
+        Me.Button25.Size = New System.Drawing.Size(109, 50)
+        Me.Button25.TabIndex = 15
+        Me.Button25.Text = "   Facts"
+        Me.Button25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button25.UseVisualStyleBackColor = True
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -917,4 +934,5 @@ Partial Class Form4
     Friend WithEvents Button1 As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Button24 As Button
+    Friend WithEvents Button25 As Button
 End Class

@@ -125,7 +125,13 @@ Public Class Form4
         End Try
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+    Private Sub Button24_Click(sender As Object, e As EventArgs) Handles Button24.Click
+        Form2.Show()
+        Me.Close()
+    End Sub
 
+    Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
+        Form2.Show()
+        Me.Close()
     End Sub
 End Class
