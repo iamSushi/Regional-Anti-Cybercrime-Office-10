@@ -7791,6 +7791,8 @@
         kCQ/LZeLHqZIAXUAAAAASUVORK5CYII=
 </value>
   </data>
+<<<<<<< HEAD
+=======
   <data name="Button19.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAApZJREFUSEvd
@@ -7866,6 +7868,7 @@
         bgZXAAAAAElFTkSuQmCC
 </value>
   </data>
+>>>>>>> 0df4c2ee83cc5a28ae53941135c2cfea967fd94c
   <metadata name="Column14.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

@@ -732,7 +732,11 @@ Partial Class Form4
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+<<<<<<< HEAD
+        Me.DataGridView1.Location = New System.Drawing.Point(24, 103)
+=======
         Me.DataGridView1.Location = New System.Drawing.Point(262, 3)
+>>>>>>> 0df4c2ee83cc5a28ae53941135c2cfea967fd94c
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(741, 609)
         Me.DataGridView1.TabIndex = 0
@@ -909,6 +913,8 @@ Partial Class Form4
     Friend WithEvents Label9 As Label
     Friend WithEvents ComboBox5 As ComboBox
     Friend WithEvents Button21 As Button
+<<<<<<< HEAD
+=======
     Friend WithEvents Label8 As Label
     Friend WithEvents ComboBox4 As ComboBox
     Friend WithEvents Button10 As Button
@@ -917,4 +923,5 @@ Partial Class Form4
     Friend WithEvents Button1 As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Button24 As Button
+>>>>>>> 0df4c2ee83cc5a28ae53941135c2cfea967fd94c
 End Class
