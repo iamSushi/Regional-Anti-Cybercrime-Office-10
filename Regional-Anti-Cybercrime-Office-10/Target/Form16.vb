@@ -73,6 +73,9 @@ Public Class Form16
         selectedRow = DataGridView1.Rows(Index)
 
         id.Text = selectedRow.Cells(0).Value.ToString()
+        TextBox2.Text = selectedRow.Cells(1).Value.ToString()
+        TextBox1.Text = selectedRow.Cells(2).Value.ToString()
+
     End Sub
 
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
