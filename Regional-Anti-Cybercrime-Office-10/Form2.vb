@@ -70,4 +70,8 @@
             Me.DialogResult = DialogResult.None
         End If
     End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        Form13.Show()
+    End Sub
 End Class
