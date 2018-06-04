@@ -28,16 +28,6 @@ Public Class Form3
         Loop
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Form2.Show()
-        Me.Close()
-    End Sub
-
-    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        Form2.Show()
-        Me.Close()
-    End Sub
-
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Form4.Show()
         Me.Close()
@@ -353,7 +343,7 @@ Public Class Form3
         Form19.show()
     End Sub
 
-    Private Sub Button39_Click(sender As Object, e As EventArgs) Handles Button39.Click
+    Private Sub Button39_Click(sender As Object, e As EventArgs) 
         Dim key As String = DirectCast(ComboBox13.SelectedItem, KeyValuePair(Of String, String)).Key
         Dim value As String = DirectCast(ComboBox13.SelectedItem, KeyValuePair(Of String, String)).Value
         MessageBox.Show(key & "   " & value)
@@ -420,19 +410,19 @@ Public Class Form3
         Form20.Show()
     End Sub
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+    Private Sub Label6_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label30_Click(sender As Object, e As EventArgs) Handles Label30.Click
+    Private Sub Label30_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
+    Private Sub Button25_Click(sender As Object, e As EventArgs)
         Form21.Show()
     End Sub
 
-    Private Sub Button27_Click(sender As Object, e As EventArgs) Handles Button27.Click
+    Private Sub Button27_Click(sender As Object, e As EventArgs)
         Form22.Show()
     End Sub
 

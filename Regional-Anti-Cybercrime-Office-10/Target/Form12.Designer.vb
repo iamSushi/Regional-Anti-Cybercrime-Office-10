@@ -40,6 +40,14 @@ Partial Class Form12
         Me.id = New System.Windows.Forms.TextBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProvider2 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,7 +60,7 @@ Partial Class Form12
         Me.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button22.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button22.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button22.Location = New System.Drawing.Point(16, 361)
+        Me.Button22.Location = New System.Drawing.Point(16, 615)
         Me.Button22.Name = "Button22"
         Me.Button22.Size = New System.Drawing.Size(75, 30)
         Me.Button22.TabIndex = 42
@@ -62,11 +70,11 @@ Partial Class Form12
         'facts
         '
         Me.facts.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.facts.Location = New System.Drawing.Point(16, 120)
+        Me.facts.Location = New System.Drawing.Point(16, 445)
         Me.facts.Multiline = True
         Me.facts.Name = "facts"
         Me.facts.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.facts.Size = New System.Drawing.Size(426, 220)
+        Me.facts.Size = New System.Drawing.Size(426, 149)
         Me.facts.TabIndex = 41
         '
         'Label6
@@ -75,11 +83,11 @@ Partial Class Form12
         Me.Label6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Image = CType(resources.GetObject("Label6.Image"), System.Drawing.Image)
         Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label6.Location = New System.Drawing.Point(12, 85)
+        Me.Label6.Location = New System.Drawing.Point(17, 410)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(73, 23)
+        Me.Label6.Size = New System.Drawing.Size(70, 23)
         Me.Label6.TabIndex = 40
-        Me.Label6.Text = "      Facts"
+        Me.Label6.Text = "      How"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'factname
@@ -96,11 +104,11 @@ Partial Class Form12
         Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Image = CType(resources.GetObject("Label5.Image"), System.Drawing.Image)
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(12, 9)
+        Me.Label5.Location = New System.Drawing.Point(17, 9)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(79, 23)
+        Me.Label5.Size = New System.Drawing.Size(76, 23)
         Me.Label5.TabIndex = 38
-        Me.Label5.Text = "      Name"
+        Me.Label5.Text = "      What"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Button2
@@ -124,7 +132,7 @@ Partial Class Form12
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button3.Location = New System.Drawing.Point(105, 361)
+        Me.Button3.Location = New System.Drawing.Point(105, 615)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(87, 30)
         Me.Button3.TabIndex = 53
@@ -196,7 +204,7 @@ Partial Class Form12
         'id
         '
         Me.id.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.id.Location = New System.Drawing.Point(411, 361)
+        Me.id.Location = New System.Drawing.Point(411, 614)
         Me.id.Name = "id"
         Me.id.Size = New System.Drawing.Size(31, 31)
         Me.id.TabIndex = 55
@@ -211,12 +219,104 @@ Partial Class Form12
         Me.ErrorProvider2.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.ErrorProvider2.ContainerControl = Me
         '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(16, 116)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(426, 31)
+        Me.TextBox2.TabIndex = 57
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Image = CType(resources.GetObject("Label1.Image"), System.Drawing.Image)
+        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label1.Location = New System.Drawing.Point(17, 85)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(80, 23)
+        Me.Label1.TabIndex = 56
+        Me.Label1.Text = "      When"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(16, 196)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(426, 31)
+        Me.TextBox3.TabIndex = 59
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Image = CType(resources.GetObject("Label3.Image"), System.Drawing.Image)
+        Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label3.Location = New System.Drawing.Point(17, 165)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(86, 23)
+        Me.Label3.TabIndex = 58
+        Me.Label3.Text = "      Where"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox4.Location = New System.Drawing.Point(16, 274)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(426, 31)
+        Me.TextBox4.TabIndex = 61
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Image = CType(resources.GetObject("Label4.Image"), System.Drawing.Image)
+        Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label4.Location = New System.Drawing.Point(17, 243)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(71, 23)
+        Me.Label4.TabIndex = 60
+        Me.Label4.Text = "      Who"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox5.Location = New System.Drawing.Point(16, 355)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(426, 31)
+        Me.TextBox5.TabIndex = 63
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Image = CType(resources.GetObject("Label7.Image"), System.Drawing.Image)
+        Me.Label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label7.Location = New System.Drawing.Point(17, 324)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(70, 23)
+        Me.Label7.TabIndex = 62
+        Me.Label7.Text = "      Why"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Form12
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(1154, 412)
+        Me.ClientSize = New System.Drawing.Size(1154, 652)
+        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.id)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button3)
@@ -253,4 +353,12 @@ Partial Class Form12
     Friend WithEvents id As TextBox
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents ErrorProvider2 As ErrorProvider
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label1 As Label
 End Class

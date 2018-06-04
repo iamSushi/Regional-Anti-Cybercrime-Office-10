@@ -24,10 +24,10 @@ Public Class Form1
             End While
 
             If result = 1 Then
-                Form2.Show()
+                Form7.Show()
                 Me.Hide()
             Else
-                MessageBox.Show("Username or Password is incorrect!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Username or Password is incorrect!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
 
 
@@ -38,7 +38,7 @@ Public Class Form1
         Finally
             mysqlconn.Dispose()
         End Try
-        Form2.Show()
+        Form7.Show()
 
     End Sub
 

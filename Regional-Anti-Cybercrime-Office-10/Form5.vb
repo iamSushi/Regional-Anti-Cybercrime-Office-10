@@ -22,16 +22,6 @@ Public Class Form5
         Loop
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Form2.Show()
-        Me.Close()
-    End Sub
-
-    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        Form2.Show()
-        Me.Close()
-    End Sub
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Form3.Show()
         Me.Close()
@@ -287,36 +277,6 @@ Public Class Form5
         Finally
             mysqlconn.Dispose()
         End Try
-    End Sub
-
-    Private Sub Button24_Click(sender As Object, e As EventArgs) Handles Button24.Click
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
-        Dim adapter As New MySqlDataAdapter
-        Dim dbDataSet As New DataTable
-        Dim soure As New BindingSource
-
-        Try
-            mysqlconn.Open()
-
-            Dim query As String
-
-            query = "select * from persons where category = '" & DateTimePicker2.Text & "'"
-
-            command = New MySqlCommand(query, mysqlconn)
-            adapter.SelectCommand = command
-            adapter.Fill(dbDataSet)
-            soure.DataSource = dbDataSet
-            DataGridView1.DataSource = soure
-            adapter.Update(dbDataSet)
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
-
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
