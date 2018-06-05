@@ -523,4 +523,8 @@ Public Class Form5
         Form2.Show()
         Me.Close()
     End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
 End Class

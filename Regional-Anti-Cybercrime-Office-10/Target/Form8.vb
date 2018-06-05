@@ -136,6 +136,39 @@ Public Class Form8
 
     End Sub
 
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        Try
+            mysqlconn.Open()
+
+            If e.RowIndex >= 0 Then
+                Dim row As DataGridViewRow
+                row = Me.DataGridView1.Rows(e.RowIndex)
+                Dim pili = row.Cells("person_id").Value.ToString
+
+                MessageBox.Show(pili)
+
+
+                Dim query As String
+
+                query = "insert into victim values('" & lab_case & "','" & pili & "',null)"
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+                MessageBox.Show("Successful")
+
+            End If
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        load_table()
+        load_table2()
+    End Sub
+
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) 
 
     End Sub
@@ -200,5 +233,36 @@ Public Class Form8
 
         load_table2()
 
+    End Sub
+
+    Private Sub DataGridView2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellClick
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        Try
+            mysqlconn.Open()
+
+            If e.RowIndex >= 0 Then
+                Dim row As DataGridViewRow
+                row = Me.DataGridView2.Rows(e.RowIndex)
+                Dim pili = row.Cells("person_id").Value.ToString
+
+                MessageBox.Show(pili)
+
+                Dim query As String
+
+                query = "delete from victim where person_id = '" & pili & "' and lab_case_no = ' " & lab_case & "'"
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+                MessageBox.Show("Successful")
+
+            End If
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        load_table2()
     End Sub
 End Class
