@@ -35,7 +35,7 @@ Public Class Form11
 
                 Dim query As String
 
-                query = "insert into law values(null,'" & designation.Text & "','" & DateTimePicker1.Text & "','" & description.Text & "',null)"
+                query = "insert into law values(null,'" & designation.Text & "','" & DateTimePicker1.Text & "','" & description.Text & "','null')"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
                 MessageBox.Show("Successfullu added Law")

@@ -26,46 +26,11 @@ Public Class Form10
             Me.ErrorProvider1.SetError(Me.mother, "")
         End If
 
-        If String.IsNullOrEmpty(street.Text) Then
-            Me.ErrorProvider1.SetError(Me.street, "Input street")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.street, "")
-        End If
-
-        If String.IsNullOrEmpty(barangay.Text) Then
-            Me.ErrorProvider1.SetError(Me.barangay, "Input barangay")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.barangay, "")
-        End If
-
-        If String.IsNullOrEmpty(city.Text) Then
-            Me.ErrorProvider1.SetError(Me.city, "Input city")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.city, "")
-        End If
-
-        If String.IsNullOrEmpty(province.Text) Then
-            Me.ErrorProvider1.SetError(Me.province, "Input province")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.province, "")
-        End If
-
         If String.IsNullOrEmpty(contact.Text) Then
             Me.ErrorProvider1.SetError(Me.contact, "Input contact")
             count += 1
         Else
             Me.ErrorProvider1.SetError(Me.contact, "")
-        End If
-
-        If String.IsNullOrEmpty(email.Text) Then
-            Me.ErrorProvider1.SetError(Me.email, "Input email")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.email, "")
         End If
 
         If count <> 0 Then
@@ -76,7 +41,7 @@ Public Class Form10
 
                 Dim query As String
 
-                query = "insert into agency values(null,'" & agency.Text & "','" & mother.Text & "','" & street.Text & "','" & barangay.Text & "','" & city.Text & "','" & province.Text & "','" & contact.Text & "','" & email.Text & "',null)"
+                query = "insert into agency values(null,'" & agency.Text & "','" & street.Text & "','" & barangay.Text & "','" & city.Text & "','" & province.Text & "','" & mother.Text & "','" & contact.Text & "','" & email.Text & "',null)"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
                 MessageBox.Show("Successfully Add an Agency")
@@ -163,46 +128,11 @@ Public Class Form10
             Me.ErrorProvider1.SetError(Me.mother, "")
         End If
 
-        If String.IsNullOrEmpty(street.Text) Then
-            Me.ErrorProvider1.SetError(Me.street, "Input street")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.street, "")
-        End If
-
-        If String.IsNullOrEmpty(barangay.Text) Then
-            Me.ErrorProvider1.SetError(Me.barangay, "Input barangay")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.barangay, "")
-        End If
-
-        If String.IsNullOrEmpty(city.Text) Then
-            Me.ErrorProvider1.SetError(Me.city, "Input city")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.city, "")
-        End If
-
-        If String.IsNullOrEmpty(province.Text) Then
-            Me.ErrorProvider1.SetError(Me.province, "Input province")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.province, "")
-        End If
-
         If String.IsNullOrEmpty(contact.Text) Then
             Me.ErrorProvider1.SetError(Me.contact, "Input contact")
             count += 1
         Else
             Me.ErrorProvider1.SetError(Me.contact, "")
-        End If
-
-        If String.IsNullOrEmpty(email.Text) Then
-            Me.ErrorProvider1.SetError(Me.email, "Input email")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.email, "")
         End If
 
         If count <> 0 Then

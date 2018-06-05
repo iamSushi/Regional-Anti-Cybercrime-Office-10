@@ -473,11 +473,6 @@ Public Class Form6
         TextBox4.Text = selectedRow.Cells(3).Value.ToString()
         TextBox5.Text = selectedRow.Cells(4).Value.ToString()
 
-        Dim img() As Byte
-
-        Dim ms As New MemoryStream(img)
-        PictureBox3.Image = Image.FromStream(ms)
-
     End Sub
 
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click

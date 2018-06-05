@@ -24,8 +24,8 @@ Partial Class Form6
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form6))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panel_slide = New System.Windows.Forms.Panel()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button16 = New System.Windows.Forms.Button()
@@ -591,20 +591,20 @@ Partial Class Form6
         '
         'DataGridView1
         '
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.Control
         Me.DataGridView1.Location = New System.Drawing.Point(-5, 230)
@@ -704,7 +704,7 @@ Partial Class Form6
         Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button19.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button19.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button19.Location = New System.Drawing.Point(89, 281)
+        Me.Button19.Location = New System.Drawing.Point(89, 286)
         Me.Button19.Name = "Button19"
         Me.Button19.Size = New System.Drawing.Size(80, 30)
         Me.Button19.TabIndex = 24
@@ -726,7 +726,7 @@ Partial Class Form6
         Me.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button20.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button20.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button20.Location = New System.Drawing.Point(175, 281)
+        Me.Button20.Location = New System.Drawing.Point(175, 286)
         Me.Button20.Name = "Button20"
         Me.Button20.Size = New System.Drawing.Size(75, 30)
         Me.Button20.TabIndex = 25
@@ -896,6 +896,8 @@ Partial Class Form6
         '
         'office
         '
+        Me.office.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.office.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.office.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.office.FormattingEnabled = True
         Me.office.Location = New System.Drawing.Point(548, 470)
@@ -905,6 +907,8 @@ Partial Class Form6
         '
         'rank
         '
+        Me.rank.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.rank.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.rank.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rank.FormattingEnabled = True
         Me.rank.Location = New System.Drawing.Point(548, 420)

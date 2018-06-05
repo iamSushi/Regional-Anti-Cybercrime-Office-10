@@ -27,7 +27,6 @@ Partial Class Form7
         Me.Button23 = New System.Windows.Forms.Button()
         Me.Button28 = New System.Windows.Forms.Button()
         Me.Button25 = New System.Windows.Forms.Button()
-        Me.Button27 = New System.Windows.Forms.Button()
         Me.panel_slide = New System.Windows.Forms.Panel()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button16 = New System.Windows.Forms.Button()
@@ -66,7 +65,6 @@ Partial Class Form7
         Me.Panel4.Controls.Add(Me.Button23)
         Me.Panel4.Controls.Add(Me.Button28)
         Me.Panel4.Controls.Add(Me.Button25)
-        Me.Panel4.Controls.Add(Me.Button27)
         Me.Panel4.Location = New System.Drawing.Point(73, 58)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1011, 672)
@@ -122,23 +120,6 @@ Partial Class Form7
         Me.Button25.Text = "               Agency"
         Me.Button25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button25.UseVisualStyleBackColor = False
-        '
-        'Button27
-        '
-        Me.Button27.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Button27.FlatAppearance.BorderSize = 0
-        Me.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button27.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button27.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button27.Image = CType(resources.GetObject("Button27.Image"), System.Drawing.Image)
-        Me.Button27.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button27.Location = New System.Drawing.Point(790, 340)
-        Me.Button27.Name = "Button27"
-        Me.Button27.Size = New System.Drawing.Size(179, 73)
-        Me.Button27.TabIndex = 1
-        Me.Button27.Text = "               Facts"
-        Me.Button27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button27.UseVisualStyleBackColor = False
         '
         'panel_slide
         '
@@ -479,7 +460,6 @@ Partial Class Form7
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button22 As Button
     Friend WithEvents Button28 As Button
-    Friend WithEvents Button27 As Button
     Friend WithEvents Button25 As Button
     Friend WithEvents Button23 As Button
     Friend WithEvents Button1 As Button
