@@ -446,6 +446,8 @@ Public Class Form3
             adapter.Fill(dbDataSet)
             soure.DataSource = dbDataSet
             DataGridView3.DataSource = soure
+            DataGridView2.DataSource = soure
+            DataGridView1.DataSource = soure
             adapter.Update(dbDataSet)
 
             mysqlconn.Close()

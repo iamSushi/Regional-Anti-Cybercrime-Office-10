@@ -54,6 +54,8 @@ Public Class Form13
                 Form3.lab_case = pili
                 Form3.TextBox10.Text = name
                 Form3.TextBox1.Text = name
+                Form2.lab_case = pili
+                Form2.TextBox6.Text = name
 
 
             End If
