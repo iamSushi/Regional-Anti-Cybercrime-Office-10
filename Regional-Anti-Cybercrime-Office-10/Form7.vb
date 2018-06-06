@@ -81,7 +81,6 @@ Public Class Form7
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None
         End If
-
     End Sub
 
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
@@ -106,7 +105,113 @@ Public Class Form7
         Me.Close()
     End Sub
 
-    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
+    Private Sub load_table()
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Try
+            mysqlconn.Open()
+            Dim query As String
 
+            query = "SELECT * from userprofile"
+            command = New MySqlCommand(query, mysqlconn)
+            Dim adapter As New MySqlDataAdapter(command)
+            Dim table As New DataTable()
+            adapter.Fill(table)
+
+            TextBox10.Text = table.Rows(0)(0).ToString()
+            TextBox1.Text = table.Rows(0)(1).ToString()
+            TextBox2.Text = table.Rows(0)(2).ToString()
+            TextBox3.Text = table.Rows(0)(3).ToString()
+            TextBox9.Text = table.Rows(0)(4).ToString()
+            mysqlconn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub Form7_Load(sender As Object, e As EventArgs) Handles Me.Load
+        load_table()
+    End Sub
+
+    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+
+        Dim count As Int16
+        count = 0
+
+        If String.IsNullOrEmpty(TextBox6.Text) Then
+            Me.ErrorProvider1.SetError(Me.TextBox6, "Input current password")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.TextBox6, "")
+        End If
+
+        If TextBox6.Text <> TextBox9.Text Then
+            MessageBox.Show("Current password don't match!")
+            load_table()
+            TextBox6.Text = ""
+            TextBox7.Text = ""
+            TextBox8.Text = ""
+            count += 1
+        End If
+
+        If String.IsNullOrEmpty(TextBox7.Text) Then
+            Me.ErrorProvider1.SetError(Me.TextBox7, "Input new password")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.TextBox7, "")
+        End If
+
+        If String.IsNullOrEmpty(TextBox8.Text) Then
+            Me.ErrorProvider1.SetError(Me.TextBox8, "Input retype password")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.TextBox8, "")
+        End If
+
+        If TextBox7.Text <> TextBox8.Text Then
+            MessageBox.Show("New password don't match!")
+            TextBox7.Text = ""
+            TextBox8.Text = ""
+            count += 1
+        End If
+
+        If count <> 0 Then
+            Return
+        Else
+            Try
+                mysqlconn.Open()
+                If String.IsNullOrEmpty(TextBox5.Text) Then
+                    Dim query As String
+                    query = "UPDATE accounts SET username = '" & TextBox3.Text & "', password = '" & TextBox8.Text & "' WHERE officer_id = '" & TextBox10.Text & "'"
+                    command = New MySqlCommand(query, mysqlconn)
+                    reader = command.ExecuteReader
+                    MessageBox.Show("Updated Successfully!")
+                Else
+                    Dim query As String
+                    query = "UPDATE accounts SET username = '" & TextBox5.Text & "', password = '" & TextBox8.Text & "' WHERE officer_id = '" & TextBox10.Text & "'"
+                    command = New MySqlCommand(query, mysqlconn)
+                    reader = command.ExecuteReader
+                    MessageBox.Show("Updated Successfully!")
+                End If
+                load_table()
+                TextBox5.Text = ""
+                TextBox6.Text = ""
+                TextBox7.Text = ""
+                TextBox8.Text = ""
+                TextBox9.Text = ""
+                TextBox10.Text = ""
+                mysqlconn.Close()
+
+                count = 0
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
+        End If
     End Sub
 End Class
