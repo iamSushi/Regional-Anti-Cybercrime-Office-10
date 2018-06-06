@@ -24,6 +24,14 @@ Public Class Form1
             End While
 
             If result = 1 Then
+                mysqlconn.Close()
+                mysqlconn.Open()
+
+                Dim query2 As String
+                query2 = "UPDATE accounts SET status = 1 WHERE username = '" & TextBox1.Text & "' and password = '" & TextBox2.Text & "'"
+                command = New MySqlCommand(query2, mysqlconn)
+                reader = command.ExecuteReader
+
                 Form7.Show()
                 Me.Hide()
             Else
@@ -38,14 +46,10 @@ Public Class Form1
         Finally
             mysqlconn.Dispose()
         End Try
-        Form7.Show()
 
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Dispose()
-
-
-
     End Sub
 End Class

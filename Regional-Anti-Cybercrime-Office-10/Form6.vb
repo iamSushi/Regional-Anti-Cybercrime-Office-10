@@ -77,6 +77,22 @@ Public Class Form6
         Dim dialog As DialogResult
         dialog = MessageBox.Show("Do you really want to exit?", "Exit", MessageBoxButtons.YesNo)
         If dialog = DialogResult.Yes Then
+            mysqlconn = New MySqlConnection
+            mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+            Try
+                mysqlconn.Open()
+                Dim query2 As String
+                query2 = "UPDATE accounts SET status = 0 WHERE status = 1"
+                command = New MySqlCommand(query2, mysqlconn)
+                reader = command.ExecuteReader
+
+                mysqlconn.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
+
             Application.ExitThread()
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None
@@ -161,7 +177,7 @@ Public Class Form6
                     gender = "female"
                 End If
 
-                query = "insert into officer values(null,'" & fname.Text & "','" & mname.Text & "','" & sname.Text & "','" & DateTimePicker1.Text & "','" + gender + "','" & contact.Text & "','" & email.Text & "','" & rank.Text & "','" & office.Text & "','null','null',@profile_image,null)"
+                query = "insert into officer values(null,'" & fname.Text & "','" & mname.Text & "','" & sname.Text & "','" & DateTimePicker1.Text & "','" + gender + "','" & contact.Text & "','" & email.Text & "','" & rank.Text & "','null','" & office.Text & "',@profile_image,null)"
                 command = New MySqlCommand(query, mysqlconn)
                 command.Parameters.AddWithValue("@profile_image", arrImage)
                 reader = command.ExecuteReader
@@ -206,7 +222,7 @@ Public Class Form6
 
             Dim query As String
 
-            query = "select officer_id as ID, fname as First, mname as Middle, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , agency as Agency, remark as Remark , date_created as Created from officer"
+            query = "select officer_id as ID, fname as First, mname as Middle, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , agency as Agency, date_created as Created from officer"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -454,9 +470,9 @@ Public Class Form6
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        Index = e.RowIndex
+        index = e.RowIndex
         Dim selectedRow As DataGridViewRow
-        selectedRow = DataGridView1.Rows(Index)
+        selectedRow = DataGridView1.Rows(index)
 
         id.Text = selectedRow.Cells(0).Value.ToString()
         fname.Text = selectedRow.Cells(1).Value.ToString()

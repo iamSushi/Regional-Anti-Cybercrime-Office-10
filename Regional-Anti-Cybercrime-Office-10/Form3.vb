@@ -72,6 +72,22 @@ Public Class Form3
         Dim dialog As DialogResult
         dialog = MessageBox.Show("Do you really want to exit?", "Exit", MessageBoxButtons.YesNo)
         If dialog = DialogResult.Yes Then
+            mysqlconn = New MySqlConnection
+            mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+            Try
+                mysqlconn.Open()
+                Dim query2 As String
+                query2 = "UPDATE accounts SET status = 0 WHERE status = 1"
+                command = New MySqlCommand(query2, mysqlconn)
+                reader = command.ExecuteReader
+
+                mysqlconn.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
+
             Application.ExitThread()
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None

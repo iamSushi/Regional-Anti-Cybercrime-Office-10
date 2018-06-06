@@ -1,4 +1,10 @@
-﻿Public Class Form7
+﻿Imports MySql.Data.MySqlClient
+Public Class Form7
+    Dim mysqlconn As MySqlConnection
+    Dim command As MySqlCommand
+    Dim reader As MySqlDataReader
+
+
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Do While panel_slide.Width < 109
             panel_slide.Width = panel_slide.Width + 1
@@ -55,10 +61,27 @@
         Dim dialog As DialogResult
         dialog = MessageBox.Show("Do you really want to exit?", "Exit", MessageBoxButtons.YesNo)
         If dialog = DialogResult.Yes Then
+            mysqlconn = New MySqlConnection
+            mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+            Try
+                mysqlconn.Open()
+                Dim query2 As String
+                query2 = "UPDATE accounts SET status = 0 WHERE status = 1"
+                command = New MySqlCommand(query2, mysqlconn)
+                reader = command.ExecuteReader
+
+                mysqlconn.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
+
             Application.ExitThread()
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None
         End If
+
     End Sub
 
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
@@ -73,10 +96,6 @@
         Form16.Show()
     End Sub
 
-    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
-
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Form2.Show()
         Me.Close()
@@ -85,5 +104,9 @@
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
         Form2.Show()
         Me.Close()
+    End Sub
+
+    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
+
     End Sub
 End Class
