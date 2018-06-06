@@ -48,9 +48,6 @@ Public Class Form19
                 row = Me.DataGridView1.Rows(e.RowIndex)
                 Dim pili = row.Cells("ID").Value.ToString
 
-                MessageBox.Show(pili)
-
-
                 Dim query As String
 
                 query = "insert into case_nature values('" & lab_case & "','" & pili & "',null)"
@@ -96,9 +93,13 @@ Public Class Form19
         Finally
             mysqlconn.Dispose()
         End Try
+
+
     End Sub
 
     Private Sub load_table2()
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
         Dim adapter2 As New MySqlDataAdapter
         Dim dbDataSet2 As New DataTable
         Dim soure2 As New BindingSource
@@ -107,7 +108,7 @@ Public Class Form19
             mysqlconn.Open()
             Dim query As String
 
-            query = "select law_id as ID, designation as Designation, description as Description from case_nature left join law on case_nature.nature_of_case = law.law_id"
+            query = "select law_id as ID, designation as Designation, description as Description from case_nature inner join law on case_nature.nature_of_case = law.law_id where case_nature.lab_case_no = '" & lab_case & "'"
             command = New MySqlCommand(query, mysqlconn)
             adapter2.SelectCommand = command
             adapter2.Fill(dbDataSet2)
@@ -135,7 +136,7 @@ Public Class Form19
 
             Dim query As String
 
-            query = "select * from case_nature where name like '" & TextBox1.Text & "%' "
+            query = "select law_id as ID , designation as Name, date_passed as Date_Passed, description as Description from law where designation like '" & TextBox1.Text & "%' "
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -159,23 +160,19 @@ Public Class Form19
         Dim adapter2 As New MySqlDataAdapter
         Dim dbDataSet2 As New DataTable
         Dim soure2 As New BindingSource
-        Dim x As Integer
         Try
             mysqlconn.Open()
-            Dim query As String
 
-            query = "select law_id as ID, designation as Designation, description as Description from case_nature left join law on case_nature.nature_of_case = law.law_id"
+            Dim query As String
+            MessageBox.Show(lab_case)
+            query = "select lab_case_no_id from laboratory_case where lab_case_no = '" & lab_case & "'"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
-            x = 0
+
             While reader.Read
-                x = x + 1
+                Dim nameni = reader.GetString("lab_case_no_id")
+                Label3.Text = nameni
             End While
-
-            If x > 0 Then
-                load_table2()
-            End If
-
 
             mysqlconn.Close()
         Catch ex As MySqlException
@@ -183,8 +180,6 @@ Public Class Form19
         Finally
             mysqlconn.Dispose()
         End Try
-
-
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs)
@@ -202,8 +197,6 @@ Public Class Form19
                 Dim row As DataGridViewRow
                 row = Me.DataGridView2.Rows(e.RowIndex)
                 Dim pili = row.Cells("ID").Value.ToString
-
-                MessageBox.Show(pili)
 
                 Dim query As String
 
@@ -232,15 +225,12 @@ Public Class Form19
                 Dim row As DataGridViewRow
                 row = Me.DataGridView2.Rows(e.RowIndex)
                 Dim pili = row.Cells("ID").Value.ToString
-
-                MessageBox.Show(pili)
-
                 Dim query As String
 
                 query = "delete from case_nature where nature_of_case = '" & pili & "' and lab_case_no = '" & lab_case & "'"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
-                MessageBox.Show("Successful")
+                MessageBox.Show("Successful Deleted")
 
             End If
             mysqlconn.Close()
@@ -254,5 +244,32 @@ Public Class Form19
         load_table2()
     End Sub
 
+    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
 
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select law_id as ID , designation as Name, date_passed as Date_Passed, description as Description from law where date_passed like '" & DateTimePicker2.Value & "%' "
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
 End Class

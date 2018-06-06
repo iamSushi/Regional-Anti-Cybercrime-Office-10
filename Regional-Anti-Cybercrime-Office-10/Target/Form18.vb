@@ -13,27 +13,19 @@ Public Class Form18
         load_table()
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
-        Dim adapter2 As New MySqlDataAdapter
-        Dim dbDataSet2 As New DataTable
-        Dim soure2 As New BindingSource
-        x = 0
         Try
             mysqlconn.Open()
-            Dim query As String
 
-            query = "select persons.person_id,persons.fname,persons.mname,persons.sname from suspect left join persons on suspect.person_id = persons.person_id where lab_case_no = '" & lab_case & "'"
+            Dim query As String
+            MessageBox.Show(lab_case)
+            query = "select lab_case_no_id from laboratory_case where lab_case_no = '" & lab_case & "'"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
-            MessageBox.Show("halaka1")
-            While reader.Read
-                x = x + 1
-                MessageBox.Show("halaka2")
-            End While
-            If x > 0 Then
-                load_table2()
-                MessageBox.Show("halaka3")
-            End If
 
+            While reader.Read
+                Dim nameni = reader.GetString("lab_case_no_id")
+                Label3.Text = nameni
+            End While
 
             mysqlconn.Close()
         Catch ex As MySqlException
@@ -56,10 +48,6 @@ Public Class Form18
                 Dim row As DataGridViewRow
                 row = Me.DataGridView1.Rows(e.RowIndex)
                 Dim pili = row.Cells("person_id").Value.ToString
-
-                MessageBox.Show(pili)
-
-
                 Dim query As String
 
                 query = "insert into suspect values('" & lab_case & "','" & pili & "',null)"
@@ -87,16 +75,11 @@ Public Class Form18
                 Dim row As DataGridViewRow
                 row = Me.DataGridView1.Rows(e.RowIndex)
                 Dim pili = row.Cells("person_id").Value.ToString
-
-                MessageBox.Show(pili)
-
-
                 Dim query As String
 
                 query = "insert into suspect values('" & lab_case & "','" & pili & "',null)"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
-                MessageBox.Show("Successful")
 
             End If
             mysqlconn.Close()
@@ -122,8 +105,8 @@ Public Class Form18
 
             Dim query As String
 
-            query = "select person_id,fname,mname,sname from persons"
-            Command = New MySqlCommand(query, mysqlconn)
+            query = "select person_id as ID ,fname as Firstname ,mname as Middlename ,sname as Surname from persons"
+            command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
             soure.DataSource = dbDataSet
@@ -137,29 +120,6 @@ Public Class Form18
             mysqlconn.Dispose()
         End Try
 
-        Dim adapter2 As New MySqlDataAdapter
-        Dim dbDataSet2 As New DataTable
-        Dim soure2 As New BindingSource
-
-        Try
-            mysqlconn.Open()
-
-            Dim query As String
-
-            query = "select persons.person_id,persons.fname,persons.mname,persons.sname from suspect left join persons on suspect.person_id = persons.person_id where lab_case_no = '" & lab_case & "'"
-            command = New MySqlCommand(query, mysqlconn)
-            adapter2.SelectCommand = command
-            adapter2.Fill(dbDataSet2)
-            soure2.DataSource = dbDataSet2
-            DataGridView2.DataSource = soure2
-            adapter2.Update(dbDataSet2)
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
 
     End Sub
 
@@ -270,7 +230,7 @@ Public Class Form18
 
             Dim query As String
 
-            query = "select * from persons where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
+            query = "select person_id as ID ,fname as Firstname ,mname as Middlename ,sname as Surname from persons where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command

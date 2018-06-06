@@ -10,6 +10,28 @@ Public Class Form8
     Private Sub Form8_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         load_table()
+        load_table2()
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            MessageBox.Show(lab_case)
+            query = "select lab_case_no_id from laboratory_case where lab_case_no = '" & lab_case & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                Dim nameni = reader.GetString("lab_case_no_id")
+                Label3.Text = nameni
+            End While
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
 
     End Sub
 
@@ -55,7 +77,7 @@ Public Class Form8
 
             Dim query As String
 
-            query = "select persons.person_id,persons.fname,persons.mname,persons.sname from victim left join persons on victim.person_id = persons.person_id where lab_case_no = '" & lab_case & "'"
+            query = "select persons.person_id,persons.fname,persons.mname,persons.sname from victim inner join persons on victim.person_id = persons.person_id where lab_case_no = '" & lab_case & "'"
             command = New MySqlCommand(query, mysqlconn)
             adapter2.SelectCommand = command
             adapter2.Fill(dbDataSet2)
@@ -83,7 +105,7 @@ Public Class Form8
 
             Dim query As String
 
-            query = "select * from persons where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
+            query = "select persons.person_id,persons.fname,persons.mname,persons.sname from victim inner join persons on victim.person_id = persons.person_id where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -136,6 +158,7 @@ Public Class Form8
 
     End Sub
 
+
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
@@ -147,15 +170,12 @@ Public Class Form8
                 row = Me.DataGridView1.Rows(e.RowIndex)
                 Dim pili = row.Cells("person_id").Value.ToString
 
-                MessageBox.Show(pili)
-
-
                 Dim query As String
 
                 query = "insert into victim values('" & lab_case & "','" & pili & "',null)"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
-                MessageBox.Show("Successful")
+
 
             End If
             mysqlconn.Close()

@@ -52,11 +52,53 @@ Public Class Form13
                 Dim name = row.Cells("CaseID").Value.ToString
 
                 Form3.lab_case = pili
-                Form3.TextBox10.Text = name
+
                 Form3.TextBox1.Text = name
                 Form2.lab_case = pili
                 Form2.TextBox6.Text = name
 
+                Form3.lab_case = pili
+                Form8.lab_case = pili
+
+                Form18.lab_case = pili
+                Form19.lab_case = pili
+                Form24.lab_case = pili
+
+
+            End If
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+
+        Try
+            mysqlconn.Open()
+
+            If e.RowIndex >= 0 Then
+                Dim row As DataGridViewRow
+                row = Me.DataGridView1.Rows(e.RowIndex)
+                Dim pili = row.Cells("ID").Value.ToString
+                Dim name = row.Cells("CaseID").Value.ToString
+
+                Form3.lab_case = pili
+                Form3.TextBox10.Text = name
+                Form3.TextBox1.Text = name
+                Form2.lab_case = pili
+                Form2.TextBox6.Text = name
+                Form3.lab_case = pili
+                Form8.lab_case = pili
+
+                Form18.lab_case = pili
+                Form19.lab_case = pili
+                Form24.lab_case = pili
+                MessageBox.Show("Successfully Selected " + name)
 
             End If
             mysqlconn.Close()

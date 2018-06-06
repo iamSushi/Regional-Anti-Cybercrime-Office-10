@@ -288,12 +288,8 @@ Public Class Form3
             ComboBox17.Text = ""
             ComboBox3.Text = ""
             DateTimePicker1.Text = ""
-
-
             load_table()
-
-
-
+            load_table2()
             mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show(ex.Message)
@@ -303,8 +299,9 @@ Public Class Form3
     End Sub
 
     Private Sub Button36_Click_1(sender As Object, e As EventArgs) Handles Button36.Click
+        MessageBox.Show(lab_case)
         Form19.Show()
-        Form19.lab_case = lab_case
+
     End Sub
 
 
@@ -314,11 +311,8 @@ Public Class Form3
 
         Try
             mysqlconn.Open()
-
             Dim query As String
             Dim query1 As String
-
-
             query = "insert into evidence values('" & lab_case & "','" & ComboBox1.Text & "','" & ComboBox2.Text & "', '" & ComboBox4.Text & "','" & ComboBox5.Text & "','" & ComboBox6.Text & "','" & ComboBox7.Text & "','" & ComboBox8.Text & "','" & ComboBox9.Text & "','" & ComboBox10.Text & "','" & ComboBox11.Text & "','" & ComboBox12.Text & "','" & ComboBox16.Text & "','" & ComboBox14.Text & "','" & TextBox13.Text & "',null )"
             query1 = "insert into laboratory_case values(null,         '1'            ,'          1                 ','3','4','5',          '6',      '     7       ',   '       8'           ,'        9                  ','              10             ','             11          ', 12 ,null)"
             command = New MySqlCommand(query, mysqlconn)
@@ -326,7 +320,6 @@ Public Class Form3
             MessageBox.Show("Successful")
             ComboBox1.Text = ""
             ComboBox2.Text = ""
-
             ComboBox4.Text = ""
             ComboBox5.Text = ""
             ComboBox6.Text = ""
@@ -336,10 +329,6 @@ Public Class Form3
             ComboBox10.Text = ""
             ComboBox11.Text = ""
             ComboBox12.Text = ""
-
-
-
-
             mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show(ex.Message)
@@ -474,4 +463,32 @@ Public Class Form3
         End Try
     End Sub
 
+    Private Sub TextBox15_TextChanged(sender As Object, e As EventArgs) Handles TextBox15.TextChanged
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select select lab_case_no as ID,lab_case_no_id as CaseID,date_received as Date_Released,date_informed as Date_Informed,date_released as Date_Released,date_examined as Date_Examined,case_status as Case_Status,type as DFE from laboratory_case where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
 End Class
