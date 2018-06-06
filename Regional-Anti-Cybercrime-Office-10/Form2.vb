@@ -213,7 +213,7 @@ Public Class Form2
 
             Dim query As String
 
-            query = "delete from facts where lab_case_no = '" & lab_case & "'"
+            query = "delete from    facts where lab_case_no = '" & lab_case & "'"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             mysqlconn.Close()
