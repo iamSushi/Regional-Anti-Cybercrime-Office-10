@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2018 at 08:36 AM
+-- Generation Time: Jun 06, 2018 at 09:04 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -141,7 +141,7 @@ CREATE TABLE `evidence` (
 CREATE TABLE `facts` (
   `lab_case_no` bigint(20) NOT NULL,
   `what` text NOT NULL,
-  `date_occur` date NOT NULL,
+  `date_occur` varchar(255) DEFAULT NULL,
   `time_occur` varchar(255) NOT NULL,
   `place_occur` varchar(255) NOT NULL,
   `why` text NOT NULL,
@@ -158,10 +158,10 @@ CREATE TABLE `facts` (
 CREATE TABLE `laboratory_case` (
   `lab_case_no` bigint(20) NOT NULL,
   `lab_case_no_id` varchar(50) NOT NULL,
-  `date_received` date NOT NULL,
-  `date_informed` date DEFAULT NULL,
-  `date_released` date NOT NULL,
-  `date_examined` date NOT NULL,
+  `date_received` varchar(255) DEFAULT NULL,
+  `date_informed` varchar(255) DEFAULT NULL,
+  `date_released` varchar(255) DEFAULT NULL,
+  `date_examined` varchar(255) DEFAULT NULL,
   `case_status` varchar(20) NOT NULL,
   `released_by` bigint(20) DEFAULT NULL,
   `claimed_by` bigint(20) DEFAULT NULL,
@@ -182,7 +182,7 @@ CREATE TABLE `laboratory_case` (
 CREATE TABLE `law` (
   `law_id` bigint(20) NOT NULL,
   `designation` varchar(255) NOT NULL,
-  `date_passed` date DEFAULT NULL,
+  `date_passed` varchar(255) DEFAULT NULL,
   `description` longtext NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
