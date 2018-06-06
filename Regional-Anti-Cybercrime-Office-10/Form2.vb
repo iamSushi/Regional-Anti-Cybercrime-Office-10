@@ -132,7 +132,7 @@ Public Class Form2
             mysqlconn.Open()
 
             Dim query As String
-            query = "update facts set what ='" & factname.Text & "', date_occur = '" & DateTimePicker2.Value & "', time_occur =='" & DateTimePicker3.Value & "', place_occur = '" & TextBox13.Text & "', why = '" & TextBox4.Text & "', how = '" & facts.Text & "' where lab_Case_no = '" & lab_case & "' "
+            query = "update facts set what ='" & factname.Text & "', date_occur = '" & DateTimePicker2.Value & "', time_occur ='" & DateTimePicker3.Value & "', place_occur = '" & TextBox13.Text & "', why = '" & TextBox4.Text & "', how = '" & facts.Text & "' where lab_Case_no = '" & lab_case & "' "
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
@@ -163,7 +163,7 @@ Public Class Form2
 
             Dim query As String
 
-            query = "select lab_case_no_id,date_received,requesting_agency,examiner,investigator from laboratory_case"
+            query = "select lab_case_no as ID, what as What, date_occur as Date_Occurence, time_occur as Time_Occurence, place_occur as Place_Occurence, why as Why, how as How from facts"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -179,4 +179,64 @@ Public Class Form2
         End Try
     End Sub
 
+    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        load_table()
+    End Sub
+
+    Private Sub DataGridView2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellClick
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        Try
+            mysqlconn.Open()
+
+            If e.RowIndex >= 0 Then
+                Dim row As DataGridViewRow
+                row = Me.DataGridView2.Rows(e.RowIndex)
+                Dim pili = row.Cells("ID").Value.ToString
+                Dim what = row.Cells("What").Value.ToString
+                Dim date_occ = row.Cells("Date_Occurence").Value.ToString
+                Dim time_occ = row.Cells("Time_Occurence").Value.ToString
+                Dim place_occ = row.Cells("Place_Occurence").Value.ToString
+                Dim why = row.Cells("Why").Value.ToString
+                Dim how = row.Cells("How").Value.ToString
+
+                factname.Text = what
+
+                DateTimePicker3.Value = time_occ
+                TextBox13.Text = place_occ
+                TextBox4.Text = why
+                facts.Text = how
+                lab_case = pili
+
+            End If
+
+
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "delete from    facts where lab_case_no = '" & lab_case & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
 End Class
