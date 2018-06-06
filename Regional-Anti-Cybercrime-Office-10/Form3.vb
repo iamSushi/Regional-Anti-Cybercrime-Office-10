@@ -7,6 +7,9 @@ Public Class Form3
 
     Dim examiner As String
     Dim investigator As String
+    Dim examiner2 As String
+    Dim investigator2 As String
+    Dim lab_case_no As String
 
     Public Property releasedby As String
     Public Property claimedby As String
@@ -400,7 +403,7 @@ Public Class Form3
         Try
             mysqlconn.Open()
             Dim query As String
-            query = "update laboratory_case set released_by = '" + releasedby + "' where lab_case_no = '" & lab_case & "'"
+            query = "update laboratory_case set released_by = '" + releasedby + "' where lab_case_no = '" & lab_case_no & "'"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
@@ -417,7 +420,7 @@ Public Class Form3
         Try
             mysqlconn.Open()
             Dim query As String
-            query = "update laboratory_case set claimed_by = '" + claimedby + "' where lab_case_no = '" & lab_case & "'"
+            query = "update laboratory_case set claimed_by = '" + claimedby + "' where lab_case_no = '" & lab_case_no & "'"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
@@ -445,7 +448,7 @@ Public Class Form3
 
             Dim query As String
 
-            query = "select lab_case_no as ID,lab_case_no_id as CaseID,date_received as Date_Released,date_informed as Date_Informed,date_released as Date_Released,date_examined as Date_Examined,case_status as Case_Status,type as DFE from laboratory_case"
+            query = "select lab_case_no as ID,lab_case_no_id as CaseID,date_received as Date_Received,date_informed as Date_Informed,date_released as Date_Released,date_examined as Date_Examined,case_status as Case_Status,type as DFE from laboratory_case"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -470,18 +473,19 @@ Public Class Form3
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
 
+
         Try
             mysqlconn.Open()
 
             Dim query As String
 
-            query = "select select lab_case_no as ID,lab_case_no_id as CaseID,date_received as Date_Released,date_informed as Date_Informed,date_released as Date_Released,date_examined as Date_Examined,case_status as Case_Status,type as DFE from laboratory_case where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
+            query = "select lab_case_no as ID,lab_case_no_id as CaseID,date_received as Date_Received,date_informed as Date_Informed,date_released as Date_Released,date_examined as Date_Examined,case_status as Case_Status,type as DFE from laboratory_case where lab_case_no_id like '" & TextBox15.Text & "%' "
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
             soure.DataSource = dbDataSet
-            DataGridView1.DataSource = soure
+            DataGridView2.DataSource = soure
             adapter.Update(dbDataSet)
 
             mysqlconn.Close()
@@ -490,5 +494,102 @@ Public Class Form3
         Finally
             mysqlconn.Dispose()
         End Try
+    End Sub
+
+    Private Sub TextBox7_TextChanged(sender As Object, e As EventArgs) Handles TextBox7.TextChanged
+
+    End Sub
+
+    Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
+
+    End Sub
+
+    Private Sub DataGridView2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellClick
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        Try
+            mysqlconn.Open()
+
+            If e.RowIndex >= 0 Then
+                Dim row As DataGridViewRow
+                row = Me.DataGridView2.Rows(e.RowIndex)
+                Dim pili = row.Cells("ID").Value.ToString
+                Dim case_name = row.Cells("CaseID").Value.ToString
+                TextBox10.Text = case_name
+                lab_case_no = pili
+            End If
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            query = "select * from laboratory_case where lab_case_no = '" & lab_case_no & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                examiner2 = reader.GetString("examiner")
+                investigator2 = reader.GetString("investigator")
+            End While
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            query = "select fname,mname,sname from officer where officer_id = '" & examiner2 & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                Dim f = reader.GetString("fname")
+                Dim m = reader.GetString("mname")
+                Dim s = reader.GetString("sname")
+                Dim name = f + " " + m + " " + s
+                TextBox12.Text = name
+            End While
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            query = "select fname,mname,sname from officer where officer_id = '" & investigator2 & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                Dim f = reader.GetString("fname")
+                Dim m = reader.GetString("mname")
+                Dim s = reader.GetString("sname")
+                Dim name = f + " " + m + " " + s
+                TextBox14.Text = name
+            End While
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
     End Sub
 End Class

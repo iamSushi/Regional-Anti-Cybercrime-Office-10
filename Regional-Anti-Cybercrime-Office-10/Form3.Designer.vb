@@ -120,6 +120,9 @@ Partial Class Form3
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Button19 = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
@@ -136,9 +139,6 @@ Partial Class Form3
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Button27 = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Button19 = New System.Windows.Forms.Button()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -1350,6 +1350,41 @@ Partial Class Form3
         Me.TabPage3.Text = "Case Complete"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
+        'TextBox15
+        '
+        Me.TextBox15.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.TextBox15.Location = New System.Drawing.Point(240, 190)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(189, 31)
+        Me.TextBox15.TabIndex = 104
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Image = CType(resources.GetObject("Label16.Image"), System.Drawing.Image)
+        Me.Label16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label16.Location = New System.Drawing.Point(37, 193)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(181, 23)
+        Me.Label16.TabIndex = 103
+        Me.Label16.Text = "      Laboratory Case ID"
+        '
+        'Button19
+        '
+        Me.Button19.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Button19.FlatAppearance.BorderSize = 0
+        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button19.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button19.Image = CType(resources.GetObject("Button19.Image"), System.Drawing.Image)
+        Me.Button19.Location = New System.Drawing.Point(429, 190)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(35, 31)
+        Me.Button19.TabIndex = 102
+        Me.Button19.UseVisualStyleBackColor = False
+        '
         'Button10
         '
         Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
@@ -1530,41 +1565,6 @@ Partial Class Form3
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(1011, 382)
         Me.DataGridView2.TabIndex = 0
-        '
-        'TextBox15
-        '
-        Me.TextBox15.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox15.Location = New System.Drawing.Point(240, 190)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(189, 31)
-        Me.TextBox15.TabIndex = 104
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Image = CType(resources.GetObject("Label16.Image"), System.Drawing.Image)
-        Me.Label16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label16.Location = New System.Drawing.Point(37, 193)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(181, 23)
-        Me.Label16.TabIndex = 103
-        Me.Label16.Text = "      Laboratory Case ID"
-        '
-        'Button19
-        '
-        Me.Button19.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Button19.FlatAppearance.BorderSize = 0
-        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button19.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Button19.Image = CType(resources.GetObject("Button19.Image"), System.Drawing.Image)
-        Me.Button19.Location = New System.Drawing.Point(429, 190)
-        Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(35, 31)
-        Me.Button19.TabIndex = 102
-        Me.Button19.UseVisualStyleBackColor = False
         '
         'Form3
         '

@@ -64,10 +64,8 @@ Public Class Form25
                 Label19.Text = reader.GetString("date_received")
                 Label20.Text = reader.GetString("date_informed")
                 Label21.Text = reader.GetString("date_released")
-                Label22.Text = reader.GetString("date_occur")
-                Label23.Text = reader.GetString("time_occur")
                 Label24.Text = reader.GetString("date_examined")
-                Label25.Text = reader.GetString("place_occur")
+
             End While
 
             mysqlconn.Close()
