@@ -37,7 +37,7 @@ Public Class Form1
             Else
                 MessageBox.Show("Username or Password is incorrect!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
-
+            Form7.Show()
 
 
             mysqlconn.Close()
