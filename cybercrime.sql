@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2018 at 07:21 PM
+-- Generation Time: Jun 07, 2018 at 10:19 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -42,7 +42,7 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`officer_id`, `type`, `username`, `password`, `status`, `date_created`) VALUES
-(5, 'Admin', 'YunnahChuyy', 'Admin\"2015103060', 0, '2018-06-06 17:17:43');
+(5, 'Admin', 'Admin', 'masaya', 0, '2018-06-07 08:10:54');
 
 -- --------------------------------------------------------
 
@@ -132,6 +132,14 @@ CREATE TABLE `evidence` (
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `evidence`
+--
+
+INSERT INTO `evidence` (`lab_case_no`, `sim`, `tablet`, `loptop`, `desktop`, `cellphone`, `flash_drive`, `optical_drive`, `secure_digital`, `external_drive`, `video_recorder`, `hard_disk_drive`, `dc`, `dvr`, `status`, `date_created`) VALUES
+(3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '2018-06-06 21:44:18'),
+(4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '2018-06-06 21:45:48');
+
 -- --------------------------------------------------------
 
 --
@@ -148,6 +156,24 @@ CREATE TABLE `facts` (
   `how` longtext NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `laboratory`
+-- (See below for the actual view)
+--
+CREATE TABLE `laboratory` (
+`ID` bigint(20)
+,`CaseID` varchar(50)
+,`Date_Received` varchar(255)
+,`Date_Informed` varchar(255)
+,`Date_Released` varchar(255)
+,`Date_Examined` varchar(255)
+,`Case_Status` varchar(20)
+,`Requesting_Agency` varchar(255)
+,`DFE` varchar(50)
+);
 
 -- --------------------------------------------------------
 
@@ -172,6 +198,14 @@ CREATE TABLE `laboratory_case` (
   `type` varchar(50) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `laboratory_case`
+--
+
+INSERT INTO `laboratory_case` (`lab_case_no`, `lab_case_no_id`, `date_received`, `date_informed`, `date_released`, `date_examined`, `case_status`, `released_by`, `claimed_by`, `complainant`, `requesting_agency`, `examiner`, `investigator`, `type`, `date_created`) VALUES
+(3, 'try lang ni sya', '6/1/2018', NULL, '6/20/2018', '6/22/2018', 'ongoing', NULL, NULL, 8, 5, 5, 5, ' Audio Visual ', '2018-06-06 19:08:35'),
+(4, 'ikaw', '6/1/2018', NULL, '6/27/2018', '6/21/2018', 'walko', NULL, NULL, 9, 14, 5, 5, ' Cellphone ', '2018-06-06 20:41:27');
 
 -- --------------------------------------------------------
 
@@ -250,6 +284,14 @@ CREATE TABLE `persons` (
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `persons`
+--
+
+INSERT INTO `persons` (`person_id`, `fname`, `mname`, `sname`, `nname`, `dob`, `gender`, `status`, `contact`, `email`, `category`, `profile_image`, `date_created`) VALUES
+(8, 'James Kenneth Mark', 'Omamalin', 'Sinadjan', NULL, '12/12/18', 'male', 'Single', '09xxxxxxxxxxxxx', 'sinadjan@gmail.com', 'Victim', NULL, '2018-06-06 21:41:32'),
+(9, 'Yunnah Kid', 'Omamalin', 'Chuuyy', NULL, '12/12/18', 'male', 'Single', '092222222222', 'chuyy@gmail.com', 'victims', NULL, '2018-06-06 21:42:01');
+
 -- --------------------------------------------------------
 
 --
@@ -319,6 +361,15 @@ CREATE TABLE `victim` (
   `person_id` bigint(20) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `laboratory`
+--
+DROP TABLE IF EXISTS `laboratory`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `laboratory`  AS  select `laboratory_case`.`lab_case_no` AS `ID`,`laboratory_case`.`lab_case_no_id` AS `CaseID`,`laboratory_case`.`date_received` AS `Date_Received`,`laboratory_case`.`date_informed` AS `Date_Informed`,`laboratory_case`.`date_released` AS `Date_Released`,`laboratory_case`.`date_examined` AS `Date_Examined`,`laboratory_case`.`case_status` AS `Case_Status`,`agency`.`agency_name` AS `Requesting_Agency`,`laboratory_case`.`type` AS `DFE` from (`laboratory_case` join `agency` on((`agency`.`agency_id` = `laboratory_case`.`requesting_agency`))) ;
 
 -- --------------------------------------------------------
 
@@ -436,7 +487,7 @@ ALTER TABLE `facts`
 -- AUTO_INCREMENT for table `laboratory_case`
 --
 ALTER TABLE `laboratory_case`
-  MODIFY `lab_case_no` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `lab_case_no` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `law`
@@ -454,7 +505,7 @@ ALTER TABLE `officer`
 -- AUTO_INCREMENT for table `persons`
 --
 ALTER TABLE `persons`
-  MODIFY `person_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `person_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `rank`
