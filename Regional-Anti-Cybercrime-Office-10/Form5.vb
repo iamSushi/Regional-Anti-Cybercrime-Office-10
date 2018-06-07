@@ -140,7 +140,7 @@ Public Class Form5
                     gender = "female"
                 End If
 
-                query = "insert into persons values(null,'" & fname.Text & "','" & mname.Text & "','" & sname.Text & "','null','" & DateTimePicker1.Text & "','" & gender & "','" & status.Text & "','" & contact.Text & "','" & email.Text & "','" & category.Text & "',@profile_image,null)"
+                query = "insert into persons values(null,'" & fname.Text & "','" & mname.Text & "','" & sname.Text & "','" & nickname.Text & "','" & DateTimePicker1.Value & "','" & gender & "','" & status.Text & "','" & contact.Text & "','" & email.Text & "','" & category.Text & "',@profile_image,null)"
                 command = New MySqlCommand(query, mysqlconn)
                 command.Parameters.AddWithValue("@profile_image", arrImage)
                 reader = command.ExecuteReader
@@ -148,6 +148,7 @@ Public Class Form5
                 fname.Text = ""
                 mname.Text = ""
                 sname.Text = ""
+                nickname.Text = ""
                 contact.Text = ""
                 email.Text = ""
                 DateTimePicker1.Text = ""
@@ -209,6 +210,64 @@ Public Class Form5
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
 
+    End Sub
+
+    Private Sub profile_image()
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Try
+            mysqlconn.Open()
+            Dim query As String
+
+            query = "SELECT * from persons WHERE person_id = '" & id.Text & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            Dim adapter As New MySqlDataAdapter(command)
+            Dim table As New DataTable()
+            adapter.Fill(table)
+
+
+            Dim img() As Byte
+
+            img = table.Rows(0)(11)
+            Dim ms As New MemoryStream(img)
+
+            PictureBox2.Image = Image.FromStream(ms)
+
+            mysqlconn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub profile_image2()
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Try
+            mysqlconn.Open()
+            Dim query As String
+
+            query = "SELECT * from persons WHERE person_id = '" & id.Text & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            Dim adapter As New MySqlDataAdapter(command)
+            Dim table As New DataTable()
+            adapter.Fill(table)
+
+
+            Dim img() As Byte
+
+            img = table.Rows(0)(11)
+            Dim ms As New MemoryStream(img)
+
+            PictureBox3.Image = Image.FromStream(ms)
+
+            mysqlconn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
     End Sub
 
     Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
@@ -371,35 +430,23 @@ Public Class Form5
         fname.Text = selectedRow.Cells(1).Value.ToString()
         mname.Text = selectedRow.Cells(2).Value.ToString()
         sname.Text = selectedRow.Cells(3).Value.ToString()
+        DateTimePicker1.Value = selectedRow.Cells(4).Value.ToString()
         contact.Text = selectedRow.Cells(7).Value.ToString()
         email.Text = selectedRow.Cells(8).Value.ToString()
         category.Text = selectedRow.Cells(9).Value.ToString()
         status.Text = selectedRow.Cells(6).Value.ToString()
+
+        TextBox2.Text = selectedRow.Cells(1).Value.ToString()
+        TextBox3.Text = selectedRow.Cells(2).Value.ToString()
+        TextBox4.Text = selectedRow.Cells(3).Value.ToString()
+        TextBox5.Text = selectedRow.Cells(4).Value.ToString()
+        profile_image()
+        profile_image2()
     End Sub
 
     Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
-
-        'dim newdatarow as datagridviewrow
-        'newdatarow = datagridview1.rows(index)
-
-        'newdatarow.cells(1).value = fname.text
-        'newdatarow.cells(2).value = mname.text
-        'newdatarow.cells(3).value = sname.text
-        'newdatarow.cells(7).value = contact.text
-        'newdatarow.cells(8).value = email.text
-        'newdatarow.cells(9).value = category.text
-        'newdatarow.cells(6).value = status.text
-
-        'msgbox("successfully updated!")
-        'fname.text = ""
-        'mname.text = ""
-        'sname.text = ""
-        'contact.text = ""
-        'email.text = ""
-        'category.text = ""
-        'status.text = ""
 
         Dim filesize As UInt32
         Dim mstream As New System.IO.MemoryStream
@@ -475,7 +522,7 @@ Public Class Form5
                     gender = "female"
                 End If
 
-                query = "UPDATE persons set fname = '" & fname.Text & "', mname = '" & mname.Text & "', sname = '" & sname.Text & "', contact = '" & contact.Text & "',email = '" & email.Text & "',category = '" & category.Text & "',status = '" & status.Text & "' where person_id = '" & id.Text & "'"
+                query = "UPDATE persons set fname = '" & fname.Text & "', mname = '" & mname.Text & "', sname = '" & sname.Text & "', contact = '" & contact.Text & "',email = '" & email.Text & "',category = '" & category.Text & "',status = '" & status.Text & "', dob = '" & DateTimePicker1.Value & "', profile_image = @profile_image, nname = '" & nickname.Text & "' where person_id = '" & id.Text & "'"
                 command = New MySqlCommand(query, mysqlconn)
                 command.Parameters.AddWithValue("@profile_image", arrImage)
                 reader = command.ExecuteReader
@@ -483,6 +530,7 @@ Public Class Form5
                 fname.Text = ""
                 mname.Text = ""
                 sname.Text = ""
+                nickname.Text = ""
                 contact.Text = ""
                 email.Text = ""
                 DateTimePicker1.Text = ""
