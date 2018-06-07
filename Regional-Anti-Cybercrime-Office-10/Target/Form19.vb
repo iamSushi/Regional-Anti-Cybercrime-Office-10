@@ -5,39 +5,6 @@ Public Class Form19
     Dim command As MySqlCommand
     Dim reader As MySqlDataReader
     Public Property lab_case As String
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
-
-        Try
-            mysqlconn.Open()
-
-            If e.RowIndex >= 0 Then
-                Dim row As DataGridViewRow
-                row = Me.DataGridView1.Rows(e.RowIndex)
-                Dim pili = row.Cells("ID").Value.ToString
-
-                MessageBox.Show(pili)
-
-
-                Dim query As String
-
-                query = "insert into case_nature values('" & lab_case & "','" & pili & "',null)"
-                command = New MySqlCommand(query, mysqlconn)
-                reader = command.ExecuteReader
-                MessageBox.Show("Successful")
-
-            End If
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
-
-        load_table()
-        load_table2()
-    End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Try
@@ -136,7 +103,7 @@ Public Class Form19
 
             Dim query As String
 
-            query = "select law_id as ID , designation as Name, date_passed as Date_Passed, description as Description from law where designation like '" & TextBox1.Text & "%' "
+            query = "select law_id as ID , designation as Name, date_passed as Date_Passed, description as Description from law where date_passed like '" & TextBox1.Text & "%' "
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -157,29 +124,6 @@ Public Class Form19
         load_table()
         load_table2()
 
-        Dim adapter2 As New MySqlDataAdapter
-        Dim dbDataSet2 As New DataTable
-        Dim soure2 As New BindingSource
-        Try
-            mysqlconn.Open()
-
-            Dim query As String
-            MessageBox.Show(lab_case)
-            query = "select lab_case_no_id from laboratory_case where lab_case_no = '" & lab_case & "'"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-
-            While reader.Read
-                Dim nameni = reader.GetString("lab_case_no_id")
-                Label3.Text = nameni
-            End While
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs)

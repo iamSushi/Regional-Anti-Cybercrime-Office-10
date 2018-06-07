@@ -252,18 +252,36 @@ Public Class Form3
 
 
     Private Sub Button32_Click_1(sender As Object, e As EventArgs) Handles Button32.Click
-        Form24.Show()
-        Form24.lab_case = lab_case
+
+
+        If lab_case > 0 Then
+            Form24.Show()
+            Form24.lab_case = lab_case
+
+        Else
+            MessageBox.Show("First Select Laboratory Case")
+        End If
+
     End Sub
 
     Private Sub Button28_Click_1(sender As Object, e As EventArgs) Handles Button28.Click
-        Form8.Show()
-        Form8.lab_case = lab_case
+
+        If lab_case > 0 Then
+            Form8.Show()
+            Form8.lab_case = lab_case
+        Else
+            MessageBox.Show("First Select Laboratory Case")
+        End If
     End Sub
 
     Private Sub Button21_Click_1(sender As Object, e As EventArgs) Handles Button21.Click
-        Form18.Show()
-        Form18.lab_case = lab_case
+
+        If lab_case > 0 Then
+            Form18.Show()
+            Form18.lab_case = lab_case
+        Else
+            MessageBox.Show("First Select Laboratory Case")
+        End If
     End Sub
 
     Private Sub Button31_Click_1(sender As Object, e As EventArgs) Handles Button31.Click
@@ -279,7 +297,7 @@ Public Class Form3
             Dim query1 As String
 
 
-            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Value & "',null,'" & DateTimePicker5.Value & "','" & DateTimePicker6.Value & "','" & TextBox9.Text & "',null,null,null,'" & agency & "','" & examiner & "','" & investigator & "',' " & ComboBox3.Text & " ',null)"
+            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Value & "','null','" & DateTimePicker5.Value & "','" & DateTimePicker6.Value & "','" & TextBox9.Text & "','null','null','null','" & agency & "','" & examiner & "','" & investigator & "',' " & ComboBox3.Text & " ',null)"
             query1 = "insert into laboratory_case values(null,         '1'            ,'          1                 ','3','4','5',          '6',      '     7       ',   '       8'           ,'        9                  ','              10             ','             11          ', 12 ,null)"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
@@ -302,59 +320,68 @@ Public Class Form3
     End Sub
 
     Private Sub Button36_Click_1(sender As Object, e As EventArgs) Handles Button36.Click
-        MessageBox.Show(lab_case)
-        Form19.Show()
 
+
+        If lab_case > 0 Then
+            Form19.Show()
+        Else
+            MessageBox.Show("First Select Laboratory Case")
+        End If
     End Sub
 
 
     Private Sub Button38_Click(sender As Object, e As EventArgs) Handles Button38.Click
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        If lab_case > 0 Then
+            Try
+                mysqlconn.Open()
+                Dim query As String
+                Dim query1 As String
+                query = "insert into evidence values('" & lab_case & "','" & ComboBox1.Text & "','" & ComboBox2.Text & "', '" & ComboBox4.Text & "','" & ComboBox5.Text & "','" & ComboBox6.Text & "','" & ComboBox7.Text & "','" & ComboBox8.Text & "','" & ComboBox9.Text & "','" & ComboBox10.Text & "','" & ComboBox11.Text & "','" & ComboBox12.Text & "','" & ComboBox16.Text & "','" & ComboBox14.Text & "','" & TextBox13.Text & "',null )"
+                query1 = "insert into laboratory_case values(null,         '1'            ,'          1                 ','3','4','5',          '6',      '     7       ',   '       8'           ,'        9                  ','              10             ','             11          ', 12 ,null)"
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+                MessageBox.Show("Successful")
+                ComboBox1.Text = ""
+                ComboBox2.Text = ""
+                ComboBox4.Text = ""
+                ComboBox5.Text = ""
+                ComboBox6.Text = ""
+                ComboBox7.Text = ""
+                ComboBox8.Text = ""
+                ComboBox9.Text = ""
+                ComboBox10.Text = ""
+                ComboBox11.Text = ""
+                ComboBox12.Text = ""
+                mysqlconn.Close()
+            Catch ex As MySqlException
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
 
-        Try
-            mysqlconn.Open()
-            Dim query As String
-            Dim query1 As String
-            query = "insert into evidence values('" & lab_case & "','" & ComboBox1.Text & "','" & ComboBox2.Text & "', '" & ComboBox4.Text & "','" & ComboBox5.Text & "','" & ComboBox6.Text & "','" & ComboBox7.Text & "','" & ComboBox8.Text & "','" & ComboBox9.Text & "','" & ComboBox10.Text & "','" & ComboBox11.Text & "','" & ComboBox12.Text & "','" & ComboBox16.Text & "','" & ComboBox14.Text & "','" & TextBox13.Text & "',null )"
-            query1 = "insert into laboratory_case values(null,         '1'            ,'          1                 ','3','4','5',          '6',      '     7       ',   '       8'           ,'        9                  ','              10             ','             11          ', 12 ,null)"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-            MessageBox.Show("Successful")
-            ComboBox1.Text = ""
-            ComboBox2.Text = ""
-            ComboBox4.Text = ""
-            ComboBox5.Text = ""
-            ComboBox6.Text = ""
-            ComboBox7.Text = ""
-            ComboBox8.Text = ""
-            ComboBox9.Text = ""
-            ComboBox10.Text = ""
-            ComboBox11.Text = ""
-            ComboBox12.Text = ""
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
+            Try
+                mysqlconn.Open()
+                Dim query As String
+                query = "update laboratory_case set complainant = '" + complainant + "' where lab_case_no = '" & lab_case & "'"
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+                MessageBox.Show("Successful")
 
-        Try
-            mysqlconn.Open()
-            Dim query As String
-            query = "update laboratory_case set complainant = '" + complainant + "' where lab_case_no = '" & lab_case & "'"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-            MessageBox.Show("Successful")
+                TextBox3.Text = ""
 
-            TextBox3.Text = ""
+                mysqlconn.Close()
+            Catch ex As MySqlException
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
 
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
+        Else
+            MessageBox.Show("First Select Laboratory Case")
+        End If
+
 
     End Sub
 
@@ -400,39 +427,46 @@ Public Class Form3
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
-        Try
-            mysqlconn.Open()
-            Dim query As String
-            query = "update laboratory_case set released_by = '" + releasedby + "' where lab_case_no = '" & lab_case_no & "'"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-            MessageBox.Show("Successful")
+        If lab_case_no > 0 Then
+            Try
+                mysqlconn.Open()
+                Dim query As String
+                query = "update laboratory_case set released_by = '" + releasedby + "' where lab_case_no = '" & lab_case_no & "'"
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+                MessageBox.Show("Successful")
 
-            TextBox5.Text = ""
+                TextBox5.Text = ""
 
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
+                mysqlconn.Close()
+            Catch ex As MySqlException
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
 
-        Try
-            mysqlconn.Open()
-            Dim query As String
-            query = "update laboratory_case set claimed_by = '" + claimedby + "' where lab_case_no = '" & lab_case_no & "'"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-            MessageBox.Show("Successful")
+            Try
+                mysqlconn.Open()
+                Dim query As String
+                query = "update laboratory_case set claimed_by = '" + claimedby + "' where lab_case_no = '" & lab_case_no & "'"
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+                MessageBox.Show("Successful")
 
-            TextBox6.Text = ""
+                TextBox6.Text = ""
 
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
+                mysqlconn.Close()
+            Catch ex As MySqlException
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
+
+        Else
+            MessageBox.Show("First Select Laboratory Case")
+        End If
+
+
     End Sub
 
     Private Sub load_table2()
@@ -448,7 +482,7 @@ Public Class Form3
 
             Dim query As String
 
-            query = "select lab_case_no as ID,lab_case_no_id as CaseID,date_received as Date_Received,date_informed as Date_Informed,date_released as Date_Released,date_examined as Date_Examined,case_status as Case_Status,type as DFE from laboratory_case"
+            query = "select lab_case_no as ID,lab_case_no_id as CaseID,date_received as Date_Received,date_released as Date_Released,date_examined as Date_Examined,case_status as Case_Status,type as DFE from laboratory_case"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -479,7 +513,7 @@ Public Class Form3
 
             Dim query As String
 
-            query = "select lab_case_no as ID,lab_case_no_id as CaseID,date_received as Date_Received,date_informed as Date_Informed,date_released as Date_Released,date_examined as Date_Examined,case_status as Case_Status,type as DFE from laboratory_case where lab_case_no_id like '" & TextBox15.Text & "%' "
+            query = "select lab_case_no as ID,lab_case_no_id as CaseID,date_received as Date_Received,date_released as Date_Released,date_examined as Date_Examined,case_status as Case_Status,type as DFE from laboratory_case where lab_case_no_id like '" & TextBox15.Text & "%' "
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -591,5 +625,18 @@ Public Class Form3
             mysqlconn.Dispose()
         End Try
 
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
+        TextBox2.Text = ""
+        TextBox9.Text = ""
+        TextBox7.Text = ""
+        ComboBox17.Text = ""
+        ComboBox15.Text = ""
+        ComboBox3.Text = ""
     End Sub
 End Class
