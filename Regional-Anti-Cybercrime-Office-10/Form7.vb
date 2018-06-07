@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.IO
 Public Class Form7
     Dim mysqlconn As MySqlConnection
     Dim command As MySqlCommand
@@ -112,17 +113,24 @@ Public Class Form7
             mysqlconn.Open()
             Dim query As String
 
-            query = "SELECT * from userprofile"
+            query = "SELECT * from userprofile WHERE status = 1"
             command = New MySqlCommand(query, mysqlconn)
             Dim adapter As New MySqlDataAdapter(command)
             Dim table As New DataTable()
             adapter.Fill(table)
 
             TextBox10.Text = table.Rows(0)(0).ToString()
-            TextBox1.Text = table.Rows(0)(1).ToString()
-            TextBox2.Text = table.Rows(0)(2).ToString()
-            TextBox3.Text = table.Rows(0)(3).ToString()
-            TextBox9.Text = table.Rows(0)(4).ToString()
+            TextBox1.Text = table.Rows(0)(1).ToString() + " " + table.Rows(0)(2).ToString() + " " + table.Rows(0)(3).ToString()
+            TextBox2.Text = table.Rows(0)(4).ToString()
+            TextBox3.Text = table.Rows(0)(5).ToString()
+
+            Dim img() As Byte
+
+            img = table.Rows(0)(8)
+            Dim ms As New MemoryStream(img)
+
+            PictureBox2.Image = Image.FromStream(ms)
+
             mysqlconn.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -130,6 +138,8 @@ Public Class Form7
             mysqlconn.Dispose()
         End Try
     End Sub
+
+
 
     Private Sub Form7_Load(sender As Object, e As EventArgs) Handles Me.Load
         load_table()

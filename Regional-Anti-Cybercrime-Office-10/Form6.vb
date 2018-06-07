@@ -177,7 +177,7 @@ Public Class Form6
                     gender = "female"
                 End If
 
-                query = "insert into officer values(null,'" & fname.Text & "','" & mname.Text & "','" & sname.Text & "','" & DateTimePicker1.Text & "','" + gender + "','" & contact.Text & "','" & email.Text & "','" & rank.Text & "','null','" & office.Text & "',@profile_image,null)"
+                query = "insert into officer values(null,'" & fname.Text & "','" & mname.Text & "','" & sname.Text & "','" & DateTimePicker1.Value & "','" + gender + "','" & contact.Text & "','" & email.Text & "','" & rank.Text & "','" & ComboBox2.Text & "','" & office.Text & "',@profile_image,null)"
                 command = New MySqlCommand(query, mysqlconn)
                 command.Parameters.AddWithValue("@profile_image", arrImage)
                 reader = command.ExecuteReader
@@ -222,7 +222,7 @@ Public Class Form6
 
             Dim query As String
 
-            query = "select officer_id as ID, fname as First, mname as Middle, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , agency as Agency, date_created as Created from officer"
+            query = "select officer_id as ID, fname as First, mname as Middle, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , position as Position, agency as Agency, date_created as Created from officer"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -232,6 +232,64 @@ Public Class Form6
 
             mysqlconn.Close()
         Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub profile_image()
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Try
+            mysqlconn.Open()
+            Dim query As String
+
+            query = "SELECT * from officer WHERE officer_id = '" & id.Text & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            Dim adapter As New MySqlDataAdapter(command)
+            Dim table As New DataTable()
+            adapter.Fill(table)
+
+
+            Dim img() As Byte
+
+            img = table.Rows(0)(11)
+            Dim ms As New MemoryStream(img)
+
+            PictureBox2.Image = Image.FromStream(ms)
+
+            mysqlconn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub profile_image2()
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Try
+            mysqlconn.Open()
+            Dim query As String
+
+            query = "SELECT * from officer WHERE officer_id = '" & id.Text & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            Dim adapter As New MySqlDataAdapter(command)
+            Dim table As New DataTable()
+            adapter.Fill(table)
+
+
+            Dim img() As Byte
+
+            img = table.Rows(0)(11)
+            Dim ms As New MemoryStream(img)
+
+            PictureBox3.Image = Image.FromStream(ms)
+
+            mysqlconn.Close()
+        Catch ex As Exception
             MessageBox.Show(ex.Message)
         Finally
             mysqlconn.Dispose()
@@ -435,7 +493,7 @@ Public Class Form6
                     gender = "female"
                 End If
 
-                query = "UPDATE officer set fname = '" & fname.Text & "', mname = '" & mname.Text & "', sname = '" & sname.Text & "', contact = '" & contact.Text & "',email = '" & email.Text & "',rank = '" & rank.Text & "',agency = '" & office.Text & "' where officer_id = '" & id.Text & "'"
+                query = "UPDATE officer set fname = '" & fname.Text & "', mname = '" & mname.Text & "', sname = '" & sname.Text & "', contact = '" & contact.Text & "',email = '" & email.Text & "',rank = '" & rank.Text & "',agency = '" & office.Text & "', position = '" & ComboBox2.Text & "', dob = '" & DateTimePicker1.Value & "', gender = '" & gender & "', profile_image = @profile_image where officer_id = '" & id.Text & "'"
                 command = New MySqlCommand(query, mysqlconn)
                 command.Parameters.AddWithValue("@profile_image", arrImage)
                 reader = command.ExecuteReader
@@ -478,17 +536,19 @@ Public Class Form6
         fname.Text = selectedRow.Cells(1).Value.ToString()
         mname.Text = selectedRow.Cells(2).Value.ToString()
         sname.Text = selectedRow.Cells(3).Value.ToString()
-
+        DateTimePicker1.Value = selectedRow.Cells(4).Value.ToString()
         contact.Text = selectedRow.Cells(6).Value.ToString()
         email.Text = selectedRow.Cells(7).Value.ToString()
         rank.Text = selectedRow.Cells(8).Value.ToString()
+        ComboBox2.Text = selectedRow.Cells(9).Value.ToString()
         office.Text = selectedRow.Cells(9).Value.ToString()
 
         TextBox2.Text = selectedRow.Cells(1).Value.ToString()
         TextBox3.Text = selectedRow.Cells(2).Value.ToString()
         TextBox4.Text = selectedRow.Cells(3).Value.ToString()
         TextBox5.Text = selectedRow.Cells(4).Value.ToString()
-
+        profile_image()
+        profile_image2()
     End Sub
 
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
