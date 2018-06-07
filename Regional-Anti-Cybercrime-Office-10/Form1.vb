@@ -36,8 +36,9 @@ Public Class Form1
                 Me.Hide()
             Else
                 MessageBox.Show("Username or Password is incorrect!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                TextBox1.Text = ""
+                TextBox2.Text = ""
             End If
-            Form7.Show()
 
 
             mysqlconn.Close()

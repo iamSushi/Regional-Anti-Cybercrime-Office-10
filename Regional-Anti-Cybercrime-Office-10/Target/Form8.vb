@@ -49,7 +49,7 @@ Public Class Form8
 
             Dim query As String
 
-            query = "select person_id,fname,mname,sname from persons"
+            query = "select person_id as ID,fname as  Firstname, mname as Middlename,sname as Surname from persons"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -77,7 +77,7 @@ Public Class Form8
 
             Dim query As String
 
-            query = "select persons.person_id,persons.fname,persons.mname,persons.sname from victim inner join persons on victim.person_id = persons.person_id where lab_case_no = '" & lab_case & "'"
+            query = "select persons.person_id as ID,persons.fname as Firstname, persons.mname as Middlename, persons.sname as Surname from victim inner join persons on victim.person_id = persons.person_id where lab_case_no = '" & lab_case & "'"
             command = New MySqlCommand(query, mysqlconn)
             adapter2.SelectCommand = command
             adapter2.Fill(dbDataSet2)

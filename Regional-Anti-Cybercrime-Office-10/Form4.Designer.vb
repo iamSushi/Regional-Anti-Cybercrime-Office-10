@@ -23,7 +23,7 @@ Partial Class Form4
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panel_slide = New System.Windows.Forms.Panel()
         Me.Button25 = New System.Windows.Forms.Button()
         Me.Button16 = New System.Windows.Forms.Button()
@@ -50,6 +50,12 @@ Partial Class Form4
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button23 = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ComboBox6 = New System.Windows.Forms.ComboBox()
@@ -79,12 +85,9 @@ Partial Class Form4
         Me.Button20 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Button26 = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -418,6 +421,9 @@ Partial Class Form4
         'Panel3
         '
         Me.Panel3.AutoScroll = True
+        Me.Panel3.Controls.Add(Me.TextBox5)
+        Me.Panel3.Controls.Add(Me.Button26)
+        Me.Panel3.Controls.Add(Me.Label11)
         Me.Panel3.Controls.Add(Me.TextBox4)
         Me.Panel3.Controls.Add(Me.TextBox3)
         Me.Panel3.Controls.Add(Me.DateTimePicker4)
@@ -447,6 +453,52 @@ Partial Class Form4
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(261, 608)
         Me.Panel3.TabIndex = 25
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(16, 610)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(175, 31)
+        Me.TextBox4.TabIndex = 45
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(16, 450)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(175, 31)
+        Me.TextBox3.TabIndex = 44
+        '
+        'DateTimePicker4
+        '
+        Me.DateTimePicker4.Location = New System.Drawing.Point(16, 370)
+        Me.DateTimePicker4.Name = "DateTimePicker4"
+        Me.DateTimePicker4.Size = New System.Drawing.Size(175, 31)
+        Me.DateTimePicker4.TabIndex = 43
+        Me.DateTimePicker4.Value = New Date(2018, 6, 7, 0, 0, 0, 0)
+        '
+        'DateTimePicker3
+        '
+        Me.DateTimePicker3.Location = New System.Drawing.Point(16, 290)
+        Me.DateTimePicker3.Name = "DateTimePicker3"
+        Me.DateTimePicker3.Size = New System.Drawing.Size(175, 31)
+        Me.DateTimePicker3.TabIndex = 42
+        Me.DateTimePicker3.Value = New Date(2018, 6, 7, 0, 0, 0, 0)
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Location = New System.Drawing.Point(16, 210)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(175, 31)
+        Me.DateTimePicker2.TabIndex = 41
+        Me.DateTimePicker2.Value = New Date(2018, 6, 7, 0, 0, 0, 0)
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(16, 130)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(175, 31)
+        Me.DateTimePicker1.TabIndex = 40
+        Me.DateTimePicker1.Value = New Date(2018, 6, 7, 0, 0, 0, 0)
         '
         'Button23
         '
@@ -686,14 +738,14 @@ Partial Class Form4
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(262, 3)
         Me.DataGridView1.Name = "DataGridView1"
@@ -790,51 +842,39 @@ Partial Class Form4
         Me.Label5.TabIndex = 17
         Me.Label5.Text = "      Case ID"
         '
-        'DateTimePicker1
+        'TextBox5
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(16, 130)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(175, 31)
-        Me.DateTimePicker1.TabIndex = 40
-        Me.DateTimePicker1.Value = New Date(2018, 6, 7, 0, 0, 0, 0)
+        Me.TextBox5.Location = New System.Drawing.Point(16, 695)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(175, 31)
+        Me.TextBox5.TabIndex = 48
         '
-        'DateTimePicker2
+        'Button26
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(16, 210)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(175, 31)
-        Me.DateTimePicker2.TabIndex = 41
-        Me.DateTimePicker2.Value = New Date(2018, 6, 7, 0, 0, 0, 0)
+        Me.Button26.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Button26.FlatAppearance.BorderSize = 0
+        Me.Button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button26.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button26.Image = CType(resources.GetObject("Button26.Image"), System.Drawing.Image)
+        Me.Button26.Location = New System.Drawing.Point(191, 695)
+        Me.Button26.Name = "Button26"
+        Me.Button26.Size = New System.Drawing.Size(35, 31)
+        Me.Button26.TabIndex = 47
+        Me.Button26.UseVisualStyleBackColor = False
         '
-        'DateTimePicker3
+        'Label11
         '
-        Me.DateTimePicker3.Location = New System.Drawing.Point(16, 290)
-        Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(175, 31)
-        Me.DateTimePicker3.TabIndex = 42
-        Me.DateTimePicker3.Value = New Date(2018, 6, 7, 0, 0, 0, 0)
-        '
-        'DateTimePicker4
-        '
-        Me.DateTimePicker4.Location = New System.Drawing.Point(16, 370)
-        Me.DateTimePicker4.Name = "DateTimePicker4"
-        Me.DateTimePicker4.Size = New System.Drawing.Size(175, 31)
-        Me.DateTimePicker4.TabIndex = 43
-        Me.DateTimePicker4.Value = New Date(2018, 6, 7, 0, 0, 0, 0)
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(16, 450)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(175, 31)
-        Me.TextBox3.TabIndex = 44
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(16, 610)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(175, 31)
-        Me.TextBox4.TabIndex = 45
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Label11.Image = CType(resources.GetObject("Label11.Image"), System.Drawing.Image)
+        Me.Label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label11.Location = New System.Drawing.Point(12, 669)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(131, 23)
+        Me.Label11.TabIndex = 46
+        Me.Label11.Text = "      Complainant"
         '
         'Form4
         '
@@ -927,4 +967,7 @@ Partial Class Form4
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Button26 As Button
+    Friend WithEvents Label11 As Label
 End Class

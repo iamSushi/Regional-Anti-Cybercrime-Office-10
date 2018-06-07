@@ -35,6 +35,7 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -64,6 +65,7 @@ Partial Class Form1
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Panel4)
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.TextBox2)
         Me.Panel2.Controls.Add(Me.Label2)
@@ -85,7 +87,7 @@ Partial Class Form1
         Me.Button2.Location = New System.Drawing.Point(240, 187)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 30)
-        Me.Button2.TabIndex = 7
+        Me.Button2.TabIndex = 4
         Me.Button2.Text = "Exit"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -95,7 +97,7 @@ Partial Class Form1
         Me.TextBox2.Location = New System.Drawing.Point(159, 127)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(224, 31)
-        Me.TextBox2.TabIndex = 6
+        Me.TextBox2.TabIndex = 2
         Me.TextBox2.UseSystemPasswordChar = True
         '
         'Label2
@@ -117,7 +119,7 @@ Partial Class Form1
         Me.Button1.Location = New System.Drawing.Point(159, 187)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 30)
-        Me.Button1.TabIndex = 4
+        Me.Button1.TabIndex = 3
         Me.Button1.Text = "Login"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -127,7 +129,7 @@ Partial Class Form1
         Me.TextBox1.Location = New System.Drawing.Point(159, 88)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(224, 31)
-        Me.TextBox1.TabIndex = 3
+        Me.TextBox1.TabIndex = 1
         '
         'LinkLabel1
         '
@@ -167,12 +169,20 @@ Partial Class Form1
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLight
-        Me.Label3.Location = New System.Drawing.Point(54, 10)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label3.Location = New System.Drawing.Point(54, 6)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(317, 52)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Regional Anti-Cybercrime Office 10" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "                        (RACO10)"
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Panel4.Location = New System.Drawing.Point(0, 65)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(428, 4)
+        Me.Panel4.TabIndex = 6
         '
         'Form1
         '
@@ -208,4 +218,5 @@ Partial Class Form1
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Panel4 As Panel
 End Class
