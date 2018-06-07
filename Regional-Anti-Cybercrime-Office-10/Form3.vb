@@ -244,6 +244,9 @@ Public Class Form3
             mysqlconn.Dispose()
         End Try
 
+        ComboBox3.Items.Add("Cellphone")
+        ComboBox3.Items.Add("Laptop")
+        ComboBox3.Items.Add("Tablet")
 
     End Sub
 
@@ -285,38 +288,74 @@ Public Class Form3
     End Sub
 
     Private Sub Button31_Click_1(sender As Object, e As EventArgs) Handles Button31.Click
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
-        Dim investigator As String = DirectCast(ComboBox17.SelectedItem, KeyValuePair(Of String, String)).Key
-        Dim examiner As String = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
-        Convert.ToDateTime(DateTimePicker1.Text).ToString("yyyy-MM-dd")
-        Try
-            mysqlconn.Open()
+        Dim count As Int16
+        count = 0
 
-            Dim query As String
-            Dim query1 As String
+        If String.IsNullOrEmpty(TextBox2.Text) Then
+            Me.ErrorProvider1.SetError(Me.TextBox2, "Input Laboratory Case ID")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.TextBox2, "")
+        End If
+        If String.IsNullOrEmpty(TextBox9.Text) Then
+            Me.ErrorProvider1.SetError(Me.TextBox9, "Input Case Status")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.TextBox9, "")
+        End If
+        If String.IsNullOrEmpty(agency) Then
+            Me.ErrorProvider1.SetError(Me.Button34, "Input firstname")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.Button34, "")
+        End If
+
+        If String.IsNullOrEmpty(ComboBox3.ValueMember) Then
+            Me.ErrorProvider1.SetError(Me.ComboBox3, "Input DFE")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.ComboBox3, "")
+        End If
+
+        If count > 0 Then
+            Return
+
+        Else
+            mysqlconn = New MySqlConnection
+            mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+            Dim investigator As String = DirectCast(ComboBox17.SelectedItem, KeyValuePair(Of String, String)).Key
+            Dim examiner As String = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
+            Convert.ToDateTime(DateTimePicker1.Text).ToString("yyyy-MM-dd")
+            Try
+                mysqlconn.Open()
+
+                Dim query As String
+                Dim query1 As String
 
 
-            query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Value & "','null','" & DateTimePicker5.Value & "','" & DateTimePicker6.Value & "','" & TextBox9.Text & "',0,0,'null','" & agency & "','" & examiner & "','" & investigator & "',' " & ComboBox3.Text & " ',null)"
-            query1 = "insert into laboratory_case values(null,         '1'            ,'          1                 ','3','4','5',          '6',      '     7       ',   '       8'           ,'        9                  ','              10             ','             11          ', 12 ,null)"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-            MessageBox.Show("Successful")
-            TextBox2.Text = ""
-            TextBox7.Text = ""
-            TextBox9.Text = ""
-            ComboBox15.Text = ""
-            ComboBox17.Text = ""
-            ComboBox3.Text = ""
-            DateTimePicker1.Text = ""
-            load_table()
-            load_table2()
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
+                query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Value & "','null','" & DateTimePicker5.Value & "','" & DateTimePicker6.Value & "','" & TextBox9.Text & "',0,0,'null','" & agency & "','" & examiner & "','" & investigator & "',' " & ComboBox3.Text & " ',null)"
+                query1 = "insert into laboratory_case values(null,         '1'            ,'          1                 ','3','4','5',          '6',      '     7       ',   '       8'           ,'        9                  ','              10             ','             11          ', 12 ,null)"
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+                MessageBox.Show("Successful")
+                TextBox2.Text = ""
+                TextBox7.Text = ""
+                TextBox9.Text = ""
+                ComboBox15.Text = ""
+                ComboBox17.Text = ""
+                ComboBox3.Text = ""
+                DateTimePicker1.Text = ""
+                load_table()
+                load_table2()
+                mysqlconn.Close()
+            Catch ex As MySqlException
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
+        End If
+
+
     End Sub
 
     Private Sub Button36_Click_1(sender As Object, e As EventArgs) Handles Button36.Click

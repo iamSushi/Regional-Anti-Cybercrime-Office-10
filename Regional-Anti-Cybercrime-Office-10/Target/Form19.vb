@@ -103,7 +103,7 @@ Public Class Form19
 
             Dim query As String
 
-            query = "select law_id as ID , designation as Name, date_passed as Date_Passed, description as Description from law where date_passed like '" & TextBox1.Text & "%' "
+            query = "select law_id as ID , designation as Name, date_passed as Date_Passed, description as Description from law where designation like '" & TextBox1.Text & "%' "
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
