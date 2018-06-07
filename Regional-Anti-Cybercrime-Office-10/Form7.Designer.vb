@@ -23,6 +23,8 @@ Partial Class Form7
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form7))
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
@@ -77,6 +79,7 @@ Partial Class Form7
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Button20 = New System.Windows.Forms.Button()
         Me.Panel4.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,6 +96,7 @@ Partial Class Form7
         Me.Panel4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Panel4.AutoScroll = True
         Me.Panel4.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Panel4.Controls.Add(Me.Button20)
         Me.Panel4.Controls.Add(Me.TextBox10)
         Me.Panel4.Controls.Add(Me.TextBox9)
         Me.Panel4.Controls.Add(Me.Button19)
@@ -208,9 +212,26 @@ Partial Class Form7
         '
         'DataGridView1
         '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.Location = New System.Drawing.Point(364, 284)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(599, 130)
@@ -371,12 +392,13 @@ Partial Class Form7
         Me.Button23.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button23.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button23.Image = CType(resources.GetObject("Button23.Image"), System.Drawing.Image)
-        Me.Button23.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button23.Location = New System.Drawing.Point(863, 90)
+        Me.Button23.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button23.Location = New System.Drawing.Point(805, 141)
         Me.Button23.Name = "Button23"
-        Me.Button23.Size = New System.Drawing.Size(100, 100)
+        Me.Button23.Size = New System.Drawing.Size(158, 73)
         Me.Button23.TabIndex = 3
-        Me.Button23.Text = "               Rank"
+        Me.Button23.Text = "             Rank"
+        Me.Button23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button23.UseVisualStyleBackColor = False
         '
         'TextBox6
@@ -411,12 +433,13 @@ Partial Class Form7
         Me.Button28.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button28.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button28.Image = CType(resources.GetObject("Button28.Image"), System.Drawing.Image)
-        Me.Button28.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button28.Location = New System.Drawing.Point(741, 90)
+        Me.Button28.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button28.Location = New System.Drawing.Point(805, 43)
         Me.Button28.Name = "Button28"
-        Me.Button28.Size = New System.Drawing.Size(100, 100)
+        Me.Button28.Size = New System.Drawing.Size(158, 73)
         Me.Button28.TabIndex = 2
-        Me.Button28.Text = "               Law"
+        Me.Button28.Text = "              Law"
+        Me.Button28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button28.UseVisualStyleBackColor = False
         '
         'TextBox5
@@ -450,12 +473,13 @@ Partial Class Form7
         Me.Button25.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button25.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button25.Image = CType(resources.GetObject("Button25.Image"), System.Drawing.Image)
-        Me.Button25.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button25.Location = New System.Drawing.Point(619, 90)
+        Me.Button25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button25.Location = New System.Drawing.Point(625, 43)
         Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(100, 100)
+        Me.Button25.Size = New System.Drawing.Size(158, 73)
         Me.Button25.TabIndex = 0
-        Me.Button25.Text = "               Agency"
+        Me.Button25.Text = "            Agency"
+        Me.Button25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button25.UseVisualStyleBackColor = False
         '
         'panel_slide
@@ -755,6 +779,23 @@ Partial Class Form7
         Me.ErrorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'Button20
+        '
+        Me.Button20.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Button20.FlatAppearance.BorderSize = 0
+        Me.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button20.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button20.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button20.Image = CType(resources.GetObject("Button20.Image"), System.Drawing.Image)
+        Me.Button20.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button20.Location = New System.Drawing.Point(625, 141)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(158, 73)
+        Me.Button20.TabIndex = 79
+        Me.Button20.Text = "           Position"
+        Me.Button20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button20.UseVisualStyleBackColor = False
+        '
         'Form7
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -837,4 +878,5 @@ Partial Class Form7
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents Button20 As Button
 End Class
