@@ -369,6 +369,19 @@ Public Class Form6
             End While
 
             mysqlconn.Close()
+            mysqlconn.Open()
+
+            Dim query4 As String
+            query4 = "select * from cybercrime.position"
+            command = New MySqlCommand(query4, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                Dim xxpos = reader.GetString("name")
+                ComboBox2.Items.Add(xxpos)
+            End While
+
+            mysqlconn.Close()
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)

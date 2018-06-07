@@ -139,10 +139,36 @@ Public Class Form7
         End Try
     End Sub
 
+    Private Sub officer_table()
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
 
+        Try
+            mysqlconn.Open()
+            Dim query As String
+
+            query = "SELECT officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, gender as Gender, rank as Rank from officer"
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
 
     Private Sub Form7_Load(sender As Object, e As EventArgs) Handles Me.Load
         load_table()
+        officer_table()
     End Sub
 
     Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
@@ -223,5 +249,9 @@ Public Class Form7
                 mysqlconn.Dispose()
             End Try
         End If
+    End Sub
+
+    Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
+        Form12.Show()
     End Sub
 End Class
