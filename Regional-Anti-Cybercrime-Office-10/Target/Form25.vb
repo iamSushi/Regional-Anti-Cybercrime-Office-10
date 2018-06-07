@@ -58,30 +58,14 @@ Public Class Form25
                 Label1.Text = reader.GetString("lab_case_no_id")
                 Label5.Text = reader.GetString("type")
                 Label10.Text = reader.GetString("requesting_agency")
-
-
+                Label11.Text = reader.GetString("claimed_by")
+                Label15.Text = reader.GetString("released_by")
                 Label18.Text = reader.GetString("case_status")
                 Label19.Text = reader.GetString("date_received")
-
+                Label15.Text = reader.GetString("date_informed")
                 Label21.Text = reader.GetString("date_released")
                 Label24.Text = reader.GetString("date_examined")
-                If reader.IsDBNull("claimed_by") Then
-                    Label11.Text = ""
-                Else
-                    Label11.Text = reader.GetString("claimed_by")
-                End If
 
-                If reader.IsDBNull(reader.GetString("released_by")) Then
-                    Label15.Text = ""
-                Else
-                    Label15.Text = reader.GetString("released_by")
-                End If
-
-                If reader.IsDBNull(reader.GetString("date_informed")) Then
-                    Label20.Text = ""
-                Else
-                    Label15.Text = reader.GetString("date_informed")
-                End If
             End While
 
             mysqlconn.Close()

@@ -81,7 +81,8 @@ Public Class Form21
                 Dim name = f + " " + m + " " + s
                 Form3.TextBox5.Text = name
                 Form3.releasedby = pili
-
+                Form4.TextBox5.Text = name
+                Form4.released_by = pili
                 MessageBox.Show("Successful")
 
             End If
