@@ -135,6 +135,7 @@ Public Class Form4
             DataGridView1.DataSource = soure
             adapter.Update(dbDataSet)
 
+
             mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show(ex.Message)
@@ -378,5 +379,9 @@ Public Class Form4
         Finally
             mysqlconn.Dispose()
         End Try
+    End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
     End Sub
 End Class
