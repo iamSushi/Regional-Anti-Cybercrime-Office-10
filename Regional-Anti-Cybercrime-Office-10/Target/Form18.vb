@@ -208,7 +208,7 @@ Public Class Form18
 
             Dim query As String
 
-            query = "select person_id as ID ,fname as Firstname ,mname as Middlename ,sname as Surname from persons where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
+            query = "select person_id as ID, fname as Firstname, mname as Middlename, sname as Surname from persons where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command

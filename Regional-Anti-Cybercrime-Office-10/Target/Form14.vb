@@ -1,11 +1,16 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class Form21
+Public Class Form14
     Dim mysqlconn As MySqlConnection
     Dim command As MySqlCommand
     Dim reader As MySqlDataReader
-    Private Sub Form21_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Form14_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
+
     End Sub
 
     Private Sub load_table()
@@ -21,7 +26,7 @@ Public Class Form21
 
             Dim query As String
 
-            query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, rank as Rank from Officer "
+            query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, rank as Rank,position as Position from Officer where position = 'examiner'"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -29,36 +34,6 @@ Public Class Form21
             DataGridView1.DataSource = soure
             adapter.Update(dbDataSet)
 
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
-
-        Try
-            mysqlconn.Open()
-
-            If e.RowIndex >= 0 Then
-                Dim row As DataGridViewRow
-                row = Me.DataGridView1.Rows(e.RowIndex)
-                Dim pili = row.Cells("ID").Value.ToString
-                Dim f = row.Cells("Firstname").Value.ToString
-                Dim m = row.Cells("Middlename").Value.ToString
-                Dim s = row.Cells("Surname").Value.ToString
-                Dim name = f + " " + m + " " + s
-
-
-                Form3.TextBox5.Text = name
-                Form3.releasedby = pili
-
-
-            End If
             mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show(ex.Message)
@@ -79,10 +54,10 @@ Public Class Form21
                 Dim m = row.Cells("Middlename").Value.ToString
                 Dim s = row.Cells("Surname").Value.ToString
                 Dim name = f + " " + m + " " + s
-                Form3.TextBox5.Text = name
-                Form3.releasedby = pili
-                Form4.TextBox5.Text = name
-                Form4.released_by = pili
+
+                Form4.TextBox8.Text = name
+                Form4.examiner = pili
+
                 MessageBox.Show("Successful")
 
             End If
@@ -107,7 +82,7 @@ Public Class Form21
 
             Dim query As String
 
-            query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, rank as Rank from Officer where fname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%'"
+            query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, rank as Rank,position as Position from Officer where fname like '" & TextBox1.Text & "%' or  mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%' and position = 'examiner'"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)

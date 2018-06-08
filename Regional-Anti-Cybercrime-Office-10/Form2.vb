@@ -98,30 +98,69 @@ Public Class Form2
     End Sub
 
     Private Sub Button22_Click(sender As Object, e As EventArgs) Handles Button22.Click
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
-        Try
-            mysqlconn.Open()
+        Dim count As Int16
+        count = 0
 
-            Dim query As String
-            query = "insert into facts values('" & lab_case & "','" & factname.Text & "','" & DateTimePicker2.Value & "','" & DateTimePicker3.Value & "','" & TextBox13.Text & "','" & TextBox4.Text & "','" & facts.Text & "',null)"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-            MessageBox.Show("Successful")
-            TextBox6.Text = ""
-            TextBox13.Text = ""
-            TextBox4.Text = ""
-            factname.Text = ""
-            facts.Text = ""
-            DateTimePicker1.Text = ""
-            load_table()
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
+        If String.IsNullOrEmpty(lab_case) Then
+            Me.ErrorProvider1.SetError(Me.Button11, "Input Laboratory Case ID")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.Button11, "")
+        End If
+        If String.IsNullOrEmpty(factname.Text) Then
+            Me.ErrorProvider1.SetError(Me.factname, "Input What")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.factname, "")
+        End If
+        If String.IsNullOrEmpty(TextBox13.Text) Then
+            Me.ErrorProvider1.SetError(Me.TextBox13, "Input Place of Occurence")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.TextBox13, "")
+        End If
+        If String.IsNullOrEmpty(TextBox4.Text) Then
+            Me.ErrorProvider1.SetError(Me.TextBox4, "Input What")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.TextBox4, "")
+        End If
+        If String.IsNullOrEmpty(facts.Text) Then
+            Me.ErrorProvider1.SetError(Me.facts, "Input How")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.facts, "")
+        End If
+
+        If count > 0 Then
+            Return
+        Else
+            mysqlconn = New MySqlConnection
+            mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+
+            Try
+                mysqlconn.Open()
+
+                Dim query As String
+                query = "insert into facts values('" & lab_case & "','" & factname.Text & "','" & DateTimePicker2.Value & "','" & DateTimePicker3.Value & "','" & TextBox13.Text & "','" & TextBox4.Text & "','" & facts.Text & "',null)"
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+                MessageBox.Show("Successful")
+                TextBox6.Text = ""
+                TextBox13.Text = ""
+                TextBox4.Text = ""
+                factname.Text = ""
+                facts.Text = ""
+                DateTimePicker1.Text = ""
+                load_table()
+                mysqlconn.Close()
+            Catch ex As MySqlException
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
+        End If
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
@@ -149,6 +188,9 @@ Public Class Form2
         Finally
             mysqlconn.Dispose()
         End Try
+
+
+
     End Sub
 
     Private Sub load_table()

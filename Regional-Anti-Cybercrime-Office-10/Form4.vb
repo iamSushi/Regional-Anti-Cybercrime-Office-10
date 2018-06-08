@@ -6,6 +6,10 @@ Public Class Form4
     Dim reader As MySqlDataReader
 
     Public Property complainant As String
+    Public Property released_by As String
+    Public Property claimed_by As String
+    Public Property investigator As String
+    Public Property examiner As String
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Do While panel_slide.Width < 109
@@ -85,7 +89,7 @@ Public Class Form4
         End If
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
@@ -345,7 +349,7 @@ Public Class Form4
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
 
-
+        TextBox4.Text = ""
         Try
             mysqlconn.Open()
 
@@ -382,6 +386,258 @@ Public Class Form4
     End Sub
 
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
+    End Sub
+
+    Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs) Handles TextBox6.TextChanged
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select * from laboratory where Requesting_Agency like'" & TextBox6.Text & "%' "
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles TextBox5.TextChanged
+        Form21.Show()
+    End Sub
+
+    Private Sub Button26_Click(sender As Object, e As EventArgs) Handles Button26.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+        TextBox5.Text = ""
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "SELECT 
+                    laboratory_case.lab_case_no as ID,
+                    laboratory_case.lab_case_no_id as CaseID,
+                    laboratory_case.date_received AS Date_Received,
+                    laboratory_case.date_informed AS Date_Informed,
+                    laboratory_case.date_released AS Date_Released,
+                    laboratory_case.date_examined AS Date_Examined,
+                    laboratory_case.case_status AS Case_Status,
+                    agency.agency_name AS Requesting_Agency,
+                    laboratory_case.type AS DFE,
+                    laboratory_case.released_by AS Released_By
+                    FROM laboratory_case
+                    INNER JOIN agency ON agency.agency_id = laboratory_case.requesting_agency
+                    where Released_by like '" & released_by & "%' "
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub TextBox7_TextChanged(sender As Object, e As EventArgs) Handles TextBox7.TextChanged
+        Form22.Show()
+    End Sub
+        
+    Private Sub Button27_Click(sender As Object, e As EventArgs) Handles Button27.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+        TextBox7.Text = ""
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "SELECT 
+                    laboratory_case.lab_case_no as ID,
+                    laboratory_case.lab_case_no_id as CaseID,
+                    laboratory_case.date_received AS Date_Received,
+                    laboratory_case.date_informed AS Date_Informed,
+                    laboratory_case.date_released AS Date_Released,
+                    laboratory_case.date_examined AS Date_Examined,
+                    laboratory_case.case_status AS Case_Status,
+                    agency.agency_name AS Requesting_Agency,
+                    laboratory_case.type AS DFE,
+                    laboratory_case.claimed_by AS Claimed_By
+                    FROM laboratory_case
+                    INNER JOIN agency ON agency.agency_id = laboratory_case.requesting_agency
+                    where Claimed_By like '" & claimed_by & "%' "
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub TextBox10_TextChanged(sender As Object, e As EventArgs) Handles TextBox10.TextChanged
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select * from laboratory where DFE like '" & TextBox10.Text & "%' "
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub TextBox8_TextChanged(sender As Object, e As EventArgs) Handles TextBox8.TextChanged
+        Form14.Show()
+    End Sub
+
+    Private Sub TextBox9_TextChanged(sender As Object, e As EventArgs) Handles TextBox9.TextChanged
+        Form15.Show()
+    End Sub
+
+    Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "SELECT 
+                    laboratory_case.lab_case_no as ID,
+                    laboratory_case.lab_case_no_id as CaseID,
+                    laboratory_case.date_received AS Date_Received,
+                    laboratory_case.date_informed AS Date_Informed,
+                    laboratory_case.date_released AS Date_Released,
+                    laboratory_case.date_examined AS Date_Examined,
+                    laboratory_case.case_status AS Case_Status,
+                    agency.agency_name AS Requesting_Agency,
+                    laboratory_case.type AS DFE,
+                    laboratory_case.investigator AS Investigator_ID
+                    FROM laboratory_case
+                    INNER JOIN agency ON agency.agency_id = laboratory_case.requesting_agency
+                    where investigator like '" & investigator & "%' "
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub Button28_Click(sender As Object, e As EventArgs) Handles Button28.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "SELECT 
+                    laboratory_case.lab_case_no as ID,
+                    laboratory_case.lab_case_no_id as CaseID,
+                    laboratory_case.date_received AS Date_Received,
+                    laboratory_case.date_informed AS Date_Informed,
+                    laboratory_case.date_released AS Date_Released,
+                    laboratory_case.date_examined AS Date_Examined,
+                    laboratory_case.case_status AS Case_Status,
+                    agency.agency_name AS Requesting_Agency,
+                    laboratory_case.type AS DFE,
+                    laboratory_case.examiner AS examiner_ID
+                    FROM laboratory_case
+                    INNER JOIN agency ON agency.agency_id = laboratory_case.requesting_agency
+                    where examiner like '" & examiner & "%' "
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
 
     End Sub
 End Class

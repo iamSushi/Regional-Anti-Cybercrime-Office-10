@@ -81,12 +81,43 @@ Public Class Form22
                 Dim m = row.Cells("Middlename").Value.ToString
                 Dim s = row.Cells("Surname").Value.ToString
                 Dim name = f + " " + m + " " + s
-                Form3.TextBox5.Text = name
-                Form3.releasedby = pili
+                Form3.TextBox6.Text = name
+                Form3.claimedby = pili
+                Form4.TextBox7.Text = name
+                Form4.claimed_by = pili
 
                 MessageBox.Show("Successful")
 
             End If
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, rank as Rank from Officer where fname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%'"
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
             mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show(ex.Message)
