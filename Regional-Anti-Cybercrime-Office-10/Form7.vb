@@ -150,7 +150,7 @@ Public Class Form7
             mysqlconn.Open()
             Dim query As String
 
-            query = "SELECT officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, gender as Gender, rank as Rank from officer"
+            query = "SELECT officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, position as Position, rank as Rank from officer"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)

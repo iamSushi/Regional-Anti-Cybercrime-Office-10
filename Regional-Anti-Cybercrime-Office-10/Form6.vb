@@ -554,7 +554,7 @@ Public Class Form6
         email.Text = selectedRow.Cells(7).Value.ToString()
         rank.Text = selectedRow.Cells(8).Value.ToString()
         ComboBox2.Text = selectedRow.Cells(9).Value.ToString()
-        office.Text = selectedRow.Cells(9).Value.ToString()
+        office.Text = selectedRow.Cells(10).Value.ToString()
 
         TextBox2.Text = selectedRow.Cells(1).Value.ToString()
         TextBox3.Text = selectedRow.Cells(2).Value.ToString()

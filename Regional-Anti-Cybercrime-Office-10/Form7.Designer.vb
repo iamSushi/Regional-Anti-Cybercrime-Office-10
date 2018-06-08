@@ -171,7 +171,7 @@ Partial Class Form7
         Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button18.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button18.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button18.Location = New System.Drawing.Point(576, 425)
+        Me.Button18.Location = New System.Drawing.Point(576, 480)
         Me.Button18.Name = "Button18"
         Me.Button18.Size = New System.Drawing.Size(68, 30)
         Me.Button18.TabIndex = 75
@@ -185,7 +185,7 @@ Partial Class Form7
         Me.Button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button35.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button35.Image = CType(resources.GetObject("Button35.Image"), System.Drawing.Image)
-        Me.Button35.Location = New System.Drawing.Point(532, 424)
+        Me.Button35.Location = New System.Drawing.Point(532, 479)
         Me.Button35.Name = "Button35"
         Me.Button35.Size = New System.Drawing.Size(35, 31)
         Me.Button35.TabIndex = 74
@@ -195,7 +195,7 @@ Partial Class Form7
         '
         Me.TextBox4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox4.Location = New System.Drawing.Point(364, 424)
+        Me.TextBox4.Location = New System.Drawing.Point(364, 479)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(168, 31)
         Me.TextBox4.TabIndex = 73
@@ -205,9 +205,9 @@ Partial Class Form7
         Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(364, 476)
+        Me.DataGridView2.Location = New System.Drawing.Point(364, 525)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(599, 131)
+        Me.DataGridView2.Size = New System.Drawing.Size(595, 82)
         Me.DataGridView2.TabIndex = 71
         '
         'DataGridView1
@@ -234,7 +234,7 @@ Partial Class Form7
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.Location = New System.Drawing.Point(364, 284)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(599, 130)
+        Me.DataGridView1.Size = New System.Drawing.Size(595, 189)
         Me.DataGridView1.TabIndex = 70
         '
         'Panel3
