@@ -291,7 +291,21 @@ Public Class Form3
     Private Sub Button31_Click_1(sender As Object, e As EventArgs) Handles Button31.Click
         Dim count As Int16
         count = 0
+        Dim investigator As String = DirectCast(ComboBox17.SelectedItem, KeyValuePair(Of String, String)).Key
+        Dim examiner As String = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
 
+        If investigator > 0 Then
+            Me.ErrorProvider1.SetError(Me.ComboBox17, "")
+        Else
+            Me.ErrorProvider1.SetError(Me.ComboBox17, "Select Investiagtor")
+            count += 1
+        End If
+        If examiner > 0 Then
+            Me.ErrorProvider1.SetError(Me.ComboBox15, "")
+        Else
+            Me.ErrorProvider1.SetError(Me.ComboBox15, "Select Investiagtor")
+            count += 1
+        End If
         If String.IsNullOrEmpty(TextBox2.Text) Then
             Me.ErrorProvider1.SetError(Me.TextBox2, "Input Laboratory Case ID")
             count += 1
@@ -311,7 +325,7 @@ Public Class Form3
             Me.ErrorProvider1.SetError(Me.Button34, "")
         End If
 
-        If String.IsNullOrEmpty(ComboBox3.ValueMember) Then
+        If String.IsNullOrEmpty(ComboBox3.Text) Then
             Me.ErrorProvider1.SetError(Me.ComboBox3, "Input DFE")
             count += 1
         Else
@@ -324,9 +338,9 @@ Public Class Form3
         Else
             mysqlconn = New MySqlConnection
             mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
-            Dim investigator As String = DirectCast(ComboBox17.SelectedItem, KeyValuePair(Of String, String)).Key
-            Dim examiner As String = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
-            Convert.ToDateTime(DateTimePicker1.Text).ToString("yyyy-MM-dd")
+
+            count = 0
+
             Try
                 mysqlconn.Open()
 
@@ -354,6 +368,8 @@ Public Class Form3
             Finally
                 mysqlconn.Dispose()
             End Try
+            investigator = "0"
+            examiner = "0"
         End If
 
 
