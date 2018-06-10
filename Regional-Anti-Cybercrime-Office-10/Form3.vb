@@ -246,8 +246,9 @@ Public Class Form3
         End Try
 
         ComboBox3.Items.Add("Cellphone")
-        ComboBox3.Items.Add("Laptop")
-        ComboBox3.Items.Add("Tablet")
+        ComboBox3.Items.Add("Computer")
+        ComboBox3.Items.Add("Audio Visual")
+        ComboBox3.Items.Add("Intel")
 
     End Sub
 
