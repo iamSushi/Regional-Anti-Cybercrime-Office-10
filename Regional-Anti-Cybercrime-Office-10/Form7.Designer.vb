@@ -138,17 +138,19 @@ Partial Class Form7
         '
         'TextBox11
         '
+        Me.TextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox11.Location = New System.Drawing.Point(32, 638)
         Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(20, 20)
+        Me.TextBox11.Size = New System.Drawing.Size(20, 13)
         Me.TextBox11.TabIndex = 81
         Me.TextBox11.Visible = False
         '
         'id
         '
+        Me.id.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.id.Location = New System.Drawing.Point(6, 638)
         Me.id.Name = "id"
-        Me.id.Size = New System.Drawing.Size(20, 20)
+        Me.id.Size = New System.Drawing.Size(20, 13)
         Me.id.TabIndex = 80
         Me.id.Visible = False
         '
@@ -171,21 +173,23 @@ Partial Class Form7
         '
         'TextBox10
         '
+        Me.TextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox10.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.TextBox10.Location = New System.Drawing.Point(84, 638)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(20, 31)
+        Me.TextBox10.Size = New System.Drawing.Size(20, 24)
         Me.TextBox10.TabIndex = 78
         Me.TextBox10.Visible = False
         '
         'TextBox9
         '
+        Me.TextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox9.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.TextBox9.Location = New System.Drawing.Point(58, 638)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(20, 31)
+        Me.TextBox9.Size = New System.Drawing.Size(20, 24)
         Me.TextBox9.TabIndex = 77
         Me.TextBox9.Visible = False
         '

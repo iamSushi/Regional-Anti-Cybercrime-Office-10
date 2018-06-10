@@ -215,7 +215,7 @@ Public Class Form7
             Me.ErrorProvider1.SetError(Me.TextBox6, "")
         End If
 
-        If TextBox6.Text <> TextBox9.Text Then
+        If TextBox7.Text <> TextBox8.Text Then
             MessageBox.Show("Current password don't match!")
             load_table()
             TextBox6.Text = ""
