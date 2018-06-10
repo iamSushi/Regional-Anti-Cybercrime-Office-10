@@ -173,12 +173,14 @@ Public Class Form6
                 Dim gender As String
 
                 If RadioButton1.Checked = True Then
-                    gender = "male"
+                    gender = "Male"
+                ElseIf RadioButton2.Checked = True Then
+                    gender = "Female"
                 Else
-                    gender = "female"
+                    gender = "Not specified"
                 End If
 
-                query = "insert into officer values(null,'" & fname.Text & "','" & mname.Text & "','" & sname.Text & "','" & DateTimePicker1.Value & "','" + gender + "','" & contact.Text & "','" & email.Text & "','" & rank.Text & "','" & ComboBox2.Text & "','" & office.Text & "',@profile_image,null)"
+                query = "insert into officer values(null,'" & fname.Text & "','" & mname.Text & "','" & sname.Text & "','" & DateTimePicker1.Value & "','" + gender + "','" & contact.Text & "','" & email.Text & "','" & rank.Text & "','" & ComboBox2.Text & "','" & office.Text & "',@profile_image,NOW())"
                 command = New MySqlCommand(query, mysqlconn)
                 command.Parameters.AddWithValue("@profile_image", arrImage)
                 reader = command.ExecuteReader
@@ -188,7 +190,6 @@ Public Class Form6
                 sname.Text = ""
                 contact.Text = ""
                 email.Text = ""
-                DateTimePicker1.Text = ""
                 rank.Text = ""
                 office.Text = ""
                 PictureBox2.Image = Nothing
@@ -502,9 +503,11 @@ Public Class Form6
                 Dim gender As String
 
                 If RadioButton1.Checked = True Then
-                    gender = "male"
+                    gender = "Male"
+                ElseIf RadioButton2.Checked = True Then
+                    gender = "Female"
                 Else
-                    gender = "female"
+                    gender = "Not specified"
                 End If
 
                 query = "UPDATE officer set fname = '" & fname.Text & "', mname = '" & mname.Text & "', sname = '" & sname.Text & "', contact = '" & contact.Text & "',email = '" & email.Text & "',rank = '" & rank.Text & "',agency = '" & office.Text & "', position = '" & ComboBox2.Text & "', dob = '" & DateTimePicker1.Value & "', gender = '" & gender & "', profile_image = @profile_image where officer_id = '" & id.Text & "'"
@@ -561,6 +564,7 @@ Public Class Form6
         TextBox3.Text = selectedRow.Cells(2).Value.ToString()
         TextBox4.Text = selectedRow.Cells(3).Value.ToString()
         TextBox5.Text = selectedRow.Cells(4).Value.ToString()
+
         profile_image()
         profile_image2()
     End Sub
@@ -593,5 +597,6 @@ Public Class Form6
         Form2.Show()
         Me.Close()
     End Sub
+
 
 End Class
