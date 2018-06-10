@@ -751,7 +751,6 @@ Partial Class Form3
         '
         Me.ComboBox3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"Cellphone", "Computer", "Audio Visual", "Intel"})
         Me.ComboBox3.Location = New System.Drawing.Point(241, 190)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(220, 31)

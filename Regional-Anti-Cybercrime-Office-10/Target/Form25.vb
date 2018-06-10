@@ -65,17 +65,18 @@ Public Class Form25
 
             While reader.Read
                 Label1.Text = reader.GetString("lab_case_no_id")
-                Label5.Text = reader.GetString("type")
+                TextBox10.Text = reader.GetString("type")
                 agency = reader.GetString("requesting_agency")
                 claimed_by = reader.GetString("claimed_by")
                 received_by = reader.GetString("released_by")
-                Label18.Text = reader.GetString("case_status")
-                Label19.Text = reader.GetString("date_received")
-                Label15.Text = reader.GetString("date_informed")
-                Label21.Text = reader.GetString("date_released")
-                Label24.Text = reader.GetString("date_examined")
+                TextBox13.Text = reader.GetString("case_status")
+                TextBox14.Text = reader.GetString("date_received")
+                TextBox15.Text = reader.GetString("date_informed")
+                TextBox16.Text = reader.GetString("date_released")
+                TextBox17.Text = reader.GetString("date_examined")
                 examiner = reader.GetString("examiner")
                 investigator = reader.GetString("investigator")
+                complainant = reader.GetString("complainant")
 
             End While
 
@@ -175,7 +176,7 @@ Public Class Form25
                 Dim sname = reader.GetString("s")
                 Dim name = fname + " " + mname + " " + sname
 
-                Label3.Text = name
+                TextBox9.Text = name
 
             End While
 
@@ -200,7 +201,7 @@ Public Class Form25
                 Dim sname = reader.GetString("s")
                 Dim name = fname + " " + mname + " " + sname
 
-                Label2.Text = name
+                TextBox8.Text = name
 
             End While
 
@@ -223,7 +224,7 @@ Public Class Form25
             While reader.Read
                 Dim fname = reader.GetString("f")
 
-                Label10.Text = fname
+                TextBox18.Text = fname
 
             End While
 
@@ -249,7 +250,7 @@ Public Class Form25
                 Dim sname = reader.GetString("s")
                 Dim name = fname + " " + mname + " " + sname
 
-                Label15.Text = name
+                TextBox12.Text = name
 
             End While
 
@@ -275,7 +276,33 @@ Public Class Form25
                 Dim sname = reader.GetString("s")
                 Dim name = fname + " " + mname + " " + sname
 
-                Label11.Text = name
+                TextBox11.Text = name
+
+            End While
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select fname as f , mname as m, sname as s from persons where person_id = '" & complainant & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                Dim fname = reader.GetString("f")
+                Dim mname = reader.GetString("m")
+                Dim sname = reader.GetString("s")
+                Dim name = fname + " " + mname + " " + sname
+
+                TextBox7.Text = name
 
             End While
 
@@ -326,6 +353,14 @@ Public Class Form25
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
+
+    Private Sub Label31_Click(sender As Object, e As EventArgs) Handles Label31.Click
 
     End Sub
 End Class

@@ -43,7 +43,6 @@ Partial Class Form2
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -80,6 +79,7 @@ Partial Class Form2
         Me.Button20 = New System.Windows.Forms.Button()
         Me.Button21 = New System.Windows.Forms.Button()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -267,10 +267,10 @@ Partial Class Form2
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.TextBox2)
         Me.TabPage1.Controls.Add(Me.Button12)
         Me.TabPage1.Controls.Add(Me.Button9)
         Me.TabPage1.Controls.Add(Me.DataGridView2)
-        Me.TabPage1.Controls.Add(Me.DateTimePicker3)
         Me.TabPage1.Controls.Add(Me.DateTimePicker2)
         Me.TabPage1.Controls.Add(Me.TextBox13)
         Me.TabPage1.Controls.Add(Me.Label16)
@@ -332,15 +332,6 @@ Partial Class Form2
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(585, 298)
         Me.DataGridView2.TabIndex = 104
-        '
-        'DateTimePicker3
-        '
-        Me.DateTimePicker3.CalendarFont = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker3.Location = New System.Drawing.Point(40, 220)
-        Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(318, 31)
-        Me.DateTimePicker3.TabIndex = 103
         '
         'DateTimePicker2
         '
@@ -778,6 +769,13 @@ Partial Class Form2
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(40, 220)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(314, 31)
+        Me.TextBox2.TabIndex = 106
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -837,7 +835,6 @@ Partial Class Form2
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Button11 As Button
-    Friend WithEvents DateTimePicker3 As DateTimePicker
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents TextBox13 As TextBox
     Friend WithEvents Label16 As Label
@@ -866,4 +863,5 @@ Partial Class Form2
     Friend WithEvents Button21 As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents TextBox2 As TextBox
 End Class
