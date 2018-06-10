@@ -75,7 +75,7 @@ Public Class Form6
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         Dim dialog As DialogResult
-        dialog = MessageBox.Show("Do you really want to exit?", "Exit", MessageBoxButtons.YesNo)
+        dialog = MessageBox.Show("Do you really want to exit?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If dialog = DialogResult.Yes Then
             mysqlconn = New MySqlConnection
             mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
@@ -93,7 +93,8 @@ Public Class Form6
                 mysqlconn.Dispose()
             End Try
 
-            Application.ExitThread()
+            Me.Close()
+            Form1.Show()
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None
         End If
