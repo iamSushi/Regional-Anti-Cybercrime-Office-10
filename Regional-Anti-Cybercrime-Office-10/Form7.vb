@@ -126,6 +126,7 @@ Public Class Form7
             TextBox2.Text = table.Rows(0)(4).ToString()
             TextBox3.Text = table.Rows(0)(5).ToString()
 
+            TextBox9.Text = table.Rows(0)(6).ToString()
             Dim img() As Byte
 
             img = table.Rows(0)(8)
