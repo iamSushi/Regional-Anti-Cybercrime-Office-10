@@ -308,7 +308,7 @@ Public Class Form7
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -339,7 +339,7 @@ Public Class Form7
             MessageBox.Show("masaya")
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -358,21 +358,28 @@ Public Class Form7
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
-        Try
-            mysqlconn.Open()
+        Dim dialog As DialogResult
+        dialog = MessageBox.Show("Do you really want to delete?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If dialog = DialogResult.Yes Then
+            Try
+                mysqlconn.Open()
 
-            Dim query As String
+                Dim query As String
 
-            query = "DELETE FROM accounts WHERE officer_id = '" & id.Text & "'"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-            MessageBox.Show("masaya")
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
+                query = "DELETE FROM accounts WHERE officer_id = '" & id.Text & "'"
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+                MessageBox.Show("Successfully remove user!", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                mysqlconn.Close()
+            Catch ex As MySqlException
+                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Finally
+                mysqlconn.Dispose()
+            End Try
+        ElseIf dialog = DialogResult.No Then
+            Me.DialogResult = DialogResult.None
+        End If
+
         accounts_table()
     End Sub
 End Class

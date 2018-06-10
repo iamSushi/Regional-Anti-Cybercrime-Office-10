@@ -563,19 +563,25 @@ Public Class Form5
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
-        Try
-            Dim query As String
-            mysqlconn.Open()
-            query = "DELETE FROM persons WHERE person_id = '" & id.Text & "'"
-            command = New MySqlCommand(query, mysqlconn)
+        Dim dialog As DialogResult
+        dialog = MessageBox.Show("Do you really want to delete?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If dialog = DialogResult.Yes Then
+            Try
+                Dim query As String
+                mysqlconn.Open()
+                query = "DELETE FROM persons WHERE person_id = '" & id.Text & "'"
+                command = New MySqlCommand(query, mysqlconn)
 
-            reader = command.ExecuteReader
-            MessageBox.Show("Successful")
-            load_table()
-            mysqlconn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+                reader = command.ExecuteReader
+                MessageBox.Show("Successful")
+                load_table()
+                mysqlconn.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        ElseIf dialog = DialogResult.No Then
+            Me.DialogResult = DialogResult.None
+        End If
 
     End Sub
 

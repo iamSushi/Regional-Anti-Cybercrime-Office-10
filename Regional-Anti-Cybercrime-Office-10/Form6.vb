@@ -570,22 +570,30 @@ Public Class Form6
     End Sub
 
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
-        Try
-            Dim query As String
-            mysqlconn.Open()
-            query = "DELETE FROM officer WHERE officer_id = '" & id.Text & "'"
-            command = New MySqlCommand(query, mysqlconn)
+        Dim dialog As DialogResult
+        dialog = MessageBox.Show("Do you really want to delete?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If dialog = DialogResult.Yes Then
+            Try
+                mysqlconn = New MySqlConnection
+                mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+                Dim query As String
+                mysqlconn.Open()
+                query = "DELETE FROM officer WHERE officer_id = '" & id.Text & "'"
+                command = New MySqlCommand(query, mysqlconn)
 
-            reader = command.ExecuteReader
-            MessageBox.Show("Successful")
-            load_table()
-            mysqlconn.Close()
-        Catch ex As Exception
-
-        End Try
+                reader = command.ExecuteReader
+                MessageBox.Show("Successful", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                load_table()
+                mysqlconn.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
+        ElseIf dialog = DialogResult.No Then
+            Me.DialogResult = DialogResult.None
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
