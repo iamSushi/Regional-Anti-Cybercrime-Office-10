@@ -5,6 +5,7 @@ Public Class Form2
     Dim command As MySqlCommand
     Dim reader As MySqlDataReader
     Public Property lab_case As String
+    Public Property count As Int16
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Form3.Show()
         Me.Close()
@@ -249,6 +250,50 @@ Public Class Form2
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
+        MessageBox.Show(count)
+        If count > 0 Then
+            count = 0
+            Try
+                mysqlconn.Open()
+
+                Dim query As String
+
+                query = "select * from facts where lab_case_no = '" & lab_case & "'"
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+
+                While reader.Read
+                    Dim what = reader.GetString("what")
+                    Dim why = reader.GetString("why")
+                    Dim how = reader.GetString("how")
+                    Dim date_occur = reader.GetValue("date_occur")
+                    Dim time_occ = reader.GetValue("time_occur")
+                    Dim place = reader.GetString("place_occur")
+
+
+                    factname.Text = what
+
+                    DateTimePicker3.Value = time_occ
+                    DateTimePicker2.Value = date_occur
+                    TextBox13.Text = place
+                    TextBox4.Text = why
+                    facts.Text = how
+                    factname.Text = what
+
+
+
+                End While
+
+
+                mysqlconn.Close()
+            Catch ex As MySqlException
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
+
+        End If
+
     End Sub
 
     Private Sub DataGridView2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellClick
