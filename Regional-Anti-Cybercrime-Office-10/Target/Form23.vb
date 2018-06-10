@@ -108,7 +108,7 @@ Public Class Form23
                 Form3.TextBox7.Text = name
                 Form3.agency = pili
 
-
+                MessageBox.Show("You successfully choice Agency")
 
 
             End If
