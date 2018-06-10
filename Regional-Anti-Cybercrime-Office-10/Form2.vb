@@ -5,7 +5,6 @@ Public Class Form2
     Dim command As MySqlCommand
     Dim reader As MySqlDataReader
     Public Property lab_case As String
-    Public Property count As Int16
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Form3.Show()
         Me.Close()
@@ -70,7 +69,7 @@ Public Class Form2
 
     Private Sub Button7_Click_1(sender As Object, e As EventArgs) Handles Button7.Click
         Dim dialog As DialogResult
-        dialog = MessageBox.Show("Do you really want to exit?", "Exit", MessageBoxButtons.YesNo)
+        dialog = MessageBox.Show("Do you really want to exit?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If dialog = DialogResult.Yes Then
             mysqlconn = New MySqlConnection
             mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
@@ -83,12 +82,13 @@ Public Class Form2
 
                 mysqlconn.Close()
             Catch ex As Exception
-                MessageBox.Show(ex.Message)
+                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
 
-            Application.ExitThread()
+            Me.Close()
+            Form1.Show()
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None
         End If
@@ -157,7 +157,7 @@ Public Class Form2
                 load_table()
                 mysqlconn.Close()
             Catch ex As MySqlException
-                MessageBox.Show(ex.Message)
+                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -185,7 +185,7 @@ Public Class Form2
             load_table()
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -217,7 +217,7 @@ Public Class Form2
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -242,7 +242,7 @@ Public Class Form2
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -250,50 +250,6 @@ Public Class Form2
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
-        MessageBox.Show(count)
-        If count > 0 Then
-            count = 0
-            Try
-                mysqlconn.Open()
-
-                Dim query As String
-
-                query = "select * from facts where lab_case_no = '" & lab_case & "'"
-                command = New MySqlCommand(query, mysqlconn)
-                reader = command.ExecuteReader
-
-                While reader.Read
-                    Dim what = reader.GetString("what")
-                    Dim why = reader.GetString("why")
-                    Dim how = reader.GetString("how")
-                    Dim date_occur = reader.GetValue("date_occur")
-                    Dim time_occ = reader.GetValue("time_occur")
-                    Dim place = reader.GetString("place_occur")
-
-
-                    factname.Text = what
-
-                    DateTimePicker3.Value = time_occ
-                    DateTimePicker2.Value = date_occur
-                    TextBox13.Text = place
-                    TextBox4.Text = why
-                    facts.Text = how
-                    factname.Text = what
-
-
-
-                End While
-
-
-                mysqlconn.Close()
-            Catch ex As MySqlException
-                MessageBox.Show(ex.Message)
-            Finally
-                mysqlconn.Dispose()
-            End Try
-
-        End If
-
     End Sub
 
     Private Sub DataGridView2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellClick
@@ -327,7 +283,7 @@ Public Class Form2
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -364,7 +320,7 @@ Public Class Form2
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -387,7 +343,7 @@ Public Class Form2
                 load_table()
                 mysqlconn.Close()
             Catch ex As MySqlException
-                MessageBox.Show(ex.Message)
+                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -424,7 +380,7 @@ Public Class Form2
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -453,7 +409,7 @@ Public Class Form2
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -482,7 +438,7 @@ Public Class Form2
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try

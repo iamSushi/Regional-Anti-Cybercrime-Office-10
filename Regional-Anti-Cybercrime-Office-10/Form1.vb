@@ -1,15 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
-
-
 Public Class Form1
-
     Dim mysqlconn As MySqlConnection
     Dim command As MySqlCommand
     Dim reader As MySqlDataReader
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        mysqlconn = New MySqlConnection With {
+            .ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        }
         Try
             mysqlconn.Open()
             Dim query As String
@@ -23,6 +21,7 @@ Public Class Form1
                 result = result + 1
             End While
 
+
             If result = 1 Then
                 mysqlconn.Close()
                 mysqlconn.Open()
@@ -32,17 +31,19 @@ Public Class Form1
                 command = New MySqlCommand(query2, mysqlconn)
                 reader = command.ExecuteReader
 
-                Form7.Show()
+                TextBox1.Text = ""
+                TextBox2.Text = ""
                 Me.Hide()
+                Form7.Show()
             Else
-                MessageBox.Show("Username or Password is incorrect!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Username or Password is incorrect!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 TextBox1.Text = ""
                 TextBox2.Text = ""
             End If
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -51,5 +52,9 @@ Public Class Form1
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Dispose()
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
     End Sub
 End Class

@@ -4,7 +4,7 @@ Public Class Form7
     Dim mysqlconn As MySqlConnection
     Dim command As MySqlCommand
     Dim reader As MySqlDataReader
-
+    Dim index As Integer
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Do While panel_slide.Width < 109
@@ -60,7 +60,7 @@ Public Class Form7
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         Dim dialog As DialogResult
-        dialog = MessageBox.Show("Do you really want to exit?", "Exit", MessageBoxButtons.YesNo)
+        dialog = MessageBox.Show("Do you really want to exit?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If dialog = DialogResult.Yes Then
             mysqlconn = New MySqlConnection
             mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
@@ -78,7 +78,9 @@ Public Class Form7
                 mysqlconn.Dispose()
             End Try
 
-            Application.ExitThread()
+            'Application.ExitThread()
+            Me.Close()
+            Form1.Show()
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None
         End If
@@ -150,7 +152,7 @@ Public Class Form7
             mysqlconn.Open()
             Dim query As String
 
-            query = "SELECT officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, position as Position, rank as Rank from officer"
+            query = "SELECT officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, position as Position, rank as Rank FROM officer"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -166,9 +168,37 @@ Public Class Form7
         End Try
     End Sub
 
+    Private Sub accounts_table()
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+        Try
+            mysqlconn.Open()
+            Dim query As String
+
+            query = "SELECT officer.officer_id as ID, officer.fname as Firstname, officer.sname as Surname, officer.position as Position, officer.rank as Rank, officer.agency as Agency, accounts.username as Username, accounts.date_created as DateCreated FROM accounts INNER JOIN officer ON officer.officer_id = accounts.officer_id"
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView2.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
     Private Sub Form7_Load(sender As Object, e As EventArgs) Handles Me.Load
         load_table()
         officer_table()
+        accounts_table()
     End Sub
 
     Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
@@ -253,5 +283,95 @@ Public Class Form7
 
     Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
         Form12.Show()
+    End Sub
+
+    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+        Try
+            mysqlconn.Open()
+            Dim query As String
+
+            query = "SELECT officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, position as Position, rank as Rank FROM officer WHERE sname like '" & TextBox4.Text & "%' "
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
+
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        index = e.RowIndex
+        Dim selectedRow As DataGridViewRow
+        selectedRow = DataGridView1.Rows(index)
+
+        id.Text = selectedRow.Cells(0).Value.ToString()
+        TextBox11.Text = selectedRow.Cells(3).Value.ToString()
+    End Sub
+
+    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "INSERT INTO accounts VALUES('" & id.Text & "','Examiner','" & TextBox11.Text & "','" & TextBox11.Text & "','0','')"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+            MessageBox.Show("masaya")
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+        accounts_table()
+    End Sub
+
+    Private Sub DataGridView2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellClick
+        index = e.RowIndex
+        Dim selectedRow As DataGridViewRow
+        selectedRow = DataGridView2.Rows(index)
+
+        id.Text = selectedRow.Cells(0).Value.ToString()
+    End Sub
+
+    Private Sub Button19_Click(sender As Object, e As EventArgs) Handles Button19.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "DELETE FROM accounts WHERE officer_id = '" & id.Text & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+            MessageBox.Show("masaya")
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+        accounts_table()
     End Sub
 End Class

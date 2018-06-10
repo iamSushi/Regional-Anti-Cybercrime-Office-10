@@ -246,7 +246,7 @@ Public Class Form8
             If e.RowIndex >= 0 Then
                 Dim row As DataGridViewRow
                 row = Me.DataGridView2.Rows(e.RowIndex)
-                Dim pili = row.Cells("ID").Value.ToString
+                Dim pili = row.Cells("person_id").Value.ToString
 
                 MessageBox.Show(pili)
 
