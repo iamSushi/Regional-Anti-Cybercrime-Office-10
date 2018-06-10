@@ -286,6 +286,33 @@ Public Class Form25
             mysqlconn.Dispose()
         End Try
 
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = " select * from facts where lab_case_no = " & lab_case & ""
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                TextBox1.Text = reader.GetString("what")
+                TextBox2.Text = reader.GetString("how")
+                TextBox6.Text = reader.GetString("date_occur")
+                TextBox4.Text = reader.GetString("time_occur")
+                TextBox5.Text = reader.GetString("place_occur")
+                TextBox3.Text = reader.GetString("why")
+
+
+            End While
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
     End Sub
 
     Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
@@ -296,5 +323,9 @@ Public Class Form25
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None
         End If
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
     End Sub
 End Class

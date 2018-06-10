@@ -51,24 +51,42 @@ Partial Class Form25
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.ListBox3 = New System.Windows.Forms.ListBox()
         Me.Button31 = New System.Windows.Forms.Button()
         Me.Button29 = New System.Windows.Forms.Button()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProvider2 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.ListBox3 = New System.Windows.Forms.ListBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -385,77 +403,6 @@ Partial Class Form25
         Me.Label13.TabIndex = 0
         Me.Label13.Text = "      Laboratory Case ID"
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(547, 571)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(860, 116)
-        Me.DataGridView1.TabIndex = 9
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.ListBox1)
-        Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(541, 77)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(269, 481)
-        Me.GroupBox2.TabIndex = 10
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Suspect(s)"
-        '
-        'ListBox1
-        '
-        Me.ListBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 23
-        Me.ListBox1.Location = New System.Drawing.Point(6, 34)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(257, 441)
-        Me.ListBox1.TabIndex = 0
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.ListBox2)
-        Me.GroupBox3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(841, 77)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(269, 481)
-        Me.GroupBox3.TabIndex = 11
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Victim(s)"
-        '
-        'ListBox2
-        '
-        Me.ListBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.ItemHeight = 23
-        Me.ListBox2.Location = New System.Drawing.Point(6, 34)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(257, 441)
-        Me.ListBox2.TabIndex = 1
-        '
-        'GroupBox4
-        '
-        Me.GroupBox4.Controls.Add(Me.ListBox3)
-        Me.GroupBox4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox4.Location = New System.Drawing.Point(1144, 77)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(269, 481)
-        Me.GroupBox4.TabIndex = 11
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Nature of Case(s)"
-        '
-        'ListBox3
-        '
-        Me.ListBox3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox3.FormattingEnabled = True
-        Me.ListBox3.ItemHeight = 23
-        Me.ListBox3.Location = New System.Drawing.Point(6, 34)
-        Me.ListBox3.Name = "ListBox3"
-        Me.ListBox3.Size = New System.Drawing.Size(257, 441)
-        Me.ListBox3.TabIndex = 1
-        '
         'Button31
         '
         Me.Button31.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
@@ -492,17 +439,242 @@ Partial Class Form25
         '
         Me.ErrorProvider2.ContainerControl = Me
         '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Location = New System.Drawing.Point(522, 45)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(909, 684)
+        Me.TabControl1.TabIndex = 106
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.GroupBox4)
+        Me.TabPage1.Controls.Add(Me.GroupBox3)
+        Me.TabPage1.Controls.Add(Me.GroupBox2)
+        Me.TabPage1.Controls.Add(Me.DataGridView1)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(901, 658)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Case"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.TextBox6)
+        Me.TabPage2.Controls.Add(Me.TextBox5)
+        Me.TabPage2.Controls.Add(Me.TextBox4)
+        Me.TabPage2.Controls.Add(Me.TextBox3)
+        Me.TabPage2.Controls.Add(Me.TextBox2)
+        Me.TabPage2.Controls.Add(Me.Label25)
+        Me.TabPage2.Controls.Add(Me.Label23)
+        Me.TabPage2.Controls.Add(Me.Label22)
+        Me.TabPage2.Controls.Add(Me.Label16)
+        Me.TabPage2.Controls.Add(Me.Label14)
+        Me.TabPage2.Controls.Add(Me.TextBox1)
+        Me.TabPage2.Controls.Add(Me.Label4)
+        Me.TabPage2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(901, 658)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Facts"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.ListBox3)
+        Me.GroupBox4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox4.Location = New System.Drawing.Point(617, 24)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(269, 481)
+        Me.GroupBox4.TabIndex = 14
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Nature of Case(s)"
+        '
+        'ListBox3
+        '
+        Me.ListBox3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox3.FormattingEnabled = True
+        Me.ListBox3.ItemHeight = 23
+        Me.ListBox3.Location = New System.Drawing.Point(6, 34)
+        Me.ListBox3.Name = "ListBox3"
+        Me.ListBox3.Size = New System.Drawing.Size(257, 441)
+        Me.ListBox3.TabIndex = 1
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.ListBox2)
+        Me.GroupBox3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox3.Location = New System.Drawing.Point(314, 24)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(269, 481)
+        Me.GroupBox3.TabIndex = 15
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Victim(s)"
+        '
+        'ListBox2
+        '
+        Me.ListBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox2.FormattingEnabled = True
+        Me.ListBox2.ItemHeight = 23
+        Me.ListBox2.Location = New System.Drawing.Point(6, 34)
+        Me.ListBox2.Name = "ListBox2"
+        Me.ListBox2.Size = New System.Drawing.Size(257, 441)
+        Me.ListBox2.TabIndex = 1
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.ListBox1)
+        Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(14, 24)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(269, 481)
+        Me.GroupBox2.TabIndex = 13
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Suspect(s)"
+        '
+        'ListBox1
+        '
+        Me.ListBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 23
+        Me.ListBox1.Location = New System.Drawing.Point(6, 34)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(257, 441)
+        Me.ListBox1.TabIndex = 0
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(20, 518)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(860, 116)
+        Me.DataGridView1.TabIndex = 12
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(31, 47)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(52, 23)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "What"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(54, 84)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox1.Size = New System.Drawing.Size(319, 114)
+        Me.TextBox1.TabIndex = 1
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(437, 38)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(46, 23)
+        Me.Label14.TabIndex = 2
+        Me.Label14.Text = "How"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(31, 231)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(152, 23)
+        Me.Label16.TabIndex = 3
+        Me.Label16.Text = "Date of Occurence"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(31, 381)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(156, 23)
+        Me.Label22.TabIndex = 4
+        Me.Label22.Text = "Place of Occurence"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(31, 304)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(153, 23)
+        Me.Label23.TabIndex = 5
+        Me.Label23.Text = "Time of Occurence"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(31, 458)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(46, 23)
+        Me.Label25.TabIndex = 6
+        Me.Label25.Text = "Why"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(457, 79)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox2.Size = New System.Drawing.Size(415, 557)
+        Me.TextBox2.TabIndex = 7
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(54, 506)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ReadOnly = True
+        Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox3.Size = New System.Drawing.Size(319, 114)
+        Me.TextBox3.TabIndex = 8
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(54, 341)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.ReadOnly = True
+        Me.TextBox4.Size = New System.Drawing.Size(319, 31)
+        Me.TextBox4.TabIndex = 10
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(54, 410)
+        Me.TextBox5.Multiline = True
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.ReadOnly = True
+        Me.TextBox5.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.TextBox5.Size = New System.Drawing.Size(319, 45)
+        Me.TextBox5.TabIndex = 11
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(54, 267)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.ReadOnly = True
+        Me.TextBox6.Size = New System.Drawing.Size(319, 31)
+        Me.TextBox6.TabIndex = 12
+        '
         'Form25
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1434, 788)
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Button31)
         Me.Controls.Add(Me.Button29)
-        Me.Controls.Add(Me.GroupBox4)
-        Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label1)
@@ -510,12 +682,16 @@ Partial Class Form25
         Me.Text = "Form25"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox4.ResumeLayout(False)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -546,17 +722,32 @@ Partial Class Form25
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents ListBox2 As ListBox
-    Friend WithEvents ListBox3 As ListBox
     Friend WithEvents Label26 As Label
     Friend WithEvents Label27 As Label
     Friend WithEvents Button31 As Button
     Friend WithEvents Button29 As Button
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents ErrorProvider2 As ErrorProvider
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents ListBox3 As ListBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents ListBox2 As ListBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents TextBox6 As TextBox
 End Class
