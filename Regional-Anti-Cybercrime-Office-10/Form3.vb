@@ -399,10 +399,12 @@ Public Class Form3
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
                 MessageBox.Show("Successful")
+                TextBox1.Text = ""
+                TextBox13.Text = ""
                 ComboBox1.Text = ""
                 ComboBox2.Text = ""
-                ComboBox4.Text = ""
                 ComboBox5.Text = ""
+                ComboBox4.Text = ""
                 ComboBox6.Text = ""
                 ComboBox7.Text = ""
                 ComboBox8.Text = ""
@@ -410,6 +412,10 @@ Public Class Form3
                 ComboBox10.Text = ""
                 ComboBox11.Text = ""
                 ComboBox12.Text = ""
+                ComboBox15.Text = ""
+                ComboBox14.Text = ""
+                ComboBox16.Text = ""
+                TextBox13.Text = ""
                 mysqlconn.Close()
             Catch ex As MySqlException
                 MessageBox.Show(ex.Message)

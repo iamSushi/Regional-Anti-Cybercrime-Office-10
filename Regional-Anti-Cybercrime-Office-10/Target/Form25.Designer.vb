@@ -128,7 +128,7 @@ Partial Class Form25
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(224, 48)
+        Me.Label26.Location = New System.Drawing.Point(206, 48)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(50, 23)
         Me.Label26.TabIndex = 119
@@ -141,7 +141,7 @@ Partial Class Form25
         Me.Label27.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label27.Image = CType(resources.GetObject("Label27.Image"), System.Drawing.Image)
         Me.Label27.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label27.Location = New System.Drawing.Point(27, 48)
+        Me.Label27.Location = New System.Drawing.Point(20, 48)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(131, 23)
         Me.Label27.TabIndex = 118
@@ -150,7 +150,7 @@ Partial Class Form25
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(224, 652)
+        Me.Label24.Location = New System.Drawing.Point(206, 642)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(50, 23)
         Me.Label24.TabIndex = 116
@@ -159,7 +159,7 @@ Partial Class Form25
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(223, 513)
+        Me.Label21.Location = New System.Drawing.Point(206, 596)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(50, 23)
         Me.Label21.TabIndex = 113
@@ -168,7 +168,7 @@ Partial Class Form25
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(223, 465)
+        Me.Label20.Location = New System.Drawing.Point(206, 542)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(50, 23)
         Me.Label20.TabIndex = 112
@@ -177,7 +177,7 @@ Partial Class Form25
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(224, 420)
+        Me.Label19.Location = New System.Drawing.Point(206, 487)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(50, 23)
         Me.Label19.TabIndex = 111
@@ -186,7 +186,7 @@ Partial Class Form25
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(224, 379)
+        Me.Label18.Location = New System.Drawing.Point(206, 425)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(50, 23)
         Me.Label18.TabIndex = 110
@@ -195,7 +195,7 @@ Partial Class Form25
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(224, 330)
+        Me.Label15.Location = New System.Drawing.Point(206, 372)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(50, 23)
         Me.Label15.TabIndex = 109
@@ -204,7 +204,7 @@ Partial Class Form25
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(224, 277)
+        Me.Label11.Location = New System.Drawing.Point(206, 309)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(50, 23)
         Me.Label11.TabIndex = 108
@@ -213,7 +213,7 @@ Partial Class Form25
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(223, 230)
+        Me.Label10.Location = New System.Drawing.Point(206, 253)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(50, 23)
         Me.Label10.TabIndex = 107
@@ -222,7 +222,7 @@ Partial Class Form25
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(224, 181)
+        Me.Label5.Location = New System.Drawing.Point(206, 195)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(50, 23)
         Me.Label5.TabIndex = 106
@@ -231,7 +231,7 @@ Partial Class Form25
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(224, 137)
+        Me.Label3.Location = New System.Drawing.Point(206, 137)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(50, 23)
         Me.Label3.TabIndex = 105
@@ -240,7 +240,7 @@ Partial Class Form25
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(224, 93)
+        Me.Label2.Location = New System.Drawing.Point(206, 93)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(50, 23)
         Me.Label2.TabIndex = 104
@@ -252,7 +252,7 @@ Partial Class Form25
         Me.Label33.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label33.Image = CType(resources.GetObject("Label33.Image"), System.Drawing.Image)
         Me.Label33.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label33.Location = New System.Drawing.Point(27, 652)
+        Me.Label33.Location = New System.Drawing.Point(20, 652)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(148, 23)
         Me.Label33.TabIndex = 102
@@ -265,7 +265,7 @@ Partial Class Form25
         Me.Label32.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label32.Image = CType(resources.GetObject("Label32.Image"), System.Drawing.Image)
         Me.Label32.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label32.Location = New System.Drawing.Point(27, 379)
+        Me.Label32.Location = New System.Drawing.Point(20, 425)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(122, 23)
         Me.Label32.TabIndex = 98
@@ -278,7 +278,7 @@ Partial Class Form25
         Me.Label31.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label31.Image = CType(resources.GetObject("Label31.Image"), System.Drawing.Image)
         Me.Label31.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label31.Location = New System.Drawing.Point(27, 330)
+        Me.Label31.Location = New System.Drawing.Point(20, 372)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(118, 23)
         Me.Label31.TabIndex = 81
@@ -291,7 +291,7 @@ Partial Class Form25
         Me.Label30.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label30.Image = CType(resources.GetObject("Label30.Image"), System.Drawing.Image)
         Me.Label30.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label30.Location = New System.Drawing.Point(26, 277)
+        Me.Label30.Location = New System.Drawing.Point(20, 309)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(125, 23)
         Me.Label30.TabIndex = 80
@@ -303,7 +303,7 @@ Partial Class Form25
         Me.Label29.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.Image = CType(resources.GetObject("Label29.Image"), System.Drawing.Image)
         Me.Label29.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label29.Location = New System.Drawing.Point(27, 513)
+        Me.Label29.Location = New System.Drawing.Point(20, 596)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(142, 23)
         Me.Label29.TabIndex = 77
@@ -315,7 +315,7 @@ Partial Class Form25
         Me.Label6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Image = CType(resources.GetObject("Label6.Image"), System.Drawing.Image)
         Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label6.Location = New System.Drawing.Point(26, 465)
+        Me.Label6.Location = New System.Drawing.Point(20, 542)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(147, 23)
         Me.Label6.TabIndex = 76
@@ -327,7 +327,7 @@ Partial Class Form25
         Me.Label17.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.Image = CType(resources.GetObject("Label17.Image"), System.Drawing.Image)
         Me.Label17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label17.Location = New System.Drawing.Point(27, 181)
+        Me.Label17.Location = New System.Drawing.Point(20, 195)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(64, 23)
         Me.Label17.TabIndex = 64
@@ -339,7 +339,7 @@ Partial Class Form25
         Me.Label9.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Image = CType(resources.GetObject("Label9.Image"), System.Drawing.Image)
         Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label9.Location = New System.Drawing.Point(27, 137)
+        Me.Label9.Location = New System.Drawing.Point(20, 139)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(128, 23)
         Me.Label9.TabIndex = 14
@@ -351,7 +351,7 @@ Partial Class Form25
         Me.Label8.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Image = CType(resources.GetObject("Label8.Image"), System.Drawing.Image)
         Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label8.Location = New System.Drawing.Point(27, 93)
+        Me.Label8.Location = New System.Drawing.Point(20, 93)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(105, 23)
         Me.Label8.TabIndex = 12
@@ -363,7 +363,7 @@ Partial Class Form25
         Me.Label7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Image = CType(resources.GetObject("Label7.Image"), System.Drawing.Image)
         Me.Label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label7.Location = New System.Drawing.Point(26, 230)
+        Me.Label7.Location = New System.Drawing.Point(20, 253)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(180, 23)
         Me.Label7.TabIndex = 10
@@ -375,7 +375,7 @@ Partial Class Form25
         Me.Label12.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Image = CType(resources.GetObject("Label12.Image"), System.Drawing.Image)
         Me.Label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label12.Location = New System.Drawing.Point(27, 420)
+        Me.Label12.Location = New System.Drawing.Point(20, 487)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(142, 23)
         Me.Label12.TabIndex = 2

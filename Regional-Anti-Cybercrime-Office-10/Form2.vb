@@ -133,6 +133,12 @@ Public Class Form2
         Else
             Me.ErrorProvider1.SetError(Me.facts, "")
         End If
+        If String.IsNullOrEmpty(TextBox2.Text) Then
+            Me.ErrorProvider1.SetError(Me.TextBox2, "Input Time of Occurence")
+            count += 1
+        Else
+            Me.ErrorProvider1.SetError(Me.TextBox2, "")
+        End If
 
         If count > 0 Then
             Return
@@ -144,11 +150,12 @@ Public Class Form2
                 mysqlconn.Open()
 
                 Dim query As String
-                query = "insert into facts values('" & lab_case & "','" & factname.Text & "','" & DateTimePicker2.Value & "','" & DateTimePicker3.Value & "','" & TextBox13.Text & "','" & TextBox4.Text & "','" & facts.Text & "',null)"
+                query = "insert into facts values('" & lab_case & "','" & factname.Text & "','" & DateTimePicker2.Value & "','" & TextBox2.Text & "','" & TextBox13.Text & "','" & TextBox4.Text & "','" & facts.Text & "',null)"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
                 MessageBox.Show("Successful")
                 TextBox6.Text = ""
+                TextBox2.Text = ""
                 TextBox13.Text = ""
                 TextBox4.Text = ""
                 factname.Text = ""
@@ -172,12 +179,13 @@ Public Class Form2
             mysqlconn.Open()
 
             Dim query As String
-            query = "update facts set what ='" & factname.Text & "', date_occur = '" & DateTimePicker2.Value & "', time_occur ='" & DateTimePicker3.Value & "', place_occur = '" & TextBox13.Text & "', why = '" & TextBox4.Text & "', how = '" & facts.Text & "' where lab_Case_no = '" & lab_case & "' "
+            query = "update facts set what ='" & factname.Text & "', date_occur = '" & DateTimePicker2.Value & "', time_occur ='" & TextBox2.Text & "', place_occur = '" & TextBox13.Text & "', why = '" & TextBox4.Text & "', how = '" & facts.Text & "' where lab_Case_no = '" & lab_case & "' "
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
             TextBox6.Text = ""
             TextBox13.Text = ""
+            TextBox2.Text = ""
             TextBox4.Text = ""
             factname.Text = ""
             facts.Text = ""
@@ -272,7 +280,7 @@ Public Class Form2
 
                 factname.Text = what
 
-                DateTimePicker3.Value = time_occ
+                TextBox2.Text = time_occ
                 TextBox13.Text = place_occ
                 TextBox4.Text = why
                 TextBox6.Text = name
@@ -309,7 +317,7 @@ Public Class Form2
 
                 factname.Text = what
 
-                DateTimePicker3.Value = time_occ
+                TextBox2.Text = time_occ
                 TextBox13.Text = place_occ
                 TextBox4.Text = why
                 TextBox6.Text = name
