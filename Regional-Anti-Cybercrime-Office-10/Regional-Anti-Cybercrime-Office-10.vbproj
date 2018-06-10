@@ -239,6 +239,12 @@
     <Compile Include="Target\Form9.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="User Control\UserControl1.Designer.vb">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\UserControl1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -318,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Target\Form9.resx">
       <DependentUpon>Form9.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\UserControl1.resx">
+      <DependentUpon>UserControl1.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
