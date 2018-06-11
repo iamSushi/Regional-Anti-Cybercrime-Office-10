@@ -69,6 +69,7 @@ Public Class Form13
 
 
                 Try
+                    mysqlconn.Dispose()
                     mysqlconn.Open()
 
                     Dim query As String

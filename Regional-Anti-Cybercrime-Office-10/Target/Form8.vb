@@ -115,18 +115,34 @@ Public Class Form8
 
             If e.RowIndex >= 0 Then
                 Dim row As DataGridViewRow
+                Dim x As Int16
                 row = Me.DataGridView1.Rows(e.RowIndex)
-                Dim pili = row.Cells("ID ").Value.ToString
+                Dim pili = row.Cells("ID").Value.ToString
+                Dim query2 As String
+                query2 = "select * from victim where person_id = '" & pili & "' and lab_case_no = '" & lab_case & "'"
+                command2 = New MySqlCommand(query2, mysqlconn)
+                reader2 = command2.ExecuteReader
 
-                MessageBox.Show(pili)
+                While reader2.Read
+                    x = x + 1
+                End While
+                mysqlconn.Dispose()
+                mysqlconn.Open()
+
+                If x > 0 Then
+                    load_table2()
+                Else
+                    Dim query As String
+                    query = "insert into victim values('" & lab_case & "','" & pili & "',null)"
+                    command = New MySqlCommand(query, mysqlconn)
+                    reader = command.ExecuteReader
+
+                End If
 
 
-                Dim query As String
 
-                query = "insert into victim values('" & lab_case & "','" & pili & "',null)"
-                command = New MySqlCommand(query, mysqlconn)
-                reader = command.ExecuteReader
-                MessageBox.Show("Successful")
+
+
 
             End If
             mysqlconn.Close()
@@ -136,7 +152,7 @@ Public Class Form8
             mysqlconn.Dispose()
         End Try
 
-        load_table()
+
         load_table2()
 
     End Sub
@@ -227,40 +243,20 @@ Public Class Form8
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
-
         Try
             mysqlconn.Open()
 
             If e.RowIndex >= 0 Then
                 Dim row As DataGridViewRow
-                Dim x As Int16
-                row = Me.DataGridView1.Rows(e.RowIndex)
+                row = Me.DataGridView2.Rows(e.RowIndex)
                 Dim pili = row.Cells("ID").Value.ToString
-                Dim query2 As String
-                query2 = "select * from victim where person_id = '" & pili & "' and lab_case_no = '" & lab_case & "'"
-                command2 = New MySqlCommand(query2, mysqlconn)
-                reader2 = command2.ExecuteReader
 
-                While reader2.Read
-                    x = x + 1
-                End While
-                mysqlconn.Dispose()
-                mysqlconn.Open()
+                Dim query As String
 
-                If x > 0 Then
-                    load_table2()
-                Else
-                    Dim query As String
-                    query = "insert into victim values('" & lab_case & "','" & pili & "',null)"
-                    command = New MySqlCommand(query, mysqlconn)
-                    reader = command.ExecuteReader
-
-                End If
-
-
-
-
-
+                query = "delete from victim where person_id = '" & pili & "' and lab_case_no = ' " & lab_case & "'"
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+                MessageBox.Show("Successful")
 
             End If
             mysqlconn.Close()
@@ -269,7 +265,6 @@ Public Class Form8
         Finally
             mysqlconn.Dispose()
         End Try
-
 
         load_table2()
     End Sub
@@ -284,8 +279,6 @@ Public Class Form8
                 Dim row As DataGridViewRow
                 row = Me.DataGridView2.Rows(e.RowIndex)
                 Dim pili = row.Cells("ID").Value.ToString
-
-                MessageBox.Show(pili)
 
                 Dim query As String
 
