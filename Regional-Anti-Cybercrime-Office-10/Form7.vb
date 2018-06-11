@@ -264,6 +264,7 @@ Public Class Form7
                     reader = command.ExecuteReader
                     MessageBox.Show("Updated Successfully!")
                 End If
+
                 load_table()
                 TextBox5.Text = ""
                 TextBox6.Text = ""
@@ -352,7 +353,7 @@ Public Class Form7
                 MessageBox.Show("Successful!", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 count = 0
             Catch ex As Exception
-                MessageBox.Show(ex.Message)
+                MessageBox.Show("Invalid user action!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             End Try
         Else
             MessageBox.Show("User account has already existed!", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -383,13 +384,16 @@ Public Class Form7
 
                 Dim query As String
 
-                query = "DELETE FROM accounts WHERE officer_id = '" & id.Text & "'"
+                query = "DELETE FROM accounts WHERE officer_id = '" & id.Text & "' and type != 'Admin'"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
-                MessageBox.Show("Successfully remove user!", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                MessageBox.Show("Successfully removed user!", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
                 mysqlconn.Close()
+
             Catch ex As MySqlException
-                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Invalid user action!" + ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Finally
                 mysqlconn.Dispose()
             End Try
