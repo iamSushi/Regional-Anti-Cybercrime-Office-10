@@ -327,23 +327,40 @@ Public Class Form7
     Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        Dim count As Int16
+        Dim query As String
+        count = 0
+        mysqlconn.Open()
+        query = "SELECT * FROM accounts WHERE officer_id = '" & id.Text & "'"
+        command = New MySqlCommand(query, mysqlconn)
+        reader = command.ExecuteReader
 
-        Try
-            mysqlconn.Open()
+        While reader.Read
+            count += 1
+        End While
+        count = count - 1
 
-            Dim query As String
+        mysqlconn.Close()
+        If count <> 0 Then
+            Try
+                Dim query2 As String
+                mysqlconn.Open()
+                query2 = "INSERT INTO accounts VALUES('" & id.Text & "','','" & TextBox11.Text & "','" & TextBox11.Text & "','',NOW())"
+                command = New MySqlCommand(query2, mysqlconn)
+                reader = command.ExecuteReader
+                mysqlconn.Close()
+                MessageBox.Show("Successful!", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                count = 0
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        Else
+            MessageBox.Show("User account has already existed!", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
 
-            query = "INSERT INTO accounts VALUES('" & id.Text & "','Examiner','" & TextBox11.Text & "','" & TextBox11.Text & "','0','')"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-            MessageBox.Show("masaya")
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        Finally
-            mysqlconn.Dispose()
-        End Try
+        mysqlconn.Close()
         accounts_table()
+        officer_table()
     End Sub
 
     Private Sub DataGridView2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellClick
@@ -381,5 +398,6 @@ Public Class Form7
         End If
 
         accounts_table()
+        officer_table()
     End Sub
 End Class
