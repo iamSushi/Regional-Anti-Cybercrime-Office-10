@@ -64,6 +64,7 @@ Public Class Form13
                 Form19.lab_case = pili
                 Form24.lab_case = pili
 
+                Me.Hide()
 
             End If
             mysqlconn.Close()
@@ -99,7 +100,7 @@ Public Class Form13
                 Form19.lab_case = pili
                 Form24.lab_case = pili
                 MessageBox.Show("Successfully Selected " + name)
-
+                Me.Hide()
             End If
             mysqlconn.Close()
         Catch ex As MySqlException

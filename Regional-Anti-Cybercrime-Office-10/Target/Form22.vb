@@ -58,7 +58,7 @@ Public Class Form22
                 Form3.releasedby = pili
 
                 MessageBox.Show("Successful")
-
+                Me.Hide()
             End If
             mysqlconn.Close()
         Catch ex As MySqlException
@@ -87,7 +87,7 @@ Public Class Form22
                 Form4.claimed_by = pili
 
                 MessageBox.Show("Successful")
-
+                Me.Hide()
             End If
             mysqlconn.Close()
         Catch ex As MySqlException

@@ -350,7 +350,51 @@ Public Class Form26
 
             Dim query As String
 
-            query = "update laboratory_case set type = '" & ComboBox1.Text & "', case_status = '" & TextBox13.Text & "', date_received = '" & DateTimePicker1.Value & "', date_informed = '" & DateTimePicker2.Value & "', date_released = '" & DateTimePicker3.Value & "', date_examined = '" & DateTimePicker4.Value & "', examiner = '" & examiner_pili & "', investigator = '" & examiner_pili & "'  where lab_case_no = '" & lab_case & "'"
+            query = "update laboratory_case set type = '" & ComboBox1.Text & "', case_status = '" & TextBox13.Text & "', date_received = '" & DateTimePicker1.Value & "', date_informed = '" & DateTimePicker2.Value & "', date_released = '" & DateTimePicker3.Value & "', date_examined = '" & DateTimePicker4.Value & "' where lab_case_no = '" & lab_case & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            MessageBox.Show(investigator_pili)
+
+            If String.IsNullOrEmpty(investigator_pili) Then
+                query = "update laboratory_case set investigator = '" & investigator & "' where lab_case_no = '" & lab_case & "'"
+            Else
+                query = "update laboratory_case set investigator = '" & investigator_pili & "' where lab_case_no = '" & lab_case & "'"
+            End If
+
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            MessageBox.Show(examiner_pili)
+
+            If String.IsNullOrEmpty(examiner_pili) Then
+                query = "update laboratory_case set examiner = '" & examiner & "' where lab_case_no = '" & lab_case & "'"
+            Else
+                query = "update laboratory_case set examiner = '" & examiner_pili & "' where lab_case_no = '" & lab_case & "'"
+            End If
+
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
 

@@ -59,6 +59,7 @@ Public Class Form24
                 Form3.TextBox3.Text = name
                 Form3.complainant = pili
                 MessageBox.Show("Successful")
+                Me.Hide()
 
             End If
             mysqlconn.Close()
