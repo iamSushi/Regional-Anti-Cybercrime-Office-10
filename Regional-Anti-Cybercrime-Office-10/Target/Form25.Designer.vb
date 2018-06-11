@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form25
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form25
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form25))
@@ -76,6 +76,7 @@ Partial Class Form25
         Me.Label14 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -653,11 +654,26 @@ Partial Class Form25
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "What"
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(646, 746)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(79, 30)
+        Me.Button1.TabIndex = 107
+        Me.Button1.Text = "Update"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Form25
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1434, 788)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Button29)
         Me.Controls.Add(Me.GroupBox1)
@@ -734,4 +750,5 @@ Partial Class Form25
     Friend WithEvents TextBox17 As TextBox
     Friend WithEvents TextBox16 As TextBox
     Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents Button1 As Button
 End Class
