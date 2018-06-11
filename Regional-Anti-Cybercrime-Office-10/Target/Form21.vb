@@ -56,8 +56,8 @@ Public Class Form21
 
                 Form3.TextBox5.Text = name
                 Form3.releasedby = pili
-
-
+                MessageBox.Show("Successful")
+                Me.Hide()
             End If
             mysqlconn.Close()
         Catch ex As MySqlException
@@ -84,7 +84,7 @@ Public Class Form21
                 Form4.TextBox5.Text = name
                 Form4.released_by = pili
                 MessageBox.Show("Successful")
-
+                Me.Hide()
             End If
             mysqlconn.Close()
         Catch ex As MySqlException

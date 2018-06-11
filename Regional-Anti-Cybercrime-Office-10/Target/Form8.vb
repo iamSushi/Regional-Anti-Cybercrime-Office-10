@@ -5,6 +5,8 @@ Public Class Form8
     Dim mysqlconn As MySqlConnection
     Dim command As MySqlCommand
     Dim reader As MySqlDataReader
+    Dim command2 As MySqlCommand
+    Dim reader2 As MySqlDataReader
     Public Property lab_case As String
 
     Private Sub Form8_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -149,25 +151,44 @@ Public Class Form8
 
             If e.RowIndex >= 0 Then
                 Dim row As DataGridViewRow
+                Dim x As Int16
                 row = Me.DataGridView1.Rows(e.RowIndex)
                 Dim pili = row.Cells("ID").Value.ToString
+                Dim query2 As String
+                query2 = "select * from victim where person_id = '" & pili & "' and lab_case_no = '" & lab_case & "'"
+                command2 = New MySqlCommand(query2, mysqlconn)
+                reader2 = command2.ExecuteReader
 
-                Dim query As String
+                While reader2.Read
+                    x = x + 1
+                End While
+                mysqlconn.Dispose()
+                mysqlconn.Open()
 
-                query = "insert into victim values('" & lab_case & "','" & pili & "',null)"
-                command = New MySqlCommand(query, mysqlconn)
-                reader = command.ExecuteReader
+                If x > 0 Then
+                    load_table2()
+                Else
+                    Dim query As String
+                    query = "insert into victim values('" & lab_case & "','" & pili & "',null)"
+                    command = New MySqlCommand(query, mysqlconn)
+                    reader = command.ExecuteReader
+
+                End If
+
+
+
+
 
 
             End If
-            mysqlconn.Close()
+                mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show(ex.Message)
         Finally
             mysqlconn.Dispose()
         End Try
 
-        load_table()
+
         load_table2()
     End Sub
 
@@ -204,7 +225,6 @@ Public Class Form8
     End Sub
 
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
-
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
@@ -213,17 +233,34 @@ Public Class Form8
 
             If e.RowIndex >= 0 Then
                 Dim row As DataGridViewRow
-                row = Me.DataGridView2.Rows(e.RowIndex)
-                Dim pili = row.Cells("person_id").Value.ToString
+                Dim x As Int16
+                row = Me.DataGridView1.Rows(e.RowIndex)
+                Dim pili = row.Cells("ID").Value.ToString
+                Dim query2 As String
+                query2 = "select * from victim where person_id = '" & pili & "' and lab_case_no = '" & lab_case & "'"
+                command2 = New MySqlCommand(query2, mysqlconn)
+                reader2 = command2.ExecuteReader
 
-                MessageBox.Show(pili)
+                While reader2.Read
+                    x = x + 1
+                End While
+                mysqlconn.Dispose()
+                mysqlconn.Open()
 
-                Dim query As String
+                If x > 0 Then
+                    load_table2()
+                Else
+                    Dim query As String
+                    query = "insert into victim values('" & lab_case & "','" & pili & "',null)"
+                    command = New MySqlCommand(query, mysqlconn)
+                    reader = command.ExecuteReader
 
-                query = "delete from victim where person_id = '" & pili & "' and lab_case_no = ' " & lab_case & "'"
-                command = New MySqlCommand(query, mysqlconn)
-                reader = command.ExecuteReader
-                MessageBox.Show("Successful")
+                End If
+
+
+
+
+
 
             End If
             mysqlconn.Close()
@@ -233,8 +270,8 @@ Public Class Form8
             mysqlconn.Dispose()
         End Try
 
-        load_table2()
 
+        load_table2()
     End Sub
 
     Private Sub DataGridView2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellClick
@@ -246,7 +283,7 @@ Public Class Form8
             If e.RowIndex >= 0 Then
                 Dim row As DataGridViewRow
                 row = Me.DataGridView2.Rows(e.RowIndex)
-                Dim pili = row.Cells("person_id").Value.ToString
+                Dim pili = row.Cells("ID").Value.ToString
 
                 MessageBox.Show(pili)
 

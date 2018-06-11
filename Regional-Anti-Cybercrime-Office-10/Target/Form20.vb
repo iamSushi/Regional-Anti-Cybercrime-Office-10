@@ -76,7 +76,7 @@ Public Class Form20
                 row = Me.DataGridView1.Rows(e.RowIndex)
                 Dim pili = row.Cells("lab_case_no").Value.ToString
 
-                MessageBox.Show(pili)
+                MessageBox.Show("succesful")
                 Form3.TextBox1.Text = row.Cells("CaseID").Value.ToString
                 Form8.Label3.Text = row.Cells("CaseID").Value.ToString
                 Form18.Label3.Text = row.Cells("CaseID").Value.ToString
@@ -89,7 +89,7 @@ Public Class Form20
                 Form24.lab_case = pili
 
 
-
+                Me.Hide()
             End If
             mysqlconn.Close()
         Catch ex As MySqlException

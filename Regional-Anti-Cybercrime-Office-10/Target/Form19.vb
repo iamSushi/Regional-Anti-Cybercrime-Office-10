@@ -4,6 +4,8 @@ Public Class Form19
     Dim mysqlconn As MySqlConnection
     Dim command As MySqlCommand
     Dim reader As MySqlDataReader
+    Dim command2 As MySqlCommand
+    Dim reader2 As MySqlDataReader
     Public Property lab_case As String
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
@@ -12,15 +14,32 @@ Public Class Form19
 
             If e.RowIndex >= 0 Then
                 Dim row As DataGridViewRow
+                Dim x As Int16
                 row = Me.DataGridView1.Rows(e.RowIndex)
                 Dim pili = row.Cells("ID").Value.ToString
+                Dim query2 As String
+                query2 = "select * from case_nature where nature_of_case = '" & pili & "' and lab_case_no = '" & lab_case & "'"
+                command2 = New MySqlCommand(query2, mysqlconn)
+                reader2 = command2.ExecuteReader
 
-                Dim query As String
+                While reader2.Read
+                    X = X + 1
+                End While
+                mysqlconn.Dispose()
+                mysqlconn.Open()
+                If x > 0 Then
+                    load_table2()
+                Else
+                    Dim query As String
 
-                query = "insert into case_nature values('" & lab_case & "','" & pili & "',null)"
-                command = New MySqlCommand(query, mysqlconn)
-                reader = command.ExecuteReader
-                MessageBox.Show("Successful")
+                    query = "insert into case_nature values('" & lab_case & "','" & pili & "',null)"
+                    command = New MySqlCommand(query, mysqlconn)
+                    reader = command.ExecuteReader
+                    MessageBox.Show("Successful")
+
+                End If
+
+
 
             End If
             mysqlconn.Close()
@@ -30,7 +49,7 @@ Public Class Form19
             mysqlconn.Dispose()
         End Try
 
-        load_table()
+
         load_table2()
     End Sub
 
@@ -215,5 +234,50 @@ Public Class Form19
         Finally
             mysqlconn.Dispose()
         End Try
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        Try
+            mysqlconn.Open()
+
+            If e.RowIndex >= 0 Then
+                Dim row As DataGridViewRow
+                Dim x As Int16
+                row = Me.DataGridView1.Rows(e.RowIndex)
+                Dim pili = row.Cells("ID").Value.ToString
+                Dim query2 As String
+                query2 = "select * from case_nature where nature_of_case = '" & pili & "' and lab_case_no = '" & lab_case & "'"
+                command2 = New MySqlCommand(query2, mysqlconn)
+                reader2 = command2.ExecuteReader
+
+                While reader2.Read
+                    x = x + 1
+                End While
+                mysqlconn.Dispose()
+                mysqlconn.Open()
+                If x > 0 Then
+                    load_table2()
+                Else
+                    Dim query As String
+
+                    query = "insert into case_nature values('" & lab_case & "','" & pili & "',null)"
+                    command = New MySqlCommand(query, mysqlconn)
+                    reader = command.ExecuteReader
+                    MessageBox.Show("Successful")
+
+                End If
+
+
+
+            End If
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+
+        load_table2()
     End Sub
 End Class

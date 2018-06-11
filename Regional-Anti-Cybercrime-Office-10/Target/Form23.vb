@@ -54,9 +54,9 @@ Public Class Form23
 
                 Form3.TextBox7.Text = name
                 Form3.agency = pili
+                MessageBox.Show("You successfully choice Agency")
 
-
-
+                Me.Hide()
 
             End If
             mysqlconn.Close()
@@ -110,7 +110,7 @@ Public Class Form23
 
                 MessageBox.Show("You successfully choice Agency")
 
-
+                Me.Hide()
             End If
 
             mysqlconn.Close()

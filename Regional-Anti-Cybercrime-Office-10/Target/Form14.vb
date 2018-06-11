@@ -58,6 +58,7 @@ Public Class Form14
                 Form4.TextBox8.Text = name
                 Form4.examiner = pili
                 Form26.examiner_pili = pili
+                Form26.TextBox8.Text = name
 
                 MessageBox.Show("Successful")
                 Me.Hide()
