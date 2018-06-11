@@ -87,7 +87,7 @@ Public Class Form24
                 Form3.complainant = pili
                 Form4.complainant = pili
                 MessageBox.Show("Successful")
-
+                Me.Hide()
             End If
             mysqlconn.Close()
         Catch ex As MySqlException
