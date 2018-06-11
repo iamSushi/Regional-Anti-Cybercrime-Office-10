@@ -264,6 +264,7 @@ Public Class Form3
             Form24.lab_case = lab_case
 
         Else
+            Me.ErrorProvider1.SetError(Me.Button35, "Select a Laboratory Case")
             MessageBox.Show("First Select Laboratory Case")
         End If
 
@@ -275,6 +276,7 @@ Public Class Form3
             Form8.Show()
             Form8.lab_case = lab_case
         Else
+            Me.ErrorProvider1.SetError(Me.Button35, "Select a Laboratory Case")
             MessageBox.Show("First Select Laboratory Case")
         End If
     End Sub
@@ -285,6 +287,7 @@ Public Class Form3
             Form18.Show()
             Form18.lab_case = lab_case
         Else
+            Me.ErrorProvider1.SetError(Me.Button35, "Select a Laboratory Case")
             MessageBox.Show("First Select Laboratory Case")
         End If
     End Sub
@@ -382,6 +385,7 @@ Public Class Form3
         If lab_case > 0 Then
             Form19.Show()
         Else
+            Me.ErrorProvider1.SetError(Me.Button35, "Select a Laboratory Case")
             MessageBox.Show("First Select Laboratory Case")
         End If
     End Sub
@@ -442,6 +446,7 @@ Public Class Form3
             End Try
 
         Else
+            Me.ErrorProvider1.SetError(Me.Button35, "Select a Laboratory Case")
             MessageBox.Show("First Select Laboratory Case")
         End If
 
