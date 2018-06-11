@@ -85,6 +85,7 @@ Public Class Form15
 
                 Form4.TextBox9.Text = name
                 Form4.investigator = pili
+                Form26.investigator_pili = pili
 
                 MessageBox.Show("Successful")
 

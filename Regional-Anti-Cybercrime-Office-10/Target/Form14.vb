@@ -57,8 +57,10 @@ Public Class Form14
 
                 Form4.TextBox8.Text = name
                 Form4.examiner = pili
+                Form26.examiner_pili = pili
 
                 MessageBox.Show("Successful")
+                Me.Hide()
 
             End If
             mysqlconn.Close()

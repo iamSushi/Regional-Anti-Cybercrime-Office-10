@@ -21,6 +21,10 @@ Public Class Form26
     Dim complainant_s As String
     Dim agency_s As String
 
+    Public Property examiner_pili As String
+    Public Property investigator_pili As String
+
+
     Private Sub Form26_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
     End Sub
@@ -346,7 +350,7 @@ Public Class Form26
 
             Dim query As String
 
-            query = "update laboratory_case set type = '" & ComboBox1.Text & "', case_status = '" & TextBox13.Text & "', date_received = '" & DateTimePicker1.Value & "', date_informed = '" & DateTimePicker2.Value & "', date_released = '" & DateTimePicker3.Value & "', date_examined = '" & DateTimePicker4.Value & "' where lab_case_no = '" & lab_case & "'"
+            query = "update laboratory_case set type = '" & ComboBox1.Text & "', case_status = '" & TextBox13.Text & "', date_received = '" & DateTimePicker1.Value & "', date_informed = '" & DateTimePicker2.Value & "', date_released = '" & DateTimePicker3.Value & "', date_examined = '" & DateTimePicker4.Value & "', examiner = '" & examiner_pili & "', investigator = '" & examiner_pili & "'  where lab_case_no = '" & lab_case & "'"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
 
@@ -405,5 +409,21 @@ Public Class Form26
 
     Private Sub Label20_Click(sender As Object, e As EventArgs) Handles Label20.Click
 
+    End Sub
+
+    Private Sub TextBox8_TextChanged(sender As Object, e As EventArgs) Handles TextBox8.TextChanged
+
+    End Sub
+
+    Private Sub TextBox8_MouseClick(sender As Object, e As MouseEventArgs) Handles TextBox8.MouseClick
+
+    End Sub
+
+    Private Sub TextBox9_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles TextBox9.MouseDoubleClick
+        Form15.Show()
+    End Sub
+
+    Private Sub TextBox8_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles TextBox8.MouseDoubleClick
+        Form14.Show()
     End Sub
 End Class

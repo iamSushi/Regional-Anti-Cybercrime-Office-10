@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2018 at 08:16 PM
--- Server version: 10.1.32-MariaDB
--- PHP Version: 7.2.5
+-- Generation Time: Jun 11, 2018 at 06:01 AM
+-- Server version: 10.1.25-MariaDB
+-- PHP Version: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -139,6 +139,15 @@ CREATE TABLE `case_nature` (
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `case_nature`
+--
+
+INSERT INTO `case_nature` (`lab_case_no`, `nature_of_case`, `date_created`) VALUES
+(5, 5, '2018-06-10 23:57:11'),
+(5, 2, '2018-06-10 23:57:14'),
+(5, 6, '2018-06-10 23:57:17');
+
 -- --------------------------------------------------------
 
 --
@@ -170,7 +179,8 @@ CREATE TABLE `evidence` (
 
 INSERT INTO `evidence` (`lab_case_no`, `sim`, `tablet`, `loptop`, `desktop`, `cellphone`, `flash_drive`, `optical_drive`, `secure_digital`, `external_drive`, `video_recorder`, `hard_disk_drive`, `dc`, `dvr`, `status`, `date_created`) VALUES
 (3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '2018-06-06 21:44:18'),
-(4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '2018-06-06 21:45:48');
+(4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '2018-06-06 21:45:48'),
+(5, 0, 0, 4, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, '', '2018-06-10 22:32:37');
 
 -- --------------------------------------------------------
 
@@ -187,6 +197,54 @@ CREATE TABLE `facts` (
   `why` text NOT NULL,
   `how` longtext NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Triggers `facts`
+--
+DELIMITER $$
+CREATE TRIGGER `delete_facts` BEFORE DELETE ON `facts` FOR EACH ROW INSERT INTO facts_delete VALUES(old.lab_case_no,old.what,old.date_occur,old.time_occur,old.place_occur,old.why,old.how,old.date_created,null)
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `update_facts` BEFORE UPDATE ON `facts` FOR EACH ROW INSERT INTO facts_update VALUES(old.lab_case_no,old.what,old.date_occur,old.time_occur,old.place_occur,old.why,old.how,old.date_created,null)
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `facts_delete`
+--
+
+CREATE TABLE `facts_delete` (
+  `lab_case_no` bigint(20) NOT NULL,
+  `what` text NOT NULL,
+  `date_occur` varchar(30) NOT NULL,
+  `time_occur` varchar(30) NOT NULL,
+  `place_occur` varchar(30) NOT NULL,
+  `why` text NOT NULL,
+  `how` longtext NOT NULL,
+  `date_created` datetime NOT NULL,
+  `date_deleted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `facts_update`
+--
+
+CREATE TABLE `facts_update` (
+  `lab_case_no` bigint(20) NOT NULL,
+  `what` text NOT NULL,
+  `date_occur` varchar(30) NOT NULL,
+  `time_occur` varchar(30) NOT NULL,
+  `place_occur` varchar(50) NOT NULL,
+  `why` text NOT NULL,
+  `how` longtext NOT NULL,
+  `date_created` datetime NOT NULL,
+  `date_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -237,7 +295,56 @@ CREATE TABLE `laboratory_case` (
 
 INSERT INTO `laboratory_case` (`lab_case_no`, `lab_case_no_id`, `date_received`, `date_informed`, `date_released`, `date_examined`, `case_status`, `released_by`, `claimed_by`, `complainant`, `requesting_agency`, `examiner`, `investigator`, `type`, `date_created`) VALUES
 (3, 'try lang ni sya', '6/1/2018', NULL, '6/20/2018', '6/22/2018', 'ongoing', NULL, NULL, 8, 5, 5, 5, ' Audio Visual ', '2018-06-06 19:08:35'),
-(4, 'ikaw', '6/1/2018', NULL, '6/27/2018', '6/21/2018', 'walko', NULL, NULL, 9, 14, 5, 5, ' Cellphone ', '2018-06-06 20:41:27');
+(4, 'ikaw', '6/1/2018', NULL, '6/27/2018', '6/21/2018', 'walko', NULL, NULL, 9, 14, 5, 5, ' Cellphone ', '2018-06-06 20:41:27'),
+(5, 'ret', '6/9/2018', '6/11/2018 7:17:27 AM', '6/6/2018', '6/15/2018', 'dwa', 0, 0, 0, 3, 8, 8, ' Computer ', '2018-06-10 21:08:28');
+
+--
+-- Triggers `laboratory_case`
+--
+DELIMITER $$
+CREATE TRIGGER `update_laboratory_case` BEFORE UPDATE ON `laboratory_case` FOR EACH ROW INSERT INTO laboratory_case_update VALUES(old.lab_case_no,old.lab_case_no_id,old.date_received,old.date_informed,old.date_released,old.date_examined,old.case_status,old.released_by,old.claimed_by,old.complainant,old.requesting_agency,old.examiner,old.investigator,old.type,old.date_created,null)
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `laboratory_case_update`
+--
+
+CREATE TABLE `laboratory_case_update` (
+  `lab_case_no` int(11) NOT NULL,
+  `lab_case_no_id` varchar(50) NOT NULL,
+  `date_received` int(11) DEFAULT NULL,
+  `date_informed` bigint(20) DEFAULT NULL,
+  `date_released` varchar(50) DEFAULT NULL,
+  `date_examined` varchar(50) DEFAULT NULL,
+  `case_status` varchar(20) NOT NULL,
+  `released_by` bigint(20) DEFAULT NULL,
+  `claimed_by` bigint(20) DEFAULT NULL,
+  `complainant` bigint(20) DEFAULT NULL,
+  `requesting_agency` bigint(20) DEFAULT NULL,
+  `examiner` bigint(20) DEFAULT NULL,
+  `investigator` bigint(20) DEFAULT NULL,
+  `type` varchar(20) NOT NULL,
+  `date_created` datetime NOT NULL,
+  `date_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `laboratory_case_update`
+--
+
+INSERT INTO `laboratory_case_update` (`lab_case_no`, `lab_case_no_id`, `date_received`, `date_informed`, `date_released`, `date_examined`, `case_status`, `released_by`, `claimed_by`, `complainant`, `requesting_agency`, `examiner`, `investigator`, `type`, `date_created`, `date_updated`) VALUES
+(4, '0', 6, NULL, '6/27/2018', '6/21/2018', 'walko', NULL, NULL, 9, 14, 5, 5, ' Cellphone ', '2018-06-07 04:41:27', '2018-06-10 19:31:31'),
+(4, 'ikaw waadad', 6, NULL, '6/27/2018', '6/21/2018', 'walko', NULL, NULL, 9, 14, 5, 5, ' Cellphone ', '2018-06-07 04:41:27', '2018-06-10 19:32:46'),
+(5, 'ret', 6, 0, '6/6/2018', '6/6/2018', 'dwa', 0, 0, 0, 3, 8, 8, ' Computer ', '2018-06-11 05:08:28', '2018-06-10 22:32:38'),
+(5, 'ret', 6, 0, '6/6/2018', '6/6/2018', 'dwa', 0, 0, 0, 3, 8, 8, ' Computer ', '2018-06-11 05:08:28', '2018-06-10 23:17:30'),
+(5, 'ret', 6, 6, '6/6/2018', '6/6/2018', 'dwa', 0, 0, 0, 3, 8, 8, ' Computer ', '2018-06-11 05:08:28', '2018-06-10 23:55:28'),
+(5, 'ret', 6, 6, '6/6/2018', '6/15/2018', 'dwa', 0, 0, 0, 3, 8, 8, ' Computer ', '2018-06-11 05:08:28', '2018-06-10 23:55:44'),
+(5, 'ret', 6, 6, '6/6/2018', '6/15/2018', 'dwa', 0, 0, 0, 3, 8, 8, ' Computer ', '2018-06-11 05:08:28', '2018-06-10 23:57:22'),
+(5, 'ret', 6, 6, '6/6/2018', '6/15/2018', 'dwa', 0, 0, 0, 3, 8, 8, ' Computer ', '2018-06-11 05:08:28', '2018-06-10 23:59:12'),
+(5, 'ret', 6, 6, '6/6/2018', '6/15/2018', 'dwa', 0, 0, 0, 3, 8, 8, ' Computer ', '2018-06-11 05:08:28', '2018-06-11 00:00:52');
 
 -- --------------------------------------------------------
 
@@ -502,6 +609,13 @@ CREATE TABLE `suspect` (
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `suspect`
+--
+
+INSERT INTO `suspect` (`lab_case_no`, `person_id`, `date_created`) VALUES
+(5, 10, '2018-06-10 23:55:21');
+
 -- --------------------------------------------------------
 
 --
@@ -531,6 +645,13 @@ CREATE TABLE `victim` (
   `person_id` bigint(20) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `victim`
+--
+
+INSERT INTO `victim` (`lab_case_no`, `person_id`, `date_created`) VALUES
+(5, 10, '2018-06-10 23:55:27');
 
 -- --------------------------------------------------------
 
@@ -672,49 +793,41 @@ ALTER TABLE `victim`
 --
 ALTER TABLE `agency`
   MODIFY `agency_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
-
 --
 -- AUTO_INCREMENT for table `facts`
 --
 ALTER TABLE `facts`
   MODIFY `lab_case_no` bigint(20) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `laboratory_case`
 --
 ALTER TABLE `laboratory_case`
-  MODIFY `lab_case_no` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
+  MODIFY `lab_case_no` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `law`
 --
 ALTER TABLE `law`
   MODIFY `law_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `officer`
 --
 ALTER TABLE `officer`
-  MODIFY `officer_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
+  MODIFY `officer_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `persons`
 --
 ALTER TABLE `persons`
   MODIFY `person_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
 --
 -- AUTO_INCREMENT for table `position`
 --
 ALTER TABLE `position`
   MODIFY `position_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT for table `rank`
 --
 ALTER TABLE `rank`
   MODIFY `rank_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
 --
 -- Constraints for dumped tables
 --
