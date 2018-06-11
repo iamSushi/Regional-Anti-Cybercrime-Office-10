@@ -10,6 +10,7 @@ Public Class Form3
     Dim examiner2 As String
     Dim investigator2 As String
     Dim lab_case_no As String
+    Dim lab_case_no_ni As String
 
     Public Property releasedby As String
     Public Property claimedby As String
@@ -496,45 +497,54 @@ Public Class Form3
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
         If lab_case_no > 0 Then
-            Try
-                mysqlconn.Open()
-                Dim query As String
-                query = "update laboratory_case set released_by = '" + releasedby + "' where lab_case_no = '" & lab_case_no & "'"
-                command = New MySqlCommand(query, mysqlconn)
-                reader = command.ExecuteReader
-                MessageBox.Show("Successful")
 
-                TextBox5.Text = ""
+            If releasedby > 0 Then
+                Try
+                    mysqlconn.Open()
+                    Dim query As String
+                    query = "update laboratory_case set released_by = '" + releasedby + "' where lab_case_no = '" & lab_case_no & "'"
+                    command = New MySqlCommand(query, mysqlconn)
+                    reader = command.ExecuteReader
+                    MessageBox.Show("Successful")
 
-                mysqlconn.Close()
-            Catch ex As MySqlException
-                MessageBox.Show(ex.Message)
-            Finally
-                mysqlconn.Dispose()
-            End Try
+                    TextBox5.Text = ""
 
-            Try
-                mysqlconn.Open()
-                Dim query As String
-                query = "update laboratory_case set claimed_by = '" + claimedby + "' where lab_case_no = '" & lab_case_no & "'"
-                command = New MySqlCommand(query, mysqlconn)
-                reader = command.ExecuteReader
-                MessageBox.Show("Successful")
+                    mysqlconn.Close()
+                Catch ex As MySqlException
+                    MessageBox.Show(ex.Message)
+                Finally
+                    mysqlconn.Dispose()
+                End Try
+            End If
 
-                TextBox6.Text = ""
+            If claimedby > 0 Then
+                Try
+                    mysqlconn.Open()
+                    Dim query As String
+                    query = "update laboratory_case set claimed_by = '" + claimedby + "' where lab_case_no = '" & lab_case_no & "'"
+                    command = New MySqlCommand(query, mysqlconn)
+                    reader = command.ExecuteReader
+                    MessageBox.Show("Successful")
 
-                mysqlconn.Close()
-            Catch ex As MySqlException
-                MessageBox.Show(ex.Message)
-            Finally
-                mysqlconn.Dispose()
-            End Try
-            TextBox10.Text = ""
-            TextBox12.Text = ""
-            TextBox14.Text = ""
+                    TextBox6.Text = ""
+
+                    mysqlconn.Close()
+                Catch ex As MySqlException
+                    MessageBox.Show(ex.Message)
+                Finally
+                    mysqlconn.Dispose()
+                End Try
+
+
+            End If
         Else
             MessageBox.Show("First Select Laboratory Case")
+
+
         End If
+        TextBox10.Text = ""
+        TextBox12.Text = ""
+        TextBox14.Text = ""
 
 
     End Sub
@@ -570,7 +580,7 @@ Public Class Form3
         End Try
     End Sub
 
-    Private Sub TextBox15_TextChanged(sender As Object, e As EventArgs) Handles TextBox15.TextChanged
+    Private Sub TextBox15_TextChanged(sender As Object, e As EventArgs)
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Dim adapter As New MySqlDataAdapter
@@ -583,7 +593,7 @@ Public Class Form3
 
             Dim query As String
 
-            query = "select lab_case_no as ID,lab_case_no_id as CaseID,date_received as Date_Received,date_released as Date_Released,date_examined as Date_Examined,case_status as Case_Status,type as DFE from laboratory_case where lab_case_no_id like '" & TextBox15.Text & "%' "
+
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -621,6 +631,36 @@ Public Class Form3
             mysqlconn.Dispose()
         End Try
 
+
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
+        TextBox2.Text = ""
+        ComboBox13.Text = ""
+        TextBox7.Text = ""
+        ComboBox17.Text = ""
+        ComboBox15.Text = ""
+        ComboBox3.Text = ""
+    End Sub
+
+    Private Sub DataGridView3_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView3.CellContentClick
+
+    End Sub
+
+    Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
+
+    End Sub
+
+    Private Sub TabControl1_MouseClick(sender As Object, e As MouseEventArgs) Handles TabControl1.MouseClick
+
+
+    End Sub
+
+    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
         Try
             mysqlconn.Open()
 
@@ -689,20 +729,7 @@ Public Class Form3
 
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-    End Sub
-
-    Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
-        TextBox2.Text = ""
-        ComboBox13.Text = ""
-        TextBox7.Text = ""
-        ComboBox17.Text = ""
-        ComboBox15.Text = ""
-        ComboBox3.Text = ""
-    End Sub
-
-    Private Sub DataGridView3_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView3.CellContentClick
+    Private Sub TabControl1_Selected(sender As Object, e As TabControlEventArgs) Handles TabControl1.Selected
 
     End Sub
 End Class

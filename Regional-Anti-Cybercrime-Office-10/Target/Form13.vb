@@ -4,6 +4,8 @@ Public Class Form13
     Dim command As MySqlCommand
     Dim reader As MySqlDataReader
     Dim index As Integer
+    Dim investigator2 As String
+    Dim examiner2 As String
 
     Private Sub load_table()
         mysqlconn = New MySqlConnection
@@ -64,6 +66,74 @@ Public Class Form13
                 Form19.lab_case = pili
                 Form24.lab_case = pili
 
+
+
+                Try
+                    mysqlconn.Open()
+
+                    Dim query As String
+                    query = "select * from laboratory_case where lab_case_no = '" & pili & "'"
+                    command = New MySqlCommand(query, mysqlconn)
+                    reader = command.ExecuteReader
+
+                    While reader.Read
+                        examiner2 = reader.GetString("examiner")
+                        investigator2 = reader.GetString("investigator")
+                    End While
+
+                    mysqlconn.Close()
+                Catch ex As MySqlException
+                    MessageBox.Show(ex.Message)
+                Finally
+                    mysqlconn.Dispose()
+                End Try
+
+                Try
+                    mysqlconn.Open()
+
+                    Dim query As String
+                    query = "select fname,mname,sname from officer where officer_id = '" & examiner2 & "'"
+                    command = New MySqlCommand(query, mysqlconn)
+                    reader = command.ExecuteReader
+
+                    While reader.Read
+                        Dim f = reader.GetString("fname")
+                        Dim m = reader.GetString("mname")
+                        Dim s = reader.GetString("sname")
+                        Dim name_ni = f + " " + m + " " + s
+                        Form3.TextBox12.Text = name_ni
+                    End While
+
+                    mysqlconn.Close()
+                Catch ex As MySqlException
+                    MessageBox.Show(ex.Message)
+                Finally
+                    mysqlconn.Dispose()
+                End Try
+
+                Try
+                    mysqlconn.Open()
+
+                    Dim query As String
+                    query = "select fname,mname,sname from officer where officer_id = '" & investigator2 & "'"
+                    command = New MySqlCommand(query, mysqlconn)
+                    reader = command.ExecuteReader
+
+                    While reader.Read
+                        Dim f = reader.GetString("fname")
+                        Dim m = reader.GetString("mname")
+                        Dim s = reader.GetString("sname")
+                        Dim name_ni = f + " " + m + " " + s
+                        Form3.TextBox14.Text = name_ni
+                    End While
+
+                    mysqlconn.Close()
+                Catch ex As MySqlException
+                    MessageBox.Show(ex.Message)
+                Finally
+                    mysqlconn.Dispose()
+                End Try
+
                 Me.Hide()
 
             End If
@@ -100,6 +170,74 @@ Public Class Form13
                 Form19.lab_case = pili
                 Form24.lab_case = pili
                 MessageBox.Show("Successfully Selected " + name)
+
+                Try
+                    mysqlconn.Dispose()
+                    mysqlconn.Open()
+
+                    Dim query As String
+                    query = "select * from laboratory_case where lab_case_no = '" & pili & "'"
+                    command = New MySqlCommand(query, mysqlconn)
+                    reader = command.ExecuteReader
+
+                    While reader.Read
+                        examiner2 = reader.GetString("examiner")
+                        investigator2 = reader.GetString("investigator")
+                    End While
+
+                    mysqlconn.Close()
+                Catch ex As MySqlException
+                    MessageBox.Show(ex.Message)
+                Finally
+                    mysqlconn.Dispose()
+                End Try
+
+                Try
+                    mysqlconn.Open()
+
+                    Dim query As String
+                    query = "select fname,mname,sname from officer where officer_id = '" & examiner2 & "'"
+                    command = New MySqlCommand(query, mysqlconn)
+                    reader = command.ExecuteReader
+
+                    While reader.Read
+                        Dim f = reader.GetString("fname")
+                        Dim m = reader.GetString("mname")
+                        Dim s = reader.GetString("sname")
+                        Dim name_ni = f + " " + m + " " + s
+                        Form3.TextBox12.Text = name_ni
+                    End While
+
+                    mysqlconn.Close()
+                Catch ex As MySqlException
+                    MessageBox.Show(ex.Message)
+                Finally
+                    mysqlconn.Dispose()
+                End Try
+
+                Try
+                    mysqlconn.Open()
+
+                    Dim query As String
+                    query = "select fname,mname,sname from officer where officer_id = '" & investigator2 & "'"
+                    command = New MySqlCommand(query, mysqlconn)
+                    reader = command.ExecuteReader
+
+                    While reader.Read
+                        Dim f = reader.GetString("fname")
+                        Dim m = reader.GetString("mname")
+                        Dim s = reader.GetString("sname")
+                        Dim name_ni = f + " " + m + " " + s
+                        Form3.TextBox14.Text = name_ni
+                    End While
+
+                    mysqlconn.Close()
+                Catch ex As MySqlException
+                    MessageBox.Show(ex.Message)
+                Finally
+                    mysqlconn.Dispose()
+                End Try
+
                 Me.Hide()
             End If
             mysqlconn.Close()
