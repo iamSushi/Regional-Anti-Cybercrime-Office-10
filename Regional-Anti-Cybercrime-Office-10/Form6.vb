@@ -523,7 +523,12 @@ Public Class Form6
                 DateTimePicker1.Text = ""
                 rank.Text = ""
                 office.Text = ""
+                TextBox2.Text = ""
+                TextBox3.Text = ""
+                TextBox4.Text = ""
+                TextBox5.Text = ""
                 PictureBox2.Image = Nothing
+                PictureBox3.Image = Nothing
 
                 Me.ErrorProvider1.SetError(Me.fname, "")
                 Me.ErrorProvider1.SetError(Me.mname, "")

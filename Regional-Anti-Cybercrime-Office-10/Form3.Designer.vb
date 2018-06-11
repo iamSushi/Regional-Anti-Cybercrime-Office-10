@@ -56,7 +56,6 @@ Partial Class Form3
         Me.DateTimePicker6 = New System.Windows.Forms.DateTimePicker()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.DateTimePicker5 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
@@ -141,6 +140,7 @@ Partial Class Form3
         Me.Button27 = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ComboBox13 = New System.Windows.Forms.ComboBox()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -465,11 +465,11 @@ Partial Class Form3
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.ComboBox13)
         Me.TabPage2.Controls.Add(Me.DataGridView3)
         Me.TabPage2.Controls.Add(Me.DateTimePicker6)
         Me.TabPage2.Controls.Add(Me.Label33)
         Me.TabPage2.Controls.Add(Me.DateTimePicker5)
-        Me.TabPage2.Controls.Add(Me.TextBox9)
         Me.TabPage2.Controls.Add(Me.Label29)
         Me.TabPage2.Controls.Add(Me.Label32)
         Me.TabPage2.Controls.Add(Me.TextBox7)
@@ -499,6 +499,7 @@ Partial Class Form3
         'DataGridView3
         '
         Me.DataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.DataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -563,14 +564,6 @@ Partial Class Form3
         Me.DateTimePicker5.Size = New System.Drawing.Size(221, 31)
         Me.DateTimePicker5.TabIndex = 79
         Me.DateTimePicker5.Value = New Date(2018, 6, 6, 0, 0, 0, 0)
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox9.Location = New System.Drawing.Point(714, 40)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(220, 31)
-        Me.TextBox9.TabIndex = 101
         '
         'Label29
         '
@@ -885,7 +878,7 @@ Partial Class Form3
         '
         'DataGridView1
         '
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -1564,7 +1557,7 @@ Partial Class Form3
         '
         'DataGridView2
         '
-        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -1577,6 +1570,16 @@ Partial Class Form3
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
+        '
+        'ComboBox13
+        '
+        Me.ComboBox13.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox13.FormattingEnabled = True
+        Me.ComboBox13.Items.AddRange(New Object() {"Pending", "Released", "For released"})
+        Me.ComboBox13.Location = New System.Drawing.Point(714, 40)
+        Me.ComboBox13.Name = "ComboBox13"
+        Me.ComboBox13.Size = New System.Drawing.Size(220, 31)
+        Me.ComboBox13.TabIndex = 105
         '
         'Form3
         '
@@ -1696,7 +1699,6 @@ Partial Class Form3
     Friend WithEvents DateTimePicker6 As DateTimePicker
     Friend WithEvents Label33 As Label
     Friend WithEvents DateTimePicker5 As DateTimePicker
-    Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Label29 As Label
     Friend WithEvents Label32 As Label
     Friend WithEvents TextBox7 As TextBox
@@ -1725,4 +1727,5 @@ Partial Class Form3
     Friend WithEvents Label16 As Label
     Friend WithEvents Button19 As Button
     Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents ComboBox13 As ComboBox
 End Class
