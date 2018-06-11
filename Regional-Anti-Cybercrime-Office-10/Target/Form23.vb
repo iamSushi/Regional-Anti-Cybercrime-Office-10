@@ -78,7 +78,7 @@ Public Class Form23
 
             Dim query As String
 
-            query = "select agency_id as ID, agency_name as Name from agency where Agency_Name like '" & TextBox1.Text & "%' "
+            query = "select agency_id as ID, agency_name as Agency_Name from agency where Agency_Name like '" & TextBox1.Text & "%' "
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)

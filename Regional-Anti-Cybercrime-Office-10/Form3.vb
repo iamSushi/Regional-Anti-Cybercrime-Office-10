@@ -529,7 +529,9 @@ Public Class Form3
             Finally
                 mysqlconn.Dispose()
             End Try
-
+            TextBox10.Text = ""
+            TextBox12.Text = ""
+            TextBox14.Text = ""
         Else
             MessageBox.Show("First Select Laboratory Case")
         End If
