@@ -121,32 +121,11 @@ Public Class Form6
             Me.ErrorProvider1.SetError(Me.fname, "")
         End If
 
-        If String.IsNullOrEmpty(mname.Text) Then
-            Me.ErrorProvider1.SetError(Me.mname, "Input middlename")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.mname, "")
-        End If
-
         If String.IsNullOrEmpty(sname.Text) Then
             Me.ErrorProvider1.SetError(Me.sname, "Input surname")
             count += 1
         Else
             Me.ErrorProvider1.SetError(Me.sname, "")
-        End If
-
-        If String.IsNullOrEmpty(contact.Text) Then
-            Me.ErrorProvider1.SetError(Me.contact, "Input contact")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.contact, "")
-        End If
-
-        If String.IsNullOrEmpty(email.Text) Then
-            Me.ErrorProvider1.SetError(Me.email, "Input email")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.email, "")
         End If
 
         If String.IsNullOrEmpty(rank.Text) Then
@@ -334,18 +313,6 @@ Public Class Form6
 
         Try
             mysqlconn.Open()
-            Dim query As String
-            query = "select * from cybercrime.rank"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-
-            While reader.Read
-                Dim xrank = reader.GetString("rank")
-                rank.Items.Add(xrank)
-            End While
-
-            mysqlconn.Close()
-            mysqlconn.Open()
 
             Dim query2 As String
             query2 = "select * from cybercrime.agency"
@@ -367,7 +334,7 @@ Public Class Form6
 
             While reader.Read
                 Dim xxrank = reader.GetString("rank")
-                ComboBox1.Items.Add(xxrank)
+                rank.Items.Add(xxrank)
             End While
 
             mysqlconn.Close()
@@ -381,6 +348,19 @@ Public Class Form6
             While reader.Read
                 Dim xxpos = reader.GetString("name")
                 ComboBox2.Items.Add(xxpos)
+            End While
+            mysqlconn.Close()
+            mysqlconn.Open()
+
+
+            Dim query5 As String
+            query5 = "select * from cybercrime.rank"
+            command = New MySqlCommand(query5, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                Dim xrank = reader.GetString("rank")
+                ComboBox1.Items.Add(xrank)
             End While
 
             mysqlconn.Close()
@@ -405,7 +385,7 @@ Public Class Form6
 
             Dim query As String
 
-            query = "select fname as First, mname as Middle, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , office as Office, remark as Remark , date_created as Created from officer where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
+            query = "select fname as Firstname, mname as Middlename, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , office as Office, remark as Remark , date_created as DateCreated from officer where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -451,32 +431,11 @@ Public Class Form6
             Me.ErrorProvider1.SetError(Me.fname, "")
         End If
 
-        If String.IsNullOrEmpty(mname.Text) Then
-            Me.ErrorProvider1.SetError(Me.mname, "Input middlename")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.mname, "")
-        End If
-
         If String.IsNullOrEmpty(sname.Text) Then
             Me.ErrorProvider1.SetError(Me.sname, "Input surname")
             count += 1
         Else
             Me.ErrorProvider1.SetError(Me.sname, "")
-        End If
-
-        If String.IsNullOrEmpty(contact.Text) Then
-            Me.ErrorProvider1.SetError(Me.contact, "Input contact")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.contact, "")
-        End If
-
-        If String.IsNullOrEmpty(email.Text) Then
-            Me.ErrorProvider1.SetError(Me.email, "Input email")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.email, "")
         End If
 
         If String.IsNullOrEmpty(rank.Text) Then
@@ -611,5 +570,31 @@ Public Class Form6
         Me.Close()
     End Sub
 
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
 
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            query = "select fname as Firstname, mname as Middlename, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , office as Office, remark as Remark , date_created as DateCreated from officer where rank = '" & ComboBox1.Text & "'"
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+    End Sub
 End Class

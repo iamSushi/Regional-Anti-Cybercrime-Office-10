@@ -37,6 +37,7 @@ Partial Class Form16
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -47,7 +48,7 @@ Partial Class Form16
         Me.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button22.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button22.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button22.Location = New System.Drawing.Point(16, 164)
+        Me.Button22.Location = New System.Drawing.Point(18, 153)
         Me.Button22.Name = "Button22"
         Me.Button22.Size = New System.Drawing.Size(96, 30)
         Me.Button22.TabIndex = 48
@@ -57,7 +58,7 @@ Partial Class Form16
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(16, 37)
+        Me.TextBox2.Location = New System.Drawing.Point(18, 37)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(315, 31)
         Me.TextBox2.TabIndex = 45
@@ -68,7 +69,7 @@ Partial Class Form16
         Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Image = CType(resources.GetObject("Label5.Image"), System.Drawing.Image)
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(12, 9)
+        Me.Label5.Location = New System.Drawing.Point(14, 9)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(72, 23)
         Me.Label5.TabIndex = 44
@@ -78,7 +79,7 @@ Partial Class Form16
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(16, 110)
+        Me.TextBox1.Location = New System.Drawing.Point(18, 110)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(107, 31)
         Me.TextBox1.TabIndex = 51
@@ -89,7 +90,7 @@ Partial Class Form16
         Me.Label1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Image = CType(resources.GetObject("Label1.Image"), System.Drawing.Image)
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label1.Location = New System.Drawing.Point(12, 82)
+        Me.Label1.Location = New System.Drawing.Point(14, 82)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(134, 23)
         Me.Label1.TabIndex = 50
@@ -112,7 +113,7 @@ Partial Class Form16
         Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button25.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button25.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button25.Location = New System.Drawing.Point(588, 35)
+        Me.Button25.Location = New System.Drawing.Point(608, 35)
         Me.Button25.Name = "Button25"
         Me.Button25.Size = New System.Drawing.Size(79, 30)
         Me.Button25.TabIndex = 59
@@ -126,7 +127,7 @@ Partial Class Form16
         Me.Button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button35.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button35.Image = CType(resources.GetObject("Button35.Image"), System.Drawing.Image)
-        Me.Button35.Location = New System.Drawing.Point(536, 35)
+        Me.Button35.Location = New System.Drawing.Point(556, 35)
         Me.Button35.Name = "Button35"
         Me.Button35.Size = New System.Drawing.Size(35, 31)
         Me.Button35.TabIndex = 16
@@ -136,7 +137,7 @@ Partial Class Form16
         '
         Me.TextBox3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox3.Location = New System.Drawing.Point(361, 35)
+        Me.TextBox3.Location = New System.Drawing.Point(381, 35)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(175, 31)
         Me.TextBox3.TabIndex = 15
@@ -148,7 +149,7 @@ Partial Class Form16
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label2.Location = New System.Drawing.Point(357, 9)
+        Me.Label2.Location = New System.Drawing.Point(377, 9)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 23)
         Me.Label2.TabIndex = 14
@@ -176,7 +177,7 @@ Partial Class Form16
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView1.Location = New System.Drawing.Point(361, 92)
+        Me.DataGridView1.Location = New System.Drawing.Point(360, 82)
         Me.DataGridView1.Name = "DataGridView1"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
@@ -186,15 +187,24 @@ Partial Class Form16
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridView1.Size = New System.Drawing.Size(436, 183)
+        Me.DataGridView1.Size = New System.Drawing.Size(401, 156)
         Me.DataGridView1.TabIndex = 0
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Panel1.Location = New System.Drawing.Point(350, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(10, 238)
+        Me.Panel1.TabIndex = 82
         '
         'Form16
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(812, 290)
+        Me.ClientSize = New System.Drawing.Size(761, 235)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button25)
         Me.Controls.Add(Me.id)
         Me.Controls.Add(Me.Button35)
@@ -225,4 +235,5 @@ Partial Class Form16
     Friend WithEvents Label2 As Label
     Friend WithEvents Button25 As Button
     Friend WithEvents id As TextBox
+    Friend WithEvents Panel1 As Panel
 End Class

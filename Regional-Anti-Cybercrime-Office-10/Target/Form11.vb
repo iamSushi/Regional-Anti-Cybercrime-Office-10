@@ -35,7 +35,7 @@ Public Class Form11
 
                 Dim query As String
 
-                query = "insert into law values(null,'" & designation.Text & "','" & DateTimePicker1.Text & "','" & description.Text & "','null')"
+                query = "insert into law values(null,'" & designation.Text & "','" & description.Text & "','null')"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
                 MessageBox.Show("Successfullu added Law")
@@ -64,7 +64,7 @@ Public Class Form11
 
             Dim query As String
 
-            query = "select law_id as ID, designation as Designation, date_passed as DatePassed, description as Description from law"
+            query = "select law_id as ID, designation as Designation, description as Description from law"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)

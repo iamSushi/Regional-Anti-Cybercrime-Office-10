@@ -83,32 +83,11 @@ Public Class Form5
             Me.ErrorProvider1.SetError(Me.fname, "")
         End If
 
-        If String.IsNullOrEmpty(mname.Text) Then
-            Me.ErrorProvider1.SetError(Me.mname, "Input middlename")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.mname, "")
-        End If
-
         If String.IsNullOrEmpty(sname.Text) Then
             Me.ErrorProvider1.SetError(Me.sname, "Input surname")
             count += 1
         Else
             Me.ErrorProvider1.SetError(Me.sname, "")
-        End If
-
-        If String.IsNullOrEmpty(contact.Text) Then
-            Me.ErrorProvider1.SetError(Me.contact, "Input contact")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.contact, "")
-        End If
-
-        If String.IsNullOrEmpty(email.Text) Then
-            Me.ErrorProvider1.SetError(Me.email, "Input email")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.email, "")
         End If
 
         If String.IsNullOrEmpty(category.Text) Then
@@ -190,7 +169,7 @@ Public Class Form5
 
             Dim query As String
 
-            query = "select person_id as ID,fname as Firstname, mname as Middlename, sname as Surname, dob as Birthdate, gender as Gender, status as Status, contact as ContactNo, email as EmailAddress, category as Category, date_created as DateCreated from persons"
+            query = "select person_id as ID,fname as Firstname, mname as Middlename, nname as Nickname, sname as Surname, dob as Birthdate, gender as Gender, status as Status, contact as ContactNo, email as EmailAddress, category as Category, date_created as DateCreated from persons"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -366,7 +345,7 @@ Public Class Form5
 
             Dim query As String
 
-            query = "select fname as First, mname as Middle, sname as Surname, dob as Birthday, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as Created from persons where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
+            query = "select fname as Firstname, mname as Middlename, sname as Surname, nname as Nickname, dob as Birthday, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as DateCreated FROM persons WHERE fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -394,8 +373,7 @@ Public Class Form5
             mysqlconn.Open()
 
             Dim query As String
-
-            query = "select * from persons where category = '" & ComboBox2.Text & "'"
+            query = "select fname as Firstname, mname as Middlename, sname as Surname, nname as Nickname, dob as Birthday, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as DateCreated FROM persons WHERE category = '" & ComboBox2.Text & "'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -466,32 +444,11 @@ Public Class Form5
             Me.ErrorProvider1.SetError(Me.fname, "")
         End If
 
-        If String.IsNullOrEmpty(mname.Text) Then
-            Me.ErrorProvider1.SetError(Me.mname, "Input middlename")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.mname, "")
-        End If
-
         If String.IsNullOrEmpty(sname.Text) Then
             Me.ErrorProvider1.SetError(Me.sname, "Input surname")
             count += 1
         Else
             Me.ErrorProvider1.SetError(Me.sname, "")
-        End If
-
-        If String.IsNullOrEmpty(contact.Text) Then
-            Me.ErrorProvider1.SetError(Me.contact, "Input contact")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.contact, "")
-        End If
-
-        If String.IsNullOrEmpty(email.Text) Then
-            Me.ErrorProvider1.SetError(Me.email, "Input email")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.email, "")
         End If
 
         If String.IsNullOrEmpty(category.Text) Then
@@ -593,9 +550,5 @@ Public Class Form5
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Form2.Show()
         Me.Close()
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
     End Sub
 End Class

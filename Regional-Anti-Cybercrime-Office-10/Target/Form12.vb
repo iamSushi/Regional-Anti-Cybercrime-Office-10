@@ -64,7 +64,7 @@ Public Class Form12
         load_table()
     End Sub
 
-    Private Sub DataGridView1_Click(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         index = e.RowIndex
         Dim selectedRow As DataGridViewRow
         selectedRow = DataGridView1.Rows(index)
