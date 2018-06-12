@@ -239,12 +239,6 @@
     <Compile Include="Target\Form8.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Target\Form9.Designer.vb">
-      <DependentUpon>Form9.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Target\Form9.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Usercontrol\UserControl1.Designer.vb">
       <DependentUpon>UserControl1.vb</DependentUpon>
     </Compile>
@@ -330,9 +324,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Target\Form8.resx">
       <DependentUpon>Form8.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Target\Form9.resx">
-      <DependentUpon>Form9.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usercontrol\UserControl1.resx">
       <DependentUpon>UserControl1.vb</DependentUpon>

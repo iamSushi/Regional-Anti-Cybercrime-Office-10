@@ -64,7 +64,7 @@ Public Class Form5
 
     Private Sub Button22_Click(sender As Object, e As EventArgs) Handles Button22.Click
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
         Dim filesize As UInt32
         Dim mstream As New System.IO.MemoryStream
@@ -83,32 +83,11 @@ Public Class Form5
             Me.ErrorProvider1.SetError(Me.fname, "")
         End If
 
-        If String.IsNullOrEmpty(mname.Text) Then
-            Me.ErrorProvider1.SetError(Me.mname, "Input middlename")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.mname, "")
-        End If
-
         If String.IsNullOrEmpty(sname.Text) Then
             Me.ErrorProvider1.SetError(Me.sname, "Input surname")
             count += 1
         Else
             Me.ErrorProvider1.SetError(Me.sname, "")
-        End If
-
-        If String.IsNullOrEmpty(contact.Text) Then
-            Me.ErrorProvider1.SetError(Me.contact, "Input contact")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.contact, "")
-        End If
-
-        If String.IsNullOrEmpty(email.Text) Then
-            Me.ErrorProvider1.SetError(Me.email, "Input email")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.email, "")
         End If
 
         If String.IsNullOrEmpty(category.Text) Then
@@ -167,7 +146,7 @@ Public Class Form5
                 mysqlconn.Close()
 
             Catch ex As MySqlException
-                MessageBox.Show(ex.Message)
+                MessageBox.Show("Invalid user action" + ex.Message, "", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -180,7 +159,7 @@ Public Class Form5
 
     Private Sub load_table()
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Dim adapter As New MySqlDataAdapter
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
@@ -190,7 +169,7 @@ Public Class Form5
 
             Dim query As String
 
-            query = "select person_id as ID,fname as Firstname, mname as Middlename, sname as Surname, dob as Birthdate, gender as Gender, status as Status, contact as ContactNo, email as EmailAddress, category as Category, date_created as DateCreated from persons"
+            query = "select person_id as ID,fname as Firstname, mname as Middlename, nname as Nickname, sname as Surname, dob as Birthdate, gender as Gender, status as Status, contact as ContactNo, email as EmailAddress, category as Category, date_created as DateCreated from persons"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -213,7 +192,7 @@ Public Class Form5
 
     Private Sub profile_image()
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Try
             mysqlconn.Open()
             Dim query As String
@@ -242,7 +221,7 @@ Public Class Form5
 
     Private Sub profile_image2()
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Try
             mysqlconn.Open()
             Dim query As String
@@ -271,7 +250,7 @@ Public Class Form5
 
     Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Dim adapter As New MySqlDataAdapter
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
@@ -303,7 +282,7 @@ Public Class Form5
         dialog = MessageBox.Show("Do you really want to exit?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If dialog = DialogResult.Yes Then
             mysqlconn = New MySqlConnection
-            mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+            mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
             Try
                 mysqlconn.Open()
                 Dim query2 As String
@@ -327,7 +306,7 @@ Public Class Form5
 
     Private Sub Button23_Click(sender As Object, e As EventArgs) Handles Button23.Click
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Dim adapter As New MySqlDataAdapter
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
@@ -356,7 +335,7 @@ Public Class Form5
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Dim adapter As New MySqlDataAdapter
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
@@ -366,7 +345,7 @@ Public Class Form5
 
             Dim query As String
 
-            query = "select fname as First, mname as Middle, sname as Surname, dob as Birthday, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as Created from persons where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
+            query = "select fname as Firstname, mname as Middlename, sname as Surname, nname as Nickname, dob as Birthday, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as DateCreated FROM persons WHERE fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -385,7 +364,7 @@ Public Class Form5
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Dim adapter As New MySqlDataAdapter
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
@@ -394,8 +373,7 @@ Public Class Form5
             mysqlconn.Open()
 
             Dim query As String
-
-            query = "select * from persons where category = '" & ComboBox2.Text & "'"
+            query = "select fname as Firstname, mname as Middlename, sname as Surname, nname as Nickname, dob as Birthday, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as DateCreated FROM persons WHERE category = '" & ComboBox2.Text & "'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -430,7 +408,7 @@ Public Class Form5
         fname.Text = selectedRow.Cells(1).Value.ToString()
         mname.Text = selectedRow.Cells(2).Value.ToString()
         sname.Text = selectedRow.Cells(3).Value.ToString()
-        DateTimePicker1.Value = selectedRow.Cells(4).Value.ToString()
+        DateTimePicker1.Value = selectedRow.Cells(5).ToString()
         contact.Text = selectedRow.Cells(7).Value.ToString()
         email.Text = selectedRow.Cells(8).Value.ToString()
         category.Text = selectedRow.Cells(9).Value.ToString()
@@ -447,7 +425,7 @@ Public Class Form5
 
     Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
         Dim filesize As UInt32
         Dim mstream As New System.IO.MemoryStream
@@ -466,32 +444,11 @@ Public Class Form5
             Me.ErrorProvider1.SetError(Me.fname, "")
         End If
 
-        If String.IsNullOrEmpty(mname.Text) Then
-            Me.ErrorProvider1.SetError(Me.mname, "Input middlename")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.mname, "")
-        End If
-
         If String.IsNullOrEmpty(sname.Text) Then
             Me.ErrorProvider1.SetError(Me.sname, "Input surname")
             count += 1
         Else
             Me.ErrorProvider1.SetError(Me.sname, "")
-        End If
-
-        If String.IsNullOrEmpty(contact.Text) Then
-            Me.ErrorProvider1.SetError(Me.contact, "Input contact")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.contact, "")
-        End If
-
-        If String.IsNullOrEmpty(email.Text) Then
-            Me.ErrorProvider1.SetError(Me.email, "Input email")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.email, "")
         End If
 
         If String.IsNullOrEmpty(category.Text) Then
@@ -551,7 +508,7 @@ Public Class Form5
                 mysqlconn.Close()
 
             Catch ex As MySqlException
-                MessageBox.Show(ex.Message)
+                MessageBox.Show("Invalid user action", "", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -561,7 +518,7 @@ Public Class Form5
 
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
         Dim dialog As DialogResult
         dialog = MessageBox.Show("Do you really want to delete?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -593,9 +550,5 @@ Public Class Form5
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Form2.Show()
         Me.Close()
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
     End Sub
 End Class

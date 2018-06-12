@@ -77,7 +77,7 @@ Public Class Form3
         dialog = MessageBox.Show("Do you really want to exit?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If dialog = DialogResult.Yes Then
             mysqlconn = New MySqlConnection
-            mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+            mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
             Try
                 mysqlconn.Open()
                 Dim query2 As String
@@ -103,10 +103,6 @@ Public Class Form3
         Form8.Show()
     End Sub
 
-    Private Sub Button36_Click(sender As Object, e As EventArgs)
-        Form9.Show()
-    End Sub
-
     Private Sub Button28_Click(sender As Object, e As EventArgs)
         Form8.Show()
     End Sub
@@ -117,7 +113,7 @@ Public Class Form3
 
     Private Sub Button31_Click(sender As Object, e As EventArgs)
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
         Try
             mysqlconn.Open()
@@ -145,7 +141,7 @@ Public Class Form3
     End Sub
     Private Sub load_table()
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Dim adapter As New MySqlDataAdapter
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
@@ -175,9 +171,7 @@ Public Class Form3
         load_table()
         load_table2()
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Dim adapter As New MySqlDataAdapter
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
@@ -299,10 +293,10 @@ Public Class Form3
         Dim investigator As String = DirectCast(ComboBox17.SelectedItem, KeyValuePair(Of String, String)).Key
         Dim examiner As String = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
 
-        If investigator > 0 Then
-            Me.ErrorProvider1.SetError(Me.ComboBox17, "")
+        If examiner > 0 Then
+            Me.ErrorProvider1.SetError(Me.ComboBox15, "")
         Else
-            Me.ErrorProvider1.SetError(Me.ComboBox17, "Select Examiner")
+            Me.ErrorProvider1.SetError(Me.ComboBox15, "Select Examiner")
             count += 1
         End If
         If String.IsNullOrEmpty(TextBox2.Text) Then
@@ -336,7 +330,7 @@ Public Class Form3
 
         Else
             mysqlconn = New MySqlConnection
-            mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+            mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
             count = 0
 
@@ -388,7 +382,7 @@ Public Class Form3
 
     Private Sub Button38_Click(sender As Object, e As EventArgs) Handles Button38.Click
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
         If lab_case > 0 Then
             Try
                 mysqlconn.Open()
@@ -488,7 +482,7 @@ Public Class Form3
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
         If lab_case_no > 0 Then
 
@@ -545,7 +539,7 @@ Public Class Form3
 
     Private Sub load_table2()
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Dim adapter As New MySqlDataAdapter
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
@@ -574,39 +568,9 @@ Public Class Form3
         End Try
     End Sub
 
-    Private Sub TextBox15_TextChanged(sender As Object, e As EventArgs)
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
-        Dim adapter As New MySqlDataAdapter
-        Dim dbDataSet As New DataTable
-        Dim soure As New BindingSource
-
-
-        Try
-            mysqlconn.Open()
-
-            Dim query As String
-
-
-
-            command = New MySqlCommand(query, mysqlconn)
-            adapter.SelectCommand = command
-            adapter.Fill(dbDataSet)
-            soure.DataSource = dbDataSet
-            DataGridView2.DataSource = soure
-            adapter.Update(dbDataSet)
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
-    End Sub
-
     Private Sub DataGridView2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellClick
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
         Try
             mysqlconn.Open()
 

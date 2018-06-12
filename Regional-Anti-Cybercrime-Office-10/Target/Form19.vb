@@ -9,6 +9,8 @@ Public Class Form19
     Public Property lab_case As String
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Try
             mysqlconn.Open()
 
@@ -23,7 +25,7 @@ Public Class Form19
                 reader2 = command2.ExecuteReader
 
                 While reader2.Read
-                    X = X + 1
+                    x = x + 1
                 End While
                 mysqlconn.Dispose()
                 mysqlconn.Open()
@@ -55,7 +57,7 @@ Public Class Form19
 
     Private Sub load_table()
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Dim adapter As New MySqlDataAdapter
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
@@ -65,7 +67,7 @@ Public Class Form19
 
             Dim query As String
 
-            query = "select law_id as ID , designation as Name, date_passed as Date_Passed, description as Description from law"
+            query = "select law_id as ID , designation as Name,description as Description from law"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -85,7 +87,7 @@ Public Class Form19
 
     Private Sub load_table2()
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
         Dim adapter2 As New MySqlDataAdapter
         Dim dbDataSet2 As New DataTable
         Dim soure2 As New BindingSource
@@ -112,7 +114,7 @@ Public Class Form19
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Dim adapter As New MySqlDataAdapter
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
@@ -122,7 +124,7 @@ Public Class Form19
 
             Dim query As String
 
-            query = "select law_id as ID , designation as Name, date_passed as Date_Passed, description as Description from law where designation like '" & TextBox1.Text & "%' "
+            query = "select law_id as ID , designation as Name,description as Description from law where designation like '" & TextBox1.Text & "%' "
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -144,7 +146,7 @@ Public Class Form19
         load_table2()
 
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
         Try
             mysqlconn.Open()
@@ -174,7 +176,7 @@ Public Class Form19
 
     Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
         Try
             mysqlconn.Open()
@@ -230,33 +232,8 @@ Public Class Form19
         load_table2()
     End Sub
 
-    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
-        Dim adapter As New MySqlDataAdapter
-        Dim dbDataSet As New DataTable
-        Dim soure As New BindingSource
+    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs)
 
-        Try
-            mysqlconn.Open()
-
-            Dim query As String
-
-            query = "select law_id as ID , designation as Name, date_passed as Date_Passed, description as Description from law where date_passed like '" & DateTimePicker2.Value & "%' "
-
-            command = New MySqlCommand(query, mysqlconn)
-            adapter.SelectCommand = command
-            adapter.Fill(dbDataSet)
-            soure.DataSource = dbDataSet
-            DataGridView1.DataSource = soure
-            adapter.Update(dbDataSet)
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick

@@ -8,7 +8,7 @@ Public Class Form11
 
     Private Sub Button22_Click(sender As Object, e As EventArgs) Handles Button22.Click
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
         Dim count As Int16
         count = 0
@@ -35,7 +35,7 @@ Public Class Form11
 
                 Dim query As String
 
-                query = "insert into law values(null,'" & designation.Text & "','" & DateTimePicker1.Text & "','" & description.Text & "','null')"
+                query = "insert into law values(null,'" & designation.Text & "','" & description.Text & "','null')"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
                 MessageBox.Show("Successfullu added Law")
@@ -54,7 +54,7 @@ Public Class Form11
 
     Private Sub load_table()
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Dim adapter As New MySqlDataAdapter
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
@@ -64,7 +64,7 @@ Public Class Form11
 
             Dim query As String
 
-            query = "select law_id as ID, designation as Designation, date_passed as DatePassed, description as Description from law"
+            query = "select law_id as ID, designation as Designation, description as Description from law"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -84,7 +84,7 @@ Public Class Form11
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Dim adapter As New MySqlDataAdapter
         Dim dbDataSet As New DataTable
         Dim soure As New BindingSource
@@ -124,7 +124,7 @@ Public Class Form11
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
 
         Try
             Dim query As String
