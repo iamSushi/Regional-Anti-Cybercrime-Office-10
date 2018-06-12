@@ -88,7 +88,7 @@ Public Class Form18
             mysqlconn.Open()
 
             Dim query As String
-            query = "select persons.person_id as ID, persons.fname as Firstname, persons.mname as Middlename, persons.sname as Surname, suspect.date_created as Date from suspect inner join persons on suspect.person_id = persons.person_id where lab_case_no = '" & lab_case & "' Order by Date"
+            query = "select persons.person_id as ID, persons.fname as Firstname, persons.mname as Middlename, persons.sname as Surname, suspect.date_created as Date from suspect inner join persons on suspect.person_id = persons.person_id where lab_case_no = '" & lab_case & "' Order by Date desc"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
 
@@ -160,7 +160,7 @@ Public Class Form18
             mysqlconn.Open()
 
             Dim query As String
-            query = "select persons.person_id as ID, persons.fname as Firstname, persons.mname as Middlename, persons.sname as Surname, suspect.date_created as Date from suspect inner join persons on suspect.person_id = persons.person_id where lab_case_no = '" & lab_case & "' Order by Date"
+            query = "select persons.person_id as ID, persons.fname as Firstname, persons.mname as Middlename, persons.sname as Surname, suspect.date_created as Date from suspect inner join persons on suspect.person_id = persons.person_id where lab_case_no = '" & lab_case & "' Order by Date desc"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
 

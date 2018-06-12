@@ -34,7 +34,6 @@ Partial Class Form26
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox18 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
@@ -55,7 +54,6 @@ Partial Class Form26
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.ComboBox14 = New System.Windows.Forms.ComboBox()
@@ -90,6 +88,8 @@ Partial Class Form26
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.ComboBox15 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox16 = New System.Windows.Forms.ComboBox()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -125,13 +125,13 @@ Partial Class Form26
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.GroupBox1.Controls.Add(Me.ComboBox15)
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker4)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker3)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker2)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.TextBox18)
-        Me.GroupBox1.Controls.Add(Me.TextBox13)
         Me.GroupBox1.Controls.Add(Me.TextBox12)
         Me.GroupBox1.Controls.Add(Me.TextBox11)
         Me.GroupBox1.Controls.Add(Me.TextBox9)
@@ -203,14 +203,6 @@ Partial Class Form26
         Me.TextBox18.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.TextBox18.Size = New System.Drawing.Size(292, 83)
         Me.TextBox18.TabIndex = 130
-        '
-        'TextBox13
-        '
-        Me.TextBox13.Location = New System.Drawing.Point(172, 387)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox13.Size = New System.Drawing.Size(326, 31)
-        Me.TextBox13.TabIndex = 125
         '
         'TextBox12
         '
@@ -429,7 +421,7 @@ Partial Class Form26
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.TextBox1)
+        Me.TabPage1.Controls.Add(Me.ComboBox16)
         Me.TabPage1.Controls.Add(Me.Label22)
         Me.TabPage1.Controls.Add(Me.Label20)
         Me.TabPage1.Controls.Add(Me.ComboBox14)
@@ -467,14 +459,6 @@ Partial Class Form26
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Case"
         Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(623, 627)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(224, 31)
-        Me.TextBox1.TabIndex = 125
         '
         'Label22
         '
@@ -833,6 +817,22 @@ Partial Class Form26
         Me.TabControl1.Size = New System.Drawing.Size(909, 695)
         Me.TabControl1.TabIndex = 111
         '
+        'ComboBox15
+        '
+        Me.ComboBox15.FormattingEnabled = True
+        Me.ComboBox15.Location = New System.Drawing.Point(172, 390)
+        Me.ComboBox15.Name = "ComboBox15"
+        Me.ComboBox15.Size = New System.Drawing.Size(326, 31)
+        Me.ComboBox15.TabIndex = 136
+        '
+        'ComboBox16
+        '
+        Me.ComboBox16.FormattingEnabled = True
+        Me.ComboBox16.Location = New System.Drawing.Point(623, 627)
+        Me.ComboBox16.Name = "ComboBox16"
+        Me.ComboBox16.Size = New System.Drawing.Size(257, 21)
+        Me.ComboBox16.TabIndex = 136
+        '
         'Form26
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -863,7 +863,6 @@ Partial Class Form26
     Friend WithEvents Button29 As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TextBox18 As TextBox
-    Friend WithEvents TextBox13 As TextBox
     Friend WithEvents TextBox12 As TextBox
     Friend WithEvents TextBox11 As TextBox
     Friend WithEvents TextBox9 As TextBox
@@ -923,6 +922,7 @@ Partial Class Form26
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label21 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label22 As Label
+    Friend WithEvents ComboBox16 As ComboBox
+    Friend WithEvents ComboBox15 As ComboBox
 End Class

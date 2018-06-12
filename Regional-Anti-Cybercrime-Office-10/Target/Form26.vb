@@ -41,6 +41,12 @@ Public Class Form26
         ComboBox1.Items.Add("Audio Visual")
         ComboBox1.Items.Add("Intel")
 
+        ComboBox16.Items.Add("Stored")
+        ComboBox16.Items.Add("Withdrawn")
+
+        ComboBox15.Items.Add("Pending")
+        ComboBox15.Items.Add("For Released")
+        ComboBox15.Items.Add("Released")
 
         Try
             mysqlconn.Open()
@@ -60,7 +66,7 @@ Public Class Form26
                 agency = reader.GetString("requesting_agency")
                 claimed_by = reader.GetString("claimed_by")
                 received_by = reader.GetString("released_by")
-                TextBox13.Text = reader.GetString("case_status")
+                ComboBox15.Text = reader.GetString("case_status")
                 DateTimePicker1.Value = reader.GetString("date_received")
                 DateTimePicker3.Value = reader.GetString("date_released")
                 DateTimePicker4.Value = reader.GetString("date_examined")
@@ -106,7 +112,7 @@ Public Class Form26
                 ComboBox12.Text = reader.GetString("hard_disk_drive")
                 ComboBox13.Text = reader.GetString("dc")
                 ComboBox14.Text = reader.GetString("dvr")
-                TextBox1.Text = reader.GetString("status")
+                ComboBox16.Text = reader.GetString("status")
             End While
 
             mysqlconn.Close()
@@ -350,7 +356,7 @@ Public Class Form26
 
             Dim query As String
 
-            query = "update laboratory_case set type = '" & ComboBox1.Text & "', case_status = '" & TextBox13.Text & "', date_received = '" & DateTimePicker1.Value & "', date_informed = '" & DateTimePicker2.Value & "', date_released = '" & DateTimePicker3.Value & "', date_examined = '" & DateTimePicker4.Value & "' where lab_case_no = '" & lab_case & "'"
+            query = "update laboratory_case set type = '" & ComboBox1.Text & "', case_status = '" & ComboBox15.Text & "', date_received = '" & DateTimePicker1.Value & "', date_informed = '" & DateTimePicker2.Value & "', date_released = '" & DateTimePicker3.Value & "', date_examined = '" & DateTimePicker4.Value & "' where lab_case_no = '" & lab_case & "'"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
 
@@ -410,7 +416,7 @@ Public Class Form26
 
             Dim query As String
 
-            query = "update evidence set sim = '" & ComboBox2.Text & "',tablet = '" & ComboBox3.Text & "', loptop = '" & ComboBox4.Text & "', desktop = '" & ComboBox5.Text & "', cellphone = '" & ComboBox6.Text & "',flash_drive = '" & ComboBox7.Text & "', optical_drive = '" & ComboBox8.Text & "', secure_digital = '" & ComboBox9.Text & "', external_drive = '" & ComboBox10.Text & "', video_recorder = '" & ComboBox11.Text & "', hard_disk_drive = '" & ComboBox12.Text & "', dc = '" & ComboBox13.Text & "', dvr = '" & ComboBox14.Text & "', status = '" & TextBox1.Text & "'  where lab_case_no = '" & lab_case & "'"
+            query = "update evidence set sim = '" & ComboBox2.Text & "',tablet = '" & ComboBox3.Text & "', loptop = '" & ComboBox4.Text & "', desktop = '" & ComboBox5.Text & "', cellphone = '" & ComboBox6.Text & "',flash_drive = '" & ComboBox7.Text & "', optical_drive = '" & ComboBox8.Text & "', secure_digital = '" & ComboBox9.Text & "', external_drive = '" & ComboBox10.Text & "', video_recorder = '" & ComboBox11.Text & "', hard_disk_drive = '" & ComboBox12.Text & "', dc = '" & ComboBox13.Text & "', dvr = '" & ComboBox14.Text & "', status = '" & ComboBox16.Text & "'  where lab_case_no = '" & lab_case & "'"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successfully Updated")

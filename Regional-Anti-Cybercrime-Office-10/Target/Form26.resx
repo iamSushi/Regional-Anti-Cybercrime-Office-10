@@ -121,6 +121,14 @@
     <value>277, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label22.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAJBJREFUOE+N
+        zUsKg0AQhOE5RpbmBgEvoCQBN0KydmNukptmlccZRNAqGEPbzAz1w4fQWhhiFSwZE5wh2zbuoXY+8IMr
+        JNvGfPpewHdfuPHgU8b0hjvsUsc0wwH+lca25Hf+eDTsX6Tx0xh5iEnjNoFJY/7NY9L4YXQ8xKRxY5x4
+        iEnjXMXxAJcCvs+OVfg+hBV1AUdI70mkuQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="Label27.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAVhJREFUOE/t
@@ -279,12 +287,4 @@
   <metadata name="ErrorProvider2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>407, 17</value>
   </metadata>
-  <data name="Label22.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAJBJREFUOE+N
-        zUsKg0AQhOE5RpbmBgEvoCQBN0KydmNukptmlccZRNAqGEPbzAz1w4fQWhhiFSwZE5wh2zbuoXY+8IMr
-        JNvGfPpewHdfuPHgU8b0hjvsUsc0wwH+lca25Hf+eDTsX6Tx0xh5iEnjNoFJY/7NY9L4YXQ8xKRxY5x4
-        iEnjXMXxAJcCvs+OVfg+hBV1AUdI70mkuQAAAABJRU5ErkJggg==
-</value>
-  </data>
 </root>

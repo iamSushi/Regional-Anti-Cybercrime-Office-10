@@ -8,52 +8,6 @@ Public Class Form19
     Dim reader2 As MySqlDataReader
     Public Property lab_case As String
 
-    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
-        Try
-            mysqlconn.Open()
-
-            If e.RowIndex >= 0 Then
-                Dim row As DataGridViewRow
-                Dim x As Int16
-                row = Me.DataGridView1.Rows(e.RowIndex)
-                Dim pili = row.Cells("ID").Value.ToString
-                Dim query2 As String
-                query2 = "select * from case_nature where nature_of_case = '" & pili & "' and lab_case_no = '" & lab_case & "'"
-                command2 = New MySqlCommand(query2, mysqlconn)
-                reader2 = command2.ExecuteReader
-
-                While reader2.Read
-                    x = x + 1
-                End While
-                mysqlconn.Dispose()
-                mysqlconn.Open()
-                If x > 0 Then
-                    load_table2()
-                Else
-                    Dim query As String
-
-                    query = "insert into case_nature values('" & lab_case & "','" & pili & "',null)"
-                    command = New MySqlCommand(query, mysqlconn)
-                    reader = command.ExecuteReader
-                    MessageBox.Show("Successful")
-
-                End If
-
-
-
-            End If
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
-
-
-        load_table2()
-    End Sub
 
     Private Sub load_table()
         mysqlconn = New MySqlConnection
@@ -277,6 +231,94 @@ Public Class Form19
             mysqlconn.Dispose()
         End Try
 
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            query = "select law_id as ID, designation as Designation, description as Description, case_nature.date_created as Date from case_nature inner join law on case_nature.nature_of_case = law.law_id where case_nature.lab_case_no = '" & lab_case & "' Order by Date desc"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                Dim f = reader.GetString("Firstname")
+                Dim m = reader.GetString("Middlename")
+                Dim s = reader.GetString("Surname")
+                Dim nameni = f + " " + m + " " + s
+                Form3.TextBox8.Text = nameni
+            End While
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        load_table2()
+    End Sub
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        Try
+            mysqlconn.Open()
+
+            If e.RowIndex >= 0 Then
+                Dim row As DataGridViewRow
+                Dim x As Int16
+                row = Me.DataGridView1.Rows(e.RowIndex)
+                Dim pili = row.Cells("ID").Value.ToString
+                Dim query2 As String
+                query2 = "select * from case_nature where nature_of_case = '" & pili & "' and lab_case_no = '" & lab_case & "'"
+                command2 = New MySqlCommand(query2, mysqlconn)
+                reader2 = command2.ExecuteReader
+
+                While reader2.Read
+                    x = x + 1
+                End While
+                mysqlconn.Dispose()
+                mysqlconn.Open()
+                If x > 0 Then
+                    load_table2()
+                Else
+                    Dim query As String
+
+                    query = "insert into case_nature values('" & lab_case & "','" & pili & "',null)"
+                    command = New MySqlCommand(query, mysqlconn)
+                    reader = command.ExecuteReader
+                    MessageBox.Show("Successful")
+
+                End If
+
+
+
+            End If
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            query = "select law_id as ID, designation as Designation, description as Description, case_nature.date_created as Date from case_nature inner join law on case_nature.nature_of_case = law.law_id where case_nature.lab_case_no = '" & lab_case & "' Order by Date desc"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                Dim f = reader.GetString("Designation")
+
+
+                Form3.TextBox8.Text = f
+            End While
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
 
         load_table2()
     End Sub
