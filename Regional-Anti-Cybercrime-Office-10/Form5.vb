@@ -132,13 +132,12 @@ Public Class Form5
                 email.Text = ""
                 status.Text = ""
                 category.Text = ""
+                TextBox6.Text = ""
+                TextBox7.Text = ""
                 PictureBox2.Image = Nothing
 
                 Me.ErrorProvider1.SetError(Me.fname, "")
-                Me.ErrorProvider1.SetError(Me.mname, "")
                 Me.ErrorProvider1.SetError(Me.sname, "")
-                Me.ErrorProvider1.SetError(Me.contact, "")
-                Me.ErrorProvider1.SetError(Me.email, "")
                 Me.ErrorProvider1.SetError(Me.category, "")
                 Me.ErrorProvider1.SetError(Me.status, "")
                 count = 0
@@ -169,7 +168,7 @@ Public Class Form5
 
             Dim query As String
 
-            query = "select person_id as ID,fname as Firstname, mname as Middlename, nname as Nickname, sname as Surname, dob as Birthdate, gender as Gender, status as Status, contact as ContactNo, email as EmailAddress, category as Category, date_created as DateCreated from persons"
+            query = "select person_id as ID,fname as Firstname, mname as Middlename, sname as Surname, nname as Nickname, dob as Birthdate, gender as Gender, status as Status, contact as ContactNo, email as EmailAddress, category as Category, date_created as DateCreated from persons"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -408,7 +407,7 @@ Public Class Form5
         fname.Text = selectedRow.Cells(1).Value.ToString()
         mname.Text = selectedRow.Cells(2).Value.ToString()
         sname.Text = selectedRow.Cells(3).Value.ToString()
-        DateTimePicker1.Value = selectedRow.Cells(5).ToString()
+        DateTimePicker1.Value = selectedRow.Cells(5).Value.ToString()
         contact.Text = selectedRow.Cells(7).Value.ToString()
         email.Text = selectedRow.Cells(8).Value.ToString()
         category.Text = selectedRow.Cells(9).Value.ToString()
@@ -417,7 +416,20 @@ Public Class Form5
         TextBox2.Text = selectedRow.Cells(1).Value.ToString()
         TextBox3.Text = selectedRow.Cells(2).Value.ToString()
         TextBox4.Text = selectedRow.Cells(3).Value.ToString()
-        TextBox5.Text = selectedRow.Cells(4).Value.ToString()
+        TextBox5.Text = selectedRow.Cells(5).Value.ToString()
+
+        Dim myDateofBirth As Date
+        Dim currentDate As Date
+        Dim daySpan As TimeSpan
+        Dim difference As Double
+        Dim age As String
+
+        myDateofBirth = DateTimePicker1.Value.ToShortDateString
+        currentDate = Date.Today.ToShortDateString
+        daySpan = (currentDate - myDateofBirth)
+        difference = daySpan.Days
+        age = Str(Int(difference / 365))
+        TextBox7.Text = age
 
         profile_image()
         profile_image2()
@@ -494,13 +506,12 @@ Public Class Form5
                 DateTimePicker1.Text = ""
                 status.Text = ""
                 category.Text = ""
+                TextBox6.Text = ""
+                TextBox7.Text = ""
                 PictureBox2.Image = Nothing
 
                 Me.ErrorProvider1.SetError(Me.fname, "")
-                Me.ErrorProvider1.SetError(Me.mname, "")
                 Me.ErrorProvider1.SetError(Me.sname, "")
-                Me.ErrorProvider1.SetError(Me.contact, "")
-                Me.ErrorProvider1.SetError(Me.email, "")
                 Me.ErrorProvider1.SetError(Me.category, "")
                 Me.ErrorProvider1.SetError(Me.status, "")
                 count = 0
@@ -533,6 +544,19 @@ Public Class Form5
                 MessageBox.Show("Successful")
                 load_table()
                 mysqlconn.Close()
+
+                fname.Text = ""
+                mname.Text = ""
+                sname.Text = ""
+                nickname.Text = ""
+                contact.Text = ""
+                email.Text = ""
+                status.Text = ""
+                category.Text = ""
+                TextBox6.Text = ""
+                TextBox7.Text = ""
+                PictureBox2.Image = Nothing
+                PictureBox3.Image = Nothing
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
@@ -550,5 +574,20 @@ Public Class Form5
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Form2.Show()
         Me.Close()
+    End Sub
+
+    Dim myDateofBirth As Date
+    Dim currentDate As Date
+    Dim daySpan As TimeSpan
+    Dim difference As Double
+    Dim age As String
+
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+        myDateofBirth = DateTimePicker1.Value.ToShortDateString
+        currentDate = Date.Today.ToShortDateString
+        daySpan = (currentDate - myDateofBirth)
+        difference = daySpan.Days
+        age = Str(Int(difference / 365))
+        TextBox6.Text = age
     End Sub
 End Class
