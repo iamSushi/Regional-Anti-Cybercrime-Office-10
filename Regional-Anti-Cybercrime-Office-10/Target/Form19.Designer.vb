@@ -66,7 +66,7 @@ Partial Class Form19
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView2.Location = New System.Drawing.Point(719, 116)
+        Me.DataGridView2.Location = New System.Drawing.Point(523, 116)
         Me.DataGridView2.Name = "DataGridView2"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
@@ -78,7 +78,7 @@ Partial Class Form19
         Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.DataGridView2.Size = New System.Drawing.Size(335, 376)
+        Me.DataGridView2.Size = New System.Drawing.Size(531, 376)
         Me.DataGridView2.TabIndex = 76
         '
         'Label4
@@ -101,7 +101,7 @@ Partial Class Form19
         Me.Button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button35.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button35.Image = CType(resources.GetObject("Button35.Image"), System.Drawing.Image)
-        Me.Button35.Location = New System.Drawing.Point(203, 54)
+        Me.Button35.Location = New System.Drawing.Point(256, 54)
         Me.Button35.Name = "Button35"
         Me.Button35.Size = New System.Drawing.Size(35, 31)
         Me.Button35.TabIndex = 69
@@ -110,9 +110,9 @@ Partial Class Form19
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(28, 54)
+        Me.TextBox1.Location = New System.Drawing.Point(32, 54)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(175, 31)
+        Me.TextBox1.Size = New System.Drawing.Size(224, 31)
         Me.TextBox1.TabIndex = 68
         '
         'Label2
@@ -163,7 +163,7 @@ Partial Class Form19
         Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
         DataGridViewCellStyle8.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle8
-        Me.DataGridView1.Size = New System.Drawing.Size(714, 376)
+        Me.DataGridView1.Size = New System.Drawing.Size(518, 376)
         Me.DataGridView1.TabIndex = 66
         '
         'Label1
@@ -171,7 +171,7 @@ Partial Class Form19
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label1.Location = New System.Drawing.Point(519, 57)
+        Me.Label1.Location = New System.Drawing.Point(329, 57)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(73, 23)
         Me.Label1.TabIndex = 77
@@ -181,7 +181,7 @@ Partial Class Form19
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(598, 57)
+        Me.Label3.Location = New System.Drawing.Point(408, 57)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(222, 23)
         Me.Label3.TabIndex = 78
@@ -190,7 +190,7 @@ Partial Class Form19
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.Panel1.Location = New System.Drawing.Point(711, 116)
+        Me.Panel1.Location = New System.Drawing.Point(513, 117)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(10, 375)
         Me.Panel1.TabIndex = 79
