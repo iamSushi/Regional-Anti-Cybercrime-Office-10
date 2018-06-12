@@ -245,6 +245,9 @@ Public Class Form3
         ComboBox3.Items.Add("Audio Visual")
         ComboBox3.Items.Add("Intel")
 
+        ComboBox18.Items.Add("Stored")
+        ComboBox18.Items.Add("Withdrawn")
+
     End Sub
 
 
@@ -388,13 +391,13 @@ Public Class Form3
                 mysqlconn.Open()
                 Dim query As String
                 Dim query1 As String
-                query = "insert into evidence values('" & lab_case & "','" & ComboBox1.Text & "','" & ComboBox2.Text & "', '" & ComboBox4.Text & "','" & ComboBox5.Text & "','" & ComboBox6.Text & "','" & ComboBox7.Text & "','" & ComboBox8.Text & "','" & ComboBox9.Text & "','" & ComboBox10.Text & "','" & ComboBox11.Text & "','" & ComboBox12.Text & "','" & ComboBox16.Text & "','" & ComboBox14.Text & "','" & TextBox13.Text & "',null )"
+                query = "insert into evidence values('" & lab_case & "','" & ComboBox1.Text & "','" & ComboBox2.Text & "', '" & ComboBox4.Text & "','" & ComboBox5.Text & "','" & ComboBox6.Text & "','" & ComboBox7.Text & "','" & ComboBox8.Text & "','" & ComboBox9.Text & "','" & ComboBox10.Text & "','" & ComboBox11.Text & "','" & ComboBox12.Text & "','" & ComboBox16.Text & "','" & ComboBox14.Text & "','" & ComboBox18.Text & "',null )"
                 query1 = "insert into laboratory_case values(null,         '1'            ,'          1                 ','3','4','5',          '6',      '     7       ',   '       8'           ,'        9                  ','              10             ','             11          ', 12 ,null)"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
                 MessageBox.Show("Successful")
                 TextBox1.Text = ""
-                TextBox13.Text = ""
+
                 ComboBox1.Text = ""
                 ComboBox2.Text = ""
                 ComboBox5.Text = ""
@@ -409,7 +412,7 @@ Public Class Form3
                 ComboBox15.Text = ""
                 ComboBox14.Text = ""
                 ComboBox16.Text = ""
-                TextBox13.Text = ""
+                ComboBox18.Text = ""
                 mysqlconn.Close()
             Catch ex As MySqlException
                 MessageBox.Show(ex.Message)

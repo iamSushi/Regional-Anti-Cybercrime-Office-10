@@ -10,9 +10,9 @@ Public Class Form8
     Public Property lab_case As String
 
     Private Sub Form8_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        load_table()
         load_table2()
+        load_table()
+
 
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
@@ -55,7 +55,7 @@ Public Class Form8
 
             Dim query As String
 
-            query = "select person_id as ID,fname as  Firstname, mname as Middlename,sname as Surname from persons"
+            query = "select person_id as ID,fname as  Firstname, mname as Middlename,sname as Surname from persons where category = 'victim'"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -111,7 +111,7 @@ Public Class Form8
 
             Dim query As String
 
-            query = "select persons.person_id as ID,persons.fname as Firstname, persons.mname as Middlename, persons.sname as Surname from victim inner join persons on victim.person_id = persons.person_id where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
+            query = "select persons.person_id as ID,persons.fname as Firstname, persons.mname as Middlename, persons.sname as Surname from victim inner join persons on victim.person_id = persons.person_id where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%' and category = 'victim'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -175,6 +175,30 @@ Public Class Form8
             mysqlconn.Dispose()
         End Try
 
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            query = "select persons.person_id as ID,persons.fname as Firstname, persons.mname as Middlename, persons.sname as Surname, victim.date_created as Date from victim inner join persons on victim.person_id = persons.person_id where lab_case_no = '" & lab_case & "' order by Date"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                Dim f = reader.GetString("Firstname")
+                Dim m = reader.GetString("Middlename")
+                Dim s = reader.GetString("Surname")
+                Dim nameni = f + " " + m + " " + s
+                Form3.TextBox4.Text = nameni
+            End While
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+
 
         load_table2()
 
@@ -220,7 +244,29 @@ Public Class Form8
 
 
             End If
-                mysqlconn.Close()
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            query = "select persons.person_id as ID,persons.fname as Firstname, persons.mname as Middlename, persons.sname as Surname, victim.date_created as Date from victim inner join persons on victim.person_id = persons.person_id where lab_case_no = '" & lab_case & "' order by Date"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                Dim f = reader.GetString("Firstname")
+                Dim m = reader.GetString("Middlename")
+                Dim s = reader.GetString("Surname")
+                Dim nameni = f + " " + m + " " + s
+                Form3.TextBox4.Text = nameni
+            End While
+
+            mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show(ex.Message)
         Finally

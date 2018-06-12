@@ -127,12 +127,7 @@ Public Class Form2
         Else
             Me.ErrorProvider1.SetError(Me.facts, "")
         End If
-        If String.IsNullOrEmpty(TextBox2.Text) Then
-            Me.ErrorProvider1.SetError(Me.TextBox2, "Input Time of Occurence")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.TextBox2, "")
-        End If
+
 
         If count > 0 Then
             Return

@@ -75,7 +75,6 @@ Partial Class Form3
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ComboBox16 = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -138,6 +137,7 @@ Partial Class Form3
         Me.Button27 = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ComboBox18 = New System.Windows.Forms.ComboBox()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -770,7 +770,7 @@ Partial Class Form3
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.TextBox13)
+        Me.TabPage1.Controls.Add(Me.ComboBox18)
         Me.TabPage1.Controls.Add(Me.Label10)
         Me.TabPage1.Controls.Add(Me.ComboBox16)
         Me.TabPage1.Controls.Add(Me.Label14)
@@ -822,13 +822,6 @@ Partial Class Form3
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Nature of Case"
         Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'TextBox13
-        '
-        Me.TextBox13.Location = New System.Drawing.Point(241, 290)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(224, 31)
-        Me.TextBox13.TabIndex = 103
         '
         'Label10
         '
@@ -1541,6 +1534,14 @@ Partial Class Form3
         Me.ErrorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'ComboBox18
+        '
+        Me.ComboBox18.FormattingEnabled = True
+        Me.ComboBox18.Location = New System.Drawing.Point(241, 290)
+        Me.ComboBox18.Name = "ComboBox18"
+        Me.ComboBox18.Size = New System.Drawing.Size(224, 31)
+        Me.ComboBox18.TabIndex = 103
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1681,8 +1682,8 @@ Partial Class Form3
     Friend WithEvents ComboBox14 As ComboBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Button18 As Button
-    Friend WithEvents TextBox13 As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents ComboBox13 As ComboBox
+    Friend WithEvents ComboBox18 As ComboBox
 End Class
