@@ -14,6 +14,29 @@ Public Class Form8
         load_table()
         load_table2()
 
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            query = "select lab_case_no_id from laboratory_case where lab_case_no = '" & lab_case & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                Dim lab_name = reader.GetString("lab_case_no_id")
+                Label3.Text = lab_name
+            End While
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
 
 
     End Sub

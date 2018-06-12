@@ -11,8 +11,32 @@ Public Class Form18
     Public Property lab_case As String
 
     Private Sub Form18_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        load_table()
         load_table2()
+        load_table()
+
+
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            query = "select lab_case_no_id from laboratory_case where lab_case_no = '" & lab_case & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                Dim lab_name = reader.GetString("lab_case_no_id")
+                Label3.Text = lab_name
+            End While
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
@@ -145,7 +169,7 @@ Public Class Form18
 
     Private Sub load_table2()
         mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false;  convert zero datetime=True"
 
         Dim adapter2 As New MySqlDataAdapter
         Dim dbDataSet2 As New DataTable
@@ -156,7 +180,7 @@ Public Class Form18
 
             Dim query As String
 
-            query = "select persons.person_id as ID, persons.fname as Firstname, persons.mname as Middlename, persons.sname as Surname from suspect left join persons on suspect.person_id = persons.person_id where lab_case_no = '" & lab_case & "'"
+            query = "select persons.person_id as ID, persons.fname as Firstname, persons.mname as Middlename, persons.sname as Surname from suspect inner join persons on suspect.person_id = persons.person_id where lab_case_no = '" & lab_case & "'"
             command = New MySqlCommand(query, mysqlconn)
             adapter2.SelectCommand = command
             adapter2.Fill(dbDataSet2)
