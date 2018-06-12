@@ -365,7 +365,7 @@ Public Class Form4
                     laboratory_case.date_examined AS DateExamined,
                     laboratory_case.case_status AS CaseStatus,
                     agency.agency_name AS RequestingAgency,
-                    laboratory_case.type AS DFE,
+                    laboratory_case.type AS DFE,       
                     laboratory_case.complainant AS Complainant
                     FROM laboratory_case
                     INNER JOIN agency ON agency.agency_id = laboratory_case.requesting_agency
