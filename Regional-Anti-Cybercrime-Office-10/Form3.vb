@@ -187,7 +187,7 @@ Public Class Form3
 
             Dim query As String
 
-            query = "select officer_id as id , fname as f ,mname as m ,sname as s from officer"
+            query = "select officer_id as id , fname as f ,mname as m ,sname as s from officer where position = 'examiner'"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
 
@@ -220,7 +220,7 @@ Public Class Form3
 
             Dim query As String
 
-            query = "select officer_id as id , fname as f ,mname as m ,sname as s from officer"
+            query = "select officer_id as id , fname as f ,mname as m ,sname as s from officer where position = 'investigator'"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
 
@@ -302,13 +302,7 @@ Public Class Form3
         If investigator > 0 Then
             Me.ErrorProvider1.SetError(Me.ComboBox17, "")
         Else
-            Me.ErrorProvider1.SetError(Me.ComboBox17, "Select Investiagtor")
-            count += 1
-        End If
-        If examiner > 0 Then
-            Me.ErrorProvider1.SetError(Me.ComboBox15, "")
-        Else
-            Me.ErrorProvider1.SetError(Me.ComboBox15, "Select Investiagtor")
+            Me.ErrorProvider1.SetError(Me.ComboBox17, "Select Examiner")
             count += 1
         End If
         If String.IsNullOrEmpty(TextBox2.Text) Then
@@ -730,6 +724,10 @@ Public Class Form3
     End Sub
 
     Private Sub TabControl1_Selected(sender As Object, e As TabControlEventArgs) Handles TabControl1.Selected
+
+    End Sub
+
+    Private Sub ComboBox15_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox15.SelectedIndexChanged
 
     End Sub
 End Class

@@ -121,12 +121,6 @@ Public Class Form2
         Else
             Me.ErrorProvider1.SetError(Me.TextBox13, "")
         End If
-        If String.IsNullOrEmpty(TextBox4.Text) Then
-            Me.ErrorProvider1.SetError(Me.TextBox4, "Input What")
-            count += 1
-        Else
-            Me.ErrorProvider1.SetError(Me.TextBox4, "")
-        End If
         If String.IsNullOrEmpty(facts.Text) Then
             Me.ErrorProvider1.SetError(Me.facts, "Input How")
             count += 1
