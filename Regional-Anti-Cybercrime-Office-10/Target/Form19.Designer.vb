@@ -32,9 +32,6 @@ Partial Class Form19
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.Button24 = New System.Windows.Forms.Button()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button35 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -83,41 +80,6 @@ Partial Class Form19
         Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView2.Size = New System.Drawing.Size(335, 376)
         Me.DataGridView2.TabIndex = 76
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Location = New System.Drawing.Point(264, 54)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(175, 31)
-        Me.DateTimePicker2.TabIndex = 75
-        Me.DateTimePicker2.Value = New Date(2018, 6, 7, 0, 0, 0, 0)
-        '
-        'Button24
-        '
-        Me.Button24.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Button24.FlatAppearance.BorderSize = 0
-        Me.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button24.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button24.Image = CType(resources.GetObject("Button24.Image"), System.Drawing.Image)
-        Me.Button24.Location = New System.Drawing.Point(439, 54)
-        Me.Button24.Name = "Button24"
-        Me.Button24.Size = New System.Drawing.Size(35, 31)
-        Me.Button24.TabIndex = 73
-        Me.Button24.UseVisualStyleBackColor = False
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label13.Image = CType(resources.GetObject("Label13.Image"), System.Drawing.Image)
-        Me.Label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label13.Location = New System.Drawing.Point(260, 21)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(70, 23)
-        Me.Label13.TabIndex = 72
-        Me.Label13.Text = "      Date"
         '
         'Label4
         '
@@ -242,9 +204,6 @@ Partial Class Form19
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView2)
-        Me.Controls.Add(Me.DateTimePicker2)
-        Me.Controls.Add(Me.Button24)
-        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button35)
         Me.Controls.Add(Me.TextBox1)
@@ -261,9 +220,6 @@ Partial Class Form19
     End Sub
 
     Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents Button24 As Button
-    Friend WithEvents Label13 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Button35 As Button
     Friend WithEvents TextBox1 As TextBox
