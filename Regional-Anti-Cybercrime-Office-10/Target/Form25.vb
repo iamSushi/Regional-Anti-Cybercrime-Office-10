@@ -19,7 +19,7 @@ Public Class Form25
 
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -41,7 +41,7 @@ Public Class Form25
 
             Dim query As String
 
-            query = "select cellphone as CP, tablet as TAB, desktop as DT, loptop as LT, sim as SIM, external_drive as ED, optical_drive as OD, hard_disk_drive as HDD, dc as DC, dvr as DVR, status as Evidence_Status from evidence where lab_Case_no = '" & lab_case & "'"
+            query = "select status as EvidenceStatus, cellphone as CP, tablet as TAB, desktop as DT, loptop as LT, sim as SIM, external_drive as ED, optical_drive as OD, hard_disk_drive as HDD, dc as DC, dvr as DVR from evidence where lab_Case_no = '" & lab_case & "'"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -355,24 +355,8 @@ Public Class Form25
         End If
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
-    End Sub
-
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-
-    End Sub
-
-    Private Sub Label31_Click(sender As Object, e As EventArgs) Handles Label31.Click
-
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Form26.Show()
         Me.Hide()
-    End Sub
-
-    Private Sub ListBox1_MouseClick(sender As Object, e As MouseEventArgs) Handles ListBox1.MouseClick
-
     End Sub
 End Class
