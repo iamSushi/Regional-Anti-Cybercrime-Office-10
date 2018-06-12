@@ -520,26 +520,24 @@ Partial Class Form4
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label15.Image = CType(resources.GetObject("Label15.Image"), System.Drawing.Image)
         Me.Label15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label15.Location = New System.Drawing.Point(12, 957)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(64, 23)
+        Me.Label15.Size = New System.Drawing.Size(40, 23)
         Me.Label15.TabIndex = 49
-        Me.Label15.Text = "      DFE"
+        Me.Label15.Text = "DFE"
         '
         'Label14
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label14.Image = CType(resources.GetObject("Label14.Image"), System.Drawing.Image)
         Me.Label14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label14.Location = New System.Drawing.Point(12, 884)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(128, 23)
+        Me.Label14.Size = New System.Drawing.Size(104, 23)
         Me.Label14.TabIndex = 56
-        Me.Label14.Text = "      Investigator"
+        Me.Label14.Text = "Investigator"
         '
         'TextBox8
         '
@@ -567,13 +565,12 @@ Partial Class Form4
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label13.Image = CType(resources.GetObject("Label13.Image"), System.Drawing.Image)
         Me.Label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label13.Location = New System.Drawing.Point(12, 811)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(105, 23)
+        Me.Label13.Size = New System.Drawing.Size(81, 23)
         Me.Label13.TabIndex = 53
-        Me.Label13.Text = "      Examiner"
+        Me.Label13.Text = "Examiner"
         '
         'TextBox7
         '
@@ -601,13 +598,12 @@ Partial Class Form4
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label12.Image = CType(resources.GetObject("Label12.Image"), System.Drawing.Image)
         Me.Label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label12.Location = New System.Drawing.Point(12, 744)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(118, 23)
+        Me.Label12.Size = New System.Drawing.Size(94, 23)
         Me.Label12.TabIndex = 50
-        Me.Label12.Text = "      Claimed By"
+        Me.Label12.Text = "Claimed By"
         '
         'TextBox6
         '
@@ -642,13 +638,12 @@ Partial Class Form4
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label11.Image = CType(resources.GetObject("Label11.Image"), System.Drawing.Image)
         Me.Label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label11.Location = New System.Drawing.Point(12, 669)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(125, 23)
+        Me.Label11.Size = New System.Drawing.Size(101, 23)
         Me.Label11.TabIndex = 46
-        Me.Label11.Text = "      Released By"
+        Me.Label11.Text = "Released By"
         '
         'TextBox4
         '
@@ -715,13 +710,12 @@ Partial Class Form4
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label10.Image = CType(resources.GetObject("Label10.Image"), System.Drawing.Image)
         Me.Label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label10.Location = New System.Drawing.Point(12, 584)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(131, 23)
+        Me.Label10.Size = New System.Drawing.Size(107, 23)
         Me.Label10.TabIndex = 37
-        Me.Label10.Text = "      Complainant"
+        Me.Label10.Text = "Complainant"
         '
         'Button22
         '
@@ -742,13 +736,12 @@ Partial Class Form4
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label9.Image = CType(resources.GetObject("Label9.Image"), System.Drawing.Image)
         Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label9.Location = New System.Drawing.Point(12, 504)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(90, 23)
+        Me.Label9.Size = New System.Drawing.Size(66, 23)
         Me.Label9.TabIndex = 34
-        Me.Label9.Text = "      Agency"
+        Me.Label9.Text = "Agency"
         '
         'Button21
         '
@@ -769,13 +762,12 @@ Partial Class Form4
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label8.Image = CType(resources.GetObject("Label8.Image"), System.Drawing.Image)
         Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label8.Location = New System.Drawing.Point(12, 424)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(122, 23)
+        Me.Label8.Size = New System.Drawing.Size(98, 23)
         Me.Label8.TabIndex = 31
-        Me.Label8.Text = "      Case Status"
+        Me.Label8.Text = "Case Status"
         '
         'Button10
         '
@@ -796,13 +788,12 @@ Partial Class Form4
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label7.Image = CType(resources.GetObject("Label7.Image"), System.Drawing.Image)
         Me.Label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label7.Location = New System.Drawing.Point(12, 344)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(148, 23)
+        Me.Label7.Size = New System.Drawing.Size(124, 23)
         Me.Label7.TabIndex = 28
-        Me.Label7.Text = "      Date Examined"
+        Me.Label7.Text = "Date Examined"
         '
         'Button1
         '
@@ -823,26 +814,24 @@ Partial Class Form4
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label6.Image = CType(resources.GetObject("Label6.Image"), System.Drawing.Image)
         Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label6.Location = New System.Drawing.Point(12, 264)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(142, 23)
+        Me.Label6.Size = New System.Drawing.Size(118, 23)
         Me.Label6.TabIndex = 25
-        Me.Label6.Text = "      Date Released"
+        Me.Label6.Text = "Date Released"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label2.Location = New System.Drawing.Point(12, 24)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(92, 23)
+        Me.Label2.Size = New System.Drawing.Size(68, 23)
         Me.Label2.TabIndex = 14
-        Me.Label2.Text = "      Case ID"
+        Me.Label2.Text = "Case ID"
         '
         'TextBox1
         '
@@ -872,13 +861,12 @@ Partial Class Form4
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label4.Image = CType(resources.GetObject("Label4.Image"), System.Drawing.Image)
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label4.Location = New System.Drawing.Point(12, 184)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(147, 23)
+        Me.Label4.Size = New System.Drawing.Size(123, 23)
         Me.Label4.TabIndex = 20
-        Me.Label4.Text = "      Date Informed"
+        Me.Label4.Text = "Date Informed"
         '
         'Button35
         '
@@ -899,13 +887,12 @@ Partial Class Form4
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Label3.Image = CType(resources.GetObject("Label3.Image"), System.Drawing.Image)
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label3.Location = New System.Drawing.Point(12, 104)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(142, 23)
+        Me.Label3.Size = New System.Drawing.Size(118, 23)
         Me.Label3.TabIndex = 17
-        Me.Label3.Text = "      Date Received"
+        Me.Label3.Text = "Date Received"
         '
         'Button18
         '
@@ -974,7 +961,7 @@ Partial Class Form4
         Me.Button20.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button20.Image = CType(resources.GetObject("Button20.Image"), System.Drawing.Image)
-        Me.Button20.Location = New System.Drawing.Point(199, 51)
+        Me.Button20.Location = New System.Drawing.Point(199, 47)
         Me.Button20.Name = "Button20"
         Me.Button20.Size = New System.Drawing.Size(35, 31)
         Me.Button20.TabIndex = 19
@@ -984,7 +971,7 @@ Partial Class Form4
         '
         Me.TextBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox2.Location = New System.Drawing.Point(24, 51)
+        Me.TextBox2.Location = New System.Drawing.Point(24, 47)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(175, 31)
         Me.TextBox2.TabIndex = 18
@@ -996,7 +983,7 @@ Partial Class Form4
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label5.Image = CType(resources.GetObject("Label5.Image"), System.Drawing.Image)
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(20, 25)
+        Me.Label5.Location = New System.Drawing.Point(20, 21)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(92, 23)
         Me.Label5.TabIndex = 17

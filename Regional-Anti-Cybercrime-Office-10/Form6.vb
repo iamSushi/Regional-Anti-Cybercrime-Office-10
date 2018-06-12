@@ -171,18 +171,19 @@ Public Class Form6
                 email.Text = ""
                 rank.Text = ""
                 office.Text = ""
+                TextBox6.Text = ""
+                TextBox7.Text = ""
+                ComboBox2.Text = ""
                 PictureBox2.Image = Nothing
                 Me.ErrorProvider1.SetError(Me.fname, "")
-                Me.ErrorProvider1.SetError(Me.mname, "")
                 Me.ErrorProvider1.SetError(Me.sname, "")
-                Me.ErrorProvider1.SetError(Me.contact, "")
-                Me.ErrorProvider1.SetError(Me.email, "")
                 Me.ErrorProvider1.SetError(Me.rank, "")
                 Me.ErrorProvider1.SetError(Me.office, "")
                 count = 0
 
                 load_table()
                 mysqlconn.Close()
+
             Catch ex As MySqlException
                 MessageBox.Show("Invalid user action", "", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Warning)
             Finally
@@ -486,14 +487,14 @@ Public Class Form6
                 TextBox3.Text = ""
                 TextBox4.Text = ""
                 TextBox5.Text = ""
+                TextBox6.Text = ""
+                TextBox7.Text = ""
+                ComboBox2.Text = ""
                 PictureBox2.Image = Nothing
                 PictureBox3.Image = Nothing
 
                 Me.ErrorProvider1.SetError(Me.fname, "")
-                Me.ErrorProvider1.SetError(Me.mname, "")
                 Me.ErrorProvider1.SetError(Me.sname, "")
-                Me.ErrorProvider1.SetError(Me.contact, "")
-                Me.ErrorProvider1.SetError(Me.email, "")
                 Me.ErrorProvider1.SetError(Me.rank, "")
                 Me.ErrorProvider1.SetError(Me.office, "")
                 count = 0
@@ -529,6 +530,20 @@ Public Class Form6
         TextBox4.Text = selectedRow.Cells(3).Value.ToString()
         TextBox5.Text = selectedRow.Cells(4).Value.ToString()
 
+        Dim myDateofBirth As Date
+        Dim currentDate As Date
+        Dim daySpan As TimeSpan
+        Dim difference As Double
+        Dim age As String
+
+        myDateofBirth = DateTimePicker1.Value.ToShortDateString
+        currentDate = Date.Today.ToShortDateString
+        daySpan = (currentDate - myDateofBirth)
+        difference = daySpan.Days
+        age = Str(Int(difference / 365))
+        TextBox7.Text = age
+
+
         profile_image()
         profile_image2()
     End Sub
@@ -550,6 +565,26 @@ Public Class Form6
                 MessageBox.Show("Successful", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 load_table()
                 mysqlconn.Close()
+
+                fname.Text = ""
+                mname.Text = ""
+                sname.Text = ""
+                contact.Text = ""
+                email.Text = ""
+                DateTimePicker1.Text = ""
+                rank.Text = ""
+                office.Text = ""
+                TextBox2.Text = ""
+                TextBox3.Text = ""
+                TextBox4.Text = ""
+                TextBox5.Text = ""
+                TextBox6.Text = ""
+                TextBox7.Text = ""
+                ComboBox2.Text = ""
+                PictureBox2.Image = Nothing
+                PictureBox3.Image = Nothing
+
+                load_table()
             Catch ex As Exception
                 MessageBox.Show("Invalid user action", "", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Warning)
             Finally
@@ -581,7 +616,7 @@ Public Class Form6
             mysqlconn.Open()
 
             Dim query As String
-            query = "select fname as Firstname, mname as Middlename, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , office as Office, remark as Remark , date_created as DateCreated from officer where rank = '" & ComboBox1.Text & "'"
+            query = "select fname as Firstname, mname as Middlename, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , agency as Office, remark as Remark , date_created as DateCreated from officer where rank = '" & ComboBox1.Text & "'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -596,5 +631,20 @@ Public Class Form6
         Finally
             mysqlconn.Dispose()
         End Try
+    End Sub
+
+    Dim myDateofBirth As Date
+    Dim currentDate As Date
+    Dim daySpan As TimeSpan
+    Dim difference As Double
+    Dim age As String
+
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+        myDateofBirth = DateTimePicker1.Value.ToShortDateString
+        currentDate = Date.Today.ToShortDateString
+        daySpan = (currentDate - myDateofBirth)
+        difference = daySpan.Days
+        age = Str(Int(difference / 365))
+        TextBox6.Text = age
     End Sub
 End Class
