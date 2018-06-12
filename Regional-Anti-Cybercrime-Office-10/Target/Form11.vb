@@ -119,7 +119,7 @@ Public Class Form11
 
         id.Text = selectedRow.Cells(0).Value.ToString()
         designation.Text = selectedRow.Cells(1).Value.ToString()
-        description.Text = selectedRow.Cells(3).Value.ToString()
+        description.Text = selectedRow.Cells(2).Value.ToString()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
