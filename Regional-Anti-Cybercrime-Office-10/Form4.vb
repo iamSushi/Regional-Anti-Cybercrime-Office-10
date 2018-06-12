@@ -359,12 +359,12 @@ Public Class Form4
             query = "SELECT 
                     laboratory_case.lab_case_no as ID,
                     laboratory_case.lab_case_no_id as CaseID,
-                    laboratory_case.date_received AS Date_Received,
-                    laboratory_case.date_informed AS Date_Informed,
-                    laboratory_case.date_released AS Date_Released,
-                    laboratory_case.date_examined AS Date_Examined,
-                    laboratory_case.case_status AS Case_Status,
-                    agency.agency_name AS Requesting_Agency,
+                    laboratory_case.date_received AS DateReceived,
+                    laboratory_case.date_informed AS DateInformed,
+                    laboratory_case.date_released AS DateReleased,
+                    laboratory_case.date_examined AS DateExamined,
+                    laboratory_case.case_status AS CaseStatus,
+                    agency.agency_name AS RequestingAgency,
                     laboratory_case.type AS DFE,
                     laboratory_case.complainant AS Complainant
                     FROM laboratory_case
@@ -440,14 +440,14 @@ Public Class Form4
             query = "SELECT 
                     laboratory_case.lab_case_no as ID,
                     laboratory_case.lab_case_no_id as CaseID,
-                    laboratory_case.date_received AS Date_Received,
-                    laboratory_case.date_informed AS Date_Informed,
-                    laboratory_case.date_released AS Date_Released,
-                    laboratory_case.date_examined AS Date_Examined,
-                    laboratory_case.case_status AS Case_Status,
-                    agency.agency_name AS Requesting_Agency,
+                    laboratory_case.date_received AS DateReceived,
+                    laboratory_case.date_informed AS DateInformed,
+                    laboratory_case.date_released AS DateReleased,
+                    laboratory_case.date_examined AS DateExamined,
+                    laboratory_case.case_status AS CaseStatus,
+                    agency.agency_name AS RequestingAgency,
                     laboratory_case.type AS DFE,
-                    laboratory_case.released_by AS Released_By
+                    laboratory_case.released_by AS ReleasedBy
                     FROM laboratory_case
                     INNER JOIN agency ON agency.agency_id = laboratory_case.requesting_agency
                     where Released_by like '" & released_by & "%' "
@@ -488,14 +488,14 @@ Public Class Form4
             query = "SELECT 
                     laboratory_case.lab_case_no as ID,
                     laboratory_case.lab_case_no_id as CaseID,
-                    laboratory_case.date_received AS Date_Received,
-                    laboratory_case.date_informed AS Date_Informed,
-                    laboratory_case.date_released AS Date_Released,
-                    laboratory_case.date_examined AS Date_Examined,
-                    laboratory_case.case_status AS Case_Status,
-                    agency.agency_name AS Requesting_Agency,
+                    laboratory_case.date_received AS DateReceived,
+                    laboratory_case.date_informed AS DateInformed,
+                    laboratory_case.date_released AS DateReleased,
+                    laboratory_case.date_examined AS DateExamined,
+                    laboratory_case.case_status AS CaseStatus,
+                    agency.agency_name AS RequestingAgency,
                     laboratory_case.type AS DFE,
-                    laboratory_case.claimed_by AS Claimed_By
+                    laboratory_case.claimed_by AS ClaimedBy
                     FROM laboratory_case
                     INNER JOIN agency ON agency.agency_id = laboratory_case.requesting_agency
                     where Claimed_By like '" & claimed_by & "%' "
@@ -568,14 +568,14 @@ Public Class Form4
             query = "SELECT 
                     laboratory_case.lab_case_no as ID,
                     laboratory_case.lab_case_no_id as CaseID,
-                    laboratory_case.date_received AS Date_Received,
-                    laboratory_case.date_informed AS Date_Informed,
-                    laboratory_case.date_released AS Date_Released,
-                    laboratory_case.date_examined AS Date_Examined,
-                    laboratory_case.case_status AS Case_Status,
-                    agency.agency_name AS Requesting_Agency,
+                    laboratory_case.date_received AS DateReceived,
+                    laboratory_case.date_informed AS DateInformed,
+                    laboratory_case.date_released AS DateReleased,
+                    laboratory_case.date_examined AS DateExamined,
+                    laboratory_case.case_status AS CaseStatus,
+                    agency.agency_name AS RequestingAgency,
                     laboratory_case.type AS DFE,
-                    laboratory_case.investigator AS Investigator_ID
+                    laboratory_case.investigator AS InvestigatorID
                     FROM laboratory_case
                     INNER JOIN agency ON agency.agency_id = laboratory_case.requesting_agency
                     where investigator like '" & investigator & "%' "
@@ -611,14 +611,14 @@ Public Class Form4
             query = "SELECT 
                     laboratory_case.lab_case_no as ID,
                     laboratory_case.lab_case_no_id as CaseID,
-                    laboratory_case.date_received AS Date_Received,
-                    laboratory_case.date_informed AS Date_Informed,
-                    laboratory_case.date_released AS Date_Released,
-                    laboratory_case.date_examined AS Date_Examined,
-                    laboratory_case.case_status AS Case_Status,
-                    agency.agency_name AS Requesting_Agency,
+                    laboratory_case.date_received AS DateReceived,
+                    laboratory_case.date_informed AS DateInformed,
+                    laboratory_case.date_released AS DateReleased,
+                    laboratory_case.date_examined AS DateExamined,
+                    laboratory_case.case_status AS CaseStatus,
+                    agency.agency_name AS RequestingAgency,
                     laboratory_case.type AS DFE,
-                    laboratory_case.examiner AS examiner_ID
+                    laboratory_case.examiner AS ExaminerID
                     FROM laboratory_case
                     INNER JOIN agency ON agency.agency_id = laboratory_case.requesting_agency
                     where examiner like '" & examiner & "%' "
