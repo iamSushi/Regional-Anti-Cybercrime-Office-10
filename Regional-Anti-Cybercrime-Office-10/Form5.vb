@@ -145,7 +145,7 @@ Public Class Form5
                 mysqlconn.Close()
 
             Catch ex As MySqlException
-                MessageBox.Show("Invalid user action" + ex.Message, "", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Warning)
+                MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -178,10 +178,13 @@ Public Class Form5
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
+
+        PictureBox2.ImageLocation = ("C:\Users\iamSushi\Desktop\user.jpg")
+        PictureBox2.Load()
     End Sub
 
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -212,7 +215,7 @@ Public Class Form5
 
             mysqlconn.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -241,7 +244,7 @@ Public Class Form5
 
             mysqlconn.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -270,7 +273,7 @@ Public Class Form5
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -291,7 +294,7 @@ Public Class Form5
 
                 mysqlconn.Close()
             Catch ex As Exception
-                MessageBox.Show(ex.Message)
+                MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -326,7 +329,7 @@ Public Class Form5
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -355,7 +358,7 @@ Public Class Form5
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -383,7 +386,7 @@ Public Class Form5
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -519,7 +522,7 @@ Public Class Form5
                 mysqlconn.Close()
 
             Catch ex As MySqlException
-                MessageBox.Show("Invalid user action", "", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Warning)
+                MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -558,7 +561,7 @@ Public Class Form5
                 PictureBox2.Image = Nothing
                 PictureBox3.Image = Nothing
             Catch ex As Exception
-                MessageBox.Show(ex.Message)
+                MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End Try
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None
@@ -589,5 +592,24 @@ Public Class Form5
         difference = daySpan.Days
         age = Str(Int(difference / 365))
         TextBox6.Text = age
+    End Sub
+
+    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
+        fname.Text = ""
+        mname.Text = ""
+        sname.Text = ""
+        nickname.Text = ""
+        contact.Text = ""
+        email.Text = ""
+        status.Text = ""
+        category.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox4.Text = ""
+        TextBox5.Text = ""
+        TextBox5.Text = ""
+        TextBox7.Text = ""
+        PictureBox3.Image = Nothing
+        load_table()
     End Sub
 End Class

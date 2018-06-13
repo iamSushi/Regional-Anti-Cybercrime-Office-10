@@ -346,7 +346,7 @@ Public Class Form7
             Try
                 Dim query2 As String
                 mysqlconn.Open()
-                query2 = "INSERT INTO accounts VALUES('" & id.Text & "','','" & TextBox11.Text & "','" & TextBox11.Text & "','',NOW())"
+                query2 = "INSERT INTO accounts VALUES('" & id.Text & "',null,'" & TextBox11.Text & "','" & TextBox11.Text & "','',NOW())"
                 command = New MySqlCommand(query2, mysqlconn)
                 reader = command.ExecuteReader
                 mysqlconn.Close()

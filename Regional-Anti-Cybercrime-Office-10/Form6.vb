@@ -7,20 +7,6 @@ Public Class Form6
     Dim reader As MySqlDataReader
     Dim index As Integer
 
-    Public Sub Button21_Click(sender As Object, e As EventArgs)
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "host = 127.0.0.1; userid = 3306; database = cybercrime;"
-        ''Dim mysqlConn As New MySqlConnection("server = 127.0.0.1; user = root; database = cybercrime")
-        Try
-            mysqlconn.Open()
-            MessageBox.Show("Connected")
-            'mysqlconn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
-    End Sub
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Do While panel_slide.Width < 109
             panel_slide.Width = panel_slide.Width + 1
@@ -88,7 +74,7 @@ Public Class Form6
 
                 mysqlconn.Close()
             Catch ex As Exception
-                MessageBox.Show(ex.Message)
+                MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -185,7 +171,7 @@ Public Class Form6
                 mysqlconn.Close()
 
             Catch ex As MySqlException
-                MessageBox.Show("Invalid user action", "", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Warning)
+                MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -214,10 +200,13 @@ Public Class Form6
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
+
+        PictureBox2.ImageLocation = ("C:\Users\iamSushi\Desktop\police.jpg")
+        PictureBox2.Load()
     End Sub
 
     Private Sub profile_image()
@@ -243,7 +232,7 @@ Public Class Form6
 
             mysqlconn.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -272,7 +261,7 @@ Public Class Form6
 
             mysqlconn.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -301,7 +290,7 @@ Public Class Form6
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -367,7 +356,7 @@ Public Class Form6
             mysqlconn.Close()
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -397,7 +386,7 @@ Public Class Form6
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -502,7 +491,7 @@ Public Class Form6
                 mysqlconn.Close()
 
             Catch ex As MySqlException
-                MessageBox.Show("Invalid user action" + ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -558,7 +547,7 @@ Public Class Form6
                 mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
                 Dim query As String
                 mysqlconn.Open()
-                query = "DELETE FROM officer WHERE officer_id = '" & id.Text & "'"
+                query = "DELETE FROM officer WHERE officer_id = '" & id.Text & "' and position != 'Examiner'"
                 command = New MySqlCommand(query, mysqlconn)
 
                 reader = command.ExecuteReader
@@ -586,7 +575,7 @@ Public Class Form6
 
                 load_table()
             Catch ex As Exception
-                MessageBox.Show("Invalid user action", "", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Warning)
+                MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -627,7 +616,7 @@ Public Class Form6
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -646,5 +635,24 @@ Public Class Form6
         difference = daySpan.Days
         age = Str(Int(difference / 365))
         TextBox6.Text = age
+    End Sub
+
+    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
+        fname.Text = ""
+        mname.Text = ""
+        sname.Text = ""
+        contact.Text = ""
+        email.Text = ""
+        ComboBox2.Text = ""
+        rank.Text = ""
+        office.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox4.Text = ""
+        TextBox5.Text = ""
+        TextBox6.Text = ""
+        TextBox7.Text = ""
+        PictureBox3.Image = Nothing
+        load_table()
     End Sub
 End Class

@@ -76,7 +76,6 @@ Partial Class Form25
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -411,7 +410,7 @@ Partial Class Form25
         Me.Button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button29.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button29.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button29.Location = New System.Drawing.Point(553, 517)
+        Me.Button29.Location = New System.Drawing.Point(544, 666)
         Me.Button29.Name = "Button29"
         Me.Button29.Size = New System.Drawing.Size(79, 30)
         Me.Button29.TabIndex = 104
@@ -432,11 +431,11 @@ Partial Class Form25
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.ItemSize = New System.Drawing.Size(150, 50)
-        Me.TabControl1.Location = New System.Drawing.Point(533, -2)
+        Me.TabControl1.Location = New System.Drawing.Point(544, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.Padding = New System.Drawing.Point(50, 3)
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(776, 503)
+        Me.TabControl1.Size = New System.Drawing.Size(776, 636)
         Me.TabControl1.TabIndex = 106
         '
         'TabPage1
@@ -448,7 +447,7 @@ Partial Class Form25
         Me.TabPage1.Location = New System.Drawing.Point(4, 54)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(768, 445)
+        Me.TabPage1.Size = New System.Drawing.Size(768, 578)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Case"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -537,9 +536,9 @@ Partial Class Form25
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.DataGridView1.Location = New System.Drawing.Point(16, 334)
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 341)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(739, 95)
+        Me.DataGridView1.Size = New System.Drawing.Size(739, 87)
         Me.DataGridView1.TabIndex = 12
         '
         'TabPage2
@@ -560,7 +559,7 @@ Partial Class Form25
         Me.TabPage2.Location = New System.Drawing.Point(4, 54)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(768, 445)
+        Me.TabPage2.Size = New System.Drawing.Size(768, 578)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Facts"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -579,7 +578,7 @@ Partial Class Form25
         '
         Me.TextBox5.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.TextBox5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.TextBox5.Location = New System.Drawing.Point(411, 221)
+        Me.TextBox5.Location = New System.Drawing.Point(411, 191)
         Me.TextBox5.Multiline = True
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.ReadOnly = True
@@ -591,7 +590,7 @@ Partial Class Form25
         '
         Me.TextBox4.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.TextBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.TextBox4.Location = New System.Drawing.Point(411, 134)
+        Me.TextBox4.Location = New System.Drawing.Point(411, 118)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(323, 31)
@@ -601,19 +600,19 @@ Partial Class Form25
         '
         Me.TextBox3.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.TextBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.TextBox3.Location = New System.Drawing.Point(27, 162)
+        Me.TextBox3.Location = New System.Drawing.Point(27, 152)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox3.Size = New System.Drawing.Size(353, 90)
+        Me.TextBox3.Size = New System.Drawing.Size(353, 70)
         Me.TextBox3.TabIndex = 8
         '
         'TextBox2
         '
         Me.TextBox2.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.TextBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.TextBox2.Location = New System.Drawing.Point(27, 294)
+        Me.TextBox2.Location = New System.Drawing.Point(27, 265)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
@@ -625,7 +624,7 @@ Partial Class Form25
         '
         Me.Label25.AutoSize = True
         Me.Label25.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.Label25.Location = New System.Drawing.Point(23, 136)
+        Me.Label25.Location = New System.Drawing.Point(23, 126)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(46, 23)
         Me.Label25.TabIndex = 6
@@ -635,7 +634,7 @@ Partial Class Form25
         '
         Me.Label23.AutoSize = True
         Me.Label23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.Label23.Location = New System.Drawing.Point(407, 108)
+        Me.Label23.Location = New System.Drawing.Point(407, 92)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(153, 23)
         Me.Label23.TabIndex = 5
@@ -645,7 +644,7 @@ Partial Class Form25
         '
         Me.Label22.AutoSize = True
         Me.Label22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.Label22.Location = New System.Drawing.Point(407, 195)
+        Me.Label22.Location = New System.Drawing.Point(407, 165)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(156, 23)
         Me.Label22.TabIndex = 4
@@ -665,7 +664,7 @@ Partial Class Form25
         '
         Me.Label14.AutoSize = True
         Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.Label14.Location = New System.Drawing.Point(23, 268)
+        Me.Label14.Location = New System.Drawing.Point(23, 239)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(46, 23)
         Me.Label14.TabIndex = 2
@@ -680,7 +679,7 @@ Partial Class Form25
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox1.Size = New System.Drawing.Size(353, 77)
+        Me.TextBox1.Size = New System.Drawing.Size(353, 68)
         Me.TextBox1.TabIndex = 1
         '
         'Label4
@@ -700,28 +699,19 @@ Partial Class Form25
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(638, 517)
+        Me.Button1.Location = New System.Drawing.Point(629, 666)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(85, 30)
         Me.Button1.TabIndex = 107
         Me.Button1.Text = "Update"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
-        Me.Panel1.Location = New System.Drawing.Point(528, -1)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(10, 719)
-        Me.Panel1.TabIndex = 131
-        '
         'Form25
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ClientSize = New System.Drawing.Size(1304, 714)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(1332, 714)
         Me.Controls.Add(Me.TextBox18)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox17)
@@ -821,5 +811,4 @@ Partial Class Form25
     Friend WithEvents TextBox16 As TextBox
     Friend WithEvents TextBox15 As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents Panel1 As Panel
 End Class
