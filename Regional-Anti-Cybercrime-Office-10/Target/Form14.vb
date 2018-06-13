@@ -4,7 +4,7 @@ Public Class Form14
     Dim mysqlconn As MySqlConnection
     Dim command As MySqlCommand
     Dim reader As MySqlDataReader
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub Label1_Click(sender As Object, e As EventArgs)
 
     End Sub
 

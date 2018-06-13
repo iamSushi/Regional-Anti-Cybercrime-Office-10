@@ -13,7 +13,7 @@ Public Class Form25
     Dim examiner As String
     Dim complainant As String
     Dim agency As String
-
+    Dim lab_case_ni As String
 
     Private Sub Label25_Click(sender As Object, e As EventArgs)
 
@@ -66,7 +66,7 @@ Public Class Form25
             reader = command.ExecuteReader
 
             While reader.Read
-                Form26.lab_case = reader.GetString("lab_case_no")
+
                 Label1.Text = reader.GetString("lab_case_no_id")
                 TextBox10.Text = reader.GetString("type")
                 agency = reader.GetString("requesting_agency")
@@ -357,6 +357,7 @@ Public Class Form25
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Form26.Show()
+
         Me.Hide()
     End Sub
 End Class

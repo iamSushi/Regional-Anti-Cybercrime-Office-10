@@ -397,7 +397,10 @@ Public Class Form3
                 reader = command.ExecuteReader
                 MessageBox.Show("Successful")
                 TextBox1.Text = ""
-
+                TextBox8.Text = ""
+                TextBox4.Text = ""
+                TextBox11.Text = ""
+                TextBox3.Text = ""
                 ComboBox1.Text = ""
                 ComboBox2.Text = ""
                 ComboBox5.Text = ""
@@ -533,6 +536,22 @@ Public Class Form3
 
 
         End If
+        Try
+            mysqlconn.Open()
+            Dim query As String
+            query = "update laboratory_case set date_informed = '" + DateTimePicker4.Value + "' where lab_case_no = '" & lab_case_no & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+            MessageBox.Show("Successful")
+
+            TextBox6.Text = ""
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
         TextBox10.Text = ""
         TextBox12.Text = ""
         TextBox14.Text = ""
@@ -584,6 +603,16 @@ Public Class Form3
                 Dim case_name = row.Cells("CaseID").Value.ToString
                 TextBox10.Text = case_name
                 lab_case_no = pili
+                Dim query As String
+                query = "select * from laboratory_case where lab_case_no = '" & pili & "'"
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+
+                While reader.Read
+                    examiner2 = reader.GetString("examiner")
+                    investigator2 = reader.GetString("investigator")
+                End While
+
             End If
             mysqlconn.Close()
         Catch ex As MySqlException
@@ -591,7 +620,51 @@ Public Class Form3
         Finally
             mysqlconn.Dispose()
         End Try
+        Try
+            mysqlconn.Open()
 
+            Dim query As String
+            query = "select fname,mname,sname from officer where officer_id = '" & examiner2 & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                Dim f = reader.GetString("fname")
+                Dim m = reader.GetString("mname")
+                Dim s = reader.GetString("sname")
+                Dim name_ni = f + " " + m + " " + s
+                TextBox12.Text = name_ni
+            End While
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            query = "select fname,mname,sname from officer where officer_id = '" & investigator2 & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                Dim f = reader.GetString("fname")
+                Dim m = reader.GetString("mname")
+                Dim s = reader.GetString("sname")
+                Dim name_ni = f + " " + m + " " + s
+                TextBox14.Text = name_ni
+            End While
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
 
     End Sub
 

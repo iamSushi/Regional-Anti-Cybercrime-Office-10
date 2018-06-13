@@ -103,6 +103,7 @@ Public Class Form4
                 Dim pili = row.Cells("ID").Value.ToString
 
                 Form25.lab_case = pili
+                Form26.lab_case = pili
                 Form25.Show()
 
             End If

@@ -75,6 +75,7 @@ Partial Class Form3
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.ComboBox18 = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ComboBox16 = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -137,7 +138,6 @@ Partial Class Form3
         Me.Button27 = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.ComboBox18 = New System.Windows.Forms.ComboBox()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -501,7 +501,7 @@ Partial Class Form3
         Me.ComboBox13.Location = New System.Drawing.Point(714, 40)
         Me.ComboBox13.Name = "ComboBox13"
         Me.ComboBox13.Size = New System.Drawing.Size(220, 31)
-        Me.ComboBox13.TabIndex = 105
+        Me.ComboBox13.TabIndex = 6
         '
         'DataGridView3
         '
@@ -547,7 +547,7 @@ Partial Class Form3
         Me.DateTimePicker6.Location = New System.Drawing.Point(713, 190)
         Me.DateTimePicker6.Name = "DateTimePicker6"
         Me.DateTimePicker6.Size = New System.Drawing.Size(221, 31)
-        Me.DateTimePicker6.TabIndex = 103
+        Me.DateTimePicker6.TabIndex = 9
         Me.DateTimePicker6.Value = New Date(2018, 6, 6, 0, 0, 0, 0)
         '
         'Label33
@@ -569,7 +569,7 @@ Partial Class Form3
         Me.DateTimePicker5.Location = New System.Drawing.Point(713, 140)
         Me.DateTimePicker5.Name = "DateTimePicker5"
         Me.DateTimePicker5.Size = New System.Drawing.Size(221, 31)
-        Me.DateTimePicker5.TabIndex = 79
+        Me.DateTimePicker5.TabIndex = 8
         Me.DateTimePicker5.Value = New Date(2018, 6, 6, 0, 0, 0, 0)
         '
         'Label29
@@ -604,7 +604,7 @@ Partial Class Form3
         Me.TextBox7.Location = New System.Drawing.Point(241, 240)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(185, 31)
-        Me.TextBox7.TabIndex = 97
+        Me.TextBox7.TabIndex = 5
         '
         'Button34
         '
@@ -642,7 +642,7 @@ Partial Class Form3
         Me.Button31.Location = New System.Drawing.Point(869, 236)
         Me.Button31.Name = "Button31"
         Me.Button31.Size = New System.Drawing.Size(65, 30)
-        Me.Button31.TabIndex = 44
+        Me.Button31.TabIndex = 10
         Me.Button31.Text = "Save"
         Me.Button31.UseVisualStyleBackColor = False
         '
@@ -688,7 +688,7 @@ Partial Class Form3
         Me.DateTimePicker1.Location = New System.Drawing.Point(713, 90)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(221, 31)
-        Me.DateTimePicker1.TabIndex = 18
+        Me.DateTimePicker1.TabIndex = 7
         Me.DateTimePicker1.Value = New Date(2018, 6, 1, 0, 0, 0, 0)
         '
         'ComboBox17
@@ -699,7 +699,7 @@ Partial Class Form3
         Me.ComboBox17.Location = New System.Drawing.Point(241, 140)
         Me.ComboBox17.Name = "ComboBox17"
         Me.ComboBox17.Size = New System.Drawing.Size(220, 31)
-        Me.ComboBox17.TabIndex = 75
+        Me.ComboBox17.TabIndex = 3
         '
         'Label12
         '
@@ -733,7 +733,7 @@ Partial Class Form3
         Me.ComboBox15.Location = New System.Drawing.Point(241, 90)
         Me.ComboBox15.Name = "ComboBox15"
         Me.ComboBox15.Size = New System.Drawing.Size(220, 31)
-        Me.ComboBox15.TabIndex = 74
+        Me.ComboBox15.TabIndex = 2
         '
         'Label9
         '
@@ -754,7 +754,7 @@ Partial Class Form3
         Me.ComboBox3.Location = New System.Drawing.Point(241, 190)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(220, 31)
-        Me.ComboBox3.TabIndex = 63
+        Me.ComboBox3.TabIndex = 4
         '
         'Label17
         '
@@ -822,6 +822,14 @@ Partial Class Form3
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Nature of Case"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'ComboBox18
+        '
+        Me.ComboBox18.FormattingEnabled = True
+        Me.ComboBox18.Location = New System.Drawing.Point(241, 290)
+        Me.ComboBox18.Name = "ComboBox18"
+        Me.ComboBox18.Size = New System.Drawing.Size(224, 31)
+        Me.ComboBox18.TabIndex = 6
         '
         'Label10
         '
@@ -906,7 +914,7 @@ Partial Class Form3
         Me.TextBox8.Location = New System.Drawing.Point(241, 90)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(189, 31)
-        Me.TextBox8.TabIndex = 96
+        Me.TextBox8.TabIndex = 2
         '
         'ComboBox11
         '
@@ -926,7 +934,7 @@ Partial Class Form3
         Me.TextBox1.Location = New System.Drawing.Point(241, 40)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(189, 31)
-        Me.TextBox1.TabIndex = 94
+        Me.TextBox1.TabIndex = 1
         '
         'ComboBox10
         '
@@ -1063,7 +1071,7 @@ Partial Class Form3
         Me.Button38.Location = New System.Drawing.Point(241, 333)
         Me.Button38.Name = "Button38"
         Me.Button38.Size = New System.Drawing.Size(65, 30)
-        Me.Button38.TabIndex = 81
+        Me.Button38.TabIndex = 7
         Me.Button38.Text = "Save"
         Me.Button38.UseVisualStyleBackColor = False
         '
@@ -1159,7 +1167,7 @@ Partial Class Form3
         Me.TextBox11.Location = New System.Drawing.Point(241, 190)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(189, 31)
-        Me.TextBox11.TabIndex = 64
+        Me.TextBox11.TabIndex = 4
         '
         'Label23
         '
@@ -1227,7 +1235,7 @@ Partial Class Form3
         Me.TextBox4.Location = New System.Drawing.Point(241, 140)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(189, 31)
-        Me.TextBox4.TabIndex = 62
+        Me.TextBox4.TabIndex = 3
         '
         'Label20
         '
@@ -1295,7 +1303,7 @@ Partial Class Form3
         Me.TextBox3.Location = New System.Drawing.Point(241, 240)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(189, 31)
-        Me.TextBox3.TabIndex = 54
+        Me.TextBox3.TabIndex = 5
         '
         'Label18
         '
@@ -1356,7 +1364,7 @@ Partial Class Form3
         Me.Button10.Location = New System.Drawing.Point(856, 190)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(80, 30)
-        Me.Button10.TabIndex = 101
+        Me.Button10.TabIndex = 7
         Me.Button10.Text = "Update"
         Me.Button10.UseVisualStyleBackColor = False
         '
@@ -1366,7 +1374,7 @@ Partial Class Form3
         Me.TextBox14.Location = New System.Drawing.Point(240, 140)
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.Size = New System.Drawing.Size(220, 31)
-        Me.TextBox14.TabIndex = 100
+        Me.TextBox14.TabIndex = 3
         '
         'TextBox12
         '
@@ -1374,7 +1382,7 @@ Partial Class Form3
         Me.TextBox12.Location = New System.Drawing.Point(240, 90)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(220, 31)
-        Me.TextBox12.TabIndex = 99
+        Me.TextBox12.TabIndex = 2
         '
         'Label35
         '
@@ -1418,7 +1426,7 @@ Partial Class Form3
         Me.TextBox10.Location = New System.Drawing.Point(240, 40)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(220, 31)
-        Me.TextBox10.TabIndex = 96
+        Me.TextBox10.TabIndex = 1
         '
         'Label30
         '
@@ -1440,7 +1448,7 @@ Partial Class Form3
         Me.DateTimePicker4.Location = New System.Drawing.Point(715, 37)
         Me.DateTimePicker4.Name = "DateTimePicker4"
         Me.DateTimePicker4.Size = New System.Drawing.Size(221, 31)
-        Me.DateTimePicker4.TabIndex = 88
+        Me.DateTimePicker4.TabIndex = 4
         '
         'Label31
         '
@@ -1474,7 +1482,7 @@ Partial Class Form3
         Me.TextBox5.Location = New System.Drawing.Point(715, 90)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(185, 31)
-        Me.TextBox5.TabIndex = 91
+        Me.TextBox5.TabIndex = 5
         '
         'Button25
         '
@@ -1499,7 +1507,7 @@ Partial Class Form3
         Me.TextBox6.Location = New System.Drawing.Point(715, 140)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(185, 31)
-        Me.TextBox6.TabIndex = 93
+        Me.TextBox6.TabIndex = 6
         '
         'Button27
         '
@@ -1533,14 +1541,6 @@ Partial Class Form3
         '
         Me.ErrorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.ErrorProvider1.ContainerControl = Me
-        '
-        'ComboBox18
-        '
-        Me.ComboBox18.FormattingEnabled = True
-        Me.ComboBox18.Location = New System.Drawing.Point(241, 290)
-        Me.ComboBox18.Name = "ComboBox18"
-        Me.ComboBox18.Size = New System.Drawing.Size(224, 31)
-        Me.ComboBox18.TabIndex = 103
         '
         'Form3
         '

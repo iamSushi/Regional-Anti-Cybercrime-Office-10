@@ -299,7 +299,7 @@ Partial Class Form2
         Me.TextBox2.Location = New System.Drawing.Point(40, 220)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(314, 31)
-        Me.TextBox2.TabIndex = 106
+        Me.TextBox2.TabIndex = 3
         '
         'Button12
         '
@@ -350,7 +350,7 @@ Partial Class Form2
         Me.DateTimePicker2.Location = New System.Drawing.Point(40, 140)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(318, 31)
-        Me.DateTimePicker2.TabIndex = 102
+        Me.DateTimePicker2.TabIndex = 2
         Me.DateTimePicker2.Value = New Date(2018, 6, 4, 0, 0, 0, 0)
         '
         'TextBox13
@@ -359,7 +359,7 @@ Partial Class Form2
         Me.TextBox13.Location = New System.Drawing.Point(40, 300)
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.Size = New System.Drawing.Size(318, 31)
-        Me.TextBox13.TabIndex = 101
+        Me.TextBox13.TabIndex = 4
         '
         'Label16
         '
@@ -429,7 +429,7 @@ Partial Class Form2
         Me.TextBox4.Location = New System.Drawing.Point(40, 382)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(318, 31)
-        Me.TextBox4.TabIndex = 75
+        Me.TextBox4.TabIndex = 5
         '
         'Label4
         '
@@ -454,7 +454,7 @@ Partial Class Form2
         Me.Button22.Location = New System.Drawing.Point(283, 506)
         Me.Button22.Name = "Button22"
         Me.Button22.Size = New System.Drawing.Size(75, 30)
-        Me.Button22.TabIndex = 68
+        Me.Button22.TabIndex = 8
         Me.Button22.Text = "Save"
         Me.Button22.UseVisualStyleBackColor = False
         '
@@ -466,7 +466,7 @@ Partial Class Form2
         Me.facts.Name = "facts"
         Me.facts.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.facts.Size = New System.Drawing.Size(585, 170)
-        Me.facts.TabIndex = 67
+        Me.facts.TabIndex = 7
         '
         'Label6
         '
@@ -487,7 +487,7 @@ Partial Class Form2
         Me.factname.Location = New System.Drawing.Point(40, 460)
         Me.factname.Name = "factname"
         Me.factname.Size = New System.Drawing.Size(318, 31)
-        Me.factname.TabIndex = 65
+        Me.factname.TabIndex = 6
         '
         'Label5
         '
@@ -509,7 +509,7 @@ Partial Class Form2
         Me.TextBox6.Location = New System.Drawing.Point(40, 60)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(290, 31)
-        Me.TextBox6.TabIndex = 97
+        Me.TextBox6.TabIndex = 1
         '
         'TabPage2
         '
