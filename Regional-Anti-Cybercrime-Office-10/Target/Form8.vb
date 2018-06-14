@@ -55,7 +55,7 @@ Public Class Form8
 
             Dim query As String
 
-            query = "select person_id as ID,fname as  Firstname, mname as Middlename,sname as Surname from persons where category = 'victim'"
+            query = "select person_id as ID,fname as  Firstname, mname as Middlename,sname as Surname, category as Category from persons where category = 'victim' or category = 'complainant'"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -110,8 +110,12 @@ Public Class Form8
             mysqlconn.Open()
 
             Dim query As String
+            If TextBox1.Text = "" Then
+                query = "select person_id as ID,fname as  Firstname, mname as Middlename,sname as Surname, category as Category from persons where category = 'victim' or category = 'complainant'"
+            Else
+                query = "select person_id as ID,fname as  Firstname, mname as Middlename,sname as Surname, category as Category from persons where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%' and (category = 'victim' or category = 'complainant')"
+            End If
 
-            query = "select persons.person_id as ID,persons.fname as Firstname, persons.mname as Middlename, persons.sname as Surname from victim inner join persons on victim.person_id = persons.person_id where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%' and category = 'victim'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
