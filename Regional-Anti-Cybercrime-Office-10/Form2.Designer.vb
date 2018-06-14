@@ -78,7 +78,6 @@ Partial Class Form2
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button19 = New System.Windows.Forms.Button()
         Me.Button20 = New System.Windows.Forms.Button()
-        Me.Button21 = New System.Windows.Forms.Button()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -651,7 +650,6 @@ Partial Class Form2
         Me.panel_slide.Controls.Add(Me.Button13)
         Me.panel_slide.Controls.Add(Me.Button19)
         Me.panel_slide.Controls.Add(Me.Button20)
-        Me.panel_slide.Controls.Add(Me.Button21)
         Me.panel_slide.Dock = System.Windows.Forms.DockStyle.Left
         Me.panel_slide.Location = New System.Drawing.Point(73, 58)
         Me.panel_slide.Name = "panel_slide"
@@ -763,18 +761,6 @@ Partial Class Form2
         Me.Button20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button20.UseVisualStyleBackColor = True
         '
-        'Button21
-        '
-        Me.Button21.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button21.FlatAppearance.BorderSize = 0
-        Me.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button21.Image = CType(resources.GetObject("Button21.Image"), System.Drawing.Image)
-        Me.Button21.Location = New System.Drawing.Point(-38, 10)
-        Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(32, 31)
-        Me.Button21.TabIndex = 8
-        Me.Button21.UseVisualStyleBackColor = True
-        '
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
@@ -863,7 +849,6 @@ Partial Class Form2
     Friend WithEvents Button13 As Button
     Friend WithEvents Button19 As Button
     Friend WithEvents Button20 As Button
-    Friend WithEvents Button21 As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents TextBox2 As TextBox

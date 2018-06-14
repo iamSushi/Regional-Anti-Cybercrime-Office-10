@@ -21,15 +21,18 @@ Public Class Form3
 
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Do While panel_slide.Width < 109
-            panel_slide.Width = panel_slide.Width + 1
-        Loop
-    End Sub
-
-    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        Do While panel_slide.Width > 0
-            panel_slide.Width = panel_slide.Width - 1
-        Loop
+        If panel_slide.Width = 0 Then
+            Do While panel_slide.Width < 109
+                panel_slide.Width = panel_slide.Width + 1
+            Loop
+            Return
+        End If
+        If panel_slide.Width = 109 Then
+            Do While panel_slide.Width > 0
+                panel_slide.Width = panel_slide.Width - 1
+            Loop
+            Return
+        End If
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
