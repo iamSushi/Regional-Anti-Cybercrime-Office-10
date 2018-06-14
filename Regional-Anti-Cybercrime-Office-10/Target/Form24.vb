@@ -24,7 +24,7 @@ Public Class Form24
 
             Dim query As String
 
-            query = "select person_id as ID, fname as Firstname, mname as Middlename, sname as Surname, category as Category from persons where category = 'victim' or category = 'witness'"
+            query = "select person_id as ID, fname as Firstname, mname as Middlename, sname as Surname, category as Category from persons where category = 'complainant' or category = 'victim'"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -116,7 +116,13 @@ Public Class Form24
 
             Dim query As String
 
-            query = "select person_id as ID, fname as Firstname, mname as Middlename, sname as Surname, category as Category from persons where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
+            If TextBox1.Text = "" Then
+                query = "select person_id as ID, fname as Firstname, mname as Middlename, sname as Surname, category as Category from persons where category = 'complainant' or category = 'victim'"
+            Else
+                query = "select person_id as ID, fname as Firstname, mname as Middlename, sname as Surname, category as Category from persons where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%' and ( category = 'complainant' or category = 'victim ')"
+            End If
+
+
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command

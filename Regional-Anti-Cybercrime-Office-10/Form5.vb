@@ -201,8 +201,8 @@ Public Class Form5
             mysqlconn.Dispose()
         End Try
 
-        PictureBox2.ImageLocation = ("C:\Users\iamSushi\Desktop\user.jpg")
-        PictureBox2.Load()
+        'PictureBox2.ImageLocation = ("C:\Users\iamSushi\Desktop\user.jpg")
+        'PictureBox2.Load()
     End Sub
 
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
