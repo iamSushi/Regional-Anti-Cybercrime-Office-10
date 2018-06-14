@@ -419,14 +419,14 @@ Partial Class Form4
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel3.Location = New System.Drawing.Point(73, 58)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(261, 672)
+        Me.Panel3.Size = New System.Drawing.Size(296, 672)
         Me.Panel3.TabIndex = 25
         '
         'ComboBox2
         '
         Me.ComboBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(14, 983)
+        Me.ComboBox2.Location = New System.Drawing.Point(32, 983)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(177, 31)
         Me.ComboBox2.TabIndex = 60
@@ -435,7 +435,7 @@ Partial Class Form4
         '
         Me.ComboBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(14, 450)
+        Me.ComboBox1.Location = New System.Drawing.Point(32, 450)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(177, 31)
         Me.ComboBox1.TabIndex = 59
@@ -443,7 +443,7 @@ Partial Class Form4
         'TextBox9
         '
         Me.TextBox9.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox9.Location = New System.Drawing.Point(16, 910)
+        Me.TextBox9.Location = New System.Drawing.Point(34, 910)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.ReadOnly = True
         Me.TextBox9.Size = New System.Drawing.Size(175, 31)
@@ -457,7 +457,7 @@ Partial Class Form4
         Me.Button30.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button30.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button30.Image = CType(resources.GetObject("Button30.Image"), System.Drawing.Image)
-        Me.Button30.Location = New System.Drawing.Point(191, 983)
+        Me.Button30.Location = New System.Drawing.Point(209, 983)
         Me.Button30.Name = "Button30"
         Me.Button30.Size = New System.Drawing.Size(35, 31)
         Me.Button30.TabIndex = 50
@@ -471,7 +471,7 @@ Partial Class Form4
         Me.Button29.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button29.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button29.Image = CType(resources.GetObject("Button29.Image"), System.Drawing.Image)
-        Me.Button29.Location = New System.Drawing.Point(191, 910)
+        Me.Button29.Location = New System.Drawing.Point(209, 910)
         Me.Button29.Name = "Button29"
         Me.Button29.Size = New System.Drawing.Size(35, 31)
         Me.Button29.TabIndex = 57
@@ -483,7 +483,7 @@ Partial Class Form4
         Me.Label15.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label15.Location = New System.Drawing.Point(12, 957)
+        Me.Label15.Location = New System.Drawing.Point(30, 957)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(40, 23)
         Me.Label15.TabIndex = 49
@@ -495,7 +495,7 @@ Partial Class Form4
         Me.Label14.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label14.Location = New System.Drawing.Point(12, 884)
+        Me.Label14.Location = New System.Drawing.Point(30, 884)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(104, 23)
         Me.Label14.TabIndex = 56
@@ -504,7 +504,7 @@ Partial Class Form4
         'TextBox8
         '
         Me.TextBox8.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(16, 837)
+        Me.TextBox8.Location = New System.Drawing.Point(34, 837)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.ReadOnly = True
         Me.TextBox8.Size = New System.Drawing.Size(175, 31)
@@ -518,7 +518,7 @@ Partial Class Form4
         Me.Button28.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button28.Image = CType(resources.GetObject("Button28.Image"), System.Drawing.Image)
-        Me.Button28.Location = New System.Drawing.Point(191, 837)
+        Me.Button28.Location = New System.Drawing.Point(209, 837)
         Me.Button28.Name = "Button28"
         Me.Button28.Size = New System.Drawing.Size(35, 31)
         Me.Button28.TabIndex = 54
@@ -530,7 +530,7 @@ Partial Class Form4
         Me.Label13.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label13.Location = New System.Drawing.Point(12, 811)
+        Me.Label13.Location = New System.Drawing.Point(30, 811)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(81, 23)
         Me.Label13.TabIndex = 53
@@ -539,7 +539,7 @@ Partial Class Form4
         'TextBox7
         '
         Me.TextBox7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(16, 770)
+        Me.TextBox7.Location = New System.Drawing.Point(34, 770)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ReadOnly = True
         Me.TextBox7.Size = New System.Drawing.Size(175, 31)
@@ -553,7 +553,7 @@ Partial Class Form4
         Me.Button27.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button27.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button27.Image = CType(resources.GetObject("Button27.Image"), System.Drawing.Image)
-        Me.Button27.Location = New System.Drawing.Point(191, 770)
+        Me.Button27.Location = New System.Drawing.Point(209, 770)
         Me.Button27.Name = "Button27"
         Me.Button27.Size = New System.Drawing.Size(35, 31)
         Me.Button27.TabIndex = 51
@@ -565,7 +565,7 @@ Partial Class Form4
         Me.Label12.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label12.Location = New System.Drawing.Point(12, 744)
+        Me.Label12.Location = New System.Drawing.Point(30, 744)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(94, 23)
         Me.Label12.TabIndex = 50
@@ -574,7 +574,7 @@ Partial Class Form4
         'TextBox6
         '
         Me.TextBox6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(16, 530)
+        Me.TextBox6.Location = New System.Drawing.Point(34, 530)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.ReadOnly = True
         Me.TextBox6.Size = New System.Drawing.Size(175, 31)
@@ -583,7 +583,7 @@ Partial Class Form4
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(16, 695)
+        Me.TextBox5.Location = New System.Drawing.Point(34, 695)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.ReadOnly = True
         Me.TextBox5.Size = New System.Drawing.Size(175, 31)
@@ -597,7 +597,7 @@ Partial Class Form4
         Me.Button26.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button26.Image = CType(resources.GetObject("Button26.Image"), System.Drawing.Image)
-        Me.Button26.Location = New System.Drawing.Point(191, 695)
+        Me.Button26.Location = New System.Drawing.Point(209, 695)
         Me.Button26.Name = "Button26"
         Me.Button26.Size = New System.Drawing.Size(35, 31)
         Me.Button26.TabIndex = 47
@@ -609,7 +609,7 @@ Partial Class Form4
         Me.Label11.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label11.Location = New System.Drawing.Point(12, 669)
+        Me.Label11.Location = New System.Drawing.Point(30, 669)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(101, 23)
         Me.Label11.TabIndex = 46
@@ -618,7 +618,7 @@ Partial Class Form4
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(16, 610)
+        Me.TextBox4.Location = New System.Drawing.Point(34, 610)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(175, 31)
@@ -627,7 +627,7 @@ Partial Class Form4
         'DateTimePicker4
         '
         Me.DateTimePicker4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker4.Location = New System.Drawing.Point(16, 370)
+        Me.DateTimePicker4.Location = New System.Drawing.Point(34, 370)
         Me.DateTimePicker4.Name = "DateTimePicker4"
         Me.DateTimePicker4.Size = New System.Drawing.Size(175, 31)
         Me.DateTimePicker4.TabIndex = 43
@@ -636,7 +636,7 @@ Partial Class Form4
         'DateTimePicker3
         '
         Me.DateTimePicker3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker3.Location = New System.Drawing.Point(16, 290)
+        Me.DateTimePicker3.Location = New System.Drawing.Point(34, 290)
         Me.DateTimePicker3.Name = "DateTimePicker3"
         Me.DateTimePicker3.Size = New System.Drawing.Size(175, 31)
         Me.DateTimePicker3.TabIndex = 42
@@ -645,7 +645,7 @@ Partial Class Form4
         'DateTimePicker2
         '
         Me.DateTimePicker2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Location = New System.Drawing.Point(16, 210)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(34, 210)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(175, 31)
         Me.DateTimePicker2.TabIndex = 41
@@ -654,7 +654,7 @@ Partial Class Form4
         'DateTimePicker1
         '
         Me.DateTimePicker1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(16, 130)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(34, 130)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(175, 31)
         Me.DateTimePicker1.TabIndex = 40
@@ -668,7 +668,7 @@ Partial Class Form4
         Me.Button23.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button23.Image = CType(resources.GetObject("Button23.Image"), System.Drawing.Image)
-        Me.Button23.Location = New System.Drawing.Point(191, 610)
+        Me.Button23.Location = New System.Drawing.Point(209, 610)
         Me.Button23.Name = "Button23"
         Me.Button23.Size = New System.Drawing.Size(35, 31)
         Me.Button23.TabIndex = 38
@@ -680,7 +680,7 @@ Partial Class Form4
         Me.Label10.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label10.Location = New System.Drawing.Point(12, 584)
+        Me.Label10.Location = New System.Drawing.Point(30, 584)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(107, 23)
         Me.Label10.TabIndex = 37
@@ -694,7 +694,7 @@ Partial Class Form4
         Me.Button22.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button22.Image = CType(resources.GetObject("Button22.Image"), System.Drawing.Image)
-        Me.Button22.Location = New System.Drawing.Point(191, 530)
+        Me.Button22.Location = New System.Drawing.Point(209, 530)
         Me.Button22.Name = "Button22"
         Me.Button22.Size = New System.Drawing.Size(35, 31)
         Me.Button22.TabIndex = 35
@@ -706,7 +706,7 @@ Partial Class Form4
         Me.Label9.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label9.Location = New System.Drawing.Point(12, 504)
+        Me.Label9.Location = New System.Drawing.Point(30, 504)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(66, 23)
         Me.Label9.TabIndex = 34
@@ -720,7 +720,7 @@ Partial Class Form4
         Me.Button21.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button21.Image = CType(resources.GetObject("Button21.Image"), System.Drawing.Image)
-        Me.Button21.Location = New System.Drawing.Point(191, 450)
+        Me.Button21.Location = New System.Drawing.Point(209, 450)
         Me.Button21.Name = "Button21"
         Me.Button21.Size = New System.Drawing.Size(35, 31)
         Me.Button21.TabIndex = 32
@@ -732,7 +732,7 @@ Partial Class Form4
         Me.Label8.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label8.Location = New System.Drawing.Point(12, 424)
+        Me.Label8.Location = New System.Drawing.Point(30, 424)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(98, 23)
         Me.Label8.TabIndex = 31
@@ -746,7 +746,7 @@ Partial Class Form4
         Me.Button10.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
-        Me.Button10.Location = New System.Drawing.Point(191, 370)
+        Me.Button10.Location = New System.Drawing.Point(209, 370)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(35, 31)
         Me.Button10.TabIndex = 29
@@ -758,7 +758,7 @@ Partial Class Form4
         Me.Label7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label7.Location = New System.Drawing.Point(12, 344)
+        Me.Label7.Location = New System.Drawing.Point(30, 344)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(124, 23)
         Me.Label7.TabIndex = 28
@@ -772,7 +772,7 @@ Partial Class Form4
         Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(191, 290)
+        Me.Button1.Location = New System.Drawing.Point(209, 290)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(35, 31)
         Me.Button1.TabIndex = 26
@@ -784,7 +784,7 @@ Partial Class Form4
         Me.Label6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label6.Location = New System.Drawing.Point(12, 264)
+        Me.Label6.Location = New System.Drawing.Point(30, 264)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(118, 23)
         Me.Label6.TabIndex = 25
@@ -796,7 +796,7 @@ Partial Class Form4
         Me.Label2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label2.Location = New System.Drawing.Point(12, 24)
+        Me.Label2.Location = New System.Drawing.Point(30, 24)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(68, 23)
         Me.Label2.TabIndex = 14
@@ -806,7 +806,7 @@ Partial Class Form4
         '
         Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox1.Location = New System.Drawing.Point(16, 50)
+        Me.TextBox1.Location = New System.Drawing.Point(34, 50)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(175, 31)
         Me.TextBox1.TabIndex = 15
@@ -819,7 +819,7 @@ Partial Class Form4
         Me.Button19.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button19.Image = CType(resources.GetObject("Button19.Image"), System.Drawing.Image)
-        Me.Button19.Location = New System.Drawing.Point(191, 210)
+        Me.Button19.Location = New System.Drawing.Point(209, 210)
         Me.Button19.Name = "Button19"
         Me.Button19.Size = New System.Drawing.Size(35, 31)
         Me.Button19.TabIndex = 22
@@ -831,7 +831,7 @@ Partial Class Form4
         Me.Label4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(12, 184)
+        Me.Label4.Location = New System.Drawing.Point(30, 184)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(123, 23)
         Me.Label4.TabIndex = 20
@@ -845,7 +845,7 @@ Partial Class Form4
         Me.Button35.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button35.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button35.Image = CType(resources.GetObject("Button35.Image"), System.Drawing.Image)
-        Me.Button35.Location = New System.Drawing.Point(191, 50)
+        Me.Button35.Location = New System.Drawing.Point(209, 50)
         Me.Button35.Name = "Button35"
         Me.Button35.Size = New System.Drawing.Size(35, 31)
         Me.Button35.TabIndex = 16
@@ -857,7 +857,7 @@ Partial Class Form4
         Me.Label3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label3.Location = New System.Drawing.Point(12, 104)
+        Me.Label3.Location = New System.Drawing.Point(30, 104)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(118, 23)
         Me.Label3.TabIndex = 17
@@ -871,7 +871,7 @@ Partial Class Form4
         Me.Button18.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button18.Image = CType(resources.GetObject("Button18.Image"), System.Drawing.Image)
-        Me.Button18.Location = New System.Drawing.Point(191, 130)
+        Me.Button18.Location = New System.Drawing.Point(209, 130)
         Me.Button18.Name = "Button18"
         Me.Button18.Size = New System.Drawing.Size(35, 31)
         Me.Button18.TabIndex = 19
