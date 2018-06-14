@@ -7796,14 +7796,6 @@
         bgZXAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Button21.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAKZJREFUOE/t
-        lEEKwkAQBPctYp5kznpO/D+KsHZLzYLEmAzRkxYMLL09RRLQ8qfUWnccF1nsqtBpLpoj0SzqnOjuiV6j
-        Qq+5agaiCbob6fRE73GRhZGo4Yy7dbLACyw2qc9kOVngRQQWbZMFFmhuzDaZkcRPFsLJN02B7PGazNM3
-        TaHFM4L2mj6T5aRaCNmBqKEsJ1VxVhbobp1Uha/89D735/ALlHIHwJ/+3RoUWbUAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="ErrorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

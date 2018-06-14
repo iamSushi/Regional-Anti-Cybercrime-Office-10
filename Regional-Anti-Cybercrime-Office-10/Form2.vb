@@ -30,12 +30,6 @@ Public Class Form2
         Me.Close()
     End Sub
 
-    Private Sub Button21_Click(sender As Object, e As EventArgs) Handles Button21.Click
-        Do While panel_slide.Width > 0
-            panel_slide.Width = panel_slide.Width - 1
-        Loop
-    End Sub
-
     Private Sub Button19_Click(sender As Object, e As EventArgs) Handles Button19.Click
         Form3.Show()
         Me.Close()
@@ -57,9 +51,18 @@ Public Class Form2
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Do While panel_slide.Width < 109
-            panel_slide.Width = panel_slide.Width + 1
-        Loop
+        If panel_slide.Width = 0 Then
+            Do While panel_slide.Width < 109
+                panel_slide.Width = panel_slide.Width + 1
+            Loop
+            Return
+        End If
+        If panel_slide.Width = 109 Then
+            Do While panel_slide.Width > 0
+                panel_slide.Width = panel_slide.Width - 1
+            Loop
+            Return
+        End If
     End Sub
 
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click

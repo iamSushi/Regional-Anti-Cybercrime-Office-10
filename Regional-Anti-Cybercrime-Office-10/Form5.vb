@@ -11,15 +11,18 @@ Public Class Form5
 
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Do While panel_slide.Width < 109
-            panel_slide.Width = panel_slide.Width + 1
-        Loop
-    End Sub
-
-    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        Do While panel_slide.Width > 0
-            panel_slide.Width = panel_slide.Width - 1
-        Loop
+        If panel_slide.Width = 0 Then
+            Do While panel_slide.Width < 109
+                panel_slide.Width = panel_slide.Width + 1
+            Loop
+            Return
+        End If
+        If panel_slide.Width = 109 Then
+            Do While panel_slide.Width > 0
+                panel_slide.Width = panel_slide.Width - 1
+            Loop
+            Return
+        End If
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -119,7 +122,15 @@ Public Class Form5
                     gender = "female"
                 End If
 
-                query = "insert into persons values(null,'" & fname.Text & "','" & mname.Text & "','" & sname.Text & "','" & nickname.Text & "','" & DateTimePicker1.Value & "','" & gender & "','" & status.Text & "','" & contact.Text & "','" & email.Text & "','" & category.Text & "',@profile_image,NOW())"
+                Dim xoxo As String
+                xoxo = Nothing
+                If DateTimePicker1.Value >= DateTime.Today Then
+                    xoxo = DateTime.Today.ToShortDateString
+                Else
+                    xoxo = DateTimePicker1.Value.ToShortDateString
+                End If
+
+                query = "insert into persons values(null,'" & fname.Text & "','" & mname.Text & "','" & sname.Text & "','" & nickname.Text & "','" & xoxo & "','" & gender & "','" & status.Text & "','" & contact.Text & "','" & email.Text & "','" & category.Text & "',@profile_image,NOW())"
                 command = New MySqlCommand(query, mysqlconn)
                 command.Parameters.AddWithValue("@profile_image", arrImage)
                 reader = command.ExecuteReader
@@ -150,9 +161,6 @@ Public Class Form5
                 mysqlconn.Dispose()
             End Try
         End If
-
-
-
 
     End Sub
 
@@ -189,7 +197,7 @@ Public Class Form5
 
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
-
+        DateTimePicker1.Value = Now
     End Sub
 
     Private Sub profile_image()
@@ -402,37 +410,41 @@ Public Class Form5
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
 
-        index = e.RowIndex
-        Dim selectedRow As DataGridViewRow
-        selectedRow = DataGridView1.Rows(index)
+        Try
+            index = e.RowIndex
+            Dim selectedRow As DataGridViewRow
+            selectedRow = DataGridView1.Rows(index)
 
-        id.Text = selectedRow.Cells(0).Value.ToString()
-        fname.Text = selectedRow.Cells(1).Value.ToString()
-        mname.Text = selectedRow.Cells(2).Value.ToString()
-        sname.Text = selectedRow.Cells(3).Value.ToString()
-        DateTimePicker1.Value = selectedRow.Cells(5).Value.ToString()
-        contact.Text = selectedRow.Cells(7).Value.ToString()
-        email.Text = selectedRow.Cells(8).Value.ToString()
-        category.Text = selectedRow.Cells(9).Value.ToString()
-        status.Text = selectedRow.Cells(6).Value.ToString()
+            id.Text = selectedRow.Cells(0).Value.ToString()
+            fname.Text = selectedRow.Cells(1).Value.ToString()
+            mname.Text = selectedRow.Cells(2).Value.ToString()
+            sname.Text = selectedRow.Cells(3).Value.ToString()
+            DateTimePicker1.Value = selectedRow.Cells(5).Value.ToString()
+            contact.Text = selectedRow.Cells(7).Value.ToString()
+            email.Text = selectedRow.Cells(8).Value.ToString()
+            category.Text = selectedRow.Cells(9).Value.ToString()
+            status.Text = selectedRow.Cells(6).Value.ToString()
 
-        TextBox2.Text = selectedRow.Cells(1).Value.ToString()
-        TextBox3.Text = selectedRow.Cells(2).Value.ToString()
-        TextBox4.Text = selectedRow.Cells(3).Value.ToString()
-        TextBox5.Text = selectedRow.Cells(5).Value.ToString()
+            TextBox2.Text = selectedRow.Cells(1).Value.ToString()
+            TextBox3.Text = selectedRow.Cells(2).Value.ToString()
+            TextBox4.Text = selectedRow.Cells(3).Value.ToString()
+            TextBox5.Text = selectedRow.Cells(5).Value.ToString()
 
-        Dim myDateofBirth As Date
-        Dim currentDate As Date
-        Dim daySpan As TimeSpan
-        Dim difference As Double
-        Dim age As String
+            Dim myDateofBirth As Date
+            Dim currentDate As Date
+            Dim daySpan As TimeSpan
+            Dim difference As Double
+            Dim age As String
 
-        myDateofBirth = DateTimePicker1.Value.ToShortDateString
-        currentDate = Date.Today.ToShortDateString
-        daySpan = (currentDate - myDateofBirth)
-        difference = daySpan.Days
-        age = Str(Int(difference / 365))
-        TextBox7.Text = age
+            myDateofBirth = DateTimePicker1.Value.ToShortDateString
+            currentDate = Date.Today.ToShortDateString
+            daySpan = (currentDate - myDateofBirth)
+            difference = daySpan.Days
+            age = Str(Int(difference / 365))
+            TextBox7.Text = age
+        Catch ex As Exception
+            Return
+        End Try
 
         profile_image()
         profile_image2()

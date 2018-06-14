@@ -32,7 +32,6 @@ Partial Class Form4
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button24 = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -117,7 +116,6 @@ Partial Class Form4
         Me.panel_slide.Controls.Add(Me.Button13)
         Me.panel_slide.Controls.Add(Me.Button12)
         Me.panel_slide.Controls.Add(Me.Button11)
-        Me.panel_slide.Controls.Add(Me.Button9)
         Me.panel_slide.Dock = System.Windows.Forms.DockStyle.Left
         Me.panel_slide.Location = New System.Drawing.Point(73, 58)
         Me.panel_slide.Name = "panel_slide"
@@ -228,18 +226,6 @@ Partial Class Form4
         Me.Button11.Text = "   Officer"
         Me.Button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button11.UseVisualStyleBackColor = True
-        '
-        'Button9
-        '
-        Me.Button9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button9.FlatAppearance.BorderSize = 0
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
-        Me.Button9.Location = New System.Drawing.Point(-38, 10)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(32, 31)
-        Me.Button9.TabIndex = 8
-        Me.Button9.UseVisualStyleBackColor = True
         '
         'Panel2
         '
@@ -1026,7 +1012,6 @@ Partial Class Form4
     Friend WithEvents Button13 As Button
     Friend WithEvents Button12 As Button
     Friend WithEvents Button11 As Button
-    Friend WithEvents Button9 As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Button8 As Button

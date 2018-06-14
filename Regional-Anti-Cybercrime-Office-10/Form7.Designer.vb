@@ -28,6 +28,10 @@ Partial Class Form7
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.id = New System.Windows.Forms.TextBox()
@@ -68,7 +72,6 @@ Partial Class Form7
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -131,29 +134,26 @@ Partial Class Form7
         Me.Panel4.Controls.Add(Me.TextBox5)
         Me.Panel4.Controls.Add(Me.Label6)
         Me.Panel4.Controls.Add(Me.Button25)
-        Me.Panel4.Location = New System.Drawing.Point(97, 71)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel4.Location = New System.Drawing.Point(73, 58)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1348, 827)
+        Me.Panel4.Size = New System.Drawing.Size(1011, 672)
         Me.Panel4.TabIndex = 7
         '
         'TextBox11
         '
         Me.TextBox11.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox11.Location = New System.Drawing.Point(40, 785)
-        Me.TextBox11.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox11.Location = New System.Drawing.Point(30, 638)
         Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(24, 36)
+        Me.TextBox11.Size = New System.Drawing.Size(19, 31)
         Me.TextBox11.TabIndex = 81
         Me.TextBox11.Visible = False
         '
         'id
         '
         Me.id.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.id.Location = New System.Drawing.Point(5, 785)
-        Me.id.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.id.Location = New System.Drawing.Point(4, 638)
         Me.id.Name = "id"
-        Me.id.Size = New System.Drawing.Size(24, 36)
+        Me.id.Size = New System.Drawing.Size(19, 31)
         Me.id.TabIndex = 80
         Me.id.Visible = False
         '
@@ -166,10 +166,9 @@ Partial Class Form7
         Me.Button20.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button20.Image = CType(resources.GetObject("Button20.Image"), System.Drawing.Image)
         Me.Button20.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button20.Location = New System.Drawing.Point(833, 174)
-        Me.Button20.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button20.Location = New System.Drawing.Point(625, 141)
         Me.Button20.Name = "Button20"
-        Me.Button20.Size = New System.Drawing.Size(211, 90)
+        Me.Button20.Size = New System.Drawing.Size(158, 73)
         Me.Button20.TabIndex = 79
         Me.Button20.Text = "           Position"
         Me.Button20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -179,10 +178,9 @@ Partial Class Form7
         '
         Me.TextBox10.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox10.Location = New System.Drawing.Point(109, 785)
-        Me.TextBox10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox10.Location = New System.Drawing.Point(82, 638)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(24, 36)
+        Me.TextBox10.Size = New System.Drawing.Size(19, 31)
         Me.TextBox10.TabIndex = 78
         Me.TextBox10.Visible = False
         '
@@ -190,10 +188,9 @@ Partial Class Form7
         '
         Me.TextBox9.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox9.Location = New System.Drawing.Point(75, 785)
-        Me.TextBox9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox9.Location = New System.Drawing.Point(56, 638)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(24, 36)
+        Me.TextBox9.Size = New System.Drawing.Size(19, 31)
         Me.TextBox9.TabIndex = 77
         Me.TextBox9.Visible = False
         '
@@ -204,10 +201,9 @@ Partial Class Form7
         Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button19.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button19.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button19.Location = New System.Drawing.Point(485, 767)
-        Me.Button19.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button19.Location = New System.Drawing.Point(364, 623)
         Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(105, 37)
+        Me.Button19.Size = New System.Drawing.Size(79, 30)
         Me.Button19.TabIndex = 76
         Me.Button19.Text = "Remove"
         Me.Button19.UseVisualStyleBackColor = False
@@ -219,10 +215,9 @@ Partial Class Form7
         Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button18.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button18.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button18.Location = New System.Drawing.Point(768, 558)
-        Me.Button18.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button18.Location = New System.Drawing.Point(576, 453)
         Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(91, 37)
+        Me.Button18.Size = New System.Drawing.Size(68, 30)
         Me.Button18.TabIndex = 75
         Me.Button18.Text = "Add"
         Me.Button18.UseVisualStyleBackColor = False
@@ -234,10 +229,9 @@ Partial Class Form7
         Me.Button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button35.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button35.Image = CType(resources.GetObject("Button35.Image"), System.Drawing.Image)
-        Me.Button35.Location = New System.Drawing.Point(709, 556)
-        Me.Button35.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button35.Location = New System.Drawing.Point(532, 452)
         Me.Button35.Name = "Button35"
-        Me.Button35.Size = New System.Drawing.Size(47, 38)
+        Me.Button35.Size = New System.Drawing.Size(35, 31)
         Me.Button35.TabIndex = 74
         Me.Button35.UseVisualStyleBackColor = False
         '
@@ -245,10 +239,9 @@ Partial Class Form7
         '
         Me.TextBox4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox4.Location = New System.Drawing.Point(485, 556)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox4.Location = New System.Drawing.Point(364, 452)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(223, 36)
+        Me.TextBox4.Size = New System.Drawing.Size(168, 31)
         Me.TextBox4.TabIndex = 73
         '
         'DataGridView2
@@ -274,10 +267,19 @@ Partial Class Form7
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.DataGridView2.Location = New System.Drawing.Point(485, 614)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView2.Location = New System.Drawing.Point(364, 499)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(793, 145)
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.DataGridView2.Size = New System.Drawing.Size(595, 118)
         Me.DataGridView2.TabIndex = 71
         '
         'DataGridView1
@@ -285,37 +287,45 @@ Partial Class Form7
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.DataGridView1.Location = New System.Drawing.Point(485, 350)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Location = New System.Drawing.Point(364, 284)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(793, 199)
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Calibri", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle8
+        Me.DataGridView1.Size = New System.Drawing.Size(595, 162)
         Me.DataGridView1.TabIndex = 70
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(33, 308)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel3.Location = New System.Drawing.Point(25, 250)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1277, 10)
+        Me.Panel3.Size = New System.Drawing.Size(958, 8)
         Me.Panel3.TabIndex = 69
         '
         'Label4
@@ -323,10 +333,9 @@ Partial Class Form7
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(343, 209)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(257, 170)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(117, 29)
+        Me.Label4.Size = New System.Drawing.Size(91, 23)
         Me.Label4.TabIndex = 67
         Me.Label4.Text = "Username"
         '
@@ -335,20 +344,18 @@ Partial Class Form7
         Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox3.Enabled = False
         Me.TextBox3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(348, 241)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox3.Location = New System.Drawing.Point(261, 196)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(429, 29)
+        Me.TextBox3.Size = New System.Drawing.Size(322, 24)
         Me.TextBox3.TabIndex = 68
         '
         'PictureBox2
         '
         Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox2.Location = New System.Drawing.Point(67, 52)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox2.Location = New System.Drawing.Point(50, 42)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(239, 221)
+        Me.PictureBox2.Size = New System.Drawing.Size(180, 180)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 6
         Me.PictureBox2.TabStop = False
@@ -358,10 +365,9 @@ Partial Class Form7
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(343, 55)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(257, 45)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 29)
+        Me.Label2.Size = New System.Drawing.Size(57, 23)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Name"
         '
@@ -372,10 +378,9 @@ Partial Class Form7
         Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button17.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button17.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button17.Location = New System.Drawing.Point(99, 710)
-        Me.Button17.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button17.Location = New System.Drawing.Point(74, 577)
         Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(105, 37)
+        Me.Button17.Size = New System.Drawing.Size(79, 30)
         Me.Button17.TabIndex = 66
         Me.Button17.Text = "Update"
         Me.Button17.UseVisualStyleBackColor = False
@@ -386,11 +391,10 @@ Partial Class Form7
         Me.TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.TextBox1.Enabled = False
         Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(348, 87)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Location = New System.Drawing.Point(261, 71)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(429, 29)
+        Me.TextBox1.Size = New System.Drawing.Size(322, 24)
         Me.TextBox1.TabIndex = 8
         '
         'TextBox8
@@ -399,10 +403,9 @@ Partial Class Form7
         Me.TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox8.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox8.ForeColor = System.Drawing.SystemColors.Window
-        Me.TextBox8.Location = New System.Drawing.Point(99, 656)
-        Me.TextBox8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox8.Location = New System.Drawing.Point(74, 533)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(323, 36)
+        Me.TextBox8.Size = New System.Drawing.Size(243, 31)
         Me.TextBox8.TabIndex = 16
         Me.TextBox8.UseSystemPasswordChar = True
         '
@@ -411,10 +414,9 @@ Partial Class Form7
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(343, 132)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(257, 107)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 29)
+        Me.Label3.Size = New System.Drawing.Size(49, 23)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Rank"
         '
@@ -423,10 +425,9 @@ Partial Class Form7
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(93, 620)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(70, 504)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(186, 29)
+        Me.Label9.Size = New System.Drawing.Size(147, 23)
         Me.Label9.TabIndex = 15
         Me.Label9.Text = "Retype password"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -436,11 +437,10 @@ Partial Class Form7
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox2.Enabled = False
         Me.TextBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(348, 164)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox2.Location = New System.Drawing.Point(261, 133)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(429, 29)
+        Me.TextBox2.Size = New System.Drawing.Size(322, 24)
         Me.TextBox2.TabIndex = 10
         '
         'TextBox7
@@ -449,10 +449,9 @@ Partial Class Form7
         Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox7.ForeColor = System.Drawing.SystemColors.Window
-        Me.TextBox7.Location = New System.Drawing.Point(99, 570)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox7.Location = New System.Drawing.Point(74, 463)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(323, 36)
+        Me.TextBox7.Size = New System.Drawing.Size(243, 31)
         Me.TextBox7.TabIndex = 14
         Me.TextBox7.UseSystemPasswordChar = True
         '
@@ -461,10 +460,9 @@ Partial Class Form7
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(93, 534)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(70, 434)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(162, 29)
+        Me.Label8.Size = New System.Drawing.Size(127, 23)
         Me.Label8.TabIndex = 13
         Me.Label8.Text = "New password"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -478,10 +476,9 @@ Partial Class Form7
         Me.Button23.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button23.Image = CType(resources.GetObject("Button23.Image"), System.Drawing.Image)
         Me.Button23.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button23.Location = New System.Drawing.Point(1073, 174)
-        Me.Button23.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button23.Location = New System.Drawing.Point(805, 141)
         Me.Button23.Name = "Button23"
-        Me.Button23.Size = New System.Drawing.Size(211, 90)
+        Me.Button23.Size = New System.Drawing.Size(158, 73)
         Me.Button23.TabIndex = 3
         Me.Button23.Text = "             Rank"
         Me.Button23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -493,10 +490,9 @@ Partial Class Form7
         Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox6.ForeColor = System.Drawing.SystemColors.Window
-        Me.TextBox6.Location = New System.Drawing.Point(99, 484)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox6.Location = New System.Drawing.Point(74, 393)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(323, 36)
+        Me.TextBox6.Size = New System.Drawing.Size(243, 31)
         Me.TextBox6.TabIndex = 12
         Me.TextBox6.UseSystemPasswordChar = True
         '
@@ -505,10 +501,9 @@ Partial Class Form7
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(93, 448)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(70, 364)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(193, 29)
+        Me.Label7.Size = New System.Drawing.Size(151, 23)
         Me.Label7.TabIndex = 11
         Me.Label7.Text = "Current password"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -522,10 +517,9 @@ Partial Class Form7
         Me.Button28.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button28.Image = CType(resources.GetObject("Button28.Image"), System.Drawing.Image)
         Me.Button28.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button28.Location = New System.Drawing.Point(1073, 53)
-        Me.Button28.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button28.Location = New System.Drawing.Point(805, 43)
         Me.Button28.Name = "Button28"
-        Me.Button28.Size = New System.Drawing.Size(211, 90)
+        Me.Button28.Size = New System.Drawing.Size(158, 73)
         Me.Button28.TabIndex = 2
         Me.Button28.Text = "              Law"
         Me.Button28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -537,10 +531,9 @@ Partial Class Form7
         Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox5.ForeColor = System.Drawing.SystemColors.Window
-        Me.TextBox5.Location = New System.Drawing.Point(99, 398)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox5.Location = New System.Drawing.Point(74, 323)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(323, 36)
+        Me.TextBox5.Size = New System.Drawing.Size(243, 31)
         Me.TextBox5.TabIndex = 10
         '
         'Label6
@@ -548,10 +541,9 @@ Partial Class Form7
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(93, 362)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(70, 294)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(165, 29)
+        Me.Label6.Size = New System.Drawing.Size(130, 23)
         Me.Label6.TabIndex = 9
         Me.Label6.Text = "New username"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -565,10 +557,9 @@ Partial Class Form7
         Me.Button25.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button25.Image = CType(resources.GetObject("Button25.Image"), System.Drawing.Image)
         Me.Button25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button25.Location = New System.Drawing.Point(833, 53)
-        Me.Button25.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button25.Location = New System.Drawing.Point(625, 43)
         Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(211, 90)
+        Me.Button25.Size = New System.Drawing.Size(158, 73)
         Me.Button25.TabIndex = 0
         Me.Button25.Text = "            Agency"
         Me.Button25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -584,12 +575,10 @@ Partial Class Form7
         Me.panel_slide.Controls.Add(Me.Button13)
         Me.panel_slide.Controls.Add(Me.Button12)
         Me.panel_slide.Controls.Add(Me.Button11)
-        Me.panel_slide.Controls.Add(Me.Button9)
         Me.panel_slide.Dock = System.Windows.Forms.DockStyle.Left
-        Me.panel_slide.Location = New System.Drawing.Point(97, 71)
-        Me.panel_slide.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.panel_slide.Location = New System.Drawing.Point(73, 58)
         Me.panel_slide.Name = "panel_slide"
-        Me.panel_slide.Size = New System.Drawing.Size(0, 827)
+        Me.panel_slide.Size = New System.Drawing.Size(0, 672)
         Me.panel_slide.TabIndex = 6
         '
         'Button10
@@ -599,10 +588,9 @@ Partial Class Form7
         Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button10.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button10.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button10.Location = New System.Drawing.Point(-145, 81)
-        Me.Button10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button10.Location = New System.Drawing.Point(-109, 66)
         Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(145, 62)
+        Me.Button10.Size = New System.Drawing.Size(109, 50)
         Me.Button10.TabIndex = 15
         Me.Button10.Text = "   Facts"
         Me.Button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -615,10 +603,9 @@ Partial Class Form7
         Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button16.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button16.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button16.Location = New System.Drawing.Point(-145, 708)
-        Me.Button16.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button16.Location = New System.Drawing.Point(-109, 575)
         Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(145, 62)
+        Me.Button16.Size = New System.Drawing.Size(109, 50)
         Me.Button16.TabIndex = 14
         Me.Button16.Text = "   Settings"
         Me.Button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -631,10 +618,9 @@ Partial Class Form7
         Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button15.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button15.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button15.Location = New System.Drawing.Point(-145, 766)
-        Me.Button15.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button15.Location = New System.Drawing.Point(-109, 622)
         Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(145, 62)
+        Me.Button15.Size = New System.Drawing.Size(109, 50)
         Me.Button15.TabIndex = 13
         Me.Button15.Text = "   Logout"
         Me.Button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -647,10 +633,9 @@ Partial Class Form7
         Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button14.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button14.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button14.Location = New System.Drawing.Point(-145, 288)
-        Me.Button14.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button14.Location = New System.Drawing.Point(-109, 234)
         Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(145, 62)
+        Me.Button14.Size = New System.Drawing.Size(109, 50)
         Me.Button14.TabIndex = 12
         Me.Button14.Text = "   Person"
         Me.Button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -663,10 +648,9 @@ Partial Class Form7
         Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button13.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button13.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button13.Location = New System.Drawing.Point(-145, 219)
-        Me.Button13.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button13.Location = New System.Drawing.Point(-109, 178)
         Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(145, 62)
+        Me.Button13.Size = New System.Drawing.Size(109, 50)
         Me.Button13.TabIndex = 11
         Me.Button13.Text = "   Report"
         Me.Button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -679,10 +663,9 @@ Partial Class Form7
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button12.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button12.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button12.Location = New System.Drawing.Point(-145, 150)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button12.Location = New System.Drawing.Point(-109, 122)
         Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(145, 62)
+        Me.Button12.Size = New System.Drawing.Size(109, 50)
         Me.Button12.TabIndex = 10
         Me.Button12.Text = "   Case"
         Me.Button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -695,27 +678,13 @@ Partial Class Form7
         Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button11.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button11.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button11.Location = New System.Drawing.Point(-145, 357)
-        Me.Button11.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button11.Location = New System.Drawing.Point(-109, 290)
         Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(145, 62)
+        Me.Button11.Size = New System.Drawing.Size(109, 50)
         Me.Button11.TabIndex = 9
         Me.Button11.Text = "   Officer"
         Me.Button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button11.UseVisualStyleBackColor = True
-        '
-        'Button9
-        '
-        Me.Button9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button9.FlatAppearance.BorderSize = 0
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
-        Me.Button9.Location = New System.Drawing.Point(-51, 12)
-        Me.Button9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(43, 38)
-        Me.Button9.TabIndex = 8
-        Me.Button9.UseVisualStyleBackColor = True
         '
         'Panel2
         '
@@ -730,10 +699,9 @@ Partial Class Form7
         Me.Panel2.Controls.Add(Me.Button3)
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel2.Location = New System.Drawing.Point(0, 71)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Location = New System.Drawing.Point(0, 58)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(97, 827)
+        Me.Panel2.Size = New System.Drawing.Size(73, 672)
         Me.Panel2.TabIndex = 5
         '
         'Button1
@@ -741,20 +709,18 @@ Partial Class Form7
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(0, 81)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Location = New System.Drawing.Point(0, 66)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(97, 62)
+        Me.Button1.Size = New System.Drawing.Size(73, 50)
         Me.Button1.TabIndex = 9
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Panel5.Location = New System.Drawing.Point(0, 708)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel5.Location = New System.Drawing.Point(0, 575)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(13, 62)
+        Me.Panel5.Size = New System.Drawing.Size(10, 50)
         Me.Panel5.TabIndex = 0
         '
         'Button8
@@ -762,10 +728,9 @@ Partial Class Form7
         Me.Button8.FlatAppearance.BorderSize = 0
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button8.Image = CType(resources.GetObject("Button8.Image"), System.Drawing.Image)
-        Me.Button8.Location = New System.Drawing.Point(0, 708)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button8.Location = New System.Drawing.Point(0, 575)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(97, 62)
+        Me.Button8.Size = New System.Drawing.Size(73, 50)
         Me.Button8.TabIndex = 7
         Me.Button8.UseVisualStyleBackColor = True
         '
@@ -774,10 +739,9 @@ Partial Class Form7
         Me.Button7.FlatAppearance.BorderSize = 0
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Image = CType(resources.GetObject("Button7.Image"), System.Drawing.Image)
-        Me.Button7.Location = New System.Drawing.Point(0, 766)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button7.Location = New System.Drawing.Point(0, 622)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(97, 62)
+        Me.Button7.Size = New System.Drawing.Size(73, 50)
         Me.Button7.TabIndex = 6
         Me.Button7.UseVisualStyleBackColor = True
         '
@@ -786,10 +750,9 @@ Partial Class Form7
         Me.Button6.FlatAppearance.BorderSize = 0
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
-        Me.Button6.Location = New System.Drawing.Point(0, 357)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button6.Location = New System.Drawing.Point(0, 290)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(97, 62)
+        Me.Button6.Size = New System.Drawing.Size(73, 50)
         Me.Button6.TabIndex = 5
         Me.Button6.UseVisualStyleBackColor = True
         '
@@ -798,10 +761,9 @@ Partial Class Form7
         Me.Button5.FlatAppearance.BorderSize = 0
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
-        Me.Button5.Location = New System.Drawing.Point(0, 288)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button5.Location = New System.Drawing.Point(0, 234)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(97, 62)
+        Me.Button5.Size = New System.Drawing.Size(73, 50)
         Me.Button5.TabIndex = 4
         Me.Button5.UseVisualStyleBackColor = True
         '
@@ -810,10 +772,9 @@ Partial Class Form7
         Me.Button4.FlatAppearance.BorderSize = 0
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
-        Me.Button4.Location = New System.Drawing.Point(0, 12)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button4.Location = New System.Drawing.Point(0, 10)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(97, 62)
+        Me.Button4.Size = New System.Drawing.Size(73, 50)
         Me.Button4.TabIndex = 3
         Me.Button4.UseVisualStyleBackColor = True
         '
@@ -822,10 +783,9 @@ Partial Class Form7
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(0, 219)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button3.Location = New System.Drawing.Point(0, 178)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(97, 62)
+        Me.Button3.Size = New System.Drawing.Size(73, 50)
         Me.Button3.TabIndex = 2
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -834,10 +794,9 @@ Partial Class Form7
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(0, 150)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Location = New System.Drawing.Point(0, 122)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(97, 62)
+        Me.Button2.Size = New System.Drawing.Size(73, 50)
         Me.Button2.TabIndex = 1
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -849,9 +808,8 @@ Partial Class Form7
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1445, 71)
+        Me.Panel1.Size = New System.Drawing.Size(1084, 58)
         Me.Panel1.TabIndex = 4
         '
         'Button22
@@ -859,10 +817,9 @@ Partial Class Form7
         Me.Button22.FlatAppearance.BorderSize = 0
         Me.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button22.Image = CType(resources.GetObject("Button22.Image"), System.Drawing.Image)
-        Me.Button22.Location = New System.Drawing.Point(1348, 0)
-        Me.Button22.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button22.Location = New System.Drawing.Point(1011, 0)
         Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(97, 71)
+        Me.Button22.Size = New System.Drawing.Size(73, 58)
         Me.Button22.TabIndex = 8
         Me.Button22.UseVisualStyleBackColor = True
         '
@@ -871,20 +828,18 @@ Partial Class Form7
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(96, 17)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(72, 14)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(451, 37)
+        Me.Label1.Size = New System.Drawing.Size(361, 29)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Regional Anti-Cybercrime Office 10"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(8, 4)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(6, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(80, 63)
+        Me.PictureBox1.Size = New System.Drawing.Size(60, 51)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -896,16 +851,15 @@ Partial Class Form7
         '
         'Form7
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1445, 898)
+        Me.ClientSize = New System.Drawing.Size(1084, 730)
         Me.Controls.Add(Me.panel_slide)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel4)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Form7"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RACO10"
@@ -932,7 +886,6 @@ Partial Class Form7
     Friend WithEvents Button13 As Button
     Friend WithEvents Button12 As Button
     Friend WithEvents Button11 As Button
-    Friend WithEvents Button9 As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Button8 As Button

@@ -8,15 +8,18 @@ Public Class Form6
     Dim index As Integer
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Do While panel_slide.Width < 109
-            panel_slide.Width = panel_slide.Width + 1
-        Loop
-    End Sub
-
-    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        Do While panel_slide.Width > 0
-            panel_slide.Width = panel_slide.Width - 1
-        Loop
+        If panel_slide.Width = 0 Then
+            Do While panel_slide.Width < 109
+                panel_slide.Width = panel_slide.Width + 1
+            Loop
+            Return
+        End If
+        If panel_slide.Width = 109 Then
+            Do While panel_slide.Width > 0
+                panel_slide.Width = panel_slide.Width - 1
+            Loop
+            Return
+        End If
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -145,7 +148,15 @@ Public Class Form6
                     gender = "Not specified"
                 End If
 
-                query = "insert into officer values(null,'" & fname.Text & "','" & mname.Text & "','" & sname.Text & "','" & DateTimePicker1.Value & "','" + gender + "','" & contact.Text & "','" & email.Text & "','" & rank.Text & "','" & ComboBox2.Text & "','" & office.Text & "',@profile_image,NOW())"
+                Dim xoxo As String
+                xoxo = Nothing
+                If DateTimePicker1.Value >= DateTime.Today Then
+                    xoxo = DateTime.Today.ToShortDateString
+                Else
+                    xoxo = DateTimePicker1.Value.ToShortDateString
+                End If
+
+                query = "insert into officer values(null,'" & fname.Text & "','" & mname.Text & "','" & sname.Text & "','" & xoxo & "','" + gender + "','" & contact.Text & "','" & email.Text & "','" & rank.Text & "','" & ComboBox2.Text & "','" & office.Text & "',@profile_image,NOW())"
                 command = New MySqlCommand(query, mysqlconn)
                 command.Parameters.AddWithValue("@profile_image", arrImage)
                 reader = command.ExecuteReader
@@ -353,14 +364,14 @@ Public Class Form6
                 ComboBox1.Items.Add(xrank)
             End While
 
-            mysqlconn.Close()
 
+            mysqlconn.Close()
         Catch ex As Exception
             MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
-
+        DateTimePicker1.Value = Now
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
@@ -499,38 +510,43 @@ Public Class Form6
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        index = e.RowIndex
-        Dim selectedRow As DataGridViewRow
-        selectedRow = DataGridView1.Rows(index)
 
-        id.Text = selectedRow.Cells(0).Value.ToString()
-        fname.Text = selectedRow.Cells(1).Value.ToString()
-        mname.Text = selectedRow.Cells(2).Value.ToString()
-        sname.Text = selectedRow.Cells(3).Value.ToString()
-        DateTimePicker1.Value = selectedRow.Cells(4).Value.ToString()
-        contact.Text = selectedRow.Cells(6).Value.ToString()
-        email.Text = selectedRow.Cells(7).Value.ToString()
-        rank.Text = selectedRow.Cells(8).Value.ToString()
-        ComboBox2.Text = selectedRow.Cells(9).Value.ToString()
-        office.Text = selectedRow.Cells(10).Value.ToString()
+        Try
+            index = e.RowIndex
+            Dim selectedRow As DataGridViewRow
+            selectedRow = DataGridView1.Rows(index)
 
-        TextBox2.Text = selectedRow.Cells(1).Value.ToString()
-        TextBox3.Text = selectedRow.Cells(2).Value.ToString()
-        TextBox4.Text = selectedRow.Cells(3).Value.ToString()
-        TextBox5.Text = selectedRow.Cells(4).Value.ToString()
+            id.Text = selectedRow.Cells(0).Value.ToString()
+            fname.Text = selectedRow.Cells(1).Value.ToString()
+            mname.Text = selectedRow.Cells(2).Value.ToString()
+            sname.Text = selectedRow.Cells(3).Value.ToString()
+            DateTimePicker1.Value = selectedRow.Cells(4).Value.ToString()
+            contact.Text = selectedRow.Cells(6).Value.ToString()
+            email.Text = selectedRow.Cells(7).Value.ToString()
+            rank.Text = selectedRow.Cells(8).Value.ToString()
+            ComboBox2.Text = selectedRow.Cells(9).Value.ToString()
+            office.Text = selectedRow.Cells(10).Value.ToString()
 
-        Dim myDateofBirth As Date
-        Dim currentDate As Date
-        Dim daySpan As TimeSpan
-        Dim difference As Double
-        Dim age As String
+            TextBox2.Text = selectedRow.Cells(1).Value.ToString()
+            TextBox3.Text = selectedRow.Cells(2).Value.ToString()
+            TextBox4.Text = selectedRow.Cells(3).Value.ToString()
+            TextBox5.Text = selectedRow.Cells(4).Value.ToString()
 
-        myDateofBirth = DateTimePicker1.Value.ToShortDateString
-        currentDate = Date.Today.ToShortDateString
-        daySpan = (currentDate - myDateofBirth)
-        difference = daySpan.Days
-        age = Str(Int(difference / 365))
-        TextBox7.Text = age
+            Dim myDateofBirth As Date
+            Dim currentDate As Date
+            Dim daySpan As TimeSpan
+            Dim difference As Double
+            Dim age As String
+
+            myDateofBirth = DateTimePicker1.Value.ToShortDateString
+            currentDate = Date.Today.ToShortDateString
+            daySpan = (currentDate - myDateofBirth)
+            difference = daySpan.Days
+            age = Str(Int(difference / 365))
+            TextBox7.Text = age
+        Catch ex As Exception
+            Return
+        End Try
 
 
         profile_image()
@@ -628,7 +644,7 @@ Public Class Form6
     Dim difference As Double
     Dim age As String
 
-    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs)
         myDateofBirth = DateTimePicker1.Value.ToShortDateString
         currentDate = Date.Today.ToShortDateString
         daySpan = (currentDate - myDateofBirth)
@@ -654,5 +670,14 @@ Public Class Form6
         TextBox7.Text = ""
         PictureBox3.Image = Nothing
         load_table()
+    End Sub
+
+    Private Sub DateTimePicker1_ValueChanged_1(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+        myDateofBirth = DateTimePicker1.Value.ToShortDateString
+        currentDate = Date.Today.ToShortDateString
+        daySpan = (currentDate - myDateofBirth)
+        difference = daySpan.Days
+        age = Str(Int(difference / 365))
+        TextBox6.Text = age
     End Sub
 End Class
