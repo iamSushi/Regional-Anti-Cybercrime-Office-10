@@ -54,6 +54,7 @@ Public Class Form23
 
                 Form3.TextBox7.Text = name
                 Form3.agency = pili
+                Form26.agent_pili = pili
                 MessageBox.Show("You successfully choice Agency")
 
                 Me.Hide()
@@ -107,7 +108,7 @@ Public Class Form23
 
                 Form3.TextBox7.Text = name
                 Form3.agency = pili
-
+                Form26.agent_pili = pili
                 MessageBox.Show("You successfully choice Agency")
 
                 Me.Hide()

@@ -54,8 +54,9 @@ Public Class Form22
                 Dim s = row.Cells("Surname").Value.ToString
                 Dim name = f + " " + m + " " + s
 
-                Form3.TextBox5.Text = name
-                Form3.releasedby = pili
+                Form3.TextBox6.Text = name
+                Form3.claimedby = pili
+                Form26.claimedby_pili = pili
 
                 MessageBox.Show("Successful")
                 Me.Hide()
@@ -85,7 +86,7 @@ Public Class Form22
                 Form3.claimedby = pili
                 Form4.TextBox7.Text = name
                 Form4.claimed_by = pili
-
+                Form26.claimedby_pili = pili
                 MessageBox.Show("Successful")
                 Me.Hide()
             End If

@@ -89,6 +89,19 @@ Partial Class Form26
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.DateTimePicker5 = New System.Windows.Forms.DateTimePicker()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
@@ -96,6 +109,7 @@ Partial Class Form26
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'ErrorProvider1
@@ -443,7 +457,7 @@ Partial Class Form26
         Me.TabPage1.Controls.Add(Me.GroupBox2)
         Me.TabPage1.Location = New System.Drawing.Point(4, 54)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(768, 578)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Case"
@@ -809,6 +823,7 @@ Partial Class Form26
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.ItemSize = New System.Drawing.Size(150, 50)
         Me.TabControl1.Location = New System.Drawing.Point(544, 12)
@@ -817,6 +832,148 @@ Partial Class Form26
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(776, 636)
         Me.TabControl1.TabIndex = 111
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.DateTimePicker5)
+        Me.TabPage2.Controls.Add(Me.TextBox5)
+        Me.TabPage2.Controls.Add(Me.TextBox4)
+        Me.TabPage2.Controls.Add(Me.TextBox3)
+        Me.TabPage2.Controls.Add(Me.TextBox2)
+        Me.TabPage2.Controls.Add(Me.Label25)
+        Me.TabPage2.Controls.Add(Me.Label23)
+        Me.TabPage2.Controls.Add(Me.Label24)
+        Me.TabPage2.Controls.Add(Me.Label26)
+        Me.TabPage2.Controls.Add(Me.Label28)
+        Me.TabPage2.Controls.Add(Me.TextBox1)
+        Me.TabPage2.Controls.Add(Me.Label34)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 54)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(768, 578)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Facts"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'TextBox5
+        '
+        Me.TextBox5.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TextBox5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.TextBox5.Location = New System.Drawing.Point(408, 217)
+        Me.TextBox5.Multiline = True
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.TextBox5.Size = New System.Drawing.Size(323, 31)
+        Me.TextBox5.TabIndex = 23
+        '
+        'TextBox4
+        '
+        Me.TextBox4.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TextBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.TextBox4.Location = New System.Drawing.Point(408, 144)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(323, 31)
+        Me.TextBox4.TabIndex = 22
+        '
+        'TextBox3
+        '
+        Me.TextBox3.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TextBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.TextBox3.Location = New System.Drawing.Point(24, 178)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox3.Size = New System.Drawing.Size(353, 70)
+        Me.TextBox3.TabIndex = 21
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TextBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.TextBox2.Location = New System.Drawing.Point(24, 291)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox2.Size = New System.Drawing.Size(707, 130)
+        Me.TextBox2.TabIndex = 20
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Label25.Location = New System.Drawing.Point(20, 152)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(46, 23)
+        Me.Label25.TabIndex = 19
+        Me.Label25.Text = "Why"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Label23.Location = New System.Drawing.Point(404, 118)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(153, 23)
+        Me.Label23.TabIndex = 18
+        Me.Label23.Text = "Time of Occurence"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Label24.Location = New System.Drawing.Point(404, 191)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(156, 23)
+        Me.Label24.TabIndex = 17
+        Me.Label24.Text = "Place of Occurence"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Label26.Location = New System.Drawing.Point(404, 47)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(152, 23)
+        Me.Label26.TabIndex = 16
+        Me.Label26.Text = "Date of Occurence"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Label28.Location = New System.Drawing.Point(20, 265)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(46, 23)
+        Me.Label28.TabIndex = 15
+        Me.Label28.Text = "How"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.TextBox1.Location = New System.Drawing.Point(24, 73)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox1.Size = New System.Drawing.Size(353, 68)
+        Me.TextBox1.TabIndex = 14
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.ForeColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.Label34.Location = New System.Drawing.Point(20, 47)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(52, 23)
+        Me.Label34.TabIndex = 13
+        Me.Label34.Text = "What"
+        '
+        'DateTimePicker5
+        '
+        Me.DateTimePicker5.Location = New System.Drawing.Point(408, 73)
+        Me.DateTimePicker5.Name = "DateTimePicker5"
+        Me.DateTimePicker5.Size = New System.Drawing.Size(323, 31)
+        Me.DateTimePicker5.TabIndex = 24
         '
         'Form26
         '
@@ -866,6 +1023,8 @@ Partial Class Form26
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.TabControl1.ResumeLayout(False)
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -935,4 +1094,17 @@ Partial Class Form26
     Friend WithEvents Label22 As Label
     Friend WithEvents ComboBox16 As ComboBox
     Friend WithEvents ComboBox15 As ComboBox
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label34 As Label
+    Friend WithEvents DateTimePicker5 As DateTimePicker
 End Class

@@ -56,6 +56,7 @@ Public Class Form21
 
                 Form3.TextBox5.Text = name
                 Form3.releasedby = pili
+                Form26.releasedby_pili = pili
                 MessageBox.Show("Successful")
                 Me.Hide()
             End If
@@ -83,6 +84,7 @@ Public Class Form21
                 Form3.releasedby = pili
                 Form4.TextBox5.Text = name
                 Form4.released_by = pili
+                Form26.releasedby_pili = pili
                 MessageBox.Show("Successful")
                 Me.Hide()
             End If
