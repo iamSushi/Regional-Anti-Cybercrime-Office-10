@@ -121,6 +121,8 @@ Partial Class Form3
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
@@ -138,9 +140,7 @@ Partial Class Form3
         Me.Button27 = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Button19 = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -283,7 +283,6 @@ Partial Class Form3
         Me.Button9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button9.FlatAppearance.BorderSize = 0
         Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
         Me.Button9.Location = New System.Drawing.Point(-38, 10)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(32, 31)
@@ -1333,9 +1332,9 @@ Partial Class Form3
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.Panel3)
         Me.TabPage3.Controls.Add(Me.TextBox9)
         Me.TabPage3.Controls.Add(Me.Label16)
-        Me.TabPage3.Controls.Add(Me.Button19)
         Me.TabPage3.Controls.Add(Me.Button10)
         Me.TabPage3.Controls.Add(Me.TextBox14)
         Me.TabPage3.Controls.Add(Me.TextBox12)
@@ -1359,6 +1358,26 @@ Partial Class Form3
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Case Complete"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.TextBox9.Location = New System.Drawing.Point(115, 250)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(189, 31)
+        Me.TextBox9.TabIndex = 99
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label16.Location = New System.Drawing.Point(37, 253)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(72, 23)
+        Me.Label16.TabIndex = 101
+        Me.Label16.Text = " Case ID"
         '
         'Button10
         '
@@ -1538,9 +1557,9 @@ Partial Class Form3
         Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.DataGridView2.Location = New System.Drawing.Point(-4, 236)
+        Me.DataGridView2.Location = New System.Drawing.Point(-4, 292)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(1011, 382)
+        Me.DataGridView2.Size = New System.Drawing.Size(1011, 326)
         Me.DataGridView2.TabIndex = 0
         '
         'ErrorProvider1
@@ -1548,40 +1567,13 @@ Partial Class Form3
         Me.ErrorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'TextBox9
+        'Panel3
         '
-        Me.TextBox9.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox9.Location = New System.Drawing.Point(240, 187)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(189, 31)
-        Me.TextBox9.TabIndex = 99
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Image = CType(resources.GetObject("Label16.Image"), System.Drawing.Image)
-        Me.Label16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label16.Location = New System.Drawing.Point(37, 190)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(181, 23)
-        Me.Label16.TabIndex = 101
-        Me.Label16.Text = "      Laboratory Case ID"
-        '
-        'Button19
-        '
-        Me.Button19.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Button19.FlatAppearance.BorderSize = 0
-        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button19.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Button19.Image = CType(resources.GetObject("Button19.Image"), System.Drawing.Image)
-        Me.Button19.Location = New System.Drawing.Point(429, 187)
-        Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(35, 31)
-        Me.Button19.TabIndex = 100
-        Me.Button19.UseVisualStyleBackColor = False
+        Me.Panel3.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Panel3.Location = New System.Drawing.Point(2, 230)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1004, 10)
+        Me.Panel3.TabIndex = 102
         '
         'Form3
         '
@@ -1729,5 +1721,5 @@ Partial Class Form3
     Friend WithEvents ComboBox18 As ComboBox
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents Button19 As Button
+    Friend WithEvents Panel3 As Panel
 End Class
