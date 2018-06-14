@@ -22,8 +22,8 @@ Partial Class Form24
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form24))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button35 = New System.Windows.Forms.Button()
@@ -37,27 +37,27 @@ Partial Class Form24
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.Control
-        Me.DataGridView1.Location = New System.Drawing.Point(-1, 102)
+        Me.DataGridView1.Location = New System.Drawing.Point(-1, 64)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(492, 390)
+        Me.DataGridView1.Size = New System.Drawing.Size(492, 428)
         Me.DataGridView1.TabIndex = 66
         '
         'Button35
@@ -67,7 +67,7 @@ Partial Class Form24
         Me.Button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button35.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button35.Image = CType(resources.GetObject("Button35.Image"), System.Drawing.Image)
-        Me.Button35.Location = New System.Drawing.Point(198, 54)
+        Me.Button35.Location = New System.Drawing.Point(358, 18)
         Me.Button35.Name = "Button35"
         Me.Button35.Size = New System.Drawing.Size(35, 31)
         Me.Button35.TabIndex = 65
@@ -76,7 +76,7 @@ Partial Class Form24
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(23, 54)
+        Me.TextBox1.Location = New System.Drawing.Point(183, 18)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(175, 31)
         Me.TextBox1.TabIndex = 64
