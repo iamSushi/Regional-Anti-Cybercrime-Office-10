@@ -320,12 +320,16 @@ Public Class Form7
 
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        index = e.RowIndex
-        Dim selectedRow As DataGridViewRow
-        selectedRow = DataGridView1.Rows(index)
+        Try
+            index = e.RowIndex
+            Dim selectedRow As DataGridViewRow
+            selectedRow = DataGridView1.Rows(index)
 
-        id.Text = selectedRow.Cells(0).Value.ToString()
-        TextBox11.Text = selectedRow.Cells(3).Value.ToString()
+            id.Text = selectedRow.Cells(0).Value.ToString()
+            TextBox11.Text = selectedRow.Cells(3).Value.ToString()
+        Catch ex As Exception
+            Return
+        End Try
     End Sub
 
     Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
@@ -368,11 +372,14 @@ Public Class Form7
     End Sub
 
     Private Sub DataGridView2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellClick
-        index = e.RowIndex
-        Dim selectedRow As DataGridViewRow
-        selectedRow = DataGridView2.Rows(index)
-
-        id.Text = selectedRow.Cells(0).Value.ToString()
+        Try
+            index = e.RowIndex
+            Dim selectedRow As DataGridViewRow
+            selectedRow = DataGridView2.Rows(index)
+            id.Text = selectedRow.Cells(0).Value.ToString()
+        Catch ex As Exception
+            Return
+        End Try
     End Sub
 
     Private Sub Button19_Click(sender As Object, e As EventArgs) Handles Button19.Click
