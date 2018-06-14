@@ -156,7 +156,8 @@ Public Class Form5
                 PictureBox3.Image = Nothing
                 RadioButton1.Checked = False
                 RadioButton2.Checked = False
-
+                TextBox1.Text = ""
+                ComboBox2.Text = ""
                 Me.ErrorProvider1.SetError(Me.fname, "")
                 Me.ErrorProvider1.SetError(Me.sname, "")
                 Me.ErrorProvider1.SetError(Me.category, "")
@@ -212,10 +213,16 @@ Public Class Form5
         category.Items.Add("Suspect")
         category.Items.Add("Victim")
         category.Items.Add("Witness")
+
         status.Items.Add("Single")
         status.Items.Add("Married")
         status.Items.Add("Widowed")
         status.Items.Add("Divorced")
+
+        ComboBox2.Items.Add("Complainant")
+        ComboBox2.Items.Add("Suspect")
+        ComboBox2.Items.Add("Victim")
+        ComboBox2.Items.Add("Witness")
 
     End Sub
 
@@ -277,7 +284,7 @@ Public Class Form5
         End Try
     End Sub
 
-    Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
+    Private Sub Button35_Click(sender As Object, e As EventArgs)
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Dim adapter As New MySqlDataAdapter
@@ -333,35 +340,6 @@ Public Class Form5
         End If
     End Sub
 
-    Private Sub Button23_Click(sender As Object, e As EventArgs) Handles Button23.Click
-        mysqlconn = New MySqlConnection
-        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
-        Dim adapter As New MySqlDataAdapter
-        Dim dbDataSet As New DataTable
-        Dim soure As New BindingSource
-
-        Try
-            mysqlconn.Open()
-
-            Dim query As String
-
-            query = "select * from persons where category = '" & ComboBox2.Text & "'"
-
-            command = New MySqlCommand(query, mysqlconn)
-            adapter.SelectCommand = command
-            adapter.Fill(dbDataSet)
-            soure.DataSource = dbDataSet
-            DataGridView1.DataSource = soure
-            adapter.Update(dbDataSet)
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        Finally
-            mysqlconn.Dispose()
-        End Try
-    End Sub
-
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
@@ -374,7 +352,7 @@ Public Class Form5
 
             Dim query As String
 
-            query = "select fname as Firstname, mname as Middlename, sname as Surname, nname as Nickname, dob as Birthday, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as DateCreated FROM persons WHERE fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
+            query = "select person_id as ID, fname as Firstname, mname as Middlename, sname as Surname, nname as Nickname, dob as Birthday, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as DateCreated FROM persons WHERE fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -402,7 +380,7 @@ Public Class Form5
             mysqlconn.Open()
 
             Dim query As String
-            query = "select fname as Firstname, mname as Middlename, sname as Surname, nname as Nickname, dob as Birthday, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as DateCreated FROM persons WHERE category = '" & ComboBox2.Text & "'"
+            query = "select person_id as ID, fname as Firstname, mname as Middlename, sname as Surname, nname as Nickname, dob as Birthday, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as DateCreated FROM persons WHERE category LIKE '" & ComboBox2.Text & "%'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -562,7 +540,8 @@ Public Class Form5
                 PictureBox3.Image = Nothing
                 RadioButton1.Checked = False
                 RadioButton2.Checked = False
-
+                TextBox1.Text = ""
+                ComboBox2.Text = ""
                 Me.ErrorProvider1.SetError(Me.fname, "")
                 Me.ErrorProvider1.SetError(Me.sname, "")
                 Me.ErrorProvider1.SetError(Me.category, "")
@@ -617,7 +596,8 @@ Public Class Form5
                 PictureBox3.Image = Nothing
                 RadioButton1.Checked = False
                 RadioButton2.Checked = False
-
+                TextBox1.Text = ""
+                ComboBox2.Text = ""
                 load_table()
             Catch ex As Exception
                 MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -673,7 +653,37 @@ Public Class Form5
         PictureBox3.Image = Nothing
         RadioButton1.Checked = False
         RadioButton2.Checked = False
-
+        TextBox1.Text = ""
+        ComboBox2.Text = ""
         load_table()
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            query = "select person_id as ID, fname as Firstname, mname as Middlename, sname as Surname, nname as Nickname, dob as Birthday, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as DateCreated FROM persons"
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+            ComboBox2.Text = ""
+        Catch ex As MySqlException
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Finally
+            mysqlconn.Dispose()
+        End Try
     End Sub
 End Class

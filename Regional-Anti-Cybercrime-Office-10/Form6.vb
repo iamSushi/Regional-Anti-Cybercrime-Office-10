@@ -179,6 +179,8 @@ Public Class Form6
                 PictureBox3.Image = Nothing
                 RadioButton1.Checked = False
                 RadioButton2.Checked = False
+                TextBox1.Text = ""
+                ComboBox1.Text = ""
                 Me.ErrorProvider1.SetError(Me.fname, "")
                 Me.ErrorProvider1.SetError(Me.sname, "")
                 Me.ErrorProvider1.SetError(Me.rank, "")
@@ -285,7 +287,7 @@ Public Class Form6
         End Try
     End Sub
 
-    Private Sub Button35_Click(sender As Object, e As EventArgs) Handles Button35.Click
+    Private Sub Button35_Click(sender As Object, e As EventArgs)
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Dim adapter As New MySqlDataAdapter
@@ -393,7 +395,7 @@ Public Class Form6
 
             Dim query As String
 
-            query = "select fname as Firstname, mname as Middlename, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , office as Office, remark as Remark , date_created as DateCreated from officer where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
+            query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , agency as Office,  date_created as DateCreated from officer where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -404,7 +406,7 @@ Public Class Form6
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Invalid user action" + ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -500,6 +502,8 @@ Public Class Form6
                 PictureBox3.Image = Nothing
                 RadioButton1.Checked = False
                 RadioButton2.Checked = False
+                TextBox1.Text = ""
+                ComboBox1.Text = ""
                 Me.ErrorProvider1.SetError(Me.fname, "")
                 Me.ErrorProvider1.SetError(Me.sname, "")
                 Me.ErrorProvider1.SetError(Me.rank, "")
@@ -605,7 +609,8 @@ Public Class Form6
                 ComboBox2.Text = ""
                 PictureBox2.Image = Nothing
                 PictureBox3.Image = Nothing
-
+                TextBox1.Text = ""
+                ComboBox1.Text = ""
                 load_table()
             Catch ex As Exception
                 MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -638,7 +643,7 @@ Public Class Form6
             mysqlconn.Open()
 
             Dim query As String
-            query = "select fname as Firstname, mname as Middlename, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , agency as Office, remark as Remark , date_created as DateCreated from officer where rank = '" & ComboBox1.Text & "'"
+            query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , agency as Office, date_created as DateCreated from officer where rank = '" & ComboBox1.Text & "'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -689,6 +694,8 @@ Public Class Form6
         PictureBox3.Image = Nothing
         RadioButton1.Checked = False
         RadioButton2.Checked = False
+        TextBox1.Text = ""
+        ComboBox1.Text = ""
         load_table()
     End Sub
 
@@ -699,5 +706,34 @@ Public Class Form6
         difference = daySpan.Days
         age = Str(Int(difference / 365))
         TextBox6.Text = age
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+            query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , agency as Office, date_created as DateCreated from officer"
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+            ComboBox1.Text = ""
+        Catch ex As MySqlException
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Finally
+            mysqlconn.Dispose()
+        End Try
     End Sub
 End Class
