@@ -117,9 +117,11 @@ Public Class Form5
                 Dim gender As String
 
                 If RadioButton1.Checked = True Then
-                    gender = "male"
+                    gender = "Male"
+                ElseIf RadioButton2.Checked = True Then
+                    gender = "Female"
                 Else
-                    gender = "female"
+                    gender = "Not specified"
                 End If
 
                 Dim xoxo As String
@@ -143,9 +145,17 @@ Public Class Form5
                 email.Text = ""
                 status.Text = ""
                 category.Text = ""
+                TextBox2.Text = ""
+                TextBox3.Text = ""
+                TextBox4.Text = ""
+                TextBox5.Text = ""
+                TextBox5.Text = ""
                 TextBox6.Text = ""
                 TextBox7.Text = ""
                 PictureBox2.Image = Nothing
+                PictureBox3.Image = Nothing
+                RadioButton1.Checked = False
+                RadioButton2.Checked = False
 
                 Me.ErrorProvider1.SetError(Me.fname, "")
                 Me.ErrorProvider1.SetError(Me.sname, "")
@@ -419,11 +429,21 @@ Public Class Form5
             fname.Text = selectedRow.Cells(1).Value.ToString()
             mname.Text = selectedRow.Cells(2).Value.ToString()
             sname.Text = selectedRow.Cells(3).Value.ToString()
+            nickname.Text = selectedRow.Cells(4).Value.ToString()
             DateTimePicker1.Value = selectedRow.Cells(5).Value.ToString()
-            contact.Text = selectedRow.Cells(7).Value.ToString()
-            email.Text = selectedRow.Cells(8).Value.ToString()
-            category.Text = selectedRow.Cells(9).Value.ToString()
-            status.Text = selectedRow.Cells(6).Value.ToString()
+
+            If selectedRow.Cells(6).Value.ToString() = "Male" Then
+                RadioButton1.Checked = True
+            ElseIf selectedRow.Cells(6).Value.ToString() = "Female" Then
+                RadioButton2.Checked = True
+            Else
+                Return
+            End If
+
+            contact.Text = selectedRow.Cells(8).Value.ToString()
+            email.Text = selectedRow.Cells(9).Value.ToString()
+            category.Text = selectedRow.Cells(10).Value.ToString()
+            status.Text = selectedRow.Cells(7).Value.ToString()
 
             TextBox2.Text = selectedRow.Cells(1).Value.ToString()
             TextBox3.Text = selectedRow.Cells(2).Value.ToString()
@@ -502,9 +522,11 @@ Public Class Form5
                 Dim gender As String
 
                 If RadioButton1.Checked = True Then
-                    gender = "male"
+                    gender = "Male"
+                ElseIf RadioButton2.Checked = True Then
+                    gender = "Female"
                 Else
-                    gender = "female"
+                    gender = "Not specified"
                 End If
 
                 query = "UPDATE persons set fname = '" & fname.Text & "', mname = '" & mname.Text & "', sname = '" & sname.Text & "', contact = '" & contact.Text & "',email = '" & email.Text & "',category = '" & category.Text & "',status = '" & status.Text & "', dob = '" & DateTimePicker1.Value & "', profile_image = @profile_image, nname = '" & nickname.Text & "' where person_id = '" & id.Text & "'"
@@ -518,12 +540,19 @@ Public Class Form5
                 nickname.Text = ""
                 contact.Text = ""
                 email.Text = ""
-                DateTimePicker1.Text = ""
                 status.Text = ""
                 category.Text = ""
+                TextBox2.Text = ""
+                TextBox3.Text = ""
+                TextBox4.Text = ""
+                TextBox5.Text = ""
+                TextBox5.Text = ""
                 TextBox6.Text = ""
                 TextBox7.Text = ""
                 PictureBox2.Image = Nothing
+                PictureBox3.Image = Nothing
+                RadioButton1.Checked = False
+                RadioButton2.Checked = False
 
                 Me.ErrorProvider1.SetError(Me.fname, "")
                 Me.ErrorProvider1.SetError(Me.sname, "")
@@ -568,10 +597,19 @@ Public Class Form5
                 email.Text = ""
                 status.Text = ""
                 category.Text = ""
+                TextBox2.Text = ""
+                TextBox3.Text = ""
+                TextBox4.Text = ""
+                TextBox5.Text = ""
+                TextBox5.Text = ""
                 TextBox6.Text = ""
                 TextBox7.Text = ""
                 PictureBox2.Image = Nothing
                 PictureBox3.Image = Nothing
+                RadioButton1.Checked = False
+                RadioButton2.Checked = False
+
+                load_table()
             Catch ex As Exception
                 MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End Try
@@ -620,8 +658,13 @@ Public Class Form5
         TextBox4.Text = ""
         TextBox5.Text = ""
         TextBox5.Text = ""
+        TextBox6.Text = ""
         TextBox7.Text = ""
+        PictureBox2.Image = Nothing
         PictureBox3.Image = Nothing
+        RadioButton1.Checked = False
+        RadioButton2.Checked = False
+
         load_table()
     End Sub
 End Class
