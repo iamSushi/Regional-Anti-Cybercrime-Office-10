@@ -436,7 +436,6 @@ Partial Class Form4
         Me.TextBox9.Size = New System.Drawing.Size(175, 31)
         Me.TextBox9.TabIndex = 58
         '
-<<<<<<< HEAD
         'Button30
         '
         Me.Button30.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
@@ -451,8 +450,7 @@ Partial Class Form4
         Me.Button30.TabIndex = 50
         Me.Button30.UseVisualStyleBackColor = False
         '
-=======
->>>>>>> e16a5afa987984faa10bba0ce77fed0535b6e6ee
+
         'Button29
         '
         Me.Button29.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
@@ -702,23 +700,10 @@ Partial Class Form4
         Me.Label9.TabIndex = 34
         Me.Label9.Text = "Agency"
         '
-<<<<<<< HEAD
+
         'Button21
         '
-        Me.Button21.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Button21.FlatAppearance.BorderSize = 0
-        Me.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button21.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Button21.Image = CType(resources.GetObject("Button21.Image"), System.Drawing.Image)
-        Me.Button21.Location = New System.Drawing.Point(209, 450)
-        Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(35, 31)
-        Me.Button21.TabIndex = 32
-        Me.Button21.UseVisualStyleBackColor = False
-        '
-=======
->>>>>>> e16a5afa987984faa10bba0ce77fed0535b6e6ee
+
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -731,23 +716,7 @@ Partial Class Form4
         Me.Label8.TabIndex = 31
         Me.Label8.Text = "Case Status"
         '
-<<<<<<< HEAD
-        'Button10
-        '
-        Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Button10.FlatAppearance.BorderSize = 0
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
-        Me.Button10.Location = New System.Drawing.Point(209, 370)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(35, 31)
-        Me.Button10.TabIndex = 29
-        Me.Button10.UseVisualStyleBackColor = False
-        '
-=======
->>>>>>> e16a5afa987984faa10bba0ce77fed0535b6e6ee
+
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -760,23 +729,7 @@ Partial Class Form4
         Me.Label7.TabIndex = 28
         Me.Label7.Text = "Date Examined"
         '
-<<<<<<< HEAD
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(209, 290)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(35, 31)
-        Me.Button1.TabIndex = 26
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-=======
->>>>>>> e16a5afa987984faa10bba0ce77fed0535b6e6ee
+
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -810,23 +763,7 @@ Partial Class Form4
         Me.TextBox1.Size = New System.Drawing.Size(210, 31)
         Me.TextBox1.TabIndex = 15
         '
-<<<<<<< HEAD
-        'Button19
-        '
-        Me.Button19.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Button19.FlatAppearance.BorderSize = 0
-        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button19.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Button19.Image = CType(resources.GetObject("Button19.Image"), System.Drawing.Image)
-        Me.Button19.Location = New System.Drawing.Point(209, 210)
-        Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(35, 31)
-        Me.Button19.TabIndex = 22
-        Me.Button19.UseVisualStyleBackColor = False
-        '
-=======
->>>>>>> e16a5afa987984faa10bba0ce77fed0535b6e6ee
+
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -839,23 +776,7 @@ Partial Class Form4
         Me.Label4.TabIndex = 20
         Me.Label4.Text = "Date Informed"
         '
-<<<<<<< HEAD
-        'Button35
-        '
-        Me.Button35.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Button35.FlatAppearance.BorderSize = 0
-        Me.Button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button35.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button35.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Button35.Image = CType(resources.GetObject("Button35.Image"), System.Drawing.Image)
-        Me.Button35.Location = New System.Drawing.Point(209, 50)
-        Me.Button35.Name = "Button35"
-        Me.Button35.Size = New System.Drawing.Size(35, 31)
-        Me.Button35.TabIndex = 16
-        Me.Button35.UseVisualStyleBackColor = False
-        '
-=======
->>>>>>> e16a5afa987984faa10bba0ce77fed0535b6e6ee
+
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -870,19 +791,7 @@ Partial Class Form4
         '
         'Button30
         '
-<<<<<<< HEAD
-        Me.Button18.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Button18.FlatAppearance.BorderSize = 0
-        Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button18.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Button18.Image = CType(resources.GetObject("Button18.Image"), System.Drawing.Image)
-        Me.Button18.Location = New System.Drawing.Point(209, 130)
-        Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(35, 31)
-        Me.Button18.TabIndex = 19
-        Me.Button18.UseVisualStyleBackColor = False
-=======
+
         Me.Button30.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Button30.FlatAppearance.BorderSize = 0
         Me.Button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -894,7 +803,7 @@ Partial Class Form4
         Me.Button30.Size = New System.Drawing.Size(35, 31)
         Me.Button30.TabIndex = 50
         Me.Button30.UseVisualStyleBackColor = False
->>>>>>> e16a5afa987984faa10bba0ce77fed0535b6e6ee
+
         '
         'DataGridView1
         '
