@@ -525,7 +525,6 @@ Partial Class Form5
         '
         Me.category.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.category.FormattingEnabled = True
-        Me.category.Items.AddRange(New Object() {"Complainant", "Victim", "Suspect", "Witness"})
         Me.category.Location = New System.Drawing.Point(548, 450)
         Me.category.Name = "category"
         Me.category.Size = New System.Drawing.Size(270, 31)
@@ -720,7 +719,6 @@ Partial Class Form5
         '
         Me.status.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.status.FormattingEnabled = True
-        Me.status.Items.AddRange(New Object() {"Single", "Married", "Widowed", "Divorced"})
         Me.status.Location = New System.Drawing.Point(548, 500)
         Me.status.Name = "status"
         Me.status.Size = New System.Drawing.Size(270, 31)

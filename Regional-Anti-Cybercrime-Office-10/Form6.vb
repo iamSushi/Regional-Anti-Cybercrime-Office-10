@@ -605,8 +605,7 @@ Public Class Form6
                 ComboBox2.Text = ""
                 PictureBox2.Image = Nothing
                 PictureBox3.Image = Nothing
-                RadioButton1.Checked = False
-                RadioButton2.Checked = False
+
                 load_table()
             Catch ex As Exception
                 MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
