@@ -364,6 +364,7 @@ Public Class Form25
             Finally
                 mysqlconn.Dispose()
             End Try
+            Me.Hide()
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None
         End If
