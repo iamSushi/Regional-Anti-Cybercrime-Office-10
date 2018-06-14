@@ -23,7 +23,6 @@ Partial Class Form4
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panel_slide = New System.Windows.Forms.Panel()
         Me.Button25 = New System.Windows.Forms.Button()
         Me.Button16 = New System.Windows.Forms.Button()
@@ -50,7 +49,6 @@ Partial Class Form4
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.Button30 = New System.Windows.Forms.Button()
         Me.Button29 = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -73,19 +71,14 @@ Partial Class Form4
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button22 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Button21 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Button10 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button19 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button35 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button18 = New System.Windows.Forms.Button()
+        Me.Button30 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -403,19 +396,13 @@ Partial Class Form4
         Me.Panel3.Controls.Add(Me.Label10)
         Me.Panel3.Controls.Add(Me.Button22)
         Me.Panel3.Controls.Add(Me.Label9)
-        Me.Panel3.Controls.Add(Me.Button21)
         Me.Panel3.Controls.Add(Me.Label8)
-        Me.Panel3.Controls.Add(Me.Button10)
         Me.Panel3.Controls.Add(Me.Label7)
-        Me.Panel3.Controls.Add(Me.Button1)
         Me.Panel3.Controls.Add(Me.Label6)
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.TextBox1)
-        Me.Panel3.Controls.Add(Me.Button19)
         Me.Panel3.Controls.Add(Me.Label4)
-        Me.Panel3.Controls.Add(Me.Button35)
         Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Controls.Add(Me.Button18)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel3.Location = New System.Drawing.Point(73, 58)
         Me.Panel3.Name = "Panel3"
@@ -437,7 +424,7 @@ Partial Class Form4
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(32, 450)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(177, 31)
+        Me.ComboBox1.Size = New System.Drawing.Size(212, 31)
         Me.ComboBox1.TabIndex = 59
         '
         'TextBox9
@@ -449,6 +436,7 @@ Partial Class Form4
         Me.TextBox9.Size = New System.Drawing.Size(175, 31)
         Me.TextBox9.TabIndex = 58
         '
+<<<<<<< HEAD
         'Button30
         '
         Me.Button30.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
@@ -463,6 +451,8 @@ Partial Class Form4
         Me.Button30.TabIndex = 50
         Me.Button30.UseVisualStyleBackColor = False
         '
+=======
+>>>>>>> e16a5afa987984faa10bba0ce77fed0535b6e6ee
         'Button29
         '
         Me.Button29.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
@@ -629,7 +619,7 @@ Partial Class Form4
         Me.DateTimePicker4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker4.Location = New System.Drawing.Point(34, 370)
         Me.DateTimePicker4.Name = "DateTimePicker4"
-        Me.DateTimePicker4.Size = New System.Drawing.Size(175, 31)
+        Me.DateTimePicker4.Size = New System.Drawing.Size(210, 31)
         Me.DateTimePicker4.TabIndex = 43
         Me.DateTimePicker4.Value = New Date(2018, 6, 7, 0, 0, 0, 0)
         '
@@ -638,7 +628,7 @@ Partial Class Form4
         Me.DateTimePicker3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker3.Location = New System.Drawing.Point(34, 290)
         Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(175, 31)
+        Me.DateTimePicker3.Size = New System.Drawing.Size(210, 31)
         Me.DateTimePicker3.TabIndex = 42
         Me.DateTimePicker3.Value = New Date(2018, 6, 7, 0, 0, 0, 0)
         '
@@ -647,7 +637,7 @@ Partial Class Form4
         Me.DateTimePicker2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker2.Location = New System.Drawing.Point(34, 210)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(175, 31)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(210, 31)
         Me.DateTimePicker2.TabIndex = 41
         Me.DateTimePicker2.Value = New Date(2018, 6, 7, 0, 0, 0, 0)
         '
@@ -656,7 +646,7 @@ Partial Class Form4
         Me.DateTimePicker1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Location = New System.Drawing.Point(34, 130)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(175, 31)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(210, 31)
         Me.DateTimePicker1.TabIndex = 40
         Me.DateTimePicker1.Value = New Date(2018, 6, 7, 0, 0, 0, 0)
         '
@@ -712,6 +702,7 @@ Partial Class Form4
         Me.Label9.TabIndex = 34
         Me.Label9.Text = "Agency"
         '
+<<<<<<< HEAD
         'Button21
         '
         Me.Button21.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
@@ -726,6 +717,8 @@ Partial Class Form4
         Me.Button21.TabIndex = 32
         Me.Button21.UseVisualStyleBackColor = False
         '
+=======
+>>>>>>> e16a5afa987984faa10bba0ce77fed0535b6e6ee
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -738,6 +731,7 @@ Partial Class Form4
         Me.Label8.TabIndex = 31
         Me.Label8.Text = "Case Status"
         '
+<<<<<<< HEAD
         'Button10
         '
         Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
@@ -752,6 +746,8 @@ Partial Class Form4
         Me.Button10.TabIndex = 29
         Me.Button10.UseVisualStyleBackColor = False
         '
+=======
+>>>>>>> e16a5afa987984faa10bba0ce77fed0535b6e6ee
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -764,6 +760,7 @@ Partial Class Form4
         Me.Label7.TabIndex = 28
         Me.Label7.Text = "Date Examined"
         '
+<<<<<<< HEAD
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
@@ -778,6 +775,8 @@ Partial Class Form4
         Me.Button1.TabIndex = 26
         Me.Button1.UseVisualStyleBackColor = False
         '
+=======
+>>>>>>> e16a5afa987984faa10bba0ce77fed0535b6e6ee
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -808,9 +807,10 @@ Partial Class Form4
         Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.TextBox1.Location = New System.Drawing.Point(34, 50)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(175, 31)
+        Me.TextBox1.Size = New System.Drawing.Size(210, 31)
         Me.TextBox1.TabIndex = 15
         '
+<<<<<<< HEAD
         'Button19
         '
         Me.Button19.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
@@ -825,6 +825,8 @@ Partial Class Form4
         Me.Button19.TabIndex = 22
         Me.Button19.UseVisualStyleBackColor = False
         '
+=======
+>>>>>>> e16a5afa987984faa10bba0ce77fed0535b6e6ee
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -837,6 +839,7 @@ Partial Class Form4
         Me.Label4.TabIndex = 20
         Me.Label4.Text = "Date Informed"
         '
+<<<<<<< HEAD
         'Button35
         '
         Me.Button35.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
@@ -851,6 +854,8 @@ Partial Class Form4
         Me.Button35.TabIndex = 16
         Me.Button35.UseVisualStyleBackColor = False
         '
+=======
+>>>>>>> e16a5afa987984faa10bba0ce77fed0535b6e6ee
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -863,8 +868,9 @@ Partial Class Form4
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Date Received"
         '
-        'Button18
+        'Button30
         '
+<<<<<<< HEAD
         Me.Button18.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Button18.FlatAppearance.BorderSize = 0
         Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -876,27 +882,30 @@ Partial Class Form4
         Me.Button18.Size = New System.Drawing.Size(35, 31)
         Me.Button18.TabIndex = 19
         Me.Button18.UseVisualStyleBackColor = False
+=======
+        Me.Button30.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Button30.FlatAppearance.BorderSize = 0
+        Me.Button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button30.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button30.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button30.Image = CType(resources.GetObject("Button30.Image"), System.Drawing.Image)
+        Me.Button30.Location = New System.Drawing.Point(191, 983)
+        Me.Button30.Name = "Button30"
+        Me.Button30.Size = New System.Drawing.Size(35, 31)
+        Me.Button30.TabIndex = 50
+        Me.Button30.UseVisualStyleBackColor = False
+>>>>>>> e16a5afa987984faa10bba0ce77fed0535b6e6ee
         '
         'DataGridView1
         '
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.Location = New System.Drawing.Point(331, 58)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1084, 730)
-        Me.DataGridView1.TabIndex = 0
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(753, 672)
+        Me.DataGridView1.TabIndex = 26
         '
         'Form4
         '
@@ -904,11 +913,11 @@ Partial Class Form4
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(1084, 730)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.panel_slide)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form4"
@@ -945,24 +954,17 @@ Partial Class Form4
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button17 As Button
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button35 As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button19 As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents Button18 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Button23 As Button
     Friend WithEvents Label10 As Label
     Friend WithEvents Button22 As Button
     Friend WithEvents Label9 As Label
-    Friend WithEvents Button21 As Button
     Friend WithEvents Label8 As Label
-    Friend WithEvents Button10 As Button
     Friend WithEvents Label7 As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Button24 As Button
     Friend WithEvents Button25 As Button
@@ -974,7 +976,6 @@ Partial Class Form4
     Friend WithEvents Button26 As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents Button30 As Button
     Friend WithEvents Button29 As Button
     Friend WithEvents Label15 As Label
     Friend WithEvents Label14 As Label
@@ -988,4 +989,6 @@ Partial Class Form4
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Button30 As Button
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
