@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.ComponentModel
 Imports System.IO
 
 Public Class Form25
@@ -357,7 +358,7 @@ Public Class Form25
                 query = " delete from laboratory_case where lab_case_no = " & lab_case & ""
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
-
+                Form4.Show()
                 mysqlconn.Close()
             Catch ex As MySqlException
                 MessageBox.Show(ex.Message)
@@ -381,5 +382,11 @@ Public Class Form25
         ListBox2.Items.Clear()
         ListBox3.Items.Clear()
         load_table()
+    End Sub
+
+    Private Sub Form25_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+
+
+        Form4.Show()
     End Sub
 End Class

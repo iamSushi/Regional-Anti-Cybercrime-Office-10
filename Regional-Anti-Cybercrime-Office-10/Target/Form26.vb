@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.ComponentModel
+Imports MySql.Data.MySqlClient
 
 Public Class Form26
     Dim mysqlconn As MySqlConnection
@@ -582,6 +583,8 @@ Public Class Form26
         Finally
             mysqlconn.Dispose()
         End Try
+        Me.Close()
+        Form25.Show()
 
     End Sub
 
@@ -648,5 +651,9 @@ Public Class Form26
 
     Private Sub TextBox18_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles TextBox18.MouseDoubleClick
         Form23.Show()
+    End Sub
+
+    Private Sub Form26_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Form25.Show()
     End Sub
 End Class

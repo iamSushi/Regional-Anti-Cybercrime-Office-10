@@ -225,8 +225,8 @@ Public Class Form6
             mysqlconn.Dispose()
         End Try
 
-        PictureBox2.ImageLocation = ("C:\Users\iamSushi\Desktop\police.jpg")
-        PictureBox2.Load()
+        ' PictureBox2.ImageLocation = ("C:\Users\iamSushi\Desktop\police.jpg")
+        'PictureBox2.Load()
     End Sub
 
     Private Sub profile_image()
