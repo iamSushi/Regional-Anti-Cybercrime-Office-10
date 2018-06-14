@@ -349,7 +349,7 @@ Public Class Form3
                 Dim query1 As String
 
 
-                query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Value & "','null','" & DateTimePicker5.Value & "','" & DateTimePicker6.Value & "','" & ComboBox13.Text & "',0,0,'null','" & agency & "','" & examiner & "','" & investigator & "',' " & ComboBox3.Text & " ',null)"
+                query = "insert into laboratory_case values(null,'" & TextBox2.Text & "','" & DateTimePicker1.Value.ToShortDateString & "','null','" & DateTimePicker5.Value.ToShortDateString & "','" & DateTimePicker6.Value.ToShortDateString & "','" & ComboBox13.Text & "',0,0,'null','" & agency & "','" & examiner & "','" & investigator & "',' " & ComboBox3.Text & " ',null)"
                 query1 = "insert into laboratory_case values(null,         '1'            ,'          1                 ','3','4','5',          '6',      '     7       ',   '       8'           ,'        9                  ','              10             ','             11          ', 12 ,null)"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
