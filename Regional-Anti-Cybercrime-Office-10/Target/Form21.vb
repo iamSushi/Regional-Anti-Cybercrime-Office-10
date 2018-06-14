@@ -51,12 +51,15 @@ Public Class Form21
                 Dim f = row.Cells("Firstname").Value.ToString
                 Dim m = row.Cells("Middlename").Value.ToString
                 Dim s = row.Cells("Surname").Value.ToString
-                Dim name = f + " " + m + " " + s
+                Dim name_ni = f + " " + m + " " + s
 
 
-                Form3.TextBox5.Text = name
+                Form3.TextBox5.Text = name_ni
                 Form3.releasedby = pili
                 Form26.releasedby_pili = pili
+                Form26.TextBox11.Text = name_ni
+                Form4.TextBox5.Text = name_ni
+                Form4.released_by = pili
                 MessageBox.Show("Successful")
                 Me.Hide()
             End If
@@ -79,12 +82,13 @@ Public Class Form21
                 Dim f = row.Cells("Firstname").Value.ToString
                 Dim m = row.Cells("Middlename").Value.ToString
                 Dim s = row.Cells("Surname").Value.ToString
-                Dim name = f + " " + m + " " + s
-                Form3.TextBox5.Text = name
+                Dim name_ni = f + " " + m + " " + s
+                Form3.TextBox5.Text = name_ni
                 Form3.releasedby = pili
-                Form4.TextBox5.Text = name
+                Form4.TextBox5.Text = name_ni
                 Form4.released_by = pili
                 Form26.releasedby_pili = pili
+                Form26.TextBox11.Text = name_ni
                 MessageBox.Show("Successful")
                 Me.Hide()
             End If

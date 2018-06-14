@@ -58,6 +58,10 @@ Public Class Form24
                 Dim name = f + " " + m + " " + s
                 Form3.TextBox3.Text = name
                 Form3.complainant = pili
+                Form26.TextBox7.Text = name
+                Form26.complainant_pili = pili
+                Form4.complainant = pili
+                Form4.TextBox4.Text = name
                 MessageBox.Show("Successful")
                 Me.Hide()
 
@@ -87,6 +91,8 @@ Public Class Form24
                 Form4.TextBox4.Text = name
                 Form3.complainant = pili
                 Form4.complainant = pili
+                Form26.TextBox7.Text = name
+                Form26.complainant_pili = pili
                 MessageBox.Show("Successful")
                 Me.Hide()
             End If
