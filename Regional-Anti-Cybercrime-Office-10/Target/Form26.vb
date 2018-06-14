@@ -63,6 +63,8 @@ Public Class Form26
             reader = command.ExecuteReader
 
             While reader.Read
+                lab_case = reader.GetString("lab_case_no")
+
                 Form8.lab_case = reader.GetString("lab_case_no")
                 Form18.lab_case = reader.GetString("lab_case_no")
                 Form19.lab_case = reader.GetString("lab_case_no")
@@ -89,7 +91,7 @@ Public Class Form26
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message + "what")
         Finally
             mysqlconn.Dispose()
         End Try
@@ -470,7 +472,6 @@ Public Class Form26
             mysqlconn.Open()
 
             Dim query As String
-            MessageBox.Show(complainant_pili)
 
             If String.IsNullOrEmpty(complainant_pili) Then
                 query = "update laboratory_case set complainant = '" & complainant & "' where lab_case_no = '" & lab_case & "'"
@@ -576,6 +577,28 @@ Public Class Form26
             query = "update facts set what ='" & TextBox1.Text & "', date_occur = '" & DateTimePicker5.Value & "', time_occur ='" & TextBox4.Text & "', place_occur = '" & TextBox5.Text & "', why = '" & TextBox3.Text & "', how = '" & TextBox2.Text & "' where lab_Case_no = '" & lab_case & "' "
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = " select * from laboratory_case where lab_case_no = '" & lab_case & "'"
+            command = New MySqlCommand(query, mysqlconn)
+            reader = command.ExecuteReader
+
+            While reader.Read
+                lab_case = reader.GetString("lab_case_no")
+                Form25.lab_case = reader.GetString("lab_case_no")
+
+            End While
 
             mysqlconn.Close()
         Catch ex As MySqlException

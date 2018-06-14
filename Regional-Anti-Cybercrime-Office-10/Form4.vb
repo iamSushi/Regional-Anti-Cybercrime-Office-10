@@ -213,7 +213,7 @@ Public Class Form4
 
             Dim query As String
 
-            query = "select * from laboratory where Date_Released like '" & DateTimePicker1.Value & "%' "
+            query = "select * from laboratory where DateReleased like '" & DateTimePicker1.Value & "%' "
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -243,7 +243,7 @@ Public Class Form4
 
             Dim query As String
 
-            query = "select * from laboratory where Date_Informed like '" & DateTimePicker2.Value & "%' "
+            query = "select * from laboratory where DateInformed like '" & DateTimePicker2.Value & "%' "
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -273,7 +273,7 @@ Public Class Form4
 
             Dim query As String
 
-            query = "select * from laboratory where Date_Released like '" & DateTimePicker3.Value & "%' "
+            query = "select * from laboratory where DateReleased like '" & DateTimePicker3.Value & "%' "
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -303,7 +303,7 @@ Public Class Form4
 
             Dim query As String
 
-            query = "select * from laboratory where Date_Examined like '" & DateTimePicker4.Value & "%' "
+            query = "select * from laboratory where DateExamined like '" & DateTimePicker4.Value & "%' "
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command

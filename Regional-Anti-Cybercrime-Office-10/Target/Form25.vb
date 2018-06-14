@@ -67,7 +67,8 @@ Public Class Form25
             reader = command.ExecuteReader
 
             While reader.Read
-
+                Form26.lab_case = reader.GetString("lab_case_no")
+                lab_case = reader.GetString("lab_case_no")
                 Label1.Text = reader.GetString("lab_case_no_id")
                 TextBox10.Text = reader.GetString("type")
                 agency = reader.GetString("requesting_agency")
@@ -372,6 +373,8 @@ Public Class Form25
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        load_table()
+
         Form26.Show()
 
         Me.Hide()
