@@ -423,9 +423,9 @@ Partial Class Form25
         Me.Button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button29.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button29.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button29.Location = New System.Drawing.Point(619, 654)
+        Me.Button29.Location = New System.Drawing.Point(630, 654)
         Me.Button29.Name = "Button29"
-        Me.Button29.Size = New System.Drawing.Size(69, 30)
+        Me.Button29.Size = New System.Drawing.Size(80, 30)
         Me.Button29.TabIndex = 104
         Me.Button29.Text = "Delete"
         Me.Button29.UseVisualStyleBackColor = False
@@ -714,7 +714,7 @@ Partial Class Form25
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button1.Location = New System.Drawing.Point(544, 654)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(69, 30)
+        Me.Button1.Size = New System.Drawing.Size(80, 30)
         Me.Button1.TabIndex = 107
         Me.Button1.Text = "Update"
         Me.Button1.UseVisualStyleBackColor = False
@@ -726,9 +726,9 @@ Partial Class Form25
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Location = New System.Drawing.Point(1251, 654)
+        Me.Button2.Location = New System.Drawing.Point(1236, 654)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(69, 30)
+        Me.Button2.Size = New System.Drawing.Size(80, 30)
         Me.Button2.TabIndex = 131
         Me.Button2.Text = "Reload"
         Me.Button2.UseVisualStyleBackColor = False

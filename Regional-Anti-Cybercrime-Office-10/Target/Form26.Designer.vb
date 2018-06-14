@@ -90,6 +90,7 @@ Partial Class Form26
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.DateTimePicker5 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -101,7 +102,6 @@ Partial Class Form26
         Me.Label28 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label34 = New System.Windows.Forms.Label()
-        Me.DateTimePicker5 = New System.Windows.Forms.DateTimePicker()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
@@ -122,14 +122,14 @@ Partial Class Form26
         '
         'Button29
         '
-        Me.Button29.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button29.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Button29.FlatAppearance.BorderSize = 0
         Me.Button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button29.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button29.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button29.Location = New System.Drawing.Point(547, 654)
         Me.Button29.Name = "Button29"
-        Me.Button29.Size = New System.Drawing.Size(69, 30)
+        Me.Button29.Size = New System.Drawing.Size(80, 30)
         Me.Button29.TabIndex = 110
         Me.Button29.Text = "Update"
         Me.Button29.UseVisualStyleBackColor = False
@@ -855,6 +855,13 @@ Partial Class Form26
         Me.TabPage2.Text = "Facts"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'DateTimePicker5
+        '
+        Me.DateTimePicker5.Location = New System.Drawing.Point(408, 73)
+        Me.DateTimePicker5.Name = "DateTimePicker5"
+        Me.DateTimePicker5.Size = New System.Drawing.Size(323, 31)
+        Me.DateTimePicker5.TabIndex = 24
+        '
         'TextBox5
         '
         Me.TextBox5.BackColor = System.Drawing.SystemColors.ControlLightLight
@@ -967,13 +974,6 @@ Partial Class Form26
         Me.Label34.Size = New System.Drawing.Size(52, 23)
         Me.Label34.TabIndex = 13
         Me.Label34.Text = "What"
-        '
-        'DateTimePicker5
-        '
-        Me.DateTimePicker5.Location = New System.Drawing.Point(408, 73)
-        Me.DateTimePicker5.Name = "DateTimePicker5"
-        Me.DateTimePicker5.Size = New System.Drawing.Size(323, 31)
-        Me.DateTimePicker5.TabIndex = 24
         '
         'Form26
         '

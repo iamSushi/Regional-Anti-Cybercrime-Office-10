@@ -24,7 +24,7 @@ Partial Class Form5
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form5))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panel_slide = New System.Windows.Forms.Panel()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button16 = New System.Windows.Forms.Button()
@@ -437,7 +437,7 @@ Partial Class Form5
         Me.TabPage2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabPage2.Location = New System.Drawing.Point(4, 54)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(1000, 614)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Register"
@@ -450,9 +450,9 @@ Partial Class Form5
         Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button18.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button18.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button18.Location = New System.Drawing.Point(608, 550)
+        Me.Button18.Location = New System.Drawing.Point(566, 550)
         Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(69, 30)
+        Me.Button18.Size = New System.Drawing.Size(80, 30)
         Me.Button18.TabIndex = 62
         Me.Button18.Text = "Clear"
         Me.Button18.UseVisualStyleBackColor = False
@@ -514,9 +514,9 @@ Partial Class Form5
         Me.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button21.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button21.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button21.Location = New System.Drawing.Point(683, 550)
+        Me.Button21.Location = New System.Drawing.Point(652, 550)
         Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(69, 30)
+        Me.Button21.Size = New System.Drawing.Size(80, 30)
         Me.Button21.TabIndex = 46
         Me.Button21.Text = "Update"
         Me.Button21.UseVisualStyleBackColor = False
@@ -540,7 +540,7 @@ Partial Class Form5
         Me.Button19.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button19.Location = New System.Drawing.Point(89, 286)
         Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(76, 30)
+        Me.Button19.Size = New System.Drawing.Size(80, 30)
         Me.Button19.TabIndex = 48
         Me.Button19.Text = "Browse"
         Me.Button19.UseVisualStyleBackColor = False
@@ -565,9 +565,9 @@ Partial Class Form5
         Me.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button22.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button22.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button22.Location = New System.Drawing.Point(758, 550)
+        Me.Button22.Location = New System.Drawing.Point(738, 550)
         Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(59, 30)
+        Me.Button22.Size = New System.Drawing.Size(80, 30)
         Me.Button22.TabIndex = 47
         Me.Button22.Text = "Save"
         Me.Button22.UseVisualStyleBackColor = False
@@ -785,7 +785,7 @@ Partial Class Form5
         Me.TabPage1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.TabPage1.Location = New System.Drawing.Point(4, 54)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(1000, 614)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Persons"
@@ -905,7 +905,7 @@ Partial Class Form5
         Me.Button25.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button25.Location = New System.Drawing.Point(28, 170)
         Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(69, 30)
+        Me.Button25.Size = New System.Drawing.Size(80, 30)
         Me.Button25.TabIndex = 58
         Me.Button25.Text = "Delete"
         Me.Button25.UseVisualStyleBackColor = False
@@ -916,14 +916,14 @@ Partial Class Form5
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DataGridView1.Location = New System.Drawing.Point(-4, 230)

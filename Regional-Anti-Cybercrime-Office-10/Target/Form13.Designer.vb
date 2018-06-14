@@ -35,6 +35,7 @@ Partial Class Form13
         '
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -52,9 +53,9 @@ Partial Class Form13
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 116)
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 73)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(753, 343)
+        Me.DataGridView1.Size = New System.Drawing.Size(753, 386)
         Me.DataGridView1.TabIndex = 0
         '
         'Label9
@@ -65,15 +66,15 @@ Partial Class Form13
         Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Label9.Location = New System.Drawing.Point(33, 25)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(181, 23)
+        Me.Label9.Size = New System.Drawing.Size(92, 23)
         Me.Label9.TabIndex = 99
-        Me.Label9.Text = "      Laboratory Case ID"
+        Me.Label9.Text = "      Case ID"
         '
         'TextBox6
         '
         Me.TextBox6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox6.Location = New System.Drawing.Point(37, 55)
+        Me.TextBox6.Location = New System.Drawing.Point(131, 22)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(256, 31)
         Me.TextBox6.TabIndex = 100

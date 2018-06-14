@@ -302,14 +302,14 @@ Partial Class Form2
         '
         'Button12
         '
-        Me.Button12.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button12.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
         Me.Button12.FlatAppearance.BorderSize = 0
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button12.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button12.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button12.Location = New System.Drawing.Point(807, 568)
+        Me.Button12.Location = New System.Drawing.Point(817, 568)
         Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(85, 30)
+        Me.Button12.Size = New System.Drawing.Size(80, 30)
         Me.Button12.TabIndex = 105
         Me.Button12.Text = "Update"
         Me.Button12.UseVisualStyleBackColor = False
@@ -319,11 +319,11 @@ Partial Class Form2
         Me.Button9.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button9.FlatAppearance.BorderSize = 0
         Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button9.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button9.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button9.Location = New System.Drawing.Point(898, 568)
+        Me.Button9.Location = New System.Drawing.Point(903, 568)
         Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(85, 30)
+        Me.Button9.Size = New System.Drawing.Size(80, 30)
         Me.Button9.TabIndex = 105
         Me.Button9.Text = "Delete"
         Me.Button9.UseVisualStyleBackColor = False
@@ -445,14 +445,14 @@ Partial Class Form2
         '
         'Button22
         '
-        Me.Button22.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button22.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(188, Byte), Integer))
         Me.Button22.FlatAppearance.BorderSize = 0
         Me.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button22.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button22.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button22.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button22.Location = New System.Drawing.Point(283, 506)
         Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(75, 30)
+        Me.Button22.Size = New System.Drawing.Size(80, 30)
         Me.Button22.TabIndex = 8
         Me.Button22.Text = "Save"
         Me.Button22.UseVisualStyleBackColor = False
