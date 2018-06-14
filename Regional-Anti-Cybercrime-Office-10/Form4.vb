@@ -373,7 +373,33 @@ Public Class Form4
     End Sub
 
     Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs) Handles TextBox6.TextChanged
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
 
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select * from laboratory where RequestingAgency like'" & TextBox6.Text & "%' "
+
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
     End Sub
 
     Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles TextBox5.TextChanged
@@ -515,6 +541,7 @@ Public Class Form4
             soure.DataSource = dbDataSet
             DataGridView1.DataSource = soure
             adapter.Update(dbDataSet)
+            TextBox9.Clear()
 
             mysqlconn.Close()
         Catch ex As MySqlException
@@ -558,6 +585,7 @@ Public Class Form4
             soure.DataSource = dbDataSet
             DataGridView1.DataSource = soure
             adapter.Update(dbDataSet)
+            TextBox8.Clear()
 
             mysqlconn.Close()
         Catch ex As MySqlException
@@ -595,7 +623,7 @@ Public Class Form4
 
             Dim query As String
 
-            query = "select * from laboratory where Case_Status like '" & ComboBox1.Text & "%' "
+            query = "select * from laboratory where CaseStatus like '" & ComboBox1.Text & "%' "
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -616,7 +644,7 @@ Public Class Form4
 
     End Sub
 
-    Private Sub Button22_Click(sender As Object, e As EventArgs) Handles Button22.Click
+    Private Sub Button22_Click(sender As Object, e As EventArgs)
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
         Dim adapter As New MySqlDataAdapter
@@ -629,7 +657,7 @@ Public Class Form4
 
             Dim query As String
 
-            query = "select * from laboratory where Requesting_Agency like'" & agency & "%' "
+            query = "select * from laboratory where RequestingAgency like'" & agency & "%' "
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -637,7 +665,7 @@ Public Class Form4
             soure.DataSource = dbDataSet
             DataGridView1.DataSource = soure
             adapter.Update(dbDataSet)
-
+            TextBox6.Clear()
             mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show(ex.Message)
@@ -647,6 +675,7 @@ Public Class Form4
     End Sub
 
     Private Sub TextBox6_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles TextBox6.MouseDoubleClick
+        Form23.Show()
 
     End Sub
 
