@@ -427,7 +427,6 @@ Public Class Form26
             mysqlconn.Open()
 
             Dim query As String
-            MessageBox.Show(investigator_pili)
 
             If String.IsNullOrEmpty(investigator_pili) Then
                 query = "update laboratory_case set investigator = '" & investigator & "' where lab_case_no = '" & lab_case & "'"
@@ -449,7 +448,6 @@ Public Class Form26
             mysqlconn.Open()
 
             Dim query As String
-            MessageBox.Show(examiner_pili)
 
             If String.IsNullOrEmpty(examiner_pili) Then
                 query = "update laboratory_case set examiner = '" & examiner & "' where lab_case_no = '" & lab_case & "'"
@@ -493,7 +491,6 @@ Public Class Form26
             mysqlconn.Open()
 
             Dim query As String
-            MessageBox.Show(releasedby_pili)
 
             If String.IsNullOrEmpty(releasedby_pili) Then
                 query = "update laboratory_case set released_by = '" & released_by & "' where lab_case_no = '" & lab_case & "'"
@@ -515,7 +512,6 @@ Public Class Form26
             mysqlconn.Open()
 
             Dim query As String
-            MessageBox.Show(claimedby_pili)
 
             If String.IsNullOrEmpty(claimedby_pili) Then
                 query = "update laboratory_case set claimed_by = '" & claimed_by & "' where lab_case_no = '" & lab_case & "'"
@@ -537,7 +533,6 @@ Public Class Form26
             mysqlconn.Open()
 
             Dim query As String
-            MessageBox.Show(agent_pili)
 
             If String.IsNullOrEmpty(agent_pili) Then
                 query = "update laboratory_case set requesting_agency = '" & agency & "' where lab_case_no = '" & lab_case & "'"
