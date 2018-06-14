@@ -137,6 +137,9 @@ Partial Class Form3
         Me.Button27 = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Button19 = New System.Windows.Forms.Button()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -1316,6 +1319,9 @@ Partial Class Form3
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.TextBox9)
+        Me.TabPage3.Controls.Add(Me.Label16)
+        Me.TabPage3.Controls.Add(Me.Button19)
         Me.TabPage3.Controls.Add(Me.Button10)
         Me.TabPage3.Controls.Add(Me.TextBox14)
         Me.TabPage3.Controls.Add(Me.TextBox12)
@@ -1528,6 +1534,41 @@ Partial Class Form3
         Me.ErrorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'TextBox9
+        '
+        Me.TextBox9.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.TextBox9.Location = New System.Drawing.Point(240, 187)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(189, 31)
+        Me.TextBox9.TabIndex = 99
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Image = CType(resources.GetObject("Label16.Image"), System.Drawing.Image)
+        Me.Label16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label16.Location = New System.Drawing.Point(37, 190)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(181, 23)
+        Me.Label16.TabIndex = 101
+        Me.Label16.Text = "      Laboratory Case ID"
+        '
+        'Button19
+        '
+        Me.Button19.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Button19.FlatAppearance.BorderSize = 0
+        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button19.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button19.Image = CType(resources.GetObject("Button19.Image"), System.Drawing.Image)
+        Me.Button19.Location = New System.Drawing.Point(429, 187)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(35, 31)
+        Me.Button19.TabIndex = 100
+        Me.Button19.UseVisualStyleBackColor = False
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1671,4 +1712,7 @@ Partial Class Form3
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents ComboBox13 As ComboBox
     Friend WithEvents ComboBox18 As ComboBox
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Button19 As Button
 End Class

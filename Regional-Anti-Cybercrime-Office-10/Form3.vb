@@ -4,6 +4,8 @@ Public Class Form3
     Dim mysqlconn As MySqlConnection
     Dim command As MySqlCommand
     Dim reader As MySqlDataReader
+    Dim command2 As MySqlCommand
+    Dim reader2 As MySqlDataReader
 
     Dim examiner As String
     Dim investigator As String
@@ -575,7 +577,7 @@ Public Class Form3
 
             Dim query As String
 
-            query = "select lab_case_no as ID,lab_case_no_id as CaseID,date_received as Date_Received,date_released as Date_Released,date_examined as Date_Examined,case_status as Case_Status,type as DFE from laboratory_case"
+            query = "select lab_case_no as ID,lab_case_no_id as CaseID,date_received as Date_Received,date_released as Date_Released,date_examined as Date_Examined,case_status as Case_Status,type as DFE from laboratory_case order by lab_case_no desc"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -598,7 +600,7 @@ Public Class Form3
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
         Try
             mysqlconn.Open()
-
+            TextBox10.Text = ""
             If e.RowIndex >= 0 Then
                 Dim row As DataGridViewRow
                 row = Me.DataGridView2.Rows(e.RowIndex)
@@ -771,6 +773,10 @@ Public Class Form3
     End Sub
 
     Private Sub ComboBox15_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox15.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub TextBox10_TextChanged(sender As Object, e As EventArgs) Handles TextBox10.TextChanged
 
     End Sub
 End Class
