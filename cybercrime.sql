@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2018 at 07:34 PM
--- Server version: 10.1.32-MariaDB
--- PHP Version: 7.2.5
+-- Generation Time: Jun 14, 2018 at 09:19 PM
+-- Server version: 10.1.25-MariaDB
+-- PHP Version: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -251,19 +251,41 @@ CREATE TABLE `laboratory_case` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `laboratory_case`
---
-
-INSERT INTO `laboratory_case` (`lab_case_no`, `lab_case_no_id`, `date_received`, `date_informed`, `date_released`, `date_examined`, `case_status`, `released_by`, `claimed_by`, `complainant`, `requesting_agency`, `examiner`, `investigator`, `type`, `date_created`) VALUES
-(9, '10RACO-CP-02062018-00324', '2/15/2018 4:28:50 PM', '6/20/2018 4:43:40 PM', '2/19/2018', '2/7/2018', 'For Released', 8, 11, 19, 29, 8, 11, ' Cellphone ', '2018-06-13 08:31:23');
-
---
 -- Triggers `laboratory_case`
 --
+DELIMITER $$
+CREATE TRIGGER `delete_laboratory_case` BEFORE DELETE ON `laboratory_case` FOR EACH ROW INSERT INTO laboratory_case_delete VALUES(old.lab_case_no,old.lab_case_no_id,old.date_received,old.date_informed,old.date_released,old.date_examined,old.case_status,old.released_by,old.claimed_by,old.complainant,old.requesting_agency,old.examiner,old.investigator,old.type,old.date_created,null)
+$$
+DELIMITER ;
 DELIMITER $$
 CREATE TRIGGER `update_laboratory_case` BEFORE UPDATE ON `laboratory_case` FOR EACH ROW INSERT INTO laboratory_case_update VALUES(old.lab_case_no,old.lab_case_no_id,old.date_received,old.date_informed,old.date_released,old.date_examined,old.case_status,old.released_by,old.claimed_by,old.complainant,old.requesting_agency,old.examiner,old.investigator,old.type,old.date_created,null)
 $$
 DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `laboratory_case_delete`
+--
+
+CREATE TABLE `laboratory_case_delete` (
+  `lab_case_no` bigint(20) NOT NULL,
+  `lab_case_no_id` varchar(50) NOT NULL,
+  `date_received` varchar(50) NOT NULL,
+  `date_informed` varchar(50) NOT NULL,
+  `date_released` varchar(50) NOT NULL,
+  `date_examined` varchar(50) NOT NULL,
+  `case_status` varchar(50) NOT NULL,
+  `released_by` bigint(20) NOT NULL,
+  `claimed_by` bigint(20) NOT NULL,
+  `complainant` bigint(20) NOT NULL,
+  `requesting_agency` bigint(20) NOT NULL,
+  `examiner` bigint(20) NOT NULL,
+  `investigator` bigint(20) NOT NULL,
+  `type` varchar(20) NOT NULL,
+  `date_created` datetime NOT NULL,
+  `date_deleted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -816,49 +838,41 @@ ALTER TABLE `victim`
 --
 ALTER TABLE `agency`
   MODIFY `agency_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
-
 --
 -- AUTO_INCREMENT for table `facts`
 --
 ALTER TABLE `facts`
   MODIFY `lab_case_no` bigint(20) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `laboratory_case`
 --
 ALTER TABLE `laboratory_case`
   MODIFY `lab_case_no` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
 --
 -- AUTO_INCREMENT for table `law`
 --
 ALTER TABLE `law`
   MODIFY `law_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
 --
 -- AUTO_INCREMENT for table `officer`
 --
 ALTER TABLE `officer`
   MODIFY `officer_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
-
 --
 -- AUTO_INCREMENT for table `persons`
 --
 ALTER TABLE `persons`
   MODIFY `person_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
 --
 -- AUTO_INCREMENT for table `position`
 --
 ALTER TABLE `position`
   MODIFY `position_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
 --
 -- AUTO_INCREMENT for table `rank`
 --
 ALTER TABLE `rank`
-  MODIFY `rank_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-COMMIT;
+  MODIFY `rank_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
