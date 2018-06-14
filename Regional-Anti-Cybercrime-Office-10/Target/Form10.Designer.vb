@@ -24,8 +24,8 @@ Partial Class Form10
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form10))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.agency = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.street = New System.Windows.Forms.TextBox()
@@ -65,7 +65,7 @@ Partial Class Form10
         Me.agency.Location = New System.Drawing.Point(49, 59)
         Me.agency.Name = "agency"
         Me.agency.Size = New System.Drawing.Size(428, 31)
-        Me.agency.TabIndex = 12
+        Me.agency.TabIndex = 1
         '
         'Label5
         '
@@ -86,7 +86,7 @@ Partial Class Form10
         Me.street.Location = New System.Drawing.Point(49, 200)
         Me.street.Name = "street"
         Me.street.Size = New System.Drawing.Size(428, 31)
-        Me.street.TabIndex = 14
+        Me.street.TabIndex = 3
         '
         'Label1
         '
@@ -107,7 +107,7 @@ Partial Class Form10
         Me.city.Location = New System.Drawing.Point(512, 59)
         Me.city.Name = "city"
         Me.city.Size = New System.Drawing.Size(439, 31)
-        Me.city.TabIndex = 16
+        Me.city.TabIndex = 5
         '
         'Label2
         '
@@ -128,7 +128,7 @@ Partial Class Form10
         Me.province.Location = New System.Drawing.Point(512, 127)
         Me.province.Name = "province"
         Me.province.Size = New System.Drawing.Size(439, 31)
-        Me.province.TabIndex = 18
+        Me.province.TabIndex = 6
         '
         'Label3
         '
@@ -153,7 +153,7 @@ Partial Class Form10
         Me.Button22.Location = New System.Drawing.Point(511, 244)
         Me.Button22.Name = "Button22"
         Me.Button22.Size = New System.Drawing.Size(80, 30)
-        Me.Button22.TabIndex = 28
+        Me.Button22.TabIndex = 9
         Me.Button22.Text = "Save"
         Me.Button22.UseVisualStyleBackColor = False
         '
@@ -163,7 +163,7 @@ Partial Class Form10
         Me.mother.Location = New System.Drawing.Point(49, 127)
         Me.mother.Name = "mother"
         Me.mother.Size = New System.Drawing.Size(428, 31)
-        Me.mother.TabIndex = 31
+        Me.mother.TabIndex = 2
         '
         'Label6
         '
@@ -184,7 +184,7 @@ Partial Class Form10
         Me.contact.Location = New System.Drawing.Point(512, 200)
         Me.contact.Name = "contact"
         Me.contact.Size = New System.Drawing.Size(199, 31)
-        Me.contact.TabIndex = 33
+        Me.contact.TabIndex = 7
         '
         'Label7
         '
@@ -205,7 +205,7 @@ Partial Class Form10
         Me.email.Location = New System.Drawing.Point(734, 200)
         Me.email.Name = "email"
         Me.email.Size = New System.Drawing.Size(217, 31)
-        Me.email.TabIndex = 35
+        Me.email.TabIndex = 8
         '
         'Label8
         '
@@ -226,7 +226,7 @@ Partial Class Form10
         Me.barangay.Location = New System.Drawing.Point(49, 272)
         Me.barangay.Name = "barangay"
         Me.barangay.Size = New System.Drawing.Size(428, 31)
-        Me.barangay.TabIndex = 38
+        Me.barangay.TabIndex = 4
         '
         'Label9
         '
@@ -246,23 +246,23 @@ Partial Class Form10
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.Location = New System.Drawing.Point(0, 422)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(982, 354)

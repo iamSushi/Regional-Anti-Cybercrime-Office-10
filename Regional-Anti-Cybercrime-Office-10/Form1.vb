@@ -40,7 +40,6 @@ Public Class Form1
                 TextBox1.Text = ""
                 TextBox2.Text = ""
             End If
-            Form4.Show()
 
             mysqlconn.Close()
         Catch ex As MySqlException

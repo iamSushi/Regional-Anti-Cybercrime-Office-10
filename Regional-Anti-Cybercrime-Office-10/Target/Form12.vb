@@ -15,7 +15,7 @@ Public Class Form12
 
             Dim query As String
 
-            query = "insert into position values(null,'" & TextBox2.Text & "',null)"
+            query = "insert into position values(null,'" & TextBox2.Text & "',NOW())"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
             MessageBox.Show("Successful")
@@ -65,12 +65,16 @@ Public Class Form12
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        index = e.RowIndex
-        Dim selectedRow As DataGridViewRow
-        selectedRow = DataGridView1.Rows(index)
+        Try
+            index = e.RowIndex
+            Dim selectedRow As DataGridViewRow
+            selectedRow = DataGridView1.Rows(index)
 
-        TextBox2.Text = selectedRow.Cells(1).Value.ToString()
-        TextBox1.Text = selectedRow.Cells(0).Value.ToString()
+            TextBox2.Text = selectedRow.Cells(1).Value.ToString()
+            TextBox1.Text = selectedRow.Cells(0).Value.ToString()
+        Catch ex As Exception
+            Return
+        End Try
 
     End Sub
 

@@ -208,6 +208,15 @@ Public Class Form5
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
         DateTimePicker1.Value = Now
+        category.Items.Add("Complainant")
+        category.Items.Add("Suspect")
+        category.Items.Add("Victim")
+        category.Items.Add("Witness")
+        status.Items.Add("Single")
+        status.Items.Add("Married")
+        status.Items.Add("Widowed")
+        status.Items.Add("Divorced")
+
     End Sub
 
     Private Sub profile_image()
