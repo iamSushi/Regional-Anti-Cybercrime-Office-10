@@ -52,12 +52,14 @@ Public Class Form22
                 Dim f = row.Cells("Firstname").Value.ToString
                 Dim m = row.Cells("Middlename").Value.ToString
                 Dim s = row.Cells("Surname").Value.ToString
-                Dim name = f + " " + m + " " + s
+                Dim name_ni = f + " " + m + " " + s
 
-                Form3.TextBox6.Text = name
+                Form3.TextBox6.Text = name_ni
                 Form3.claimedby = pili
                 Form26.claimedby_pili = pili
-
+                Form26.TextBox12.Text = name_ni
+                Form4.TextBox7.Text = name_ni
+                Form4.claimed_by = pili
                 MessageBox.Show("Successful")
                 Me.Hide()
             End If
@@ -81,12 +83,13 @@ Public Class Form22
                 Dim f = row.Cells("Firstname").Value.ToString
                 Dim m = row.Cells("Middlename").Value.ToString
                 Dim s = row.Cells("Surname").Value.ToString
-                Dim name = f + " " + m + " " + s
-                Form3.TextBox6.Text = name
+                Dim name_ni = f + " " + m + " " + s
+                Form3.TextBox6.Text = name_ni
                 Form3.claimedby = pili
-                Form4.TextBox7.Text = name
+                Form4.TextBox7.Text = name_ni
                 Form4.claimed_by = pili
                 Form26.claimedby_pili = pili
+                Form26.TextBox12.Text = name_ni
                 MessageBox.Show("Successful")
                 Me.Hide()
             End If

@@ -76,7 +76,11 @@ Partial Class Form14
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+<<<<<<< HEAD
+        Me.TextBox1.Location = New System.Drawing.Point(120, 24)
+=======
         Me.TextBox1.Location = New System.Drawing.Point(108, 24)
+>>>>>>> bfa2ba1d92a367372c808f82f5b9f5541bcc2b51
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(175, 31)
         Me.TextBox1.TabIndex = 69

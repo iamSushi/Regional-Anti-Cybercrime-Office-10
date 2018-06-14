@@ -50,11 +50,12 @@ Public Class Form23
                 Dim row As DataGridViewRow
                 row = Me.DataGridView1.Rows(e.RowIndex)
                 Dim pili = row.Cells("ID").Value.ToString
-                Dim name = row.Cells("Agency_Name").Value.ToString
+                Dim name_ni = row.Cells("Agency_Name").Value.ToString
 
-                Form3.TextBox7.Text = name
+                Form3.TextBox7.Text = name_ni
                 Form3.agency = pili
                 Form26.agent_pili = pili
+                Form26.TextBox18.Text = name_ni
                 MessageBox.Show("You successfully choice Agency")
 
                 Me.Hide()
@@ -104,11 +105,12 @@ Public Class Form23
                 Dim row As DataGridViewRow
                 row = Me.DataGridView1.Rows(e.RowIndex)
                 Dim pili = row.Cells("ID").Value.ToString
-                Dim name = row.Cells("Agency_Name").Value.ToString
+                Dim name_ni = row.Cells("Agency_Name").Value.ToString
 
-                Form3.TextBox7.Text = name
+                Form3.TextBox7.Text = name_ni
                 Form3.agency = pili
                 Form26.agent_pili = pili
+                Form26.TextBox18.Text = name_ni
                 MessageBox.Show("You successfully choice Agency")
 
                 Me.Hide()

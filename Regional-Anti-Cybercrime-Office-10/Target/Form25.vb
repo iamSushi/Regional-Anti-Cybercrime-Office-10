@@ -347,9 +347,23 @@ Public Class Form25
 
     Private Sub Button29_Click(sender As Object, e As EventArgs) Handles Button29.Click
         Dim dialog As DialogResult
-        dialog = MessageBox.Show("Do you really want to exit?", "Exit", MessageBoxButtons.YesNo)
+        dialog = MessageBox.Show("Do you really want to Delete this Case?", "Delete", MessageBoxButtons.YesNo)
         If dialog = DialogResult.Yes Then
+            Try
+                mysqlconn.Open()
 
+                Dim query As String
+
+                query = " delete from laboratory_case where lab_case_no = " & lab_case & ""
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+
+                mysqlconn.Close()
+            Catch ex As MySqlException
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None
         End If
@@ -362,6 +376,9 @@ Public Class Form25
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ListBox1.Items.Clear()
+        ListBox2.Items.Clear()
+        ListBox3.Items.Clear()
         load_table()
     End Sub
 End Class
