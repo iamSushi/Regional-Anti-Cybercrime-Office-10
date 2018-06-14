@@ -23,6 +23,8 @@ Partial Class Form4
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panel_slide = New System.Windows.Forms.Panel()
         Me.Button25 = New System.Windows.Forms.Button()
         Me.Button16 = New System.Windows.Forms.Button()
@@ -49,6 +51,7 @@ Partial Class Form4
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Button30 = New System.Windows.Forms.Button()
         Me.Button29 = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -78,7 +81,6 @@ Partial Class Form4
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button30 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.panel_slide.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -406,7 +408,7 @@ Partial Class Form4
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel3.Location = New System.Drawing.Point(73, 58)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(296, 672)
+        Me.Panel3.Size = New System.Drawing.Size(292, 672)
         Me.Panel3.TabIndex = 25
         '
         'ComboBox2
@@ -444,13 +446,12 @@ Partial Class Form4
         Me.Button30.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button30.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Button30.Image = CType(resources.GetObject("Button30.Image"), System.Drawing.Image)
-        Me.Button30.Location = New System.Drawing.Point(209, 983)
+        Me.Button30.Location = New System.Drawing.Point(191, 983)
         Me.Button30.Name = "Button30"
         Me.Button30.Size = New System.Drawing.Size(35, 31)
         Me.Button30.TabIndex = 50
         Me.Button30.UseVisualStyleBackColor = False
         '
-
         'Button29
         '
         Me.Button29.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
@@ -700,10 +701,6 @@ Partial Class Form4
         Me.Label9.TabIndex = 34
         Me.Label9.Text = "Agency"
         '
-
-        'Button21
-        '
-
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -716,7 +713,6 @@ Partial Class Form4
         Me.Label8.TabIndex = 31
         Me.Label8.Text = "Case Status"
         '
-
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -729,7 +725,6 @@ Partial Class Form4
         Me.Label7.TabIndex = 28
         Me.Label7.Text = "Date Examined"
         '
-
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -763,7 +758,6 @@ Partial Class Form4
         Me.TextBox1.Size = New System.Drawing.Size(210, 31)
         Me.TextBox1.TabIndex = 15
         '
-
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -776,7 +770,6 @@ Partial Class Form4
         Me.Label4.TabIndex = 20
         Me.Label4.Text = "Date Informed"
         '
-
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -789,31 +782,27 @@ Partial Class Form4
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Date Received"
         '
-        'Button30
-        '
-
-        Me.Button30.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(10, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Button30.FlatAppearance.BorderSize = 0
-        Me.Button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button30.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button30.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.Button30.Image = CType(resources.GetObject("Button30.Image"), System.Drawing.Image)
-        Me.Button30.Location = New System.Drawing.Point(191, 983)
-        Me.Button30.Name = "Button30"
-        Me.Button30.Size = New System.Drawing.Size(35, 31)
-        Me.Button30.TabIndex = 50
-        Me.Button30.UseVisualStyleBackColor = False
-
-        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(331, 58)
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(365, 58)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(753, 672)
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridView1.Size = New System.Drawing.Size(719, 672)
         Me.DataGridView1.TabIndex = 26
         '
         'Form4

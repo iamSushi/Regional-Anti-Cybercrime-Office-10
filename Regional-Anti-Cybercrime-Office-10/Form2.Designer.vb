@@ -529,15 +529,16 @@ Partial Class Form2
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(270, 3)
+        Me.DataGridView1.Location = New System.Drawing.Point(284, 3)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(730, 608)
+        Me.DataGridView1.Size = New System.Drawing.Size(716, 608)
         Me.DataGridView1.TabIndex = 61
         '
         'Panel3
         '
         Me.Panel3.AutoScroll = True
+        Me.Panel3.BackColor = System.Drawing.SystemColors.Control
         Me.Panel3.Controls.Add(Me.DateTimePicker1)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.Button14)
@@ -549,12 +550,12 @@ Partial Class Form2
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel3.Location = New System.Drawing.Point(3, 3)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(261, 608)
+        Me.Panel3.Size = New System.Drawing.Size(282, 608)
         Me.Panel3.TabIndex = 60
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(21, 132)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(41, 147)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(207, 31)
         Me.DateTimePicker1.TabIndex = 66
@@ -566,7 +567,7 @@ Partial Class Form2
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label3.Image = CType(resources.GetObject("Label3.Image"), System.Drawing.Image)
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label3.Location = New System.Drawing.Point(17, 189)
+        Me.Label3.Location = New System.Drawing.Point(37, 204)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(71, 23)
         Me.Label3.TabIndex = 63
@@ -579,7 +580,7 @@ Partial Class Form2
         Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button14.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button14.Image = CType(resources.GetObject("Button14.Image"), System.Drawing.Image)
-        Me.Button14.Location = New System.Drawing.Point(193, 215)
+        Me.Button14.Location = New System.Drawing.Point(213, 230)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(35, 31)
         Me.Button14.TabIndex = 65
@@ -589,7 +590,7 @@ Partial Class Form2
         '
         Me.TextBox3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox3.Location = New System.Drawing.Point(21, 215)
+        Me.TextBox3.Location = New System.Drawing.Point(41, 230)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(175, 31)
         Me.TextBox3.TabIndex = 64
@@ -601,7 +602,7 @@ Partial Class Form2
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label2.Image = CType(resources.GetObject("Label2.Image"), System.Drawing.Image)
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label2.Location = New System.Drawing.Point(17, 106)
+        Me.Label2.Location = New System.Drawing.Point(37, 121)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 23)
         Me.Label2.TabIndex = 60
@@ -614,7 +615,7 @@ Partial Class Form2
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
         Me.Label8.Image = CType(resources.GetObject("Label8.Image"), System.Drawing.Image)
         Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label8.Location = New System.Drawing.Point(17, 21)
+        Me.Label8.Location = New System.Drawing.Point(37, 36)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(92, 23)
         Me.Label8.TabIndex = 56
@@ -627,7 +628,7 @@ Partial Class Form2
         Me.Button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button35.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button35.Image = CType(resources.GetObject("Button35.Image"), System.Drawing.Image)
-        Me.Button35.Location = New System.Drawing.Point(193, 47)
+        Me.Button35.Location = New System.Drawing.Point(213, 62)
         Me.Button35.Name = "Button35"
         Me.Button35.Size = New System.Drawing.Size(35, 31)
         Me.Button35.TabIndex = 58
@@ -637,7 +638,7 @@ Partial Class Form2
         '
         Me.TextBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox1.Location = New System.Drawing.Point(21, 47)
+        Me.TextBox1.Location = New System.Drawing.Point(41, 62)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(175, 31)
         Me.TextBox1.TabIndex = 57
