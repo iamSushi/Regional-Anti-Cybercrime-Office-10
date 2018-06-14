@@ -166,12 +166,19 @@ Public Class Form6
                 sname.Text = ""
                 contact.Text = ""
                 email.Text = ""
+                ComboBox2.Text = ""
                 rank.Text = ""
                 office.Text = ""
+                TextBox2.Text = ""
+                TextBox3.Text = ""
+                TextBox4.Text = ""
+                TextBox5.Text = ""
                 TextBox6.Text = ""
                 TextBox7.Text = ""
-                ComboBox2.Text = ""
                 PictureBox2.Image = Nothing
+                PictureBox3.Image = Nothing
+                RadioButton1.Checked = False
+                RadioButton2.Checked = False
                 Me.ErrorProvider1.SetError(Me.fname, "")
                 Me.ErrorProvider1.SetError(Me.sname, "")
                 Me.ErrorProvider1.SetError(Me.rank, "")
@@ -480,7 +487,7 @@ Public Class Form6
                 sname.Text = ""
                 contact.Text = ""
                 email.Text = ""
-                DateTimePicker1.Text = ""
+                ComboBox2.Text = ""
                 rank.Text = ""
                 office.Text = ""
                 TextBox2.Text = ""
@@ -489,10 +496,10 @@ Public Class Form6
                 TextBox5.Text = ""
                 TextBox6.Text = ""
                 TextBox7.Text = ""
-                ComboBox2.Text = ""
                 PictureBox2.Image = Nothing
                 PictureBox3.Image = Nothing
-
+                RadioButton1.Checked = False
+                RadioButton2.Checked = False
                 Me.ErrorProvider1.SetError(Me.fname, "")
                 Me.ErrorProvider1.SetError(Me.sname, "")
                 Me.ErrorProvider1.SetError(Me.rank, "")
@@ -521,6 +528,16 @@ Public Class Form6
             mname.Text = selectedRow.Cells(2).Value.ToString()
             sname.Text = selectedRow.Cells(3).Value.ToString()
             DateTimePicker1.Value = selectedRow.Cells(4).Value.ToString()
+
+            If selectedRow.Cells(5).Value.ToString() = "Male" Then
+                RadioButton1.Checked = True
+            ElseIf selectedRow.Cells(5).Value.ToString() = "Female" Then
+                RadioButton2.Checked = True
+            Else
+                Return
+            End If
+
+
             contact.Text = selectedRow.Cells(6).Value.ToString()
             email.Text = selectedRow.Cells(7).Value.ToString()
             rank.Text = selectedRow.Cells(8).Value.ToString()
@@ -588,7 +605,8 @@ Public Class Form6
                 ComboBox2.Text = ""
                 PictureBox2.Image = Nothing
                 PictureBox3.Image = Nothing
-
+                RadioButton1.Checked = False
+                RadioButton2.Checked = False
                 load_table()
             Catch ex As Exception
                 MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -668,7 +686,10 @@ Public Class Form6
         TextBox5.Text = ""
         TextBox6.Text = ""
         TextBox7.Text = ""
+        PictureBox2.Image = Nothing
         PictureBox3.Image = Nothing
+        RadioButton1.Checked = False
+        RadioButton2.Checked = False
         load_table()
     End Sub
 
