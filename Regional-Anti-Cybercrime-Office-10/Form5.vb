@@ -224,6 +224,7 @@ Public Class Form5
         ComboBox2.Items.Add("Victim")
         ComboBox2.Items.Add("Witness")
 
+        Me.DataGridView1.Columns("ID").Visible = False
     End Sub
 
     Private Sub profile_image()

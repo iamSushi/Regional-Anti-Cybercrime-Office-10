@@ -10,8 +10,14 @@ Public Class Form1
         }
         Try
             mysqlconn.Open()
+
+            Dim s As String = TextBox2.Text
+            Dim bArry() As Byte = System.Text.Encoding.UTF8.GetBytes(s)
+            Dim sb64 As String = System.Convert.ToBase64String(bArry)
+
+
             Dim query As String
-            query = "select * from accounts where username ='" & TextBox1.Text & "' and password ='" & TextBox2.Text & "'"
+            query = "select * from accounts where username ='" & TextBox1.Text & "' and password ='" & sb64 & "'"
             command = New MySqlCommand(query, mysqlconn)
             reader = command.ExecuteReader
 
@@ -27,7 +33,7 @@ Public Class Form1
                 mysqlconn.Open()
 
                 Dim query2 As String
-                query2 = "UPDATE accounts SET status = 1 WHERE username = '" & TextBox1.Text & "' and password = '" & TextBox2.Text & "'"
+                query2 = "UPDATE accounts SET status = 1 WHERE username = '" & TextBox1.Text & "' and password = '" & sb64 & "'"
                 command = New MySqlCommand(query2, mysqlconn)
                 reader = command.ExecuteReader
 

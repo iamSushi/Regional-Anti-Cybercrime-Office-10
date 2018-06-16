@@ -210,7 +210,7 @@ Public Class Form6
 
             Dim query As String
 
-            query = "select officer_id as ID, fname as First, mname as Middle, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , position as Position, agency as Agency, date_created as Created from officer"
+            query = "select officer_id as ID, fname as First, mname as Middle, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , position as Position, agency as Agency, date_created as Created from officer where position != 'admin'"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -225,8 +225,6 @@ Public Class Form6
             mysqlconn.Dispose()
         End Try
 
-        ' PictureBox2.ImageLocation = ("C:\Users\iamSushi\Desktop\police.jpg")
-        'PictureBox2.Load()
     End Sub
 
     Private Sub profile_image()
@@ -318,6 +316,7 @@ Public Class Form6
 
     Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
+        Me.DataGridView1.Columns("ID").Visible = False
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
 
@@ -526,7 +525,6 @@ Public Class Form6
             index = e.RowIndex
             Dim selectedRow As DataGridViewRow
             selectedRow = DataGridView1.Rows(index)
-
             id.Text = selectedRow.Cells(0).Value.ToString()
             fname.Text = selectedRow.Cells(1).Value.ToString()
             mname.Text = selectedRow.Cells(2).Value.ToString()

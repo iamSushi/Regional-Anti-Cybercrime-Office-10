@@ -141,10 +141,10 @@ Partial Class Form7
         '
         Me.TextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox11.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox11.Location = New System.Drawing.Point(30, 638)
+        Me.TextBox11.Location = New System.Drawing.Point(6, 642)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.ReadOnly = True
-        Me.TextBox11.Size = New System.Drawing.Size(19, 24)
+        Me.TextBox11.Size = New System.Drawing.Size(101, 24)
         Me.TextBox11.TabIndex = 81
         Me.TextBox11.Visible = False
         '
@@ -152,10 +152,10 @@ Partial Class Form7
         '
         Me.id.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.id.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.id.Location = New System.Drawing.Point(4, 638)
+        Me.id.Location = New System.Drawing.Point(6, 612)
         Me.id.Name = "id"
         Me.id.ReadOnly = True
-        Me.id.Size = New System.Drawing.Size(19, 24)
+        Me.id.Size = New System.Drawing.Size(101, 24)
         Me.id.TabIndex = 80
         Me.id.Visible = False
         '
@@ -181,10 +181,10 @@ Partial Class Form7
         Me.TextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox10.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox10.Location = New System.Drawing.Point(82, 638)
+        Me.TextBox10.Location = New System.Drawing.Point(113, 642)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.ReadOnly = True
-        Me.TextBox10.Size = New System.Drawing.Size(19, 24)
+        Me.TextBox10.Size = New System.Drawing.Size(87, 24)
         Me.TextBox10.TabIndex = 78
         Me.TextBox10.Visible = False
         '
@@ -193,10 +193,10 @@ Partial Class Form7
         Me.TextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox9.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
-        Me.TextBox9.Location = New System.Drawing.Point(56, 638)
+        Me.TextBox9.Location = New System.Drawing.Point(113, 613)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.ReadOnly = True
-        Me.TextBox9.Size = New System.Drawing.Size(19, 24)
+        Me.TextBox9.Size = New System.Drawing.Size(87, 24)
         Me.TextBox9.TabIndex = 77
         Me.TextBox9.Visible = False
         '
@@ -260,6 +260,7 @@ Partial Class Form7
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.DataGridView2.GridColor = System.Drawing.SystemColors.Control
         Me.DataGridView2.Location = New System.Drawing.Point(364, 499)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
@@ -299,6 +300,7 @@ Partial Class Form7
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.Control
         Me.DataGridView1.Location = New System.Drawing.Point(364, 284)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
