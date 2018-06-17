@@ -314,7 +314,7 @@ Public Class Form7
             mysqlconn.Open()
             Dim query As String
 
-            query = "SELECT officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, position as Position, rank as Rank FROM officer WHERE fname like '" & TextBox4.Text & "%' or mname like '" & TextBox4.Text & "' or sname = '" & TextBox4.Text & "' "
+            query = "SELECT officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, position as Position, rank as Rank FROM officer WHERE fname like '" & TextBox4.Text & "%' or mname like '" & TextBox4.Text & "%' or sname like '" & TextBox4.Text & "%' and position != 'Admin'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -322,13 +322,14 @@ Public Class Form7
             soure.DataSource = dbDataSet
             DataGridView1.DataSource = soure
             adapter.Update(dbDataSet)
-
+            officer_table()
             mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try
+
     End Sub
 
 
@@ -411,7 +412,7 @@ Public Class Form7
 
                 Dim query As String
 
-                query = "DELETE FROM accounts WHERE officer_id = '" & id.Text & "' and type != 'Admin'"
+                query = "DELETE FROM accounts WHERE officer_id = '" & id.Text & "'"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
 
@@ -431,4 +432,5 @@ Public Class Form7
         accounts_table()
         officer_table()
     End Sub
+
 End Class

@@ -167,6 +167,7 @@ Public Class Form10
 
     Private Sub Form10_Load(sender As Object, e As EventArgs) Handles Me.Load
         load_table()
+        Me.DataGridView1.Columns("ID").Visible = False
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -207,7 +208,7 @@ Public Class Form10
 
             Dim query As String
 
-            query = "select agency_name as Name, mother_unit as MotherUnit FROM agency where agency_name like '" & TextBox10.Text & "%'"
+            query = "select agency_id as ID, agency_name as Agency, mother_unit as MotherUnit, street as Street, barangay as Barangay, city as City, province as Province, contact_no as Contact, email as Email FROM agency WHERE agency_name like '" & TextBox10.Text & "%' "
 
 
             command = New MySqlCommand(query, mysqlconn)
@@ -237,7 +238,7 @@ Public Class Form10
 
             Dim query As String
 
-            query = "select street as Street, barangay as Barangay, city as City, province as Province FROM agency where street like '" & TextBox11.Text & "%' or barangay like '" & TextBox11.Text & "%' or city like '" & TextBox11.Text & "%' or province like '" & TextBox11.Text & "%'"
+            query = "select agency_id as ID, agency_name as Agency, mother_unit as MotherUnit, street as Street, barangay as Barangay, city as City, province as Province, contact_no as Contact, email as Email FROM agency where street like '" & TextBox11.Text & "%' or barangay like '" & TextBox11.Text & "%' or city like '" & TextBox11.Text & "%' or province like '" & TextBox11.Text & "%'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
