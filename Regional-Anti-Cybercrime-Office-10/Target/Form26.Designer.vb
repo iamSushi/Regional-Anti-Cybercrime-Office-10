@@ -178,11 +178,11 @@ Partial Class Form26
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(292, 30)
         Me.DateTimePicker2.TabIndex = 132
-<<<<<<< HEAD
+
         Me.DateTimePicker2.Value = New Date(2018, 6, 17, 0, 0, 0, 0)
-=======
+
         Me.DateTimePicker2.Value = New Date(2018, 6, 15, 0, 0, 0, 0)
->>>>>>> 7c949cae65051b16e0bc75ede2997b58f96eb52b
+
         '
         'DateTimePicker1
         '

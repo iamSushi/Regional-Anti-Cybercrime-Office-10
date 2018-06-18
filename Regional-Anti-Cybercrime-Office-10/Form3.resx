@@ -7619,9 +7619,8 @@
         /0jA8f8AhKps1E4ApdkAAAAASUVORK5CYII=
 </value>
   </data>
-<<<<<<< HEAD
-  <data name="Label35.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-=======
+
+
   <data name="Label33.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAT9JREFUOE/t
@@ -7799,7 +7798,6 @@
 </value>
   </data>
   <data name="Label3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
->>>>>>> 7c949cae65051b16e0bc75ede2997b58f96eb52b
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAmxJREFUOE/V
         lFuIjVEUxz9yeVLyQHG+vffa3xlndMTDIZcnMTGKKcJo3B7wNDUS80JCuZU8iJC8UaLxQCFSPJEyzZRQ
@@ -7898,7 +7896,7 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-<<<<<<< HEAD
+
   <data name="Label33.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAT9JREFUOE/t
@@ -7985,8 +7983,8 @@
         UzX0b9zz/CzHsg/v30Uk8g7ASHoHYx0a4wAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Label8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-=======
+  
+
   <data name="Label11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAVhJREFUOE/t
@@ -7999,7 +7997,7 @@
 </value>
   </data>
   <data name="Label35.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
->>>>>>> 7c949cae65051b16e0bc75ede2997b58f96eb52b
+
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAmxJREFUOE/V
         lFuIjVEUxz9yeVLyQHG+vffa3xlndMTDIZcnMTGKKcJo3B7wNDUS80JCuZU8iJC8UaLxQCFSPJEyzZRQ
@@ -8015,7 +8013,7 @@
         UB8h/0SGntnfSZL8AHYht5Vj+QcqAAAAAElFTkSuQmCC
 </value>
   </data>
-<<<<<<< HEAD
+
   <data name="Label9.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAgZJREFUOE/V
@@ -8042,10 +8040,9 @@
         QmCC
 </value>
   </data>
-  <data name="Label10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-=======
+
   <data name="Label36.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
->>>>>>> 7c949cae65051b16e0bc75ede2997b58f96eb52b
+
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAJBJREFUOE+N
         zUsKg0AQhOE5RpbmBgEvoCQBN0KydmNukptmlccZRNAqGEPbzAz1w4fQWhhiFSwZE5wh2zbuoXY+8IMr
