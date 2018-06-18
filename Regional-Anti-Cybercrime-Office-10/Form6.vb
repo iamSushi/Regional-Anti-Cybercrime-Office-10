@@ -403,6 +403,9 @@ Public Class Form6
             soure.DataSource = dbDataSet
             DataGridView1.DataSource = soure
             adapter.Update(dbDataSet)
+            If String.IsNullOrEmpty(TextBox1.Text) Then
+                load_table()
+            End If
             mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
