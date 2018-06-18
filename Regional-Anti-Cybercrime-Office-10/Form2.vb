@@ -250,6 +250,8 @@ Public Class Form2
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
+        Me.DataGridView1.Columns("ID").Visible = False
+        Me.DataGridView2.Columns("ID").Visible = False
     End Sub
 
     Private Sub DataGridView2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellClick

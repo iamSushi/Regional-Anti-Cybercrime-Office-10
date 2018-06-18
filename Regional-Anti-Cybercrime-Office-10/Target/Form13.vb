@@ -37,6 +37,7 @@ Public Class Form13
 
     Private Sub Form13_Load(sender As Object, e As EventArgs) Handles Me.Load
         load_table()
+        Me.DataGridView1.Columns("ID").Visible = False
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
@@ -89,51 +90,6 @@ Public Class Form13
                     mysqlconn.Dispose()
                 End Try
 
-                Try
-                    mysqlconn.Open()
-
-                    Dim query As String
-                    query = "select fname,mname,sname from officer where officer_id = '" & examiner2 & "'"
-                    command = New MySqlCommand(query, mysqlconn)
-                    reader = command.ExecuteReader
-
-                    While reader.Read
-                        Dim f = reader.GetString("fname")
-                        Dim m = reader.GetString("mname")
-                        Dim s = reader.GetString("sname")
-                        Dim name_ni = f + " " + m + " " + s
-                        Form3.TextBox12.Text = name_ni
-                    End While
-
-                    mysqlconn.Close()
-                Catch ex As MySqlException
-                    MessageBox.Show(ex.Message)
-                Finally
-                    mysqlconn.Dispose()
-                End Try
-
-                Try
-                    mysqlconn.Open()
-
-                    Dim query As String
-                    query = "select fname,mname,sname from officer where officer_id = '" & investigator2 & "'"
-                    command = New MySqlCommand(query, mysqlconn)
-                    reader = command.ExecuteReader
-
-                    While reader.Read
-                        Dim f = reader.GetString("fname")
-                        Dim m = reader.GetString("mname")
-                        Dim s = reader.GetString("sname")
-                        Dim name_ni = f + " " + m + " " + s
-                        Form3.TextBox14.Text = name_ni
-                    End While
-
-                    mysqlconn.Close()
-                Catch ex As MySqlException
-                    MessageBox.Show(ex.Message)
-                Finally
-                    mysqlconn.Dispose()
-                End Try
 
                 Me.Hide()
 
@@ -160,7 +116,7 @@ Public Class Form13
                 Dim name = row.Cells("CaseID").Value.ToString
 
                 Form3.lab_case = pili
-                Form3.TextBox10.Text = name
+
                 Form3.TextBox1.Text = name
                 Form2.lab_case = pili
                 Form2.TextBox6.Text = name
@@ -193,51 +149,7 @@ Public Class Form13
                     mysqlconn.Dispose()
                 End Try
 
-                Try
-                    mysqlconn.Open()
 
-                    Dim query As String
-                    query = "select fname,mname,sname from officer where officer_id = '" & examiner2 & "'"
-                    command = New MySqlCommand(query, mysqlconn)
-                    reader = command.ExecuteReader
-
-                    While reader.Read
-                        Dim f = reader.GetString("fname")
-                        Dim m = reader.GetString("mname")
-                        Dim s = reader.GetString("sname")
-                        Dim name_ni = f + " " + m + " " + s
-                        Form3.TextBox12.Text = name_ni
-                    End While
-
-                    mysqlconn.Close()
-                Catch ex As MySqlException
-                    MessageBox.Show(ex.Message)
-                Finally
-                    mysqlconn.Dispose()
-                End Try
-
-                Try
-                    mysqlconn.Open()
-
-                    Dim query As String
-                    query = "select fname,mname,sname from officer where officer_id = '" & investigator2 & "'"
-                    command = New MySqlCommand(query, mysqlconn)
-                    reader = command.ExecuteReader
-
-                    While reader.Read
-                        Dim f = reader.GetString("fname")
-                        Dim m = reader.GetString("mname")
-                        Dim s = reader.GetString("sname")
-                        Dim name_ni = f + " " + m + " " + s
-                        Form3.TextBox14.Text = name_ni
-                    End While
-
-                    mysqlconn.Close()
-                Catch ex As MySqlException
-                    MessageBox.Show(ex.Message)
-                Finally
-                    mysqlconn.Dispose()
-                End Try
 
                 Me.Hide()
             End If

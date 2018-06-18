@@ -6,6 +6,7 @@ Public Class Form21
     Dim reader As MySqlDataReader
     Private Sub Form21_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
+        Me.DataGridView1.Columns("ID").Visible = False
     End Sub
 
     Private Sub load_table()

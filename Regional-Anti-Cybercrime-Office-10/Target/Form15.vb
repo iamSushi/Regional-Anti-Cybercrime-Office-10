@@ -39,6 +39,7 @@ Public Class Form15
         Finally
             mysqlconn.Dispose()
         End Try
+        Me.DataGridView1.Columns("ID").Visible = False
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged

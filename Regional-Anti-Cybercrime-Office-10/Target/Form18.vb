@@ -37,6 +37,8 @@ Public Class Form18
         Finally
             mysqlconn.Dispose()
         End Try
+        Me.DataGridView1.Columns("ID").Visible = False
+        Me.DataGridView2.Columns("ID").Visible = False
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
