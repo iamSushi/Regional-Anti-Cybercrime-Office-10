@@ -102,6 +102,7 @@ Partial Class Form26
         Me.Label28 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label34 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
@@ -175,6 +176,7 @@ Partial Class Form26
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(292, 30)
         Me.DateTimePicker2.TabIndex = 132
+        Me.DateTimePicker2.Value = New Date(2018, 6, 17, 0, 0, 0, 0)
         '
         'DateTimePicker1
         '
@@ -975,12 +977,27 @@ Partial Class Form26
         Me.Label34.TabIndex = 13
         Me.Label34.Text = "What"
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(43, Byte), Integer))
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button2.Location = New System.Drawing.Point(1236, 654)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(80, 30)
+        Me.Button2.TabIndex = 137
+        Me.Button2.Text = "Reload"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'Form26
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1332, 714)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button29)
@@ -1107,4 +1124,5 @@ Partial Class Form26
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label34 As Label
     Friend WithEvents DateTimePicker5 As DateTimePicker
+    Friend WithEvents Button2 As Button
 End Class

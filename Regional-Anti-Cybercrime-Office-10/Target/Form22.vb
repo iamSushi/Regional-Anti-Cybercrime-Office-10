@@ -22,7 +22,7 @@ Public Class Form22
 
             Dim query As String
 
-            query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, rank as Rank from Officer where position = 'investigator'"
+            query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, rank as Rank, position as Position from Officer where position = 'investigator'"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -113,8 +113,13 @@ Public Class Form22
             mysqlconn.Open()
 
             Dim query As String
+            If TextBox1.Text = "" Then
+                query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, rank as Rank, position as Position from Officer where position = 'investigator'"
+            Else
+                query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, rank as Rank, position as Position from Officer where fname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' and position = 'investigator'"
+            End If
 
-            query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, rank as Rank from Officer where fname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' and position = 'investigator'"
+
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)

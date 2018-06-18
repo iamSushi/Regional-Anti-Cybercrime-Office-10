@@ -300,7 +300,11 @@ Public Class Form3
         count = 0
         Dim investigator As String = DirectCast(ComboBox17.SelectedItem, KeyValuePair(Of String, String)).Key
         Dim examiner As String = DirectCast(ComboBox15.SelectedItem, KeyValuePair(Of String, String)).Key
+        If investigator = 0 Then
 
+        Else
+
+        End If
         If examiner > 0 Then
             Me.ErrorProvider1.SetError(Me.ComboBox15, "")
         Else
@@ -809,5 +813,9 @@ Public Class Form3
         Finally
             mysqlconn.Dispose()
         End Try
+    End Sub
+
+    Private Sub DateTimePicker4_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker4.ValueChanged
+
     End Sub
 End Class

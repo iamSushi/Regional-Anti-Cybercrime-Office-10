@@ -679,4 +679,11 @@ Public Class Form26
     Private Sub Form26_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         Form25.Show()
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ListBox1.Items.Clear()
+        ListBox2.Items.Clear()
+        ListBox3.Items.Clear()
+        load_table()
+    End Sub
 End Class
