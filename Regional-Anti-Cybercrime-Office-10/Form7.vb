@@ -323,6 +323,9 @@ Public Class Form7
             DataGridView1.DataSource = soure
             adapter.Update(dbDataSet)
             officer_table()
+            If String.IsNullOrEmpty(TextBox4.Text) Then
+                load_table()
+            End If
             mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
