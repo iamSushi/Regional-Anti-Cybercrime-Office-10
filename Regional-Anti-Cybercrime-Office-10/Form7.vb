@@ -81,7 +81,6 @@ Public Class Form7
                 mysqlconn.Dispose()
             End Try
 
-            'Application.ExitThread()
             Me.Close()
             Form1.Show()
         ElseIf dialog = DialogResult.No Then
@@ -139,7 +138,7 @@ Public Class Form7
 
             mysqlconn.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -166,7 +165,7 @@ Public Class Form7
 
             mysqlconn.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -193,7 +192,7 @@ Public Class Form7
 
             mysqlconn.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -289,7 +288,7 @@ Public Class Form7
 
                 count = 0
             Catch ex As Exception
-                MessageBox.Show(ex.Message)
+                MessageBox.Show("Invalid user input", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -328,7 +327,7 @@ Public Class Form7
             End If
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show("Invalid user action!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -424,7 +423,7 @@ Public Class Form7
                 mysqlconn.Close()
 
             Catch ex As MySqlException
-                MessageBox.Show("Invalid user action!" + ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("Invalid user action!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -436,4 +435,30 @@ Public Class Form7
         officer_table()
     End Sub
 
+    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+        Dim dialog As DialogResult
+        dialog = MessageBox.Show("Do you really want to exit?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If dialog = DialogResult.Yes Then
+            mysqlconn = New MySqlConnection
+            mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+            Try
+                mysqlconn.Open()
+                Dim query2 As String
+                query2 = "UPDATE accounts SET status = 0 WHERE status = 1"
+                command = New MySqlCommand(query2, mysqlconn)
+                reader = command.ExecuteReader
+
+                mysqlconn.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
+
+            Me.Close()
+            Form1.Show()
+        ElseIf dialog = DialogResult.No Then
+            Me.DialogResult = DialogResult.None
+        End If
+    End Sub
 End Class

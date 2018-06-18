@@ -27,7 +27,7 @@ Public Class Form16
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user input", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             load_table()
             mysqlconn.Dispose()
@@ -63,21 +63,24 @@ Public Class Form16
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        index = e.RowIndex
-        Dim selectedRow As DataGridViewRow
-        selectedRow = DataGridView1.Rows(index)
+        Try
+            index = e.RowIndex
+            Dim selectedRow As DataGridViewRow
+            selectedRow = DataGridView1.Rows(index)
 
-        id.Text = selectedRow.Cells(0).Value.ToString()
-        TextBox2.Text = selectedRow.Cells(1).Value.ToString()
-        TextBox1.Text = selectedRow.Cells(2).Value.ToString()
-
+            id.Text = selectedRow.Cells(0).Value.ToString()
+            TextBox2.Text = selectedRow.Cells(1).Value.ToString()
+            TextBox1.Text = selectedRow.Cells(2).Value.ToString()
+        Catch ex As Exception
+            Return
+        End Try
     End Sub
 
     Private Sub Button25_Click(sender As Object, e As EventArgs) Handles Button25.Click
@@ -96,7 +99,7 @@ Public Class Form16
             load_table()
             mysqlconn.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             load_table()
 
@@ -126,7 +129,7 @@ Public Class Form16
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user input", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try

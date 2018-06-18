@@ -25,7 +25,7 @@ Public Class Form12
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user input", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             load_table()
             mysqlconn.Dispose()
@@ -54,7 +54,7 @@ Public Class Form12
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -98,7 +98,7 @@ Public Class Form12
             load_table()
             mysqlconn.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
             load_table()

@@ -56,7 +56,7 @@ Public Class Form10
                 load_table()
                 mysqlconn.Close()
             Catch ex As MySqlException
-                MessageBox.Show(ex.Message)
+                MessageBox.Show("Invalid user input", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -85,26 +85,30 @@ Public Class Form10
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        index = e.RowIndex
-        Dim selectedRow As DataGridViewRow
-        selectedRow = DataGridView1.Rows(index)
+        Try
+            index = e.RowIndex
+            Dim selectedRow As DataGridViewRow
+            selectedRow = DataGridView1.Rows(index)
 
-        id.Text = selectedRow.Cells(0).Value.ToString()
-        agency.Text = selectedRow.Cells(1).Value.ToString()
-        mother.Text = selectedRow.Cells(2).Value.ToString()
-        street.Text = selectedRow.Cells(3).Value.ToString()
-        barangay.Text = selectedRow.Cells(4).Value.ToString()
-        city.Text = selectedRow.Cells(5).Value.ToString()
-        province.Text = selectedRow.Cells(6).Value.ToString()
-        contact.Text = selectedRow.Cells(7).Value.ToString()
-        email.Text = selectedRow.Cells(8).Value.ToString()
+            id.Text = selectedRow.Cells(0).Value.ToString()
+            agency.Text = selectedRow.Cells(1).Value.ToString()
+            mother.Text = selectedRow.Cells(2).Value.ToString()
+            street.Text = selectedRow.Cells(3).Value.ToString()
+            barangay.Text = selectedRow.Cells(4).Value.ToString()
+            city.Text = selectedRow.Cells(5).Value.ToString()
+            province.Text = selectedRow.Cells(6).Value.ToString()
+            contact.Text = selectedRow.Cells(7).Value.ToString()
+            email.Text = selectedRow.Cells(8).Value.ToString()
+        Catch ex As Exception
+            Return
+        End Try
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -158,7 +162,7 @@ Public Class Form10
                 load_table()
                 mysqlconn.Close()
             Catch ex As MySqlException
-                MessageBox.Show(ex.Message)
+                MessageBox.Show("Invalid user input", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -192,7 +196,7 @@ Public Class Form10
             load_table()
             mysqlconn.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
     End Sub
 
@@ -220,7 +224,7 @@ Public Class Form10
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -249,7 +253,7 @@ Public Class Form10
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try

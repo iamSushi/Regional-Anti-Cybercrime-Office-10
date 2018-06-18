@@ -45,7 +45,7 @@ Public Class Form11
 
                 mysqlconn.Close()
             Catch ex As MySqlException
-                MessageBox.Show(ex.Message)
+                MessageBox.Show("Invalid user input", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -73,7 +73,7 @@ Public Class Form11
             adapter.Update(dbDataSet)
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -108,7 +108,7 @@ Public Class Form11
             load_table()
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user input", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -145,7 +145,7 @@ Public Class Form11
             load_table()
             mysqlconn.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
     End Sub
 
@@ -174,7 +174,7 @@ Public Class Form11
             adapter.Update(dbDataSet)
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try
