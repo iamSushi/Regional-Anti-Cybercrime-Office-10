@@ -516,7 +516,7 @@ Public Class Form5
                     gender = "Not specified"
                 End If
 
-                query = "UPDATE persons set fname = '" & fname.Text & "', mname = '" & mname.Text & "', sname = '" & sname.Text & "', contact = '" & contact.Text & "',email = '" & email.Text & "',category = '" & category.Text & "',status = '" & status.Text & "', dob = '" & DateTimePicker1.Value & "', profile_image = @profile_image, nname = '" & nickname.Text & "' where person_id = '" & id.Text & "'"
+                query = "UPDATE persons set fname = '" & fname.Text & "', mname = '" & mname.Text & "', sname = '" & sname.Text & "',gender = '" & gender & "', contact = '" & contact.Text & "',email = '" & email.Text & "',category = '" & category.Text & "',status = '" & status.Text & "', dob = '" & DateTimePicker1.Value & "', profile_image = @profile_image, nname = '" & nickname.Text & "' where person_id = '" & id.Text & "'"
                 command = New MySqlCommand(query, mysqlconn)
                 command.Parameters.AddWithValue("@profile_image", arrImage)
                 reader = command.ExecuteReader
@@ -551,7 +551,7 @@ Public Class Form5
                 mysqlconn.Close()
 
             Catch ex As MySqlException
-                MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Invalid user input" + ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try

@@ -821,4 +821,31 @@ Public Class Form3
     Private Sub DateTimePicker4_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker4.ValueChanged
 
     End Sub
+
+    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+        Dim dialog As DialogResult
+        dialog = MessageBox.Show("Do you really want to exit?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If dialog = DialogResult.Yes Then
+            mysqlconn = New MySqlConnection
+            mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none"
+            Try
+                mysqlconn.Open()
+                Dim query2 As String
+                query2 = "UPDATE accounts SET status = 0 WHERE status = 1"
+                command = New MySqlCommand(query2, mysqlconn)
+                reader = command.ExecuteReader
+
+                mysqlconn.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            Finally
+                mysqlconn.Dispose()
+            End Try
+
+            Me.Close()
+            Form1.Show()
+        ElseIf dialog = DialogResult.No Then
+            Me.DialogResult = DialogResult.None
+        End If
+    End Sub
 End Class

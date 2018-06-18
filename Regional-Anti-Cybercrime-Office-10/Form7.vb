@@ -203,6 +203,7 @@ Public Class Form7
         officer_table()
         accounts_table()
         Me.DataGridView1.Columns("ID").Visible = False
+        'DataGridView1.Columns.[4].width = 200
         Me.DataGridView2.Columns("ID").Visible = False
     End Sub
 
