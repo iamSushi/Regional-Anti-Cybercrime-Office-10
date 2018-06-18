@@ -49,7 +49,9 @@ Public Class Form1
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Invalid user input", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            TextBox1.Text = ""
+            TextBox2.Text = ""
         Finally
             mysqlconn.Dispose()
         End Try

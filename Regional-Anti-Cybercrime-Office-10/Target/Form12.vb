@@ -62,6 +62,7 @@ Public Class Form12
 
     Private Sub Form12_Load(sender As Object, e As EventArgs) Handles Me.Load
         load_table()
+        Me.DataGridView1.Columns("ID").Visible = False
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick

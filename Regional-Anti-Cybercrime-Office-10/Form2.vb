@@ -156,7 +156,7 @@ Public Class Form2
                 load_table()
                 mysqlconn.Close()
             Catch ex As MySqlException
-                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Invalid user input!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -185,7 +185,7 @@ Public Class Form2
             load_table()
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Invalid user input!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -217,7 +217,7 @@ Public Class Form2
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Invalid user action!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -242,7 +242,7 @@ Public Class Form2
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Invalid user action!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -283,7 +283,7 @@ Public Class Form2
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Invalid user action!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
