@@ -511,7 +511,7 @@ Public Class Form3
                     query = "update laboratory_case set released_by = '" + releasedby + "' where lab_case_no = '" & lab_case_no & "'"
                     command = New MySqlCommand(query, mysqlconn)
                     reader = command.ExecuteReader
-                    MessageBox.Show("Successful")
+
 
                     TextBox5.Text = ""
 
@@ -530,7 +530,7 @@ Public Class Form3
                     query = "update laboratory_case set claimed_by = '" + claimedby + "' where lab_case_no = '" & lab_case_no & "'"
                     command = New MySqlCommand(query, mysqlconn)
                     reader = command.ExecuteReader
-                    MessageBox.Show("Successful")
+
 
                     TextBox6.Text = ""
 
