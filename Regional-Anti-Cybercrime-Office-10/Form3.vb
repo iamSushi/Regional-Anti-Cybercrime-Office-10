@@ -543,27 +543,30 @@ Public Class Form3
 
 
             End If
+            Try
+                mysqlconn.Open()
+                Dim query As String
+                query = "update laboratory_case set date_informed = '" + DateTimePicker4.Value + "' where lab_case_no = '" & lab_case_no & "'"
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+                MessageBox.Show("Successful")
+
+                TextBox6.Text = ""
+
+                mysqlconn.Close()
+            Catch ex As MySqlException
+                MessageBox.Show("Invalid user input!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Finally
+                mysqlconn.Dispose()
+            End Try
         Else
             MessageBox.Show("First Select Laboratory Case")
 
 
+            Me.ErrorProvider1.SetError(Me.TextBox10, "Select Examiner")
+
         End If
-        Try
-            mysqlconn.Open()
-            Dim query As String
-            query = "update laboratory_case set date_informed = '" + DateTimePicker4.Value + "' where lab_case_no = '" & lab_case_no & "'"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-            MessageBox.Show("Successful")
 
-            TextBox6.Text = ""
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show("Invalid user input!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        Finally
-            mysqlconn.Dispose()
-        End Try
         TextBox10.Text = ""
         TextBox12.Text = ""
         TextBox14.Text = ""
