@@ -210,7 +210,7 @@ Public Class Form6
 
             Dim query As String
 
-            query = "select officer_id as ID, fname as First, mname as Middle, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , position as Position, agency as Agency, date_created as Created from officer"
+            query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , position as Position, agency as Agency, date_created as DateCreated FROM officer where position != 'admin'"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -224,9 +224,8 @@ Public Class Form6
         Finally
             mysqlconn.Dispose()
         End Try
-
-        ' PictureBox2.ImageLocation = ("C:\Users\iamSushi\Desktop\police.jpg")
-        'PictureBox2.Load()
+        PictureBox2.ImageLocation = ("C:\Users\iamSushi\Desktop\police.jpg")
+        PictureBox2.Load()
     End Sub
 
     Private Sub profile_image()
@@ -318,6 +317,7 @@ Public Class Form6
 
     Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
+        Me.DataGridView1.Columns("ID").Visible = False
         mysqlconn = New MySqlConnection
         mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
 
@@ -395,7 +395,7 @@ Public Class Form6
 
             Dim query As String
 
-            query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , agency as Office,  date_created as DateCreated from officer where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
+            query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , position as Position, agency as Agency,  date_created as DateCreated from officer where fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -403,10 +403,9 @@ Public Class Form6
             soure.DataSource = dbDataSet
             DataGridView1.DataSource = soure
             adapter.Update(dbDataSet)
-
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show("Invalid user action" + ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -526,7 +525,6 @@ Public Class Form6
             index = e.RowIndex
             Dim selectedRow As DataGridViewRow
             selectedRow = DataGridView1.Rows(index)
-
             id.Text = selectedRow.Cells(0).Value.ToString()
             fname.Text = selectedRow.Cells(1).Value.ToString()
             mname.Text = selectedRow.Cells(2).Value.ToString()
@@ -537,8 +535,6 @@ Public Class Form6
                 RadioButton1.Checked = True
             ElseIf selectedRow.Cells(5).Value.ToString() = "Female" Then
                 RadioButton2.Checked = True
-            Else
-                Return
             End If
 
 
@@ -613,7 +609,7 @@ Public Class Form6
                 ComboBox1.Text = ""
                 load_table()
             Catch ex As Exception
-                MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Invalid user action" + ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -643,7 +639,7 @@ Public Class Form6
             mysqlconn.Open()
 
             Dim query As String
-            query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , agency as Office, date_created as DateCreated from officer where rank = '" & ComboBox1.Text & "'"
+            query = "select officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, dob as Birthday, gender as Gender, contact as Contact, email as Email, rank as Rank , position as Position, agency as Agency, date_created as DateCreated from officer where rank = '" & ComboBox1.Text & "'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -651,7 +647,6 @@ Public Class Form6
             soure.DataSource = dbDataSet
             DataGridView1.DataSource = soure
             adapter.Update(dbDataSet)
-
             mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show("Invalid user action", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -735,5 +730,9 @@ Public Class Form6
         Finally
             mysqlconn.Dispose()
         End Try
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
     End Sub
 End Class

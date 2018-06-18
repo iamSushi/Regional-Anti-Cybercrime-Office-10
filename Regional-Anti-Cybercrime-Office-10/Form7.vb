@@ -156,7 +156,7 @@ Public Class Form7
             mysqlconn.Open()
             Dim query As String
 
-            query = "SELECT officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, position as Position, rank as Rank FROM officer"
+            query = "SELECT officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, position as Position, rank as Rank FROM officer WHERE position != 'admin'"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -183,7 +183,7 @@ Public Class Form7
             mysqlconn.Open()
             Dim query As String
 
-            query = "SELECT officer.officer_id as ID, officer.fname as Firstname, officer.sname as Surname, officer.position as Position, officer.rank as Rank, officer.agency as Agency, accounts.username as Username, accounts.date_created as DateCreated FROM accounts INNER JOIN officer ON officer.officer_id = accounts.officer_id"
+            query = "SELECT officer.officer_id as ID, officer.fname as Firstname, officer.sname as Surname, officer.position as Position, officer.rank as Rank, officer.agency as Agency, accounts.username as Username, accounts.date_created as DateCreated FROM accounts INNER JOIN officer ON officer.officer_id = accounts.officer_id WHERE position != 'admin'"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -203,6 +203,8 @@ Public Class Form7
         load_table()
         officer_table()
         accounts_table()
+        Me.DataGridView1.Columns("ID").Visible = False
+        Me.DataGridView2.Columns("ID").Visible = False
     End Sub
 
     Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
@@ -219,7 +221,11 @@ Public Class Form7
             Me.ErrorProvider1.SetError(Me.TextBox6, "")
         End If
 
-        If TextBox6.Text <> TextBox9.Text Then
+        Dim z As String = TextBox6.Text
+        Dim pft() As Byte = System.Text.Encoding.UTF8.GetBytes(z)
+        Dim kaka As String = System.Convert.ToBase64String(pft)
+
+        If kaka <> TextBox9.Text Then
             MessageBox.Show("Current password don't match!")
             load_table()
             TextBox6.Text = ""
@@ -253,16 +259,20 @@ Public Class Form7
             Return
         Else
             Try
+                Dim s As String = TextBox8.Text
+                Dim bArry() As Byte = System.Text.Encoding.UTF8.GetBytes(s)
+                Dim sb64 As String = System.Convert.ToBase64String(bArry)
+
                 mysqlconn.Open()
                 If String.IsNullOrEmpty(TextBox5.Text) Then
                     Dim query As String
-                    query = "UPDATE accounts SET username = '" & TextBox3.Text & "', password = '" & TextBox8.Text & "' WHERE officer_id = '" & TextBox10.Text & "'"
+                    query = "UPDATE accounts SET username = '" & TextBox3.Text & "', password = '" & sb64 & "' WHERE officer_id = '" & TextBox10.Text & "'"
                     command = New MySqlCommand(query, mysqlconn)
                     reader = command.ExecuteReader
                     MessageBox.Show("Updated Successfully!")
                 Else
                     Dim query As String
-                    query = "UPDATE accounts SET username = '" & TextBox5.Text & "', password = '" & TextBox8.Text & "' WHERE officer_id = '" & TextBox10.Text & "'"
+                    query = "UPDATE accounts SET username = '" & TextBox5.Text & "', password = '" & sb64 & "' WHERE officer_id = '" & TextBox10.Text & "'"
                     command = New MySqlCommand(query, mysqlconn)
                     reader = command.ExecuteReader
                     MessageBox.Show("Updated Successfully!")
@@ -284,6 +294,9 @@ Public Class Form7
                 mysqlconn.Dispose()
             End Try
         End If
+        load_table()
+        officer_table()
+        accounts_table()
     End Sub
 
     Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
@@ -301,7 +314,7 @@ Public Class Form7
             mysqlconn.Open()
             Dim query As String
 
-            query = "SELECT officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, position as Position, rank as Rank FROM officer WHERE fname like '" & TextBox4.Text & "%' or mname like '" & TextBox4.Text & "' or sname = '" & TextBox4.Text & "' "
+            query = "SELECT officer_id as ID, fname as Firstname, mname as Middlename, sname as Surname, position as Position, rank as Rank FROM officer WHERE fname like '" & TextBox4.Text & "%' or mname like '" & TextBox4.Text & "%' or sname like '" & TextBox4.Text & "%' and position != 'Admin'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -309,13 +322,14 @@ Public Class Form7
             soure.DataSource = dbDataSet
             DataGridView1.DataSource = soure
             adapter.Update(dbDataSet)
-
+            officer_table()
             mysqlconn.Close()
         Catch ex As MySqlException
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         Finally
             mysqlconn.Dispose()
         End Try
+
     End Sub
 
 
@@ -351,9 +365,13 @@ Public Class Form7
         mysqlconn.Close()
         If count <> 0 Then
             Try
+                Dim s As String = TextBox11.Text
+                Dim bArry() As Byte = System.Text.Encoding.UTF8.GetBytes(s)
+                Dim sb64 As String = System.Convert.ToBase64String(bArry)
+
                 Dim query2 As String
                 mysqlconn.Open()
-                query2 = "INSERT INTO accounts VALUES('" & id.Text & "',null,'" & TextBox11.Text & "','" & TextBox11.Text & "','',NOW())"
+                query2 = "INSERT INTO accounts VALUES('" & id.Text & "',null,'" & TextBox11.Text & "','" & sb64 & "','',NOW())"
                 command = New MySqlCommand(query2, mysqlconn)
                 reader = command.ExecuteReader
                 mysqlconn.Close()
@@ -394,7 +412,7 @@ Public Class Form7
 
                 Dim query As String
 
-                query = "DELETE FROM accounts WHERE officer_id = '" & id.Text & "' and type != 'Admin'"
+                query = "DELETE FROM accounts WHERE officer_id = '" & id.Text & "'"
                 command = New MySqlCommand(query, mysqlconn)
                 reader = command.ExecuteReader
 
@@ -414,4 +432,5 @@ Public Class Form7
         accounts_table()
         officer_table()
     End Sub
+
 End Class

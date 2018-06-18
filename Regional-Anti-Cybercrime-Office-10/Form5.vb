@@ -187,7 +187,7 @@ Public Class Form5
 
             Dim query As String
 
-            query = "select person_id as ID,fname as Firstname, mname as Middlename, sname as Surname, nname as Nickname, dob as Birthdate, gender as Gender, status as Status, contact as ContactNo, email as EmailAddress, category as Category, date_created as DateCreated from persons"
+            query = "SELECT person_id as ID, fname as Firstname, mname as Middlename, sname as Surname, nname as Nickname, dob as Birthdate, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as DateCreated FROM persons"
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
             adapter.Fill(dbDataSet)
@@ -202,8 +202,8 @@ Public Class Form5
             mysqlconn.Dispose()
         End Try
 
-        'PictureBox2.ImageLocation = ("C:\Users\iamSushi\Desktop\user.jpg")
-        'PictureBox2.Load()
+        PictureBox2.ImageLocation = ("C:\Users\iamSushi\Desktop\user.jpg")
+        PictureBox2.Load()
     End Sub
 
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -224,6 +224,7 @@ Public Class Form5
         ComboBox2.Items.Add("Victim")
         ComboBox2.Items.Add("Witness")
 
+        Me.DataGridView1.Columns("ID").Visible = False
     End Sub
 
     Private Sub profile_image()
@@ -352,7 +353,7 @@ Public Class Form5
 
             Dim query As String
 
-            query = "select person_id as ID, fname as Firstname, mname as Middlename, sname as Surname, nname as Nickname, dob as Birthday, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as DateCreated FROM persons WHERE fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
+            query = "select person_id as ID, fname as Firstname, mname as Middlename, sname as Surname, nname as Nickname, dob as Birthdate, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as DateCreated FROM persons WHERE fname like '" & TextBox1.Text & "%' or mname like '" & TextBox1.Text & "%' or sname like '" & TextBox1.Text & "%'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -380,7 +381,7 @@ Public Class Form5
             mysqlconn.Open()
 
             Dim query As String
-            query = "select person_id as ID, fname as Firstname, mname as Middlename, sname as Surname, nname as Nickname, dob as Birthday, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as DateCreated FROM persons WHERE category LIKE '" & ComboBox2.Text & "%'"
+            query = "select person_id as ID, fname as Firstname, mname as Middlename, sname as Surname, nname as Nickname, dob as Birthdate, gender as Gender, status as Status, contact as Contact, email as Email, category as Category, date_created as DateCreated FROM persons WHERE category LIKE '" & ComboBox2.Text & "%'"
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -423,9 +424,8 @@ Public Class Form5
                 RadioButton1.Checked = True
             ElseIf selectedRow.Cells(6).Value.ToString() = "Female" Then
                 RadioButton2.Checked = True
-            Else
-                Return
             End If
+
 
             contact.Text = selectedRow.Cells(8).Value.ToString()
             email.Text = selectedRow.Cells(9).Value.ToString()

@@ -18,7 +18,7 @@ Public Class Form16
 
             query = "insert into rank values(null,'" & TextBox2.Text & "','" & TextBox1.Text & "',null)"
             command = New MySqlCommand(query, mysqlconn)
-            reader = Command.ExecuteReader
+            reader = command.ExecuteReader
             MessageBox.Show("Successful")
 
             TextBox2.Text = ""
@@ -36,6 +36,8 @@ Public Class Form16
 
     Private Sub Form16_Load(sender As Object, e As EventArgs) Handles Me.Load
         load_table()
+        Me.DataGridView1.Columns("ID").Visible = False
+        DataGridView1.Columns(1).Width = 200
     End Sub
 
     Private Sub load_table()
@@ -68,9 +70,9 @@ Public Class Form16
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        Index = e.RowIndex
+        index = e.RowIndex
         Dim selectedRow As DataGridViewRow
-        selectedRow = DataGridView1.Rows(Index)
+        selectedRow = DataGridView1.Rows(index)
 
         id.Text = selectedRow.Cells(0).Value.ToString()
         TextBox2.Text = selectedRow.Cells(1).Value.ToString()
@@ -98,6 +100,35 @@ Public Class Form16
         Finally
             load_table()
 
+        End Try
+    End Sub
+
+    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select rank_id as ID, rank as Rank, abbreviation as Abbreviation from rank where rank like '" & TextBox3.Text & "%'"
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
         End Try
     End Sub
 End Class

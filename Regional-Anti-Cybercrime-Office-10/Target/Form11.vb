@@ -80,6 +80,8 @@ Public Class Form11
     End Sub
     Private Sub Form11_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         load_table()
+        Me.DataGridView1.Columns("ID").Visible = False
+        DataGridView1.Columns(1).Width = 200
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -113,13 +115,18 @@ Public Class Form11
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        index = e.RowIndex
-        Dim selectedRow As DataGridViewRow
-        selectedRow = DataGridView1.Rows(index)
+        Try
+            index = e.RowIndex
+            Dim selectedRow As DataGridViewRow
+            selectedRow = DataGridView1.Rows(index)
 
-        id.Text = selectedRow.Cells(0).Value.ToString()
-        designation.Text = selectedRow.Cells(1).Value.ToString()
-        description.Text = selectedRow.Cells(2).Value.ToString()
+            id.Text = selectedRow.Cells(0).Value.ToString()
+            designation.Text = selectedRow.Cells(1).Value.ToString()
+            description.Text = selectedRow.Cells(2).Value.ToString()
+        Catch ex As Exception
+            Return
+        End Try
+        load_table()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -144,5 +151,32 @@ Public Class Form11
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        mysqlconn = New MySqlConnection
+        mysqlconn.ConnectionString = "server=localhost;user id=root;password=Admin@RACO102018;persistsecurityinfo=True;port=3306;database=cybercrime;SslMode=none;pooling = false; convert zero datetime=True"
+        Dim adapter As New MySqlDataAdapter
+        Dim dbDataSet As New DataTable
+        Dim soure As New BindingSource
+
+        Try
+            mysqlconn.Open()
+
+            Dim query As String
+
+            query = "select law_id as ID, designation as Designation, description as Description from law WHERE designation like '" & TextBox1.Text & "%' "
+            command = New MySqlCommand(query, mysqlconn)
+            adapter.SelectCommand = command
+            adapter.Fill(dbDataSet)
+            soure.DataSource = dbDataSet
+            DataGridView1.DataSource = soure
+            adapter.Update(dbDataSet)
+            mysqlconn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            mysqlconn.Dispose()
+        End Try
     End Sub
 End Class

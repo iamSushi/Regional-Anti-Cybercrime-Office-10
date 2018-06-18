@@ -160,6 +160,7 @@ Partial Class Form26
         Me.DateTimePicker4.Name = "DateTimePicker4"
         Me.DateTimePicker4.Size = New System.Drawing.Size(292, 30)
         Me.DateTimePicker4.TabIndex = 134
+        Me.DateTimePicker4.Value = New Date(2018, 6, 15, 0, 0, 0, 0)
         '
         'DateTimePicker3
         '
@@ -168,6 +169,7 @@ Partial Class Form26
         Me.DateTimePicker3.Name = "DateTimePicker3"
         Me.DateTimePicker3.Size = New System.Drawing.Size(292, 30)
         Me.DateTimePicker3.TabIndex = 133
+        Me.DateTimePicker3.Value = New Date(2018, 6, 15, 0, 0, 0, 0)
         '
         'DateTimePicker2
         '
@@ -176,7 +178,11 @@ Partial Class Form26
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(292, 30)
         Me.DateTimePicker2.TabIndex = 132
+<<<<<<< HEAD
         Me.DateTimePicker2.Value = New Date(2018, 6, 17, 0, 0, 0, 0)
+=======
+        Me.DateTimePicker2.Value = New Date(2018, 6, 15, 0, 0, 0, 0)
+>>>>>>> 7c949cae65051b16e0bc75ede2997b58f96eb52b
         '
         'DateTimePicker1
         '
@@ -185,6 +191,7 @@ Partial Class Form26
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(292, 30)
         Me.DateTimePicker1.TabIndex = 131
+        Me.DateTimePicker1.Value = New Date(2018, 6, 15, 0, 0, 0, 0)
         '
         'TextBox18
         '
@@ -863,6 +870,7 @@ Partial Class Form26
         Me.DateTimePicker5.Name = "DateTimePicker5"
         Me.DateTimePicker5.Size = New System.Drawing.Size(323, 31)
         Me.DateTimePicker5.TabIndex = 24
+        Me.DateTimePicker5.Value = New Date(2018, 6, 15, 0, 0, 0, 0)
         '
         'TextBox5
         '
