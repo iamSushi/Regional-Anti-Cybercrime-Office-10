@@ -253,6 +253,9 @@ Public Class Form3
         ComboBox18.Items.Add("Stored")
         ComboBox18.Items.Add("Withdrawn")
 
+        Me.DataGridView1.Columns("ID").Visible = False
+        Me.DataGridView2.Columns("ID").Visible = False
+        Me.DataGridView3.Columns("ID").Visible = False
     End Sub
 
 

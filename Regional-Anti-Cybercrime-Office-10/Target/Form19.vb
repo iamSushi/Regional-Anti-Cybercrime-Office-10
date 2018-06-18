@@ -121,7 +121,8 @@ Public Class Form19
         Finally
             mysqlconn.Dispose()
         End Try
-
+        Me.DataGridView1.Columns("ID").Visible = False
+        Me.DataGridView2.Columns("ID").Visible = False
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs)
