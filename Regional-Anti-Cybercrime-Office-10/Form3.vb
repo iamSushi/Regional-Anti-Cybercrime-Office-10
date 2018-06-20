@@ -245,10 +245,7 @@ Public Class Form3
             mysqlconn.Dispose()
         End Try
 
-        ComboBox3.Items.Add("Cellphone")
-        ComboBox3.Items.Add("Computer")
-        ComboBox3.Items.Add("Audio Visual")
-        ComboBox3.Items.Add("Intel")
+
 
         ComboBox18.Items.Add("Stored")
         ComboBox18.Items.Add("Withdrawn")
@@ -372,7 +369,7 @@ Public Class Form3
                 load_table2()
                 mysqlconn.Close()
             Catch ex As MySqlException
-                MessageBox.Show(ex.Message)
+                MessageBox.Show("Invalid user input!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -430,7 +427,7 @@ Public Class Form3
                 ComboBox18.Text = ""
                 mysqlconn.Close()
             Catch ex As MySqlException
-                MessageBox.Show(ex.Message)
+                MessageBox.Show("Invalid user input!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -447,7 +444,7 @@ Public Class Form3
 
                 mysqlconn.Close()
             Catch ex As MySqlException
-                MessageBox.Show(ex.Message)
+                MessageBox.Show("Invalid user input!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Finally
                 mysqlconn.Dispose()
             End Try
@@ -511,13 +508,13 @@ Public Class Form3
                     query = "update laboratory_case set released_by = '" + releasedby + "' where lab_case_no = '" & lab_case_no & "'"
                     command = New MySqlCommand(query, mysqlconn)
                     reader = command.ExecuteReader
-                    MessageBox.Show("Successful")
+
 
                     TextBox5.Text = ""
 
                     mysqlconn.Close()
                 Catch ex As MySqlException
-                    MessageBox.Show(ex.Message)
+                    MessageBox.Show("Invalid user action!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Finally
                     mysqlconn.Dispose()
                 End Try
@@ -530,40 +527,43 @@ Public Class Form3
                     query = "update laboratory_case set claimed_by = '" + claimedby + "' where lab_case_no = '" & lab_case_no & "'"
                     command = New MySqlCommand(query, mysqlconn)
                     reader = command.ExecuteReader
-                    MessageBox.Show("Successful")
+
 
                     TextBox6.Text = ""
 
                     mysqlconn.Close()
                 Catch ex As MySqlException
-                    MessageBox.Show(ex.Message)
+                    MessageBox.Show("Invalid user action!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Finally
                     mysqlconn.Dispose()
                 End Try
 
 
             End If
+            Try
+                mysqlconn.Open()
+                Dim query As String
+                query = "update laboratory_case set date_informed = '" + DateTimePicker4.Value + "' where lab_case_no = '" & lab_case_no & "'"
+                command = New MySqlCommand(query, mysqlconn)
+                reader = command.ExecuteReader
+                MessageBox.Show("Successful")
+
+                TextBox6.Text = ""
+
+                mysqlconn.Close()
+            Catch ex As MySqlException
+                MessageBox.Show("Invalid user input!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Finally
+                mysqlconn.Dispose()
+            End Try
         Else
             MessageBox.Show("First Select Laboratory Case")
 
 
+            Me.ErrorProvider1.SetError(Me.TextBox10, "Select Examiner")
+
         End If
-        Try
-            mysqlconn.Open()
-            Dim query As String
-            query = "update laboratory_case set date_informed = '" + DateTimePicker4.Value + "' where lab_case_no = '" & lab_case_no & "'"
-            command = New MySqlCommand(query, mysqlconn)
-            reader = command.ExecuteReader
-            MessageBox.Show("Successful")
 
-            TextBox6.Text = ""
-
-            mysqlconn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            mysqlconn.Dispose()
-        End Try
         TextBox10.Text = ""
         TextBox12.Text = ""
         TextBox14.Text = ""
@@ -596,7 +596,7 @@ Public Class Form3
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -628,7 +628,7 @@ Public Class Form3
             End If
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -650,7 +650,7 @@ Public Class Form3
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -673,7 +673,7 @@ Public Class Form3
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -722,7 +722,7 @@ Public Class Form3
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -745,7 +745,7 @@ Public Class Form3
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -768,7 +768,7 @@ Public Class Form3
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -812,7 +812,7 @@ Public Class Form3
 
             mysqlconn.Close()
         Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            MessageBox.Show("Invalid user action!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Finally
             mysqlconn.Dispose()
         End Try
@@ -822,6 +822,7 @@ Public Class Form3
 
     End Sub
 
+<<<<<<< HEAD
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
         Dim dialog As DialogResult
         dialog = MessageBox.Show("Do you really want to exit?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -847,5 +848,9 @@ Public Class Form3
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None
         End If
+=======
+    Private Sub ComboBox13_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox13.SelectedIndexChanged
+
+>>>>>>> 7f2b85ac7e834de2dd935ce7ee5a31dff281bc8d
     End Sub
 End Class
