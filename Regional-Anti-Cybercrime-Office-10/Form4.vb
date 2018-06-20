@@ -154,7 +154,7 @@ Public Class Form4
             mysqlconn.Dispose()
         End Try
         ComboBox1.Items.Add("Pending")
-        ComboBox1.Items.Add("ForReleased")
+        ComboBox1.Items.Add("For Released")
         ComboBox1.Items.Add("Released")
         ComboBox2.Items.Add("Computer")
         ComboBox2.Items.Add("Cellphone")
@@ -676,7 +676,7 @@ Public Class Form4
     End Sub
 
     Private Sub TextBox6_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles TextBox6.MouseDoubleClick
-        Form23.Show()
+
 
     End Sub
 
@@ -713,7 +713,7 @@ Public Class Form4
 
             Dim query As String
 
-            query = "select * from laboratory where DFE like'" & ComboBox2.Text & "%' "
+            query = "select * from laboratory where DFE like ' " & ComboBox2.Text & "%' "
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command

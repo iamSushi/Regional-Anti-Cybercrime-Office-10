@@ -245,10 +245,7 @@ Public Class Form3
             mysqlconn.Dispose()
         End Try
 
-        ComboBox3.Items.Add("Cellphone")
-        ComboBox3.Items.Add("Computer")
-        ComboBox3.Items.Add("Audio Visual")
-        ComboBox3.Items.Add("Intel")
+
 
         ComboBox18.Items.Add("Stored")
         ComboBox18.Items.Add("Withdrawn")
@@ -822,6 +819,10 @@ Public Class Form3
     End Sub
 
     Private Sub DateTimePicker4_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker4.ValueChanged
+
+    End Sub
+
+    Private Sub ComboBox13_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox13.SelectedIndexChanged
 
     End Sub
 End Class
