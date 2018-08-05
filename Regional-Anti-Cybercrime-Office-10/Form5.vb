@@ -202,7 +202,7 @@ Public Class Form5
             mysqlconn.Dispose()
         End Try
 
-        PictureBox2.ImageLocation = ("C:\Users\iamSushi\Desktop\user.jpg")
+        PictureBox2.ImageLocation = ("C:\xampp\Debug\img\user.jpg")
         PictureBox2.Load()
     End Sub
 

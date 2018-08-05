@@ -214,7 +214,7 @@ Public Class Form4
 
             Dim query As String
 
-            query = "select * from laboratory where DateReleased like '" & DateTimePicker1.Value & "%' "
+            query = "select * from laboratory where DateReceived like '" & DateTimePicker1.Value & "%' "
 
             command = New MySqlCommand(query, mysqlconn)
             adapter.SelectCommand = command
@@ -807,5 +807,17 @@ Public Class Form4
         ElseIf dialog = DialogResult.No Then
             Me.DialogResult = DialogResult.None
         End If
+    End Sub
+
+    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
+        TextBox1.Clear()
+        TextBox4.Clear()
+        TextBox5.Clear()
+        TextBox6.Clear()
+        TextBox7.Clear()
+        TextBox8.Clear()
+        TextBox9.Clear()
+        ComboBox1.Text = ""
+        ComboBox2.Text = ""
     End Sub
 End Class
